@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1b9e957168c5d2419f8faac485b43a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 46b6a2181bd7f86409770609a91c41f4, type: 3}
   m_Name: AkWwiseInitializationSettings
   m_EditorClassIdentifier: 
   PlatformSettingsNameList:
   - Mac
   - Windows
   PlatformSettingsList:
-  - {fileID: 11400000, guid: c915ddb01638c634bb67a57aba0d1cf5, type: 2}
-  - {fileID: 11400000, guid: 36cc6e34127fbc247ba4a312bba31598, type: 2}
+  - {fileID: 11400000, guid: d8b8eea3f9f53e64a844d8d157712dbe, type: 2}
+  - {fileID: 11400000, guid: 29e7aeaa44110ed419910658deca86ff, type: 2}
   InvalidReferencePlatforms: []
   UserSettings:
     m_BasePath: Audio\GeneratedSoundBanks

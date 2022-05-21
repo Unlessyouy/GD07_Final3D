@@ -17,6 +17,7 @@ public class BasicControl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -35,15 +36,15 @@ public class BasicControl : MonoBehaviour
         rb.MovePosition(transform.position + (processedInput.normalized * movingSpeed * Time.deltaTime));
 
         transform.Rotate(new Vector3(0, mouseInputX, 0) * cameraSpeed, Space.Self);
-        transform.Rotate(new Vector3(-mouseInputY, 0, 0) * cameraSpeed, Space.Self);
+        transform.GetChild(0).transform.Rotate(new Vector3(-mouseInputY, 0, 0) * cameraSpeed, Space.Self);
 
-        if (CheckAngle(transform.localEulerAngles.x) < -60)
+        if (CheckAngle(transform.GetChild(0).transform.localEulerAngles.x) < -60)
         {
-            transform.GetChild(4).transform.localEulerAngles = new Vector3(-60, 0, 0);
+            transform.GetChild(0).transform.localEulerAngles = new Vector3(-60, 0, 0);
         }
-        if (CheckAngle(transform.localEulerAngles.x) > 60)
+        if (CheckAngle(transform.GetChild(0).transform.localEulerAngles.x) > 60)
         {
-            transform.GetChild(4).transform.localEulerAngles = new Vector3(60, 0, 0);
+            transform.GetChild(0).transform.localEulerAngles = new Vector3(60, 0, 0);
         }
     }
     public float CheckAngle(float Value)

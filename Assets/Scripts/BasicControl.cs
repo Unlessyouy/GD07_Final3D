@@ -42,9 +42,9 @@ public class BasicControl : MonoBehaviour
         {
             transform.GetChild(0).transform.localEulerAngles = new Vector3(-60, 0, 0);
         }
-        if (CheckAngle(transform.GetChild(0).transform.localEulerAngles.x) > 60)
+        if (CheckAngle(transform.GetChild(0).transform.localEulerAngles.x) > 30)
         {
-            transform.GetChild(0).transform.localEulerAngles = new Vector3(60, 0, 0);
+            transform.GetChild(0).transform.localEulerAngles = new Vector3(30, 0, 0);
         }
     }
     public float CheckAngle(float Value)

@@ -16,15 +16,29 @@ public class PlayerControl : BasicControl
 
     public CompanionControl companion;
 
+    LineRenderer lr;
+
     protected override void Start()
     {
         base.Start();
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+        lr = GetComponent<LineRenderer>();
     }
     protected override void Update()
     {
         base.Update();
+
+        lr.SetPosition(0, transform.position);
+
+        if (connected)
+        {
+            lr.SetPosition(1, companion.transform.position);
+        }
+        else
+        {
+            lr.SetPosition(1, transform.position);
+        }
 
         lightValueUI.text = "Light: " + (int)lightValue;
 

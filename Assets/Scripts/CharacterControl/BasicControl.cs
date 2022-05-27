@@ -6,6 +6,7 @@ using TMPro;
 public class BasicControl : MonoBehaviour
 {
     protected Rigidbody rb;
+    protected Animator anim;
     public float movingSpeed;
     protected float horizontalInput;
     protected float verticalInput;
@@ -18,15 +19,14 @@ public class BasicControl : MonoBehaviour
 
     protected virtual void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
         alive = true;
-        connected = false;
+        connected = true;
         lightNear = false;
     }
     protected virtual void Update()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");//×óÓÒ£¬×ó-1£¬ÓÒ1
-        verticalInput = Input.GetAxisRaw("Vertical");//Ç°ºó
-
         if (alive)
         {
             if (lightNear)
@@ -35,11 +35,11 @@ public class BasicControl : MonoBehaviour
             }
             else if (connected)
             {
-                lightValue -= 0.25f * Time.deltaTime;
+                lightValue -= 1f * Time.deltaTime;
             }
             else
             {
-                lightValue -= 1f * Time.deltaTime;
+                lightValue -= 5f * Time.deltaTime;
             }
 
             if (lightValue >= 100)
@@ -49,6 +49,8 @@ public class BasicControl : MonoBehaviour
             if (lightValue <= 0)
             {
                 alive = false;
+                connected = false;
+                GetComponent<MeshRenderer>().material.color = Color.red;
             }
         }
         //Debug.Log(lightValue);
@@ -74,7 +76,7 @@ public class BasicControl : MonoBehaviour
             lightNear = false;
         }
     }
-    public float CheckAngle(float Value)
+    protected float CheckAngle(float Value)
     {
         float Angle = Value - 180;
         if (Angle > 0)

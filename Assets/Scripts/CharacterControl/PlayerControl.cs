@@ -6,7 +6,8 @@ using TMPro;
 public class PlayerControl : BasicControl
 {
     public float cameraSpeed;
-    public bool canConnect = false;
+
+    Vector3 lineVector;
 
     Vector3 processedInput = new(0, 0, 0);
     float mouseInputX;
@@ -21,13 +22,23 @@ public class PlayerControl : BasicControl
     protected override void Start()
     {
         base.Start();
-        rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
-        lr = GetComponent<LineRenderer>();
+        lr = GetComponentInChildren<LineRenderer>();
     }
     protected override void Update()
     {
         base.Update();
+
+        connected = (connected && companion.connected);
+
+        if (companion.alive)
+        {
+            lineVector = companion.transform.position - transform.position;
+        }
+        else
+        {
+            lineVector = Vector3.zero;
+        }
 
         lr.SetPosition(0, transform.position);
 
@@ -40,22 +51,50 @@ public class PlayerControl : BasicControl
             lr.SetPosition(1, transform.position);
         }
 
+        #region UI
         lightValueUI.text = "Light: " + (int)lightValue;
+        #endregion
 
+        #region Input
+        horizontalInput = Input.GetAxisRaw("Horizontal");//×óÓÒ£¬×ó-1£¬ÓÒ1
+        verticalInput = Input.GetAxisRaw("Vertical");//Ç°ºó
         mouseInputX = Input.GetAxisRaw("Mouse X");
         mouseInputY = Input.GetAxisRaw("Mouse Y");
 
         processedInput = transform.forward * verticalInput + transform.right * horizontalInput;
 
-        if (Input.GetKeyDown(KeyCode.Q) && canConnect)
+        if (Input.GetKeyDown(KeyCode.Q) && companion.alive)
         {
-            connected = !connected;
-            companion.connected = !companion.connected;
+            companion.following = !companion.following;
+
+            if (companion.following)
+            {
+                companion.GetComponent<MeshRenderer>().material.color = Color.green;
+            }
+            else
+            {
+                companion.GetComponent<MeshRenderer>().material.color = Color.blue;
+            }
         }
+        #endregion
     }
     void FixedUpdate()
     {
-        rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
+        float angleBetweenLineAndInput = Vector3.Angle(processedInput, lineVector);
+
+        if (alive)
+        {
+            if (angleBetweenLineAndInput <= 15 && lineVector != Vector3.zero)
+            {
+                rb.MovePosition(transform.position + (movingSpeed * 2 * Time.deltaTime * processedInput.normalized));
+                rb.useGravity = false;
+            }
+            else
+            {
+                rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
+                rb.useGravity = true;
+            }
+        }
 
         transform.Rotate(new Vector3(0, mouseInputX, 0) * cameraSpeed, Space.Self);
         transform.GetChild(0).transform.Rotate(new Vector3(-mouseInputY, 0, 0) * cameraSpeed, Space.Self);
@@ -77,10 +116,6 @@ public class PlayerControl : BasicControl
             //Debug.Log("enter");
             other.GetComponent<LightControl>().actable = true;
         }
-        else if (other.GetComponent<CompanionControl>() != null)
-        {
-            canConnect = true;
-        }
     }
     protected override void OnTriggerExit(Collider other)
     {
@@ -89,10 +124,6 @@ public class PlayerControl : BasicControl
         {
             //Debug.Log("exit");
             other.GetComponent<LightControl>().actable = false;
-        }
-        else if (other.GetComponent<CompanionControl>() != null)
-        {
-            canConnect = false;
         }
     }
 }

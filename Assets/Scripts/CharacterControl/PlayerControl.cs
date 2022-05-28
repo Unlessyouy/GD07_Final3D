@@ -34,10 +34,12 @@ public class PlayerControl : BasicControl
         if (companion.alive)
         {
             lineVector = companion.transform.position - transform.position;
+            Debug.DrawRay(transform.position, lineVector, Color.red, 0);
         }
         else
         {
             lineVector = Vector3.zero;
+            Debug.DrawRay(transform.position, lineVector, Color.red, 0);
         }
 
         lr.SetPosition(0, transform.position);

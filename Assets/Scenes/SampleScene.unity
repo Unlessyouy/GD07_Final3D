@@ -1762,10 +1762,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1865652599}
-  - component: {fileID: 1865652601}
   - component: {fileID: 1865652600}
+  - component: {fileID: 1865652601}
   m_Layer: 0
-  m_Name: Container
+  m_Name: LineControler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

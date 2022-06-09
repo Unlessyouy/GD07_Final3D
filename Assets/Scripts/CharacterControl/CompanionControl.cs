@@ -5,53 +5,82 @@ using TMPro;
 
 public class CompanionControl : BasicControl
 {
-    Vector3 processedInput;
-    Vector3 lineVector;
-
     public TextMeshProUGUI lightValueUI;
-    public PlayerControl player;
 
-    public bool following;
+    int controlType;
+    bool companionSynchronous;
+    //1 = wasd; 2 = up down left right;
+
+    //public bool following;
     protected override void Start()
     {
         base.Start();
-        following = false;
+        companionSynchronous = otherOne.GetComponent<PlayerControl>().synchronous;
+        //following = false;
+        if (companionSynchronous)
+        {
+            controlled = true;
+            GetComponent<MeshRenderer>().material.color = Color.green;
+        }
+        else
+        {
+            controlled = false;
+            GetComponent<MeshRenderer>().material.color = Color.blue;
+        }
     }
     protected override void Update()
     {
         base.Update();
 
-        if (player.alive)
+        #region Other One
+        if (otherOne.GetComponent<PlayerControl>() != null)
         {
-            lineVector = player.transform.position - transform.position;
-        }
-        else
-        {
-            lineVector = Vector3.zero;
-        }
+            PlayerControl player = otherOne.GetComponent<PlayerControl>();
+            connected = (connected && otherOne.GetComponent<PlayerControl>().connected);
 
-        connected = (connected && player.connected);
-
-        lightValueUI.text = "Companion\nLight: " + (int)lightValue;
-    }
-    private void FixedUpdate()
-    {
-        processedInput = player.transform.position - transform.position;
-
-        float angleBetweenLineAndInput = Vector3.Angle(processedInput, lineVector);
-
-        if (alive && following && processedInput.sqrMagnitude >= 3)
-        {
-            if (angleBetweenLineAndInput <= 15 && lineVector != Vector3.zero && processedInput.sqrMagnitude >= 5)
+            if (player.alive)
             {
-                rb.MovePosition(transform.position + (movingSpeed * 2 * Time.deltaTime * processedInput.normalized));
-                rb.useGravity = false;
+                lineVector = player.transform.position - transform.position;
             }
             else
             {
-                rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
-                rb.useGravity = true;
+                lineVector = Vector3.zero;
             }
         }
+        #endregion
+
+        #region Input & Movement
+        if (companionSynchronous)
+        {
+            horizontalInput = Input.GetAxisRaw("Horizontal B");//×óÓÒ£¬×ó-1£¬ÓÒ1
+            verticalInput = Input.GetAxisRaw("Vertical B");//Ç°ºó
+        }
+        else
+        {
+            horizontalInput = Input.GetAxisRaw("Horizontal");//×óÓÒ£¬×ó-1£¬ÓÒ1
+            verticalInput = Input.GetAxisRaw("Vertical");//Ç°ºó
+        }
+        processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
+        #endregion
+
+        if (!companionSynchronous)
+        {
+            if (Input.GetKeyDown(KeyCode.Q) && otherOne.GetComponent<BasicControl>().alive)
+            {
+                controlled = !controlled;
+                if (controlled)
+                {
+                    GetComponent<MeshRenderer>().material.color = Color.green;
+                }
+                else
+                {
+                    GetComponent<MeshRenderer>().material.color = Color.blue;
+                }
+            }
+        }
+
+        #region UI
+        lightValueUI.text = "Companion\nLight: " + (int)lightValue;
+        #endregion
     }
 }

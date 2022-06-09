@@ -7,13 +7,23 @@ public class BasicControl : MonoBehaviour
 {
     protected Rigidbody rb;
     protected Animator anim;
+
+    protected Vector3 lineVector;
+
+    public GameObject otherOne;
+
     public float movingSpeed;
     protected float horizontalInput;
     protected float verticalInput;
+    //protected float mouseInputX;
+    //protected float mouseInputY;
+
+    protected Vector3 processedInput = new(0, 0, 0);
 
     protected float lightValue = 100;
 
     public bool alive;
+    public bool controlled;
     public bool connected;
     public bool lightNear;
 
@@ -53,7 +63,24 @@ public class BasicControl : MonoBehaviour
                 GetComponent<MeshRenderer>().material.color = Color.red;
             }
         }
-        //Debug.Log(lightValue);
+    }
+    protected virtual void FixedUpdate()
+    {
+        float angleBetweenLineAndInput = Vector3.Angle(processedInput, lineVector);
+
+        if (alive && controlled)
+        {
+            if (angleBetweenLineAndInput <= 22.5 && lineVector != Vector3.zero)
+            {
+                rb.MovePosition(transform.position + (movingSpeed * 2 * Time.deltaTime * processedInput.normalized));
+                rb.useGravity = true;
+            }
+            else
+            {
+                rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
+                rb.useGravity = true;
+            }
+        }
     }
     protected virtual void OnTriggerEnter(Collider other)
     {

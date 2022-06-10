@@ -5,12 +5,15 @@ using TMPro;
 
 public class PlayerControl : BasicControl
 {
-    public TextMeshProUGUI lightValueUI;
-
     [Header("同步控制的开关")]
     public bool synchronous;
 
+    [Header("主角UI")]
+    public TextMeshProUGUI lightValueUI;
+
     LineRenderer lr;
+
+    CompanionControl companion;
 
     protected override void Start()
     {
@@ -18,6 +21,7 @@ public class PlayerControl : BasicControl
         Cursor.lockState = CursorLockMode.Locked;
         lr = GetComponentInChildren<LineRenderer>();
         controlled = true;
+        companion = otherOne.GetComponent<CompanionControl>();
         GetComponent<MeshRenderer>().material.color = Color.green;
     }
     protected override void Update()
@@ -25,9 +29,8 @@ public class PlayerControl : BasicControl
         base.Update();
 
         #region Other One
-        if (otherOne.GetComponent<CompanionControl>() != null)
+        if (companion != null)
         {
-            CompanionControl companion = otherOne.GetComponent<CompanionControl>();
             connected = (connected && otherOne.GetComponent<CompanionControl>().connected);
 
             if (companion.alive)
@@ -47,9 +50,10 @@ public class PlayerControl : BasicControl
         processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
         #endregion
 
+        #region E to switch control
         if (!synchronous)
         {
-            if (Input.GetKeyDown(KeyCode.Q) && otherOne.GetComponent<BasicControl>().alive)
+            if (Input.GetKeyDown(KeyCode.E) && otherOne.GetComponent<BasicControl>().alive)
             {
                 controlled = !controlled;
                 if (controlled)
@@ -62,25 +66,26 @@ public class PlayerControl : BasicControl
                 }
             }
         }
+        #endregion
 
-        #region Q to make companion follow (abandoned)
-            //if (Input.GetKeyDown(KeyCode.Q) && companion.alive)
-            //{
-            //    companion.following = !companion.following;
+        #region Q to make companion follow
+        if (Input.GetKeyDown(KeyCode.Q) && companion.alive && controlled && !synchronous)
+        {
+            companion.following = !companion.following;
 
-            //    if (companion.following)
-            //    {
-            //        companion.GetComponent<MeshRenderer>().material.color = Color.green;
-            //    }
-            //    else
-            //    {
-            //        companion.GetComponent<MeshRenderer>().material.color = Color.blue;
-            //    }
-            //}
-            #endregion
+            if (companion.following)
+            {
+                companion.GetComponent<MeshRenderer>().material.color = Color.yellow;
+            }
+            else
+            {
+                companion.GetComponent<MeshRenderer>().material.color = Color.blue;
+            }
+        }
+        #endregion
 
         #region lineRenderer
-            lr.SetPosition(0, transform.position);
+        lr.SetPosition(0, transform.position);
         if (connected)
         {
             lr.SetPosition(1, otherOne.transform.position);

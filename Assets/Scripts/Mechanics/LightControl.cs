@@ -10,7 +10,7 @@ public class LightControl : MonoBehaviour
     bool isOn = false;
     private void Update()
     {
-        if (  (actable && Input.GetKeyDown(KeyCode.E) && interactType == 1)  ||  (actable && Input.GetKeyDown(KeyCode.RightControl) && interactType == 2)  )
+        if (  (actable && Input.GetKeyDown(KeyCode.Space) && interactType == 1)  ||  (actable && Input.GetKeyDown(KeyCode.RightControl) && interactType == 2)  )
         {
             if (!isOn)
             {

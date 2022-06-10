@@ -23,9 +23,14 @@ public class BasicControl : MonoBehaviour
     protected float lightValue = 100;
 
     public bool alive;
-    public bool controlled;
+    protected bool controlled;
     public bool connected;
-    public bool lightNear;
+    protected bool lightNear;
+
+    [Header("加速效果夹角")]
+    public float speedUpAngle;
+    [Header("加速效果倍率")]
+    public float speedUpRatio;
 
     protected virtual void Start()
     {
@@ -70,9 +75,9 @@ public class BasicControl : MonoBehaviour
 
         if (alive && controlled)
         {
-            if (angleBetweenLineAndInput <= 22.5 && lineVector != Vector3.zero)
+            if (angleBetweenLineAndInput <= (speedUpAngle) / 2 && lineVector != Vector3.zero)
             {
-                rb.MovePosition(transform.position + (movingSpeed * 2 * Time.deltaTime * processedInput.normalized));
+                rb.MovePosition(transform.position + (movingSpeed * speedUpRatio * Time.deltaTime * processedInput.normalized));
                 rb.useGravity = true;
             }
             else

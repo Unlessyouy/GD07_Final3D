@@ -5,18 +5,18 @@ using TMPro;
 
 public class CompanionControl : BasicControl
 {
+    [Header("ÏÉ±´UI")]
     public TextMeshProUGUI lightValueUI;
 
-    int controlType;
     bool companionSynchronous;
     //1 = wasd; 2 = up down left right;
 
-    //public bool following;
+    public bool following;
     protected override void Start()
     {
         base.Start();
         companionSynchronous = otherOne.GetComponent<PlayerControl>().synchronous;
-        //following = false;
+        following = false;
         if (companionSynchronous)
         {
             controlled = true;
@@ -60,12 +60,21 @@ public class CompanionControl : BasicControl
             horizontalInput = Input.GetAxisRaw("Horizontal");//×óÓÒ£¬×ó-1£¬ÓÒ1
             verticalInput = Input.GetAxisRaw("Vertical");//Ç°ºó
         }
-        processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
+
+        if (following)
+        {
+            processedInput = lineVector.normalized;
+        }
+        else
+        {
+            processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
+        }
         #endregion
 
+        #region E to switch control
         if (!companionSynchronous)
         {
-            if (Input.GetKeyDown(KeyCode.Q) && otherOne.GetComponent<BasicControl>().alive)
+            if (Input.GetKeyDown(KeyCode.E) && otherOne.GetComponent<BasicControl>().alive)
             {
                 controlled = !controlled;
                 if (controlled)
@@ -78,9 +87,33 @@ public class CompanionControl : BasicControl
                 }
             }
         }
+        #endregion
 
         #region UI
         lightValueUI.text = "Companion\nLight: " + (int)lightValue;
         #endregion
+    }
+    protected override void FixedUpdate()
+    {
+        float angleBetweenLineAndInput = Vector3.Angle(processedInput, lineVector);
+
+        if (alive && controlled)
+        {
+            if (angleBetweenLineAndInput <= (speedUpAngle) / 2 && lineVector != Vector3.zero)
+            {
+                rb.MovePosition(transform.position + (movingSpeed * speedUpRatio * Time.deltaTime * processedInput.normalized));
+                rb.useGravity = true;
+            }
+            else
+            {
+                rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
+                rb.useGravity = true;
+            }
+        }
+        else if (alive && following && (lineVector.magnitude >= 5)  )
+        {
+            rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
+            rb.useGravity = true;
+        }
     }
 }

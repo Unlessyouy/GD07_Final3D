@@ -24,7 +24,7 @@ public class BasicControl : MonoBehaviour
     protected float lightValue = 100;
 
     public bool alive;
-    protected bool controlled;
+    public bool controlled;
     public bool connected;
     protected bool lightNear;
 

@@ -38,6 +38,7 @@ public class RopeDownEnd : Interactable
         base.OnTriggerEnter(other);
         if (other.GetComponent<PlayerControl>() != null)
         {
+            player = other.GetComponent<PlayerControl>();
             if (player != null && player.isClimbing == true)
             {
                 player.isClimbing = false;

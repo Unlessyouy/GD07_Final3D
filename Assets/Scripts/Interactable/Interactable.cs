@@ -55,6 +55,22 @@ public class Interactable : MonoBehaviour
             interactedObject = other.gameObject;
         }
     }
+    protected virtual void OnTriggerStay(Collider other)
+    {
+        if (other.GetComponent<PlayerControl>() != null)
+        {
+            other.GetComponent<PlayerControl>().canInteract = true;
+            actable = true;
+            interactType = 1;
+            interactedObject = other.gameObject;
+        }
+        else if (other.GetComponent<CompanionControl>() != null)
+        {
+            actable = true;
+            interactType = 2;
+            interactedObject = other.gameObject;
+        }
+    }
     protected virtual void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<PlayerControl>() != null)

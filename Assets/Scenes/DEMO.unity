@@ -1264,6 +1264,7 @@ MonoBehaviour:
   otherOne: {fileID: 1191662784}
   movingSpeed: 5
   alive: 1
+  controlled: 0
   connected: 1
   speedUpAngle: 60
   speedUpRatio: 2
@@ -2272,6 +2273,7 @@ MonoBehaviour:
   otherOne: {fileID: 471384436}
   movingSpeed: 5
   alive: 1
+  controlled: 0
   connected: 1
   speedUpAngle: 60
   speedUpRatio: 2
@@ -2388,7 +2390,7 @@ GameObject:
   - component: {fileID: 1260120867}
   - component: {fileID: 1260120866}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

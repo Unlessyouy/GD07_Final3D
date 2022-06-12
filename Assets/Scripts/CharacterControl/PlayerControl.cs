@@ -11,7 +11,12 @@ public class PlayerControl : BasicControl
     [Header("Ö÷½ÇUI")]
     public TextMeshProUGUI lightValueUI;
 
-    LineRenderer lr;
+    [HideInInspector]
+    public bool canJump;
+    [HideInInspector]
+    public bool canInteract;
+
+    public bool isClimbing;
 
     CompanionControl companion;
 
@@ -19,7 +24,6 @@ public class PlayerControl : BasicControl
     {
         base.Start();
         Cursor.lockState = CursorLockMode.Locked;
-        lr = GetComponentInChildren<LineRenderer>();
         controlled = true;
         companion = otherOne.GetComponent<CompanionControl>();
         GetComponent<MeshRenderer>().material.color = Color.green;
@@ -47,13 +51,30 @@ public class PlayerControl : BasicControl
         #region Input & Movement
         horizontalInput = Input.GetAxisRaw("Horizontal");//×óÓÒ£¬×ó-1£¬ÓÒ1
         verticalInput = Input.GetAxisRaw("Vertical");//Ç°ºó
-        processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
+        interactInput = -Input.GetAxisRaw("Interact");
+
+        if (isClimbing)
+        {
+            processedInput = Vector3.up * verticalInput;
+        }
+        else
+        {
+            processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
+        }
+
+        if (alive && canJump && !canInteract && controlled && !isClimbing)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) || interactInput == 1)
+            {
+                rb.velocity = Vector3.up * 5;
+            }
+        }
         #endregion
 
         #region E to switch control
         if (!synchronous)
         {
-            if (Input.GetKeyDown(KeyCode.E) && otherOne.GetComponent<BasicControl>().alive)
+            if (  (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton8))  && otherOne.GetComponent<BasicControl>().alive)
             {
                 controlled = !controlled;
                 if (controlled)
@@ -69,7 +90,7 @@ public class PlayerControl : BasicControl
         #endregion
 
         #region Q to make companion follow
-        if (Input.GetKeyDown(KeyCode.Q) && companion.alive && controlled && !synchronous)
+        if (  (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton0)) && companion.alive && controlled && !synchronous)
         {
             companion.following = !companion.following;
 
@@ -84,34 +105,29 @@ public class PlayerControl : BasicControl
         }
         #endregion
 
-        #region lineRenderer
-        lr.SetPosition(0, transform.position);
-        if (connected)
-        {
-            lr.SetPosition(1, otherOne.transform.position);
-        }
-        else
-        {
-            lr.SetPosition(1, transform.position);
-        }
-        #endregion
-
         #region UI
         lightValueUI.text = "Light: " + (int)lightValue;
         #endregion
     }
-    //void FixedUpdate()
-    //{
-        //transform.Rotate(new Vector3(0, mouseInputX, 0) * cameraSpeed, Space.Self);
-        //transform.GetChild(0).transform.Rotate(new Vector3(-mouseInputY, 0, 0) * cameraSpeed, Space.Self);
-
-        //if (CheckAngle(transform.GetChild(0).transform.localEulerAngles.x) < -60)
-        //{
-        //    transform.GetChild(0).transform.localEulerAngles = new Vector3(-60, 0, 0);
-        //}
-        //if (CheckAngle(transform.GetChild(0).transform.localEulerAngles.x) > 30)
-        //{
-        //    transform.GetChild(0).transform.localEulerAngles = new Vector3(30, 0, 0);
-        //}
-    //}
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Terrain"))
+        {
+            canJump = true;
+        }
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Terrain"))
+        {
+            canJump = true;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Terrain"))
+        {
+            canJump = false;
+        }
+    }
 }

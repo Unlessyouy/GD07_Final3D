@@ -15,6 +15,7 @@ public class BasicControl : MonoBehaviour
     public float movingSpeed;
     protected float horizontalInput;
     protected float verticalInput;
+    protected float interactInput;
     //protected float mouseInputX;
     //protected float mouseInputY;
 
@@ -78,12 +79,10 @@ public class BasicControl : MonoBehaviour
             if (angleBetweenLineAndInput <= (speedUpAngle) / 2 && lineVector != Vector3.zero)
             {
                 rb.MovePosition(transform.position + (movingSpeed * speedUpRatio * Time.deltaTime * processedInput.normalized));
-                rb.useGravity = true;
             }
             else
             {
                 rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
-                rb.useGravity = true;
             }
         }
     }

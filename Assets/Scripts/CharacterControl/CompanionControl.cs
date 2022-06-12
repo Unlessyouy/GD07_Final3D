@@ -7,6 +7,8 @@ public class CompanionControl : BasicControl
 {
     [Header("ÏÉ±´UI")]
     public TextMeshProUGUI lightValueUI;
+    //[HideInInspector]
+    public bool hiding;
 
     bool companionSynchronous;
     //1 = wasd; 2 = up down left right;
@@ -50,17 +52,25 @@ public class CompanionControl : BasicControl
         #endregion
 
         #region Input & Movement
-        if (companionSynchronous)
+        if (!hiding)
         {
-            horizontalInput = Input.GetAxisRaw("Horizontal B");//×óÓÒ£¬×ó-1£¬ÓÒ1
-            verticalInput = Input.GetAxisRaw("Vertical B");//Ç°ºó
+            if (companionSynchronous)
+            {
+                horizontalInput = Input.GetAxisRaw("Horizontal B");//×óÓÒ£¬×ó-1£¬ÓÒ1
+                verticalInput = Input.GetAxisRaw("Vertical B");//Ç°ºó
+            }
+            else
+            {
+                horizontalInput = Input.GetAxisRaw("Horizontal");//×óÓÒ£¬×ó-1£¬ÓÒ1
+                verticalInput = Input.GetAxisRaw("Vertical");//Ç°ºó
+            }
         }
         else
         {
-            horizontalInput = Input.GetAxisRaw("Horizontal");//×óÓÒ£¬×ó-1£¬ÓÒ1
-            verticalInput = Input.GetAxisRaw("Vertical");//Ç°ºó
+            horizontalInput = 0;
+            verticalInput = 0;
         }
-
+        
         if (following)
         {
             processedInput = lineVector.normalized;
@@ -74,7 +84,7 @@ public class CompanionControl : BasicControl
         #region E to switch control
         if (!companionSynchronous)
         {
-            if (Input.GetKeyDown(KeyCode.E) && otherOne.GetComponent<BasicControl>().alive)
+            if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton8)) && otherOne.GetComponent<BasicControl>().alive)
             {
                 controlled = !controlled;
                 if (controlled)
@@ -102,12 +112,10 @@ public class CompanionControl : BasicControl
             if (angleBetweenLineAndInput <= (speedUpAngle) / 2 && lineVector != Vector3.zero)
             {
                 rb.MovePosition(transform.position + (movingSpeed * speedUpRatio * Time.deltaTime * processedInput.normalized));
-                rb.useGravity = true;
             }
             else
             {
                 rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
-                rb.useGravity = true;
             }
         }
         else if (alive && following && (lineVector.magnitude >= 5)  )

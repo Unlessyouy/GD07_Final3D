@@ -16,8 +16,6 @@ public class PlayerControl : BasicControl
     [HideInInspector]
     public bool canInteract;
 
-    public bool isClimbing;
-
     CompanionControl companion;
 
     protected override void Start()
@@ -35,8 +33,6 @@ public class PlayerControl : BasicControl
         #region Other One
         if (companion != null)
         {
-            connected = (connected && otherOne.GetComponent<CompanionControl>().connected);
-
             if (companion.alive)
             {
                 lineVector = companion.transform.position - transform.position;
@@ -55,7 +51,15 @@ public class PlayerControl : BasicControl
 
         if (isClimbing)
         {
-            processedInput = Vector3.up * verticalInput;
+            if (onRopeTop)
+            {
+                verticalInput = -1;
+                processedInput = Vector3.up * verticalInput;
+            }
+            else
+            {
+                processedInput = Vector3.up * verticalInput;
+            }
         }
         else
         {
@@ -90,7 +94,20 @@ public class PlayerControl : BasicControl
         #endregion
 
         #region Q to make companion follow
-        if (  (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton0)) && companion.alive && controlled && !synchronous)
+        if (Input.GetKeyDown(KeyCode.Q) && companion.alive && controlled && !synchronous)
+        {
+            companion.following = !companion.following;
+
+            if (companion.following)
+            {
+                companion.GetComponent<MeshRenderer>().material.color = Color.yellow;
+            }
+            else
+            {
+                companion.GetComponent<MeshRenderer>().material.color = Color.blue;
+            }
+        }
+        else if (companion.alive && controlled && !synchronous && Input.GetKeyDown(KeyCode.JoystickButton0))
         {
             companion.following = !companion.following;
 

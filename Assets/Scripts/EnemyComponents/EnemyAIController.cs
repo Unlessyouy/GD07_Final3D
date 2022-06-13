@@ -22,6 +22,8 @@ namespace EnemyComponents
         [SerializeField] private float SuspiciousTime = 5f;
         [SerializeField] private float DwellingTime = 2f;
 
+        [SerializeField] private float stunRecoveryTime = 5f;
+
         [Space(20)] [SerializeField] private float MaxSpeed = 5f;
         [Range(0, 1)] public float PatrolFraction = 0.4f;
 
@@ -29,6 +31,8 @@ namespace EnemyComponents
         private int _wayPointIndex = 0;
         private float _lastSawPlayerTime = Mathf.Infinity;
         private float _timeArriveWaypoint = Mathf.Infinity;
+
+        float stunTimer = 0;
 
         private NavMeshAgent _navMeshAgent;
         private GameObject _player;
@@ -58,6 +62,16 @@ namespace EnemyComponents
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
+            }
+
+            if (_enemyState == EnemyState.Stunned)
+            {
+                stunTimer += Time.deltaTime;
+                if (stunTimer >= stunRecoveryTime)
+                {
+                    _enemyState = EnemyState.Patrol;
+                    stunTimer = 0;
+                }
             }
         }
 
@@ -174,6 +188,15 @@ namespace EnemyComponents
             }
 
             _player = player;
+        }
+
+        public void Stun()
+        {
+            if (_enemyState != EnemyState.Stunned)
+            {
+                _enemyState = EnemyState.Stunned;
+            }
+            stunTimer = 0;
         }
 
         #endregion

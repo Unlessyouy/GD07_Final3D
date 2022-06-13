@@ -38,7 +38,6 @@ public class CompanionControl : BasicControl
         if (otherOne.GetComponent<PlayerControl>() != null)
         {
             PlayerControl player = otherOne.GetComponent<PlayerControl>();
-            connected = (connected && otherOne.GetComponent<PlayerControl>().connected);
 
             if (player.alive)
             {
@@ -74,6 +73,18 @@ public class CompanionControl : BasicControl
         if (following && !controlled)
         {
             processedInput = lineVector.normalized;
+        }
+        else if (isClimbing)
+        {
+            if (onRopeTop)
+            {
+                verticalInput = -1;
+                processedInput = Vector3.up * verticalInput;
+            }
+            else
+            {
+                processedInput = Vector3.up * verticalInput;
+            }
         }
         else
         {

@@ -71,7 +71,7 @@ public class CompanionControl : BasicControl
             verticalInput = 0;
         }
         
-        if (following)
+        if (following && !controlled)
         {
             processedInput = lineVector.normalized;
         }
@@ -87,6 +87,7 @@ public class CompanionControl : BasicControl
             if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton8)) && otherOne.GetComponent<BasicControl>().alive)
             {
                 controlled = !controlled;
+                following = false;
                 if (controlled)
                 {
                     GetComponent<MeshRenderer>().material.color = Color.green;

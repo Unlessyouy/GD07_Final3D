@@ -5,14 +5,18 @@ using TMPro;
 
 public class PlayerControl : BasicControl
 {
-    [Header("Í¬²½¿ØÖÆµÄ¿ª¹Ø")]
+    [Header("Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ÆµÄ¿ï¿½ï¿½ï¿½")]
     public bool synchronous;
 
-    [Header("Ö÷½ÇUI")]
+    [Header("ï¿½ï¿½ï¿½ï¿½UI")]
     public TextMeshProUGUI lightValueUI;
 
-    [HideInInspector]
-    public bool canJump;
+    public bool CanJump { get; set; }
+    [Header("Jump Related")]
+    [SerializeField] private float FootOffset = 0.5f;
+    [SerializeField] private float RayLength = 0.75f;
+    [SerializeField] private float JumpHeight = 1f;
+    
     [HideInInspector]
     public bool canInteract;
 
@@ -29,24 +33,23 @@ public class PlayerControl : BasicControl
     protected override void Update()
     {
         base.Update();
-
+        CanJump = JumpRay();
         #region Other One
-        if (companion != null)
-        {
-            if (companion.alive)
-            {
-                lineVector = companion.transform.position - transform.position;
-            }
-            else
-            {
-                lineVector = Vector3.zero;
-            }
-        }
+        // if (companion != null)
+        // {
+        //     if (companion.alive)
+        //     {
+        //         lineVector = companion.transform.position - transform.position;
+        //     }
+        //     else
+        //     {
+        //         lineVector = Vector3.zero;
+        //     }
+        // }
         #endregion
 
         #region Input & Movement
-        horizontalInput = Input.GetAxisRaw("Horizontal");//×óÓÒ£¬×ó-1£¬ÓÒ1
-        verticalInput = Input.GetAxisRaw("Vertical");//Ç°ºó
+        horizontalInput = Input.GetAxisRaw("Horizontal");
         interactInput = -Input.GetAxisRaw("Interact");
 
         if (isClimbing)
@@ -66,7 +69,7 @@ public class PlayerControl : BasicControl
             processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
         }
 
-        if (alive && canJump && !canInteract && controlled && !isClimbing)
+        if (alive && CanJump && !canInteract && controlled && !isClimbing)
         {
             if (Input.GetKeyDown(KeyCode.Space) || interactInput == 1)
             {
@@ -94,57 +97,59 @@ public class PlayerControl : BasicControl
         #endregion
 
         #region Q to make companion follow
-        if (Input.GetKeyDown(KeyCode.Q) && companion.alive && controlled && !synchronous)
-        {
-            companion.following = !companion.following;
-
-            if (companion.following)
-            {
-                companion.GetComponent<MeshRenderer>().material.color = Color.yellow;
-            }
-            else
-            {
-                companion.GetComponent<MeshRenderer>().material.color = Color.blue;
-            }
-        }
-        else if (companion.alive && controlled && !synchronous && Input.GetKeyDown(KeyCode.JoystickButton0))
-        {
-            companion.following = !companion.following;
-
-            if (companion.following)
-            {
-                companion.GetComponent<MeshRenderer>().material.color = Color.yellow;
-            }
-            else
-            {
-                companion.GetComponent<MeshRenderer>().material.color = Color.blue;
-            }
-        }
+        // if (Input.GetKeyDown(KeyCode.Q) && companion.alive && controlled && !synchronous)
+        // {
+        //     companion.following = !companion.following;
+        //
+        //     if (companion.following)
+        //     {
+        //         companion.GetComponent<MeshRenderer>().material.color = Color.yellow;
+        //     }
+        //     else
+        //     {
+        //         companion.GetComponent<MeshRenderer>().material.color = Color.blue;
+        //     }
+        // }
+        // else if (companion.alive && controlled && !synchronous && Input.GetKeyDown(KeyCode.JoystickButton0))
+        // {
+        //     companion.following = !companion.following;
+        //
+        //     if (companion.following)
+        //     {
+        //         companion.GetComponent<MeshRenderer>().material.color = Color.yellow;
+        //     }
+        //     else
+        //     {
+        //         companion.GetComponent<MeshRenderer>().material.color = Color.blue;
+        //     }
+        // }
         #endregion
 
         #region UI
         lightValueUI.text = "Light: " + (int)lightValue;
         #endregion
     }
-    private void OnCollisionEnter(Collision collision)
+
+    private bool JumpRay()
     {
-        if (collision.gameObject.CompareTag("Terrain"))
+        var isRightFootGrounded = false;
+        var isLeftFootGrounded = false;
+        
+        if (Physics.Raycast(transform.position + FootOffset * transform.right, -transform.up, out var rightFootHitInfo, RayLength))
         {
-            canJump = true;
+            if (rightFootHitInfo.collider.CompareTag("Terrain"))
+            {
+                isRightFootGrounded = true;
+            }
         }
-    }
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Terrain"))
+        
+        if (Physics.Raycast(transform.position + FootOffset * -transform.right, -transform.up, out var leftFootHitInfo, RayLength))
         {
-            canJump = true;
+            if (leftFootHitInfo.collider.CompareTag("Terrain"))
+            {
+                isLeftFootGrounded = true;
+            }
         }
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Terrain"))
-        {
-            canJump = false;
-        }
+        return isLeftFootGrounded || isRightFootGrounded;
     }
 }

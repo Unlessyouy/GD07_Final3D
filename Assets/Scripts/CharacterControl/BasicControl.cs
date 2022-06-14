@@ -28,9 +28,9 @@ public class BasicControl : MonoBehaviour
     public bool isClimbing;
     public bool onRopeTop;
 
-    [Header("加速效果夹角")]
+    [Header("录脫脣脵脨搂鹿没录脨陆脟")]
     public float speedUpAngle;
-    [Header("加速效果倍率")]
+    [Header("录脫脣脵脨搂鹿没卤露脗脢")]
     public float speedUpRatio;
 
     protected virtual void Start()

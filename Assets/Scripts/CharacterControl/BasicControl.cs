@@ -16,8 +16,6 @@ public class BasicControl : MonoBehaviour
     protected float horizontalInput;
     protected float verticalInput;
     protected float interactInput;
-    //protected float mouseInputX;
-    //protected float mouseInputY;
 
     protected Vector3 processedInput = new(0, 0, 0);
 
@@ -25,8 +23,10 @@ public class BasicControl : MonoBehaviour
 
     public bool alive;
     public bool controlled;
-    public bool connected;
     protected bool lightNear;
+
+    public bool isClimbing;
+    public bool onRopeTop;
 
     [Header("加速效果夹角")]
     public float speedUpAngle;
@@ -38,25 +38,20 @@ public class BasicControl : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         alive = true;
-        connected = true;
         lightNear = false;
     }
     protected virtual void Update()
     {
         if (alive)
         {
-            if (lightNear)
-            {
-                lightValue += 1f * Time.deltaTime;
-            }
-            else if (connected)
-            {
-                lightValue -= 1f * Time.deltaTime;
-            }
-            else
-            {
-                lightValue -= 5f * Time.deltaTime;
-            }
+            //if (lightNear)
+            //{
+            //    lightValue += 1f * Time.deltaTime;
+            //}
+            //else
+            //{
+            //    lightValue -= 5f * Time.deltaTime;
+            //}
 
             if (lightValue >= 100)
             {
@@ -65,7 +60,6 @@ public class BasicControl : MonoBehaviour
             if (lightValue <= 0)
             {
                 alive = false;
-                connected = false;
                 GetComponent<MeshRenderer>().material.color = Color.red;
             }
         }

@@ -19,11 +19,11 @@ public class Rope : Interactable
                 transform.parent.parent.GetChild(1).gameObject.SetActive(true);
                 Destroy(gameObject);
             }
-            else if ((Input.GetKeyDown(KeyCode.RightControl) || interactInput == 1) && interactType == 2)
-            {
-                transform.parent.parent.GetChild(1).gameObject.SetActive(true);
-                Destroy(gameObject);
-            }
+            //else if ((Input.GetKeyDown(KeyCode.RightControl) || interactInput == 1) && interactType == 2)
+            //{
+            //    transform.parent.parent.GetChild(1).gameObject.SetActive(true);
+            //    Destroy(gameObject);
+            //}
         }
     }
 }

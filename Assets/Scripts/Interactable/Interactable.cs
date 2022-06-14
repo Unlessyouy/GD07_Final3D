@@ -17,7 +17,7 @@ public class Interactable : MonoBehaviour
         if (!canBeActed)
         {
             actableCoolDown += Time.deltaTime;
-            if (actableCoolDown >= 1f)
+            if (actableCoolDown >= 0.2f)
             {
                 canBeActed = true;
                 actableCoolDown = 0f;

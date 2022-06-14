@@ -1,139 +1,151 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class CompanionControl : BasicControl
+namespace CharacterControl
 {
-    [Header("ÏÉ±´UI")]
-    public TextMeshProUGUI lightValueUI;
-    //[HideInInspector]
-    public bool hiding;
-
-    bool companionSynchronous;
-    //1 = wasd; 2 = up down left right;
-
-    public bool following;
-    protected override void Start()
+    public class CompanionControl : BasicControl
     {
-        base.Start();
-        companionSynchronous = otherOne.GetComponent<PlayerControl>().synchronous;
-        following = false;
-        if (companionSynchronous)
-        {
-            controlled = true;
-            GetComponent<MeshRenderer>().material.color = Color.green;
-        }
-        else
-        {
-            controlled = false;
-            GetComponent<MeshRenderer>().material.color = Color.blue;
-        }
-    }
-    protected override void Update()
-    {
-        base.Update();
+        //[HideInInspector]
+        public bool hiding;
 
-        #region Other One
-        if (otherOne.GetComponent<PlayerControl>() != null)
-        {
-            PlayerControl player = otherOne.GetComponent<PlayerControl>();
+        bool companionSynchronous;
+        //1 = wasd; 2 = up down left right;
 
-            if (player.alive)
-            {
-                lineVector = player.transform.position - transform.position;
-            }
-            else
-            {
-                lineVector = Vector3.zero;
-            }
-        }
-        #endregion
+        public bool following;
 
-        #region Input & Movement
-        if (!hiding)
+
+        protected override void Start()
         {
+            base.Start();
+            companionSynchronous = otherOne.GetComponent<PlayerControl>().synchronous;
+            following = false;
             if (companionSynchronous)
             {
-                horizontalInput = Input.GetAxisRaw("Horizontal B");//×óÓÒ£¬×ó-1£¬ÓÒ1
-                verticalInput = Input.GetAxisRaw("Vertical B");//Ç°ºó
+                controlled = true;
+                GetComponent<MeshRenderer>().material.color = Color.green;
             }
             else
             {
-                horizontalInput = Input.GetAxisRaw("Horizontal");//×óÓÒ£¬×ó-1£¬ÓÒ1
-                verticalInput = Input.GetAxisRaw("Vertical");//Ç°ºó
+                controlled = false;
+                GetComponent<MeshRenderer>().material.color = Color.blue;
             }
         }
-        else
+        protected override void Update()
         {
-            horizontalInput = 0;
-            verticalInput = 0;
-        }
-        
-        if (following && !controlled)
-        {
-            processedInput = lineVector.normalized;
-        }
-        else if (isClimbing)
-        {
-            if (onRopeTop)
-            {
-                verticalInput = -1;
-                processedInput = Vector3.up * verticalInput;
-            }
-            else
-            {
-                processedInput = Vector3.up * verticalInput;
-            }
-        }
-        else
-        {
-            processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
-        }
-        #endregion
+            base.Update();
 
-        #region E to switch control
-        if (!companionSynchronous)
-        {
-            if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton8)) && otherOne.GetComponent<BasicControl>().alive)
+            #region Other One
+            if (otherOne.GetComponent<PlayerControl>() != null)
             {
-                controlled = !controlled;
-                following = false;
-                if (controlled)
+                PlayerControl player = otherOne.GetComponent<PlayerControl>();
+
+                if (player.alive)
                 {
-                    GetComponent<MeshRenderer>().material.color = Color.green;
+                    lineVector = player.transform.position - transform.position;
                 }
                 else
                 {
-                    GetComponent<MeshRenderer>().material.color = Color.blue;
+                    lineVector = Vector3.zero;
                 }
             }
-        }
-        #endregion
+            #endregion
 
-        #region UI
-        lightValueUI.text = "Companion\nLight: " + (int)lightValue;
-        #endregion
-    }
-    protected override void FixedUpdate()
-    {
-        float angleBetweenLineAndInput = Vector3.Angle(processedInput, lineVector);
+            processedInput = Input.GetAxisRaw("Vertical") * transform.up;
+            
+            #region Input & Movement
+            // if (!hiding)
+            // {
+            //     if (companionSynchronous)
+            //     {
+            //         horizontalInput = Input.GetAxisRaw("Horizontal B");//ï¿½ï¿½ï¿½Ò£ï¿½ï¿½ï¿½-1ï¿½ï¿½ï¿½ï¿½1
+            //         verticalInput = Input.GetAxisRaw("Vertical B");//Ç°ï¿½ï¿½
+            //     }
+            //     else
+            //     {
+            //         horizontalInput = Input.GetAxisRaw("Horizontal");//ï¿½ï¿½ï¿½Ò£ï¿½ï¿½ï¿½-1ï¿½ï¿½ï¿½ï¿½1
+            //         verticalInput = Input.GetAxisRaw("Vertical");//Ç°ï¿½ï¿½
+            //     }
+            // }
+            // else
+            // {
+            //     horizontalInput = 0;
+            //     verticalInput = 0;
+            // }
+            //
+            // if (following && !controlled)
+            // {
+            //     processedInput = lineVector.normalized;
+            // }
+            // else if (isClimbing)
+            // {
+            //     if (onRopeTop)
+            //     {
+            //         verticalInput = -1;
+            //         processedInput = Vector3.up * verticalInput;
+            //     }
+            //     else
+            //     {
+            //         processedInput = Vector3.up * verticalInput;
+            //     }
+            // }
+            // else
+            // {
+            //     processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
+            // }
+            #endregion
 
-        if (alive && controlled)
-        {
-            if (angleBetweenLineAndInput <= (speedUpAngle) / 2 && lineVector != Vector3.zero)
+            #region E to switch control
+            if (!companionSynchronous)
             {
-                rb.MovePosition(transform.position + (movingSpeed * speedUpRatio * Time.deltaTime * processedInput.normalized));
+                if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton8)) && otherOne.GetComponent<BasicControl>().alive)
+                {
+                    controlled = !controlled;
+                    following = false;
+                    if (controlled)
+                    {
+                        GetComponent<MeshRenderer>().material.color = Color.green;
+                    }
+                    else
+                    {
+                        GetComponent<MeshRenderer>().material.color = Color.blue;
+                    }
+                }
             }
-            else
-            {
-                rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
-            }
+            #endregion
+
+            #region UI
+            // lightValueUI.text = "Companion\nLight: " + (int)lightValue;
+            #endregion
         }
-        else if (alive && following && (lineVector.magnitude >= 5)  )
+
+        protected override void FixedUpdate()
         {
-            rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
-            rb.useGravity = true;
+            base.FixedUpdate();
         }
+
+
+
+        #region SonPreviousMovementInFixedUpdate
+
+            // float angleBetweenLineAndInput = Vector3.Angle(processedInput, lineVector);
+            //
+            // if (alive && controlled)
+            // {
+            //     if (angleBetweenLineAndInput <= (speedUpAngle) / 2 && lineVector != Vector3.zero)
+            //     {
+            //         rb.MovePosition(transform.position + (movingSpeed * speedUpRatio * Time.deltaTime * processedInput.normalized));
+            //     }
+            //     else
+            //     {
+            //         rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
+            //     }
+            // }
+            // else if (alive && following && (lineVector.magnitude >= 5)  )
+            // {
+            //     rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
+            //     rb.useGravity = true;
+            // }
+
+            #endregion
+
     }
 }

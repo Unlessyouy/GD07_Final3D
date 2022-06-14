@@ -27,12 +27,12 @@ namespace CharacterControl
         {
             Hang();
 
-            if (IsHanging && Input.GetButtonDown("Jump"))
+            if (IsHanging && (Input.GetButtonDown("HangUp") || Mathf.Abs(Input.GetAxisRaw("HangUp") - 1) < 0.1f))
             {
                 IsHanging = false;
                 _rigidbody.isKinematic = false;
                 _playerControl.isClimbing = false;
-                _rigidbody.AddForce(transform.up * JumpForce, ForceMode.Impulse);
+                _rigidbody.velocity = new Vector3(0, JumpForce, 0);
             }
         }
 

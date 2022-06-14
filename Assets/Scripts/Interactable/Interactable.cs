@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using CharacterControl;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
     //[HideInInspector]
-    public bool actable;//与之交互的角色是否到位
-    protected bool canBeActed;//本身是否能被交互
-    protected float actableCoolDown;//内置可被交互CD
+    public bool actable;//脫毛脰庐陆禄禄楼碌脛陆脟脡芦脢脟路帽碌陆脦禄
+    protected bool canBeActed;//卤戮脡铆脢脟路帽脛脺卤禄陆禄禄楼
+    protected float actableCoolDown;//脛脷脰脙驴脡卤禄陆禄禄楼CD
     protected int interactType;//1 = player; 2 = companion;
     protected GameObject interactedObject;
     protected float interactInput;
@@ -27,7 +28,7 @@ public class Interactable : MonoBehaviour
         {
             if (interactedObject.GetComponent<PlayerControl>() != null)
             {
-                interactInput = -Input.GetAxis("Interact");
+                interactInput = Input.GetAxis("Interact");
             }
             else if (interactedObject.GetComponent<CompanionControl>() != null)
             {

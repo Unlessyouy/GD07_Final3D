@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using CharacterControl;
 using UnityEngine;
 using TMPro;
 
@@ -8,14 +9,12 @@ public class PlayerControl : BasicControl
     [Header("ͬ�����ƵĿ���")]
     public bool synchronous;
 
-    [Header("����UI")]
-    public TextMeshProUGUI lightValueUI;
-
     public bool CanJump { get; set; }
     [Header("Jump Related")]
     [SerializeField] private float FootOffset = 0.5f;
     [SerializeField] private float RayLength = 0.75f;
-    [SerializeField] private float JumpHeight = 1f;
+    [SerializeField] private float JumpHeight = 5f;
+    [SerializeField] private float GravityMultiplier = 1.5f;
     
     [HideInInspector]
     public bool canInteract;
@@ -34,6 +33,7 @@ public class PlayerControl : BasicControl
     {
         base.Update();
         CanJump = JumpRay();
+        
         #region Other One
         // if (companion != null)
         // {
@@ -50,8 +50,13 @@ public class PlayerControl : BasicControl
 
         #region Input & Movement
         horizontalInput = Input.GetAxisRaw("Horizontal");
-        interactInput = -Input.GetAxisRaw("Interact");
+        interactInput = Input.GetButtonDown("Interact");
 
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity -= GravityMultiplier * Time.deltaTime * transform.up;
+        }
+        
         if (isClimbing)
         {
             if (onRopeTop)
@@ -69,11 +74,11 @@ public class PlayerControl : BasicControl
             processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
         }
 
-        if (alive && CanJump && !canInteract && controlled && !isClimbing)
+        if (alive && CanJump && !canInteract && controlled && !isClimbing & !IsHoldingHands)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || interactInput == 1)
+            if (Input.GetButtonDown("Jump"))
             {
-                rb.velocity = Vector3.up * 5;
+                rb.velocity = Vector3.up * JumpHeight;
             }
         }
         #endregion
@@ -126,7 +131,7 @@ public class PlayerControl : BasicControl
         #endregion
 
         #region UI
-        lightValueUI.text = "Light: " + (int)lightValue;
+        //lightValueUI.text = "Light: " + (int)lightValue;
         #endregion
     }
 

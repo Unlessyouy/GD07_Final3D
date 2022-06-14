@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using CharacterControl;
 using UnityEngine;
 
 public class HideableBox : Interactable

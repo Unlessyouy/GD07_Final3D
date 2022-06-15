@@ -51,7 +51,7 @@ public class PlayerControl : BasicControl
         #region Input & Movement
         horizontalInput = Input.GetAxisRaw("Horizontal");
         interactInput = Input.GetButtonDown("Interact");
-
+        verticalInput = Input.GetAxisRaw("Vertical");
         if (rb.velocity.y < 0)
         {
             rb.velocity -= GravityMultiplier * Time.deltaTime * transform.up;

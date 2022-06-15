@@ -5,6 +5,8 @@ using UnityEngine;
 public class RopeTopEnd : Interactable
 {
     BasicControl climber;
+    [SerializeField] private int TopForce = 600;
+
     private void Start()
     {
         canBeActed = false;
@@ -44,12 +46,13 @@ public class RopeTopEnd : Interactable
         base.OnTriggerEnter(other);
         if (other.GetComponent<BasicControl>() != null)
         {
-            other.GetComponent<BasicControl>().onRopeTop = true;
+            climber = other.GetComponent<BasicControl>();
+            climber.onRopeTop = true;
             if (climber != null && climber.isClimbing == true)
             {
                 climber.isClimbing = false;
                 interactedObject.GetComponent<Rigidbody>().useGravity = true;
-                interactedObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, 0));
+                interactedObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, TopForce, 0));
             }
         }
     }

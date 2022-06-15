@@ -1,11 +1,13 @@
 using System;
+using CharacterControl;
 using UnityEngine;
 
-namespace CharacterControl
+namespace Systems
 {
-    public class HoldHandsComponent : MonoBehaviour
+    public class HoldHandsSingleton : MonoBehaviour
     {
         [SerializeField] private BasicControl Father;
+        [SerializeField] private FatherClimbComponent FatherClimbComponent;
         [SerializeField] private BasicControl Son;
         private float _horizontalInput;
         
@@ -16,6 +18,20 @@ namespace CharacterControl
         private bool _isCloseEnough;
         [SerializeField] private float CloseDistance = 2f;
 
+        public static HoldHandsSingleton Instance;
+
+        private void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                Instance = this;
+            }
+        }
+        
         private void Update()
         {
             _horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -38,7 +54,7 @@ namespace CharacterControl
                 return;
             }
 
-            if (Father.controlled && !Father.isClimbing)
+            if (Father.controlled && !Father.isClimbing && !FatherClimbComponent.IsHanging)
             {
                 Father.Move(_horizontalInput);
                 Son.Move(0);

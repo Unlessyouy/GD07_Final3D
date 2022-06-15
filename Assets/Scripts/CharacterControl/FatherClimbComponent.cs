@@ -10,7 +10,7 @@ namespace CharacterControl
         [SerializeField] private float GrabDistance = 0.4f;
         [SerializeField] private float ReachOffset = 0.7f;
 
-        [SerializeField] private bool IsHanging;
+        public bool IsHanging { get; set; } 
 
         [SerializeField] private Vector3 HangingOffset;
         private Rigidbody _rigidbody;
@@ -27,11 +27,10 @@ namespace CharacterControl
         {
             Hang();
 
-            if (IsHanging && (Input.GetButtonDown("HangUp") || Mathf.Abs(Input.GetAxisRaw("HangUp") - 1) < 0.1f))
+            if (!_playerControl.isClimbing && IsHanging && (Input.GetButtonDown("HangUp") || Mathf.Abs(Input.GetAxisRaw("HangUp") - 1) < 0.1f))
             {
                 IsHanging = false;
                 _rigidbody.isKinematic = false;
-                _playerControl.isClimbing = false;
                 _rigidbody.velocity = new Vector3(0, JumpForce, 0);
             }
         }
@@ -39,7 +38,7 @@ namespace CharacterControl
         private void Hang()
         {
             if (!IsFacingWall(out var eyeHitInfo) || IsHeadBlocked() || !IsLedge(out var ledgeHitInfo) ||
-                _rigidbody.velocity.y > 0f) return;
+                _rigidbody.velocity.y > 0f || _playerControl.isClimbing) return;
 
             _rigidbody.velocity = Vector3.zero;
 
@@ -48,7 +47,6 @@ namespace CharacterControl
 
             IsHanging = true;
             _rigidbody.isKinematic = true;
-            _playerControl.isClimbing = true;
         }
 
         private bool IsFacingWall(out RaycastHit eyeHitInfo)

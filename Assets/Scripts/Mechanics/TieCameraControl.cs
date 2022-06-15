@@ -5,15 +5,29 @@ namespace Mechanics
 {
     public class TieCameraControl : MonoBehaviour
     {
-        public PlayerControl Player;
-        public CompanionControl Companion;
+        [SerializeField] private Transform Player;
+        [SerializeField] private Transform Companion;
+
+        [SerializeField] private float YModifier = 1f;
+        private float _cameraPositionX;
+        private float _cameraPositionY;
+        private float _cameraPositionZ;
 
         private void LateUpdate()
         {
-            var cameraPositionX = (Player.transform.position.x + Companion.transform.position.x) / 2;
-            var cameraPositionY = (Player.transform.position.y + Companion.transform.position.y) / 2;
-            var cameraPositionZ = (Player.transform.position.z + Companion.transform.position.z) / 2;
-            transform.position = new Vector3(cameraPositionX, cameraPositionY, cameraPositionZ);
+            _cameraPositionX = (Player.position.x + Companion.position.x) / 2;
+
+            if (Mathf.Abs(Player.position.y - Companion.position.y) >= YModifier)
+            {
+                _cameraPositionY = YModifier / 2 + 2 * Mathf.Min(Player.position.y, Companion.position.y);
+            }
+            else
+            {
+                _cameraPositionY = (Player.position.y + Companion.position.y) / 2;   
+            }
+
+            _cameraPositionZ = (Player.position.z + Companion.position.z) / 2;
+            transform.position = new Vector3(_cameraPositionX, _cameraPositionY, _cameraPositionZ);
         }
     }
 }

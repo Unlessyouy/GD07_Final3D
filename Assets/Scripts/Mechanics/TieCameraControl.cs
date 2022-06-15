@@ -1,21 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using CharacterControl;
 using UnityEngine;
 
-public class TieCameraControl : MonoBehaviour
+namespace Mechanics
 {
-    public PlayerControl player;
-    public CompanionControl companion;
-    void Start()
+    public class TieCameraControl : MonoBehaviour
     {
-        
-    }
-    void Update()
-    {
-        float cameraPositionX = (player.transform.position.x + companion.transform.position.x) / 2;
-        float cameraPositionY = (player.transform.position.y + companion.transform.position.y) / 2 + 10;
-        float cameraPositionZ = (player.transform.position.z + companion.transform.position.z) / 2 - 7.5f;
-        transform.position = new Vector3(cameraPositionX, cameraPositionY, cameraPositionZ);
+        public PlayerControl Player;
+        public CompanionControl Companion;
+
+        private void LateUpdate()
+        {
+            var cameraPositionX = (Player.transform.position.x + Companion.transform.position.x) / 2;
+            var cameraPositionY = (Player.transform.position.y + Companion.transform.position.y) / 2;
+            var cameraPositionZ = (Player.transform.position.z + Companion.transform.position.z) / 2;
+            transform.position = new Vector3(cameraPositionX, cameraPositionY, cameraPositionZ);
+        }
     }
 }

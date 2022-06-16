@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightControl : Interactable
+public class LightControl : InteractableObject
 {
     bool isOn = false;
     private void OnDrawGizmos()

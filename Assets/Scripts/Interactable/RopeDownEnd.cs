@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RopeDownEnd : Interactable
+public class RopeDownEnd : InteractableObject
 {
     BasicControl climber;
     private void Start()

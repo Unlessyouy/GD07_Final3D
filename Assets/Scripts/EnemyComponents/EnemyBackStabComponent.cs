@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using CharacterControl;
 using UnityEngine;
 
-public class EnemyBackStabComponent : Interactable
+public class EnemyBackStabComponent : InteractableObject
 {
     private void OnDrawGizmos()
     {

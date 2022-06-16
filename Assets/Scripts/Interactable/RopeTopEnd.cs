@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RopeTopEnd : Interactable
+public class RopeTopEnd : InteractableObject
 {
     BasicControl climber;
     [SerializeField] private int TopForce = 600;

@@ -25,10 +25,6 @@ namespace CharacterControl
 
         private void Update()
         {
-            Debug.Log("facing wall" + IsFacingWall(out var eyeHitInfo));
-            Debug.Log("head blocked" + IsHeadBlocked());
-            Debug.Log("ledge" + IsLedge(out var ledgeHitInfo));
-            
             Hang();
             
             if (!_playerControl.isClimbing && IsHanging && (Input.GetButtonDown("HangUp") || Mathf.Abs(Input.GetAxisRaw("HangUp") - 1) < 0.1f))

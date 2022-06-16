@@ -6,7 +6,7 @@ namespace CharacterControl
     {
         //[HideInInspector]
         public bool hiding;
-
+        public MeshRenderer ColorMesh;
         bool companionSynchronous;
         //1 = wasd; 2 = up down left right;
 
@@ -22,12 +22,12 @@ namespace CharacterControl
             if (companionSynchronous)
             {
                 controlled = true;
-                GetComponent<MeshRenderer>().material.color = Color.green;
+                ColorMesh.material.color = Color.green;
             }
             else
             {
                 controlled = false;
-                GetComponent<MeshRenderer>().material.color = Color.blue;
+                ColorMesh.material.color = Color.blue;
             }
         }
         protected override void Update()
@@ -61,11 +61,11 @@ namespace CharacterControl
                     following = false;
                     if (controlled)
                     {
-                        GetComponent<MeshRenderer>().material.color = Color.green;
+                        ColorMesh.material.color = Color.green;
                     }
                     else
                     {
-                        GetComponent<MeshRenderer>().material.color = Color.blue;
+                        ColorMesh.material.color = Color.blue;
                     }
                 }
             }

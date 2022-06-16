@@ -8,7 +8,7 @@ public class PlayerControl : BasicControl
 {
     [Header("ͬ�����ƵĿ���")]
     public bool synchronous;
-
+    public MeshRenderer ColorMesh;
     public bool CanJump { get; set; }
     [Header("Jump Related")]
     [SerializeField] private float FootOffset = 0.5f;
@@ -27,7 +27,7 @@ public class PlayerControl : BasicControl
         Cursor.lockState = CursorLockMode.Locked;
         controlled = true;
         companion = otherOne.GetComponent<CompanionControl>();
-        GetComponent<MeshRenderer>().material.color = Color.green;
+        ColorMesh.material.color = Color.green;
     }
     protected override void Update()
     {
@@ -76,11 +76,11 @@ public class PlayerControl : BasicControl
                 controlled = !controlled;
                 if (controlled)
                 {
-                    GetComponent<MeshRenderer>().material.color = Color.green;
+                    ColorMesh.material.color = Color.green;
                 }
                 else
                 {
-                    GetComponent<MeshRenderer>().material.color = Color.blue;
+                    ColorMesh.material.color = Color.blue;
                 }
             }
         }

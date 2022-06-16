@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using CharacterControl;
 using UnityEngine;
 
-public class HideableBox : Interactable
+public class HideableBox : InteractableObject
 {
     private void OnDrawGizmos()
     {

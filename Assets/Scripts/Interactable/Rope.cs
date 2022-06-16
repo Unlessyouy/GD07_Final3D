@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rope : Interactable
+public class Rope : InteractableObject
 {
     private void OnDrawGizmos()
     {

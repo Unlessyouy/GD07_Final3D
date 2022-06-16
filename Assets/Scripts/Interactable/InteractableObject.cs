@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using CharacterControl;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+public class InteractableObject : MonoBehaviour
 {
     //[HideInInspector]
     public bool actable;//ÓëÖ®½»»¥µÄ½ÇÉ«ÊÇ·ñµ½Î»

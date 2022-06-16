@@ -25,8 +25,12 @@ namespace CharacterControl
 
         private void Update()
         {
+            Debug.Log("facing wall" + IsFacingWall(out var eyeHitInfo));
+            Debug.Log("head blocked" + IsHeadBlocked());
+            Debug.Log("ledge" + IsLedge(out var ledgeHitInfo));
+            
             Hang();
-
+            
             if (!_playerControl.isClimbing && IsHanging && (Input.GetButtonDown("HangUp") || Mathf.Abs(Input.GetAxisRaw("HangUp") - 1) < 0.1f))
             {
                 IsHanging = false;
@@ -42,8 +46,10 @@ namespace CharacterControl
 
             _rigidbody.velocity = Vector3.zero;
 
-            transform.position += new Vector3((eyeHitInfo.distance * transform.right).x, -ledgeHitInfo.distance,
-                0) + HangingOffset;
+            var direction = transform.rotation.y > 0 ? 1 : -1;
+            
+            transform.position += new Vector3((eyeHitInfo.distance * -transform.forward).x, -ledgeHitInfo.distance,
+                0) + new Vector3(direction * HangingOffset.x, HangingOffset.y, HangingOffset.z);
 
             IsHanging = true;
             _rigidbody.isKinematic = true;
@@ -52,22 +58,22 @@ namespace CharacterControl
         private bool IsFacingWall(out RaycastHit eyeHitInfo)
         {
             var eyePosition = transform.position + EyeHeight * transform.up;
-            Debug.DrawRay(eyePosition, transform.right * GrabDistance, Color.green);
-            return Physics.Raycast(eyePosition, transform.right, out eyeHitInfo, GrabDistance) &&
+            Debug.DrawRay(eyePosition, -transform.forward * GrabDistance, Color.green);
+            return Physics.Raycast(eyePosition, -transform.forward, out eyeHitInfo, GrabDistance) &&
                    eyeHitInfo.collider.CompareTag("Terrain");
         }
 
         private bool IsHeadBlocked()
         {
             var headPosition = transform.position + transform.up * FullHeight;
-            Debug.DrawRay(headPosition, transform.right * GrabDistance, Color.green);
-            return Physics.Raycast(headPosition, transform.right, out var headHitInfo, GrabDistance) &&
+            Debug.DrawRay(headPosition, -transform.forward * GrabDistance, Color.green);
+            return Physics.Raycast(headPosition, -transform.forward, out var headHitInfo, GrabDistance) &&
                    headHitInfo.collider.CompareTag("Terrain");
         }
 
         private bool IsLedge(out RaycastHit ledgeHitInfo)
         {
-            var headPosition = transform.position + transform.up * FullHeight + ReachOffset * transform.right;
+            var headPosition = transform.position + transform.up * (FullHeight - ReachOffset) + GrabDistance * -transform.forward;
             Debug.DrawRay(headPosition, -transform.up * GrabDistance);
             return Physics.Raycast(headPosition, -transform.up, out ledgeHitInfo, GrabDistance) &&
                    ledgeHitInfo.collider.CompareTag("Terrain");

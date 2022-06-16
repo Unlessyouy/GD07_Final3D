@@ -12,7 +12,7 @@ namespace Mechanics
         {
             _meCollider = GetComponent<BoxCollider>();
             _checkCollider = gameObject.AddComponent<BoxCollider>();
-            _checkCollider.size = _meCollider.size * 1.2f;
+            _checkCollider.size = _meCollider.size * 1f;
             _checkCollider.center = _meCollider.center;
             _checkCollider.isTrigger = true;
         }

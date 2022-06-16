@@ -60,12 +60,12 @@ public class BasicControl : MonoBehaviour
             {
                 towardsY = 90;
             }
-            else
-            {
-                towardsY = 0;
-            }
+            // else
+            // {
+            //     towardsY = 0;
+            // }
             float rotateDifference = towardsY - transform.rotation.eulerAngles.y;
-            Debug.Log(rotateDifference);
+
             if (Mathf.Abs(rotateDifference) >= 2.5)
             {
                 if (rotateDifference > 0 && rotateDifference < 180 || rotateDifference < -180)

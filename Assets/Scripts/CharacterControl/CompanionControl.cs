@@ -16,6 +16,7 @@ namespace CharacterControl
         protected override void Start()
         {
             base.Start();
+
             companionSynchronous = otherOne.GetComponent<PlayerControl>().synchronous;
             following = false;
             if (companionSynchronous)
@@ -51,48 +52,6 @@ namespace CharacterControl
 
             processedInput = Input.GetAxisRaw("Vertical") * transform.up;
             
-            #region Input & Movement
-            // if (!hiding)
-            // {
-            //     if (companionSynchronous)
-            //     {
-            //         horizontalInput = Input.GetAxisRaw("Horizontal B");//���ң���-1����1
-            //         verticalInput = Input.GetAxisRaw("Vertical B");//ǰ��
-            //     }
-            //     else
-            //     {
-            //         horizontalInput = Input.GetAxisRaw("Horizontal");//���ң���-1����1
-            //         verticalInput = Input.GetAxisRaw("Vertical");//ǰ��
-            //     }
-            // }
-            // else
-            // {
-            //     horizontalInput = 0;
-            //     verticalInput = 0;
-            // }
-            //
-            // if (following && !controlled)
-            // {
-            //     processedInput = lineVector.normalized;
-            // }
-            // else if (isClimbing)
-            // {
-            //     if (onRopeTop)
-            //     {
-            //         verticalInput = -1;
-            //         processedInput = Vector3.up * verticalInput;
-            //     }
-            //     else
-            //     {
-            //         processedInput = Vector3.up * verticalInput;
-            //     }
-            // }
-            // else
-            // {
-            //     processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
-            // }
-            #endregion
-
             #region E to switch control
             if (!companionSynchronous)
             {
@@ -112,9 +71,6 @@ namespace CharacterControl
             }
             #endregion
 
-            #region UI
-            // lightValueUI.text = "Companion\nLight: " + (int)lightValue;
-            #endregion
         }
 
         protected override void FixedUpdate()

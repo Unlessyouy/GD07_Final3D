@@ -31,23 +31,8 @@ public class PlayerControl : BasicControl
     }
     protected override void Update()
     {
-        base.Update();
         CanJump = JumpRay();
         
-        #region Other One
-        // if (companion != null)
-        // {
-        //     if (companion.alive)
-        //     {
-        //         lineVector = companion.transform.position - transform.position;
-        //     }
-        //     else
-        //     {
-        //         lineVector = Vector3.zero;
-        //     }
-        // }
-        #endregion
-
         #region Input & Movement
         horizontalInput = Input.GetAxisRaw("Horizontal");
         interactInput = Input.GetButtonDown("Interact");
@@ -101,38 +86,7 @@ public class PlayerControl : BasicControl
         }
         #endregion
 
-        #region Q to make companion follow
-        // if (Input.GetKeyDown(KeyCode.Q) && companion.alive && controlled && !synchronous)
-        // {
-        //     companion.following = !companion.following;
-        //
-        //     if (companion.following)
-        //     {
-        //         companion.GetComponent<MeshRenderer>().material.color = Color.yellow;
-        //     }
-        //     else
-        //     {
-        //         companion.GetComponent<MeshRenderer>().material.color = Color.blue;
-        //     }
-        // }
-        // else if (companion.alive && controlled && !synchronous && Input.GetKeyDown(KeyCode.JoystickButton0))
-        // {
-        //     companion.following = !companion.following;
-        //
-        //     if (companion.following)
-        //     {
-        //         companion.GetComponent<MeshRenderer>().material.color = Color.yellow;
-        //     }
-        //     else
-        //     {
-        //         companion.GetComponent<MeshRenderer>().material.color = Color.blue;
-        //     }
-        // }
-        #endregion
-
-        #region UI
-        //lightValueUI.text = "Light: " + (int)lightValue;
-        #endregion
+        base.Update();
     }
 
     private bool JumpRay()

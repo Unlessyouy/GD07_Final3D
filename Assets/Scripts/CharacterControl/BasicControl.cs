@@ -21,7 +21,7 @@ public class BasicControl : MonoBehaviour
 
     protected Vector3 processedInput = new(0, 0, 0);
 
-
+    protected float towardsY;
 
     public bool alive;
     public bool controlled;
@@ -52,28 +52,31 @@ public class BasicControl : MonoBehaviour
     {
         if (alive)
         {
-            #region LightRelated
-
-            //if (lightNear)
-            //{
-            //    lightValue += 1f * Time.deltaTime;
-            //}
-            //else
-            //{
-            //    lightValue -= 5f * Time.deltaTime;
-            //}
-
-            // if (lightValue >= 100)
-            // {
-            //     lightValue = 100;
-            // }
-            // if (lightValue <= 0)
-            // {
-            //     alive = false;
-            //     GetComponent<MeshRenderer>().material.color = Color.red;
-            // }
-
-            #endregion
+            if (rb.velocity.x > 1)
+            {
+                towardsY = 270;
+            }
+            else if (rb.velocity.x < -1)
+            {
+                towardsY = 90;
+            }
+            else
+            {
+                towardsY = 0;
+            }
+            float rotateDifference = towardsY - transform.rotation.eulerAngles.y;
+            Debug.Log(rotateDifference);
+            if (Mathf.Abs(rotateDifference) >= 2.5)
+            {
+                if (rotateDifference > 0 && rotateDifference < 180 || rotateDifference < -180)
+                {
+                    transform.Rotate(0, 2, 0);
+                }
+                else
+                {
+                    transform.Rotate(0, -2, 0);
+                }
+            }
         }
     }
     protected virtual void FixedUpdate()
@@ -87,23 +90,6 @@ public class BasicControl : MonoBehaviour
         {
             rb.useGravity = true;
         }
-        #region PreviousMovement
-
-        // float angleBetweenLineAndInput = Vector3.Angle(processedInput, lineVector);
-        //
-        // if (alive && controlled)
-        // {
-        //     if (angleBetweenLineAndInput <= (speedUpAngle) / 2 && lineVector != Vector3.zero)
-        //     {
-        //         rb.MovePosition(transform.position + (movingSpeed * speedUpRatio * Time.deltaTime * processedInput.normalized));
-        //     }
-        //     else
-        //     {
-        //         rb.MovePosition(transform.position + (movingSpeed * Time.deltaTime * processedInput.normalized));
-        //     }
-        // }
-
-        #endregion
     }
 
     public void Move(float direction)
@@ -116,40 +102,13 @@ public class BasicControl : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.MovePosition(transform.position + ClimbSpeed * Time.deltaTime * processedInput);
     }
-
-    #region Light
-
-    // protected virtual void OnTriggerEnter(Collider other)
-    // {
-    //     if (other.GetComponent<LightRadius>() != null)
-    //     {
-    //         lightNear = true;
-    //     }
-    // }
-    // protected virtual void OnTriggerStay(Collider other)
-    // {
-    //     if (other.GetComponent<LightRadius>() != null)
-    //     {
-    //         lightNear = true;
-    //     }
-    // }
-    // protected virtual void OnTriggerExit(Collider other)
-    // {
-    //     if (other.GetComponent<LightRadius>() != null)
-    //     {
-    //         lightNear = false;
-    //     }
-    // }
-    // protected float CheckAngle(float Value)
-    // {
-    //     float Angle = Value - 180;
-    //     if (Angle > 0)
-    //     {
-    //         return Angle - 180;
-    //     }
-    //     return Angle + 180;
-    // }
-
-    #endregion
-
+    protected float CheckAngle(float Value)
+    {
+        float Angle = Value - 180;
+        if (Angle > 0)
+        {
+            return Angle - 180;
+        }
+        return Angle + 180;
+    }
 }

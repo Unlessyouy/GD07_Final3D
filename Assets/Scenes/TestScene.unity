@@ -256,7 +256,6 @@ Transform:
   - {fileID: 313889769}
   - {fileID: 218933691}
   - {fileID: 897611512}
-  - {fileID: 395144583}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1398,8 +1397,9 @@ GameObject:
   m_Component:
   - component: {fileID: 395144583}
   - component: {fileID: 395144582}
+  - component: {fileID: 395144584}
   m_Layer: 0
-  m_Name: Characters
+  m_Name: '[Characters]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1412,7 +1412,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395144581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7dedfe9df8201b47a67593da92c8aa5, type: 3}
   m_Name: 
@@ -1436,9 +1436,25 @@ Transform:
   - {fileID: 2134282043}
   - {fileID: 769282159}
   - {fileID: 560984545}
-  m_Father: {fileID: 40897003}
-  m_RootOrder: 7
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &395144584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395144581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d6a1c7d3e84f21a8e0022d14d4efa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Father: {fileID: 2134282038}
+  FatherClimbComponent: {fileID: 2134282044}
+  Son: {fileID: 769282154}
+  CloseDistance: 1
 --- !u!1001 &409969521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1568,7 +1584,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437783694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5375,7 +5391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FullHeight: 1
   EyeHeight: 0.75
-  GrabDistance: 0.5
+  GrabDistance: 0.7
   ReachOffset: 0
   HangingOffset: {x: 0.45, y: 0.25, z: 0}
   JumpForce: 8
@@ -5558,6 +5574,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 390031713}
     m_Modifications:
+    - target: {fileID: 4746699935349715469, guid: 3e89b059f78e1ed4a9613ebe3cae65a6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.8999996
+      objectReference: {fileID: 0}
     - target: {fileID: 4746699935484408360, guid: 3e89b059f78e1ed4a9613ebe3cae65a6,
         type: 3}
       propertyPath: m_RootOrder

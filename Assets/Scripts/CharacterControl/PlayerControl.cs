@@ -6,8 +6,6 @@ using TMPro;
 
 public class PlayerControl : BasicControl
 {
-    [Header("ͬ�����ƵĿ���")]
-    public bool synchronous;
     public MeshRenderer ColorMesh;
     public bool CanJump { get; set; }
     [Header("Jump Related")]
@@ -19,14 +17,11 @@ public class PlayerControl : BasicControl
     [HideInInspector]
     public bool canInteract;
 
-    CompanionControl companion;
-
     protected override void Start()
     {
         base.Start();
         Cursor.lockState = CursorLockMode.Locked;
         controlled = true;
-        companion = otherOne.GetComponent<CompanionControl>();
         ColorMesh.material.color = Color.green;
     }
     protected override void Update()
@@ -69,21 +64,20 @@ public class PlayerControl : BasicControl
         #endregion
 
         #region E to switch control
-        if (!synchronous)
+        
+        if (  (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton8))  && otherOne.GetComponent<BasicControl>().alive)
         {
-            if (  (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton8))  && otherOne.GetComponent<BasicControl>().alive)
+            controlled = !controlled;
+            if (controlled)
             {
-                controlled = !controlled;
-                if (controlled)
-                {
-                    ColorMesh.material.color = Color.green;
-                }
-                else
-                {
-                    ColorMesh.material.color = Color.blue;
-                }
+                ColorMesh.material.color = Color.green;
+            }
+            else
+            {
+                ColorMesh.material.color = Color.blue;
             }
         }
+        
         #endregion
 
         base.Update();

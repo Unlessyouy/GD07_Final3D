@@ -31,17 +31,6 @@ public class BasicControl : MonoBehaviour
     public bool onRopeTop;
     public bool IsHoldingHands;
 
-    #region PreviousLight
-
-    // protected bool lightNear;
-    // protected float lightValue = 100;
-    // [Header("¼ÓËÙÐ§¹û¼Ð½Ç")]
-    // public float speedUpAngle;
-    // [Header("¼ÓËÙÐ§¹û±¶ÂÊ")]
-    // public float speedUpRatio;
-
-    #endregion
-
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -60,10 +49,6 @@ public class BasicControl : MonoBehaviour
             {
                 towardsY = 90;
             }
-            // else
-            // {
-            //     towardsY = 0;
-            // }
             float rotateDifference = towardsY - transform.rotation.eulerAngles.y;
 
             if (Mathf.Abs(rotateDifference) >= 2.5)

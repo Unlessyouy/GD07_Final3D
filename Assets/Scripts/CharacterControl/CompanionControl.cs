@@ -37,7 +37,7 @@ namespace CharacterControl
             }
             #endregion
 
-            processedInput = Input.GetAxisRaw("Vertical") * transform.up;
+            processedInput = Input.GetAxisRaw("Vertical B") * transform.up;
             
             #region E to switch control
             

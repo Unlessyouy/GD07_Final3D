@@ -18,6 +18,11 @@ public class LightControl : InteractableObject
             if (  (Input.GetKeyDown(KeyCode.Space) || interactInput == 1) && interactType == 1 && interactedObject.GetComponent<BasicControl>().controlled )
             {
                 canBeActed = false;
+                if (interactedObject.GetComponent<Animator>() != null)
+                {
+                    interactedObject.GetComponent<Animator>().SetBool("isInteracting", true);
+                    Invoke("ExitInteracting", interactTime);
+                }
                 if (!isOn)
                 {
                     isOn = true;

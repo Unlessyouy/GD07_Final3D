@@ -19,6 +19,11 @@ public class HideableBox : InteractableObject
             if ((Input.GetKeyDown(KeyCode.RightControl) || interactInput == 1) && interactType == 2)
             {
                 canBeActed = false;
+                if (interactedObject.GetComponent<Animator>() != null)
+                {
+                    interactedObject.GetComponent<Animator>().SetBool("isInteracting", true);
+                    Invoke("ExitInteracting", interactTime);
+                }
                 if (!companion.hiding)
                 {
                     companion.hiding = true;

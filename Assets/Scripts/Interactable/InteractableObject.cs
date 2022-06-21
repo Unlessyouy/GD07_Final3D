@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
-    //[HideInInspector]
-    public bool actable;//ÓëÖ®½»»¥µÄ½ÇÉ«ÊÇ·ñµ½Î»
-    protected bool canBeActed;//±¾ÉíÊÇ·ñÄÜ±»½»»¥
-    protected float actableCoolDown;//ÄÚÖÃ¿É±»½»»¥CD
+    [HideInInspector]
+    public bool actable;
+    protected bool canBeActed;
+    protected float actableCoolDown;
     protected int interactType;//1 = player; 2 = companion;
     protected GameObject interactedObject;
     protected float interactInput;
+    protected float interactTime = 0.5f;
     protected virtual void Update()
     {
         if (!canBeActed)
@@ -86,6 +87,13 @@ public class InteractableObject : MonoBehaviour
             actable = false;
             interactType = 0;
             interactedObject = null;
+        }
+    }
+    protected void ExitInteracting()
+    {
+        if (interactedObject.GetComponent<Animator>() != null)
+        {
+            interactedObject.GetComponent<Animator>().SetBool("isInteracting", false);
         }
     }
 }

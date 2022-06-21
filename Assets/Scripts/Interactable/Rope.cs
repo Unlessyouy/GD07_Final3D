@@ -18,6 +18,11 @@ public class Rope : InteractableObject
             {
                 transform.parent.parent.GetChild(1).gameObject.SetActive(true);
                 Destroy(gameObject);
+                if (interactedObject.GetComponent<Animator>() != null)
+                {
+                    interactedObject.GetComponent<Animator>().SetBool("isInteracting", true);
+                    Invoke("ExitInteracting", interactTime);
+                }
             }
             //else if ((Input.GetKeyDown(KeyCode.RightControl) || interactInput == 1) && interactType == 2)
             //{

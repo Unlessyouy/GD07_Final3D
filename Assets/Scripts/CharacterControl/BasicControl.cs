@@ -26,7 +26,6 @@ public class BasicControl : MonoBehaviour
     public bool alive;
     public bool controlled;
 
-
     public bool isClimbing;
     public bool onRopeTop;
     public bool IsHoldingHands;
@@ -39,15 +38,23 @@ public class BasicControl : MonoBehaviour
     }
     protected virtual void Update()
     {
+        anim.SetBool("isClimbing", isClimbing);
+
         if (alive)
         {
             if (rb.velocity.x > 1)
             {
                 towardsY = 270;
+                anim.SetBool("isWalking", true);
             }
             else if (rb.velocity.x < -1)
             {
                 towardsY = 90;
+                anim.SetBool("isWalking", true);
+            }
+            else
+            {
+                anim.SetBool("isWalking", false);
             }
             float rotateDifference = towardsY - transform.rotation.eulerAngles.y;
 
@@ -86,14 +93,5 @@ public class BasicControl : MonoBehaviour
     {
         rb.velocity = Vector3.zero;
         rb.MovePosition(transform.position + ClimbSpeed * Time.deltaTime * processedInput);
-    }
-    protected float CheckAngle(float Value)
-    {
-        float Angle = Value - 180;
-        if (Angle > 0)
-        {
-            return Angle - 180;
-        }
-        return Angle + 180;
     }
 }

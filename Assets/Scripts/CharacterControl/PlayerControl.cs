@@ -103,6 +103,16 @@ public class PlayerControl : BasicControl
                 isLeftFootGrounded = true;
             }
         }
+
+        if (isLeftFootGrounded || isRightFootGrounded)
+        {
+            anim.SetBool("isGrounded", true);
+        }
+        else
+        {
+            anim.SetBool("isGrounded", false);
+        }
+
         return isLeftFootGrounded || isRightFootGrounded;
     }
 }

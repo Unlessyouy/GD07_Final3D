@@ -20,6 +20,11 @@ public class EnemyBackStabComponent : InteractableObject
             {
                 canBeActed = false;
                 GetComponentInParent<EnemyComponents.EnemyAIController>().Stun();
+                if (interactedObject.GetComponent<Animator>() != null)
+                {
+                    interactedObject.GetComponent<Animator>().SetBool("isInteracting", true);
+                    Invoke("ExitInteracting", interactTime);
+                }
             }
         }
     }

@@ -18,10 +18,15 @@ namespace Interactable
         protected override void Update()
         {
             base.Update();
-            if (!actable || !canBeActed || interactedObject.GetComponent<CompanionControl>() == null) return;
-            var companion = interactedObject.GetComponent<CompanionControl>();
-            if ((!Input.GetKeyDown(KeyCode.RightControl) && interactInput != 1) || interactType != 2) return;
-            canBeActed = false;
+            if (!((!Input.GetKeyDown(KeyCode.RightControl) && interactInput != 1) || interactType != 2))
+            {
+                canBeActed = false;
+                if (interactedObject.GetComponent<Animator>() != null)
+                {
+                    interactedObject.GetComponent<Animator>().SetBool("isInteracting", true);
+                    Invoke("ExitInteracting", interactTime);
+                }
+            }
             
             NewEventSystem.Instance.Publish(new SwitchTriggerEvent(RicketyObjects));
         }

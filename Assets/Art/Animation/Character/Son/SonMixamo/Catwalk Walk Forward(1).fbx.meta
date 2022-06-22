@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 86c1869ac9a917f4aa50d2246affaf88
+guid: f2c0048377dd714489a9c3618918fde4
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Anim_Son_GoofyRunning
+    second: Anim_Son_Walk
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Anim_Son_GoofyRunning
+      name: Anim_Son_Walk
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 38
+      lastFrame: 71
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -5,6 +5,7 @@ using HackMan.Scripts;
 using HackMan.Scripts.Systems;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Systems
 {
@@ -16,6 +17,8 @@ namespace Systems
         
         private void Start()
         {
+            GetComponent<Image>().enabled = true;
+        
             _canvasGroup = GetComponent<CanvasGroup>();
 
             StartCoroutine(FadeIn(FadeInTime));

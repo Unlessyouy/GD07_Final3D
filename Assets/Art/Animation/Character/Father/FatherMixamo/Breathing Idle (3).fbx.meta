@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: ed9b11dda96347e4f88e22b7b57f0239
+guid: 72e540239d7eb614a87c8a0f3082df16
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Anim_Son_Death_Reference
+    second: Anim_Father_Idle
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Anim_Son_Death_Reference
+      name: Anim_Father_Idle
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 234
+      lastFrame: 534
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

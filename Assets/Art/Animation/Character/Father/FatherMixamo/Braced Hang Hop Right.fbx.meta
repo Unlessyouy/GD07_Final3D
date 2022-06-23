@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: ec10872b74acb274789d247a0c725494
+guid: fde95908ed3a69b4cae6a519efa7ed5d
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Anim_Son_Climbing
+    second: Anim_Father_ClimbRight
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Anim_Son_Climbing
+      name: Anim_Father_ClimbRight
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 278
+      lastFrame: 100
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

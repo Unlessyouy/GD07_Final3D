@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c23f898f584206d479d4f98c0649d82e
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _IceOffset_M: {fileID: 2800000, guid: fc9a78a124c0ffc45ba8fd26893f59dd, type: 3}
+  - _MainTex: {fileID: 2800000, guid: 97515c29070b7054f94816b3c09a21b1, type: 3}
+  - _FrostTexture: {fileID: 2800000, guid: 887dc2cac758a6244aaf6232d9da1054, type: 3}
+  - _BaseNormals: {fileID: 2800000, guid: 0df25dc891cdf7946882e20bc1408437, type: 3}
+  - _FrostNormals: {fileID: 2800000, guid: e146f31314cc5d349a346ea4b5f2f3e5, type: 3}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

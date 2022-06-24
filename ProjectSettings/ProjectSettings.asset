@@ -767,7 +767,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
     Android: OBI_ONI_SUPPORTED
-    Standalone: OBI_ONI_SUPPORTED
+    Standalone: OBI_ONI_SUPPORTED;AMPLIFY_SHADER_EDITOR
     iPhone: OBI_ONI_SUPPORTED
   additionalCompilerArguments: {}
   platformArchitecture: {}

@@ -4336,10 +4336,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1869859562498904981, guid: db5892e6519391b4dbcc1a42aaf69ec6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1869859562498904982, guid: db5892e6519391b4dbcc1a42aaf69ec6,
         type: 3}
       propertyPath: m_Name
       value: '[Characters]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869859562498904987, guid: db5892e6519391b4dbcc1a42aaf69ec6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1869859562498904981, guid: db5892e6519391b4dbcc1a42aaf69ec6, type: 3}

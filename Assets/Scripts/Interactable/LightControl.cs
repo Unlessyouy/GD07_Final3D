@@ -15,7 +15,7 @@ public class LightControl : InteractableObject
         base.Update();
         if (actable && canBeActed)
         {
-            if (  (Input.GetKeyDown(KeyCode.Space) || interactInput == 1) && interactType == 1 && interactedObject.GetComponent<BasicControl>().controlled )
+            if (  (Input.GetKeyDown(KeyCode.Space) || interactInput == 1) && interactType == 1)
             {
                 canBeActed = false;
                 if (interactedObject.GetComponent<Animator>() != null)
@@ -36,7 +36,7 @@ public class LightControl : InteractableObject
                     transform.parent.GetComponent<MeshRenderer>().material.color = Color.black;
                 }
             }
-            else if (  (Input.GetKeyDown(KeyCode.RightControl) || interactInput == 1) && interactType == 2 && interactedObject.GetComponent<BasicControl>().controlled )
+            else if (  (Input.GetKeyDown(KeyCode.RightControl) || interactInput == 1) && interactType == 2)
             {
                 canBeActed = false;
                 if (!isOn)

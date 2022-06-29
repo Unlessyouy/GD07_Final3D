@@ -6,7 +6,6 @@ using TMPro;
 
 public class PlayerControl : BasicControl
 {
-    public MeshRenderer ColorMesh;
     public bool CanJump { get; set; }
     [Header("Jump Related")]
     [SerializeField] private float FootOffset = 0.5f;
@@ -21,40 +20,25 @@ public class PlayerControl : BasicControl
     {
         base.Start();
         Cursor.lockState = CursorLockMode.Locked;
-        controlled = true;
-        ColorMesh.material.color = Color.green;
+        if (isInOcean)
+        {
+            rb.useGravity = false;
+        }
     }
     protected override void Update()
     {
-        CanJump = JumpRay();
-        
         #region Input & Movement
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        interactInput = Input.GetButtonDown("Interact");
-        verticalInput = Input.GetAxisRaw("Vertical");
+
+        interactInput = Input.GetAxisRaw("Interact");
+
         if (rb.velocity.y < 0)
         {
             rb.velocity -= GravityMultiplier * Time.deltaTime * transform.up;
         }
-        
-        if (isClimbing)
-        {
-            if (onRopeTop)
-            {
-                verticalInput = -1;
-                processedInput = Vector3.up * verticalInput;
-            }
-            else
-            {
-                processedInput = Vector3.up * verticalInput;
-            }
-        }
-        else
-        {
-            processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
-        }
 
-        if (alive && CanJump && !canInteract && controlled && !isClimbing & !IsHoldingHands)
+        CanJump = JumpRay();
+
+        if (alive && CanJump && !canInteract && !isClimbing && !IsHoldingHands && !isInOcean)
         {
             if (Input.GetButtonDown("Jump"))
             {
@@ -63,26 +47,8 @@ public class PlayerControl : BasicControl
         }
         #endregion
 
-        #region E to switch control
-        
-        if (  (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton8))  && otherOne.GetComponent<BasicControl>().alive)
-        {
-            controlled = !controlled;
-            if (controlled)
-            {
-                ColorMesh.material.color = Color.green;
-            }
-            else
-            {
-                ColorMesh.material.color = Color.blue;
-            }
-        }
-        
-        #endregion
-
         base.Update();
     }
-
     private bool JumpRay()
     {
         var isRightFootGrounded = false;

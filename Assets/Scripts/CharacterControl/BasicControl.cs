@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.VisualScripting;
 
@@ -9,35 +10,44 @@ public class BasicControl : MonoBehaviour
     protected Rigidbody rb;
     protected Animator anim;
 
-    protected Vector3 lineVector;
-
-    public GameObject otherOne;
-
     public float movingSpeed;
     [SerializeField] protected float ClimbSpeed = 5f;
-    protected float horizontalInput;
-    protected float verticalInput;
-    protected bool interactInput;
 
     protected Vector3 processedInput = new(0, 0, 0);
+
+    protected float interactInput;
 
     protected float towardsY;
 
     public bool alive;
-    public bool controlled;
 
     public bool isClimbing;
     public bool onRopeTop;
     public bool IsHoldingHands;
 
+    public bool isInOcean;
+
+    protected float interactTimer = 0;
+    public float interactTime = 0.8f;
+
     protected virtual void Start()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            isInOcean = true;
+        }
+        else
+        {
+            isInOcean = false;
+        }
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         alive = true;
     }
     protected virtual void Update()
     {
+        #region Character Animation & Rotation
+
         anim.SetBool("isClimbing", isClimbing);
 
         if (alive)
@@ -70,6 +80,29 @@ public class BasicControl : MonoBehaviour
                 }
             }
         }
+
+        #endregion
+
+        #region interactTimer
+
+        if (interactInput == 1)
+        {
+            interactTimer += Time.deltaTime;
+        }
+        else if (interactInput == 0)
+        {
+            if (interactTimer >= interactTime)
+            {
+                Debug.Log("长按触发");
+            }
+            else if (interactTimer > 0 && interactTimer <= interactTime)
+            {
+                Debug.Log("短按触发");
+            }
+            interactTimer = 0;
+        }
+
+        #endregion
     }
     protected virtual void FixedUpdate()
     {
@@ -78,7 +111,7 @@ public class BasicControl : MonoBehaviour
             Climb();
         }
 
-        if (!isClimbing)
+        if (!isClimbing && !isInOcean)
         {
             rb.useGravity = true;
         }
@@ -88,7 +121,11 @@ public class BasicControl : MonoBehaviour
     {
         rb.velocity = new Vector3(movingSpeed * Time.deltaTime * direction, rb.velocity.y);
     }
-    
+    public void MoveInOcean(float directionX, float directionY)
+    {
+        rb.velocity = new Vector3(movingSpeed * Time.deltaTime * directionX, movingSpeed * Time.deltaTime * directionY);
+    }
+
     protected void Climb()
     {
         rb.velocity = Vector3.zero;

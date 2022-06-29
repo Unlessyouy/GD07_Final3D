@@ -8,7 +8,6 @@ namespace Mechanics
         [SerializeField] private Transform Player;
         [SerializeField] private Transform Companion;
 
-        [SerializeField] private float YModifier = 1f;
         private float _cameraPositionX;
         private float _cameraPositionY;
         private float _cameraPositionZ;

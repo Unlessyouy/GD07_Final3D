@@ -132,15 +132,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8f34501f079b849bbd2cbc3a2f3d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherOne: {fileID: 1869859561528782458}
-  movingSpeed: 125
+  movingSpeed: 150
   ClimbSpeed: 5
   alive: 1
-  controlled: 0
   isClimbing: 0
   onRopeTop: 0
   IsHoldingHands: 0
-  ColorMesh: {fileID: 1869859562215138395}
+  isInOcean: 0
+  interactTime: 0.8
   FootOffset: 0.25
   RayLength: 0.75
   JumpHeight: 6.5
@@ -523,17 +522,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b19dd6938aea64eaa810e1e981d18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherOne: {fileID: 1869859560746299680}
-  movingSpeed: 100
+  movingSpeed: 150
   ClimbSpeed: 2.5
   alive: 1
-  controlled: 0
   isClimbing: 0
   onRopeTop: 0
   IsHoldingHands: 0
+  isInOcean: 0
+  interactTime: 0.8
   hiding: 0
-  ColorMesh: {fileID: 1869859562529807122}
-  following: 0
 --- !u!95 &1869859561528782435
 Animator:
   serializedVersion: 4
@@ -612,7 +609,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1869859560746299688}
   Companion: {fileID: 1869859561528782460}
-  YModifier: 1
 --- !u!1 &1869859562040210934
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,10 +952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7dedfe9df8201b47a67593da92c8aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Father: {fileID: 1869859560746299685}
-  FatherClimbComponent: {fileID: 1869859560746299695}
-  Son: {fileID: 1869859561528782457}
-  CloseDistance: 1
 --- !u!114 &1869859562498904987
 MonoBehaviour:
   m_ObjectHideFlags: 0

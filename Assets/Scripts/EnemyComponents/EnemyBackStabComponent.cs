@@ -13,19 +13,19 @@ public class EnemyBackStabComponent : InteractableObject
     protected override void Update()
     {
         base.Update();
-        if (actable && canBeActed && interactedObject.GetComponent<CompanionControl>() != null)
-        {
-            CompanionControl companion = interactedObject.GetComponent<CompanionControl>();
-            if ((Input.GetKeyDown(KeyCode.RightControl) || interactInput == 1) && interactType == 2)
-            {
-                canBeActed = false;
-                GetComponentInParent<EnemyComponents.EnemyAIController>().Stun();
-                if (interactedObject.GetComponent<Animator>() != null)
-                {
-                    interactedObject.GetComponent<Animator>().SetBool("isInteracting", true);
-                    Invoke("ExitInteracting", interactTime);
-                }
-            }
-        }
+        //if (actable && canBeActed && interactedObject.GetComponent<CompanionControl>() != null)
+        //{
+        //    CompanionControl companion = interactedObject.GetComponent<CompanionControl>();
+        //    if ((Input.GetKeyDown(KeyCode.RightControl) || interactInput == 1) && interactType == 2)
+        //    {
+        //        canBeActed = false;
+        //        GetComponentInParent<EnemyComponents.EnemyAIController>().Stun();
+        //        if (interactedObject.GetComponent<Animator>() != null)
+        //        {
+        //            interactedObject.GetComponent<Animator>().SetBool("isInteracting", true);
+        //            Invoke("ExitInteracting", interactTime);
+        //        }
+        //    }
+        //}
     }
 }

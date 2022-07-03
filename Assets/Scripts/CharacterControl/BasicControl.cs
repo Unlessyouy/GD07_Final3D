@@ -13,9 +13,13 @@ public class BasicControl : MonoBehaviour
     public float movingSpeed;
     [SerializeField] protected float ClimbSpeed = 5f;
 
+    protected float horizontalInput;
+    protected float verticalInput;
     protected Vector3 processedInput = new(0, 0, 0);
 
     protected float interactInput;
+    public InteractableObject interactingObject;
+    public MindPowerComponent interactingMindPowerObject;
 
     protected float towardsY;
 
@@ -28,21 +32,25 @@ public class BasicControl : MonoBehaviour
     public bool isInOcean;
 
     protected float interactTimer = 0;
-    public float interactTime = 0.8f;
+    public float interactTime;
+
+    protected int interactType;//1 = Father; 2 = Son;
 
     protected virtual void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        anim = GetComponentInChildren<Animator>();
+        alive = true;
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             isInOcean = true;
+            anim.SetBool("isInOcean", true);
         }
         else
         {
             isInOcean = false;
+            anim.SetBool("isInOcean", false);
         }
-        rb = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
-        alive = true;
     }
     protected virtual void Update()
     {
@@ -55,16 +63,16 @@ public class BasicControl : MonoBehaviour
             if (rb.velocity.x > 1)
             {
                 towardsY = 270;
-                anim.SetBool("isWalking", true);
+                anim.SetBool("isMoving", true);
             }
             else if (rb.velocity.x < -1)
             {
                 towardsY = 90;
-                anim.SetBool("isWalking", true);
+                anim.SetBool("isMoving", true);
             }
             else
             {
-                anim.SetBool("isWalking", false);
+                anim.SetBool("isMoving", false);
             }
             float rotateDifference = towardsY - transform.rotation.eulerAngles.y;
 
@@ -79,27 +87,6 @@ public class BasicControl : MonoBehaviour
                     transform.Rotate(0, -2, 0);
                 }
             }
-        }
-
-        #endregion
-
-        #region interactTimer
-
-        if (interactInput == 1)
-        {
-            interactTimer += Time.deltaTime;
-        }
-        else if (interactInput == 0)
-        {
-            if (interactTimer >= interactTime)
-            {
-                Debug.Log("长按触发");
-            }
-            else if (interactTimer > 0 && interactTimer <= interactTime)
-            {
-                Debug.Log("短按触发");
-            }
-            interactTimer = 0;
         }
 
         #endregion
@@ -130,5 +117,38 @@ public class BasicControl : MonoBehaviour
     {
         rb.velocity = Vector3.zero;
         rb.MovePosition(transform.position + ClimbSpeed * Time.deltaTime * processedInput);
+    }
+    protected void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<InteractableObject>())
+        {
+            interactingObject = other.GetComponent<InteractableObject>();
+        }
+        if (other.GetComponent<MindPowerComponent>())
+        {
+            interactingMindPowerObject = other.GetComponent<MindPowerComponent>();
+        }
+    }
+    protected void OnTriggerStay(Collider other)
+    {
+        if (other.GetComponent<InteractableObject>())
+        {
+            interactingObject = other.GetComponent<InteractableObject>();
+        }
+        if (other.GetComponent<MindPowerComponent>())
+        {
+            interactingMindPowerObject = other.GetComponent<MindPowerComponent>();
+        }
+    }
+    protected void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<InteractableObject>())
+        {
+            interactingObject = null;
+        }
+        if (other.GetComponent<MindPowerComponent>())
+        {
+            interactingMindPowerObject = null;
+        }
     }
 }

@@ -24,12 +24,33 @@ public class PlayerControl : BasicControl
         {
             rb.useGravity = false;
         }
+        interactType = 1;
     }
     protected override void Update()
     {
         #region Input & Movement
 
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+
         interactInput = Input.GetAxisRaw("Interact");
+
+        if (isClimbing)
+        {
+            if (onRopeTop)
+            {
+                verticalInput = -1;
+                processedInput = Vector3.up * verticalInput;
+            }
+            else
+            {
+                processedInput = Vector3.up * verticalInput;
+            }
+        }
+        else
+        {
+            processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
+        }
 
         if (rb.velocity.y < 0)
         {
@@ -45,6 +66,30 @@ public class PlayerControl : BasicControl
                 rb.velocity = Vector3.up * JumpHeight;
             }
         }
+        #endregion
+
+        #region interactTimer
+
+        if (interactInput == 1)
+        {
+            interactTimer += Time.deltaTime;
+        }
+        else if (interactInput == 0)
+        {
+            if (interactTimer >= interactTime)
+            {
+                //¸¸×ÓÇ£ÊÖ£¬´ý×ö
+            }
+            else if (interactTimer > 0 && interactTimer <= interactTime)
+            {
+                if (interactingObject != null)
+                {
+                    interactingObject.InteractTrigger(interactType, gameObject);
+                }
+            }
+            interactTimer = 0;
+        }
+
         #endregion
 
         base.Update();

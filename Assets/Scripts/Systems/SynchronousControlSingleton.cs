@@ -54,11 +54,11 @@ namespace Systems
 
         private void FixedUpdate()
         {
-            if (!Father.isClimbing && !FatherClimbComponent.IsHanging && !Father.isInOcean)
+            if (!Father.isClimbing && !FatherClimbComponent.IsHanging && !Father.isInOcean && Father.alive)
             {
                 Father.Move(_horizontalInput);
             }
-            else if (!Father.isClimbing && !FatherClimbComponent.IsHanging && Father.isInOcean)
+            else if (!Father.isClimbing && !FatherClimbComponent.IsHanging && Father.isInOcean && Father.alive)
             {
                 Father.MoveInOcean(_horizontalInput, _verticalInput);
             }
@@ -68,11 +68,11 @@ namespace Systems
             }
 
 
-            if(!Son.isClimbing && !Son.isInOcean)
+            if(!Son.isClimbing && !Son.isInOcean && Son.alive)
             {
                 Son.Move(_rightHorizontalInput);
             }
-            else if (!Son.isClimbing && Son.isInOcean)
+            else if (!Son.isClimbing && Son.isInOcean && Son.alive)
             {
                 Son.MoveInOcean(_rightHorizontalInput, _rightVerticalInput);
             }

@@ -4,11 +4,65 @@ namespace CharacterControl
 {
     public class CompanionControl : BasicControl
     {
-        public bool hiding;
-
+        protected override void Start()
+        {
+            base.Start();
+            interactType = 2;
+        }
         protected override void Update()
         {
+            #region Input & Movement
+
+            horizontalInput = Input.GetAxisRaw("Horizontal B");
+            verticalInput = Input.GetAxisRaw("Vertical B");
+
             interactInput = Input.GetAxisRaw("Interact B");
+
+            if (isClimbing)
+            {
+                if (onRopeTop)
+                {
+                    verticalInput = -1;
+                    processedInput = Vector3.up * verticalInput;
+                }
+                else
+                {
+                    processedInput = Vector3.up * verticalInput;
+                }
+            }
+            else
+            {
+                processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
+            }
+
+            #endregion
+
+            #region interactTimer
+
+            if (interactInput == 1)
+            {
+                interactTimer += Time.deltaTime;
+            }
+            else if (interactInput == 0)
+            {
+                if (interactTimer >= interactTime)
+                {
+                    if (interactingMindPowerObject != null)
+                    {
+                        interactingMindPowerObject.MindPowerTrigger();
+                    }
+                }
+                else if (interactTimer > 0 && interactTimer <= interactTime)
+                {
+                    if (interactingObject != null)
+                    {
+                        interactingObject.InteractTrigger(interactType, gameObject);
+                    }
+                }
+                interactTimer = 0;
+            }
+
+            #endregion
 
             base.Update();
         }

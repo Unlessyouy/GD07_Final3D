@@ -6,7 +6,7 @@ namespace Mechanics
     public class WarmableComponent : MonoBehaviour
     {
         [Range(0, 1)] [SerializeField] private float WarmAmount = 1f;
-        private bool IsWarmed { get; set; }
+        public bool IsWarmed { get; set; }
 
         private Material _material;
 
@@ -17,16 +17,15 @@ namespace Mechanics
 
         public void WarmSelf(float warmSpeed)
         {
-            // if (IsWarmed) return;
             WarmAmount -= warmSpeed;
             
-            Debug.Log("start");
             _material.SetFloat("_IceSlider", WarmAmount);
 
             if (WarmAmount <= 0f)
             {
-                Debug.Log("Warmed");
                 IsWarmed = true;
+                WarmAmount = 0f;
+                _material.SetFloat("_IceSlider", WarmAmount);
             }
         }
     }

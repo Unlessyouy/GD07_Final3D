@@ -70,17 +70,18 @@ public class PlayerControl : BasicControl
 
         #region interactTimer
 
-        if (interactInput == 1)
+        if (Mathf.Abs(interactInput - 1) <= 0.01f)
         {
             interactTimer += Time.deltaTime;
-        }
-        else if (interactInput == 0)
-        {
+
             if (interactTimer >= interactTime)
             {
                 //¸¸×ÓÇ£ÊÖ£¬´ý×ö
             }
-            else if (interactTimer > 0 && interactTimer <= interactTime)
+        }
+        else if (Mathf.Abs(interactInput - 1) >= 0.99f)
+        {
+            if (interactTimer > 0 && interactTimer <= interactTime)
             {
                 if (interactingObject != null)
                 {

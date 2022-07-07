@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
-    [HideInInspector]
     protected bool actable;
     protected float actableCoolDownTimer = 0;
-    protected float actableCoolDown = 0.2f;
+    public float actableCoolDown;
 
     public bool needMP;
 

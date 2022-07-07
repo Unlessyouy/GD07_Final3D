@@ -34,6 +34,9 @@ public class BasicControl : MonoBehaviour
     protected float interactTimer = 0;
     public float interactTime;
 
+    bool interactIsReleasing;
+    bool interactIs;
+
     protected int interactType;//1 = Father; 2 = Son;
 
     protected virtual void Start()

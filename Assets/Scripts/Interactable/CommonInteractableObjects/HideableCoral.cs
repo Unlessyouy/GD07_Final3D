@@ -19,7 +19,7 @@ public class HideableCoral : InteractableObject
 
         if (isContainingSon && interactingCharacter_Son != null)
         {
-            if (Input.GetAxisRaw("Interact B") == 1)
+            if (Input.GetAxisRaw("Interact B") == 1 && actable)
             {
                 actable = false;
                 isContainingSon = false;
@@ -30,7 +30,7 @@ public class HideableCoral : InteractableObject
 
         if (isContainingFather && interactingCharacter_Father != null)
         {
-            if (Input.GetAxisRaw("Interact") == 1)
+            if (Input.GetAxisRaw("Interact") == 1 && actable)
             {
                 actable = false;
                 isContainingFather = false;

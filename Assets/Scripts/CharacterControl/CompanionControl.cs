@@ -39,25 +39,26 @@ namespace CharacterControl
 
             #region interactTimer
 
-            if (Mathf.Abs(interactInput - 1) <= 0.01f)
+            if (interactInput == 1)
             {
                 interactTimer += Time.deltaTime;
 
                 if (interactTimer >= interactTime)
                 {
-                    if (interactingMindPowerObject != null)
-                    {
-                        interactingMindPowerObject.MindPowerTrigger();
-                    }
-                }
-            }
-            else if (Mathf.Abs(interactInput - 1) >= 0.99f)
-            {
-                if (interactTimer > 0 && interactTimer <= interactTime)
-                {
                     if (interactingObject != null)
                     {
                         interactingObject.InteractTrigger(interactType, gameObject);
+                    }
+                    interactTimer = 0;
+                }
+            }
+            else if (interactInput == 0)
+            {
+                if (interactTimer > 0 && interactTimer <= interactTime)
+                {
+                    if (interactingMindPowerObject != null)
+                    {
+                        interactingMindPowerObject.MindPowerTrigger();
                     }
                 }
                 interactTimer = 0;

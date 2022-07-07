@@ -25,6 +25,7 @@ public class RopeTopEnd : InteractableObject
             if (climber != null && climber.isClimbing == true)
             {
                 climber.isClimbing = false;
+                climber.GetComponent<Rigidbody>().AddForce(Vector3.up * TopForce);
             }
         }
     }

@@ -1,24 +1,68 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Mechanics
 {
     public class WarmableComponent : MonoBehaviour
     {
-        [Range(0, 1)] [SerializeField] private float WarmAmount = 1f;
+        [Range(0, 1)] [SerializeField] protected float WarmSpeed = 0.25f;
+        [Range(0, 1)] [SerializeField] protected float WarmAmount = 1f;
+        
         public bool IsWarmed { get; set; }
+
+        private float _timer = .0f;
 
         private Material _material;
 
-        private void Start()
+        protected virtual void Start()
         {
             _material = GetComponent<MeshRenderer>().material;
         }
 
-        public void WarmSelf(float warmSpeed)
+        private void Update()
+        {
+            _timer += Time.deltaTime;
+
+            if (_timer >= 1f)
+            {
+                FreezeSelf();
+            }
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+            if (other.GetComponent<FireBrazierComponent>())
+            {
+                _timer = 0f;
+                if (!IsWarmed)
+                {
+                    WarmSelf(WarmSpeed * Time.deltaTime);
+                }
+            }
+        }
+        
+
+        private void FreezeSelf()
+        {
+            IsWarmed = false;
+            
+            if (WarmAmount < 1f)
+            {
+                WarmAmount += WarmSpeed * Time.deltaTime;
+                _material.SetFloat("_IceSlider", WarmAmount);
+            }
+            else
+            {
+                CompletelyFrozen();
+                WarmAmount = 1f;
+                _material.SetFloat("_IceSlider", WarmAmount);
+            }
+        }
+
+        private void WarmSelf(float warmSpeed)
         {
             WarmAmount -= warmSpeed;
-            
             _material.SetFloat("_IceSlider", WarmAmount);
 
             if (WarmAmount <= 0f)
@@ -26,7 +70,18 @@ namespace Mechanics
                 IsWarmed = true;
                 WarmAmount = 0f;
                 _material.SetFloat("_IceSlider", WarmAmount);
+                CompletelyWarm();
             }
+        }
+
+        protected virtual void CompletelyWarm()
+        {
+            
+        }
+        
+        protected virtual void CompletelyFrozen()
+        {
+           
         }
     }
 }

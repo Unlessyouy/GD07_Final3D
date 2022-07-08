@@ -20,10 +20,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Son
+  m_Name: M_HumanoidEnemy
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ValidKeywords:
   - _METALLICSPECGLOSSMAP
+  - _NORMALMAP
   - _OCCLUSIONMAP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -37,11 +38,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 0062258b536190a4da85721304513d25, type: 3}
+        m_Texture: {fileID: 2800000, guid: 015c4f732477c824d8deb07f2acc0dc6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: d2b232bce5d82d843a04135a1d5557cb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7e38511146fbfcf4d89d542fb329db3e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -61,15 +62,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0062258b536190a4da85721304513d25, type: 3}
+        m_Texture: {fileID: 2800000, guid: 015c4f732477c824d8deb07f2acc0dc6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 65e6fa9f958792347aebf250de3eb953, type: 3}
+        m_Texture: {fileID: 2800000, guid: af8bafebbb75ceb429f1b16b3d2efeae, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 773f3796389b8cc4095ae23b0d843c0f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 03216c81e6b0f074c88e48bc3289382c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:

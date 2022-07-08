@@ -14,13 +14,13 @@ namespace Mechanics
 
         private void LateUpdate()
         {
-            _cameraPositionX = (Player.position.x + Companion.position.x) / 2;
+            _cameraPositionX = (Player.localPosition.x + Companion.localPosition.x) / 2;
 
-            _cameraPositionY = (Player.position.y + Companion.position.y) / 4;
+            _cameraPositionY = (Player.localPosition.y + Companion.localPosition.y) / 2;
 
-            _cameraPositionZ = (Player.position.z + Companion.position.z) / 2;
+            _cameraPositionZ = (Player.localPosition.z + Companion.localPosition.z) / 2;
 
-            transform.position = new Vector3(_cameraPositionX, _cameraPositionY, _cameraPositionZ);
+            transform.localPosition = new Vector3(_cameraPositionX, _cameraPositionY, _cameraPositionZ);
         }
     }
 }

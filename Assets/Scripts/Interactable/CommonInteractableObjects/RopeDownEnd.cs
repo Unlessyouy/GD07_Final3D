@@ -5,8 +5,9 @@ using UnityEngine;
 public class RopeDownEnd : InteractableObject
 {
     BasicControl climber;
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         actable = true;
     }
     private void OnDrawGizmos()

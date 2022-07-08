@@ -11,7 +11,9 @@ public class InteractableObject : MonoBehaviour
 
     public bool needMP;
 
+    [HideInInspector]
     public bool activatedByMP;
+
     protected float activatedTimer;
     public float activatedTime;
 

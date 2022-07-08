@@ -7,7 +7,7 @@ namespace Systems
     public class SynchronousControlSingleton : MonoBehaviour
     {
         [SerializeField] private BasicControl Father;
-        [SerializeField] private FatherClimbComponent FatherClimbComponent;
+        //[SerializeField] private FatherClimbComponent FatherClimbComponent;
         [SerializeField] private BasicControl Son;
         private float _horizontalInput;
         private float _verticalInput;
@@ -54,11 +54,13 @@ namespace Systems
 
         private void FixedUpdate()
         {
-            if (!Father.isClimbing && !FatherClimbComponent.IsHanging && !Father.isInOcean && Father.alive)
+            //if (!Father.isClimbing && !FatherClimbComponent.IsHanging && !Father.isInOcean && Father.alive)
+            if (!Father.isClimbing && !Father.isInOcean && Father.alive)
             {
                 Father.Move(_horizontalInput);
             }
-            else if (!Father.isClimbing && !FatherClimbComponent.IsHanging && Father.isInOcean && Father.alive)
+            //else if (!Father.isClimbing && !FatherClimbComponent.IsHanging && Father.isInOcean && Father.alive)
+            else if (!Father.isClimbing && Father.isInOcean && Father.alive)
             {
                 Father.MoveInOcean(_horizontalInput, _verticalInput);
             }
@@ -66,7 +68,6 @@ namespace Systems
             {
                 Father.Move(0);
             }
-
 
             if(!Son.isClimbing && !Son.isInOcean && Son.alive)
             {

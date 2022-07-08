@@ -10,7 +10,7 @@ public class PlayerControl : BasicControl
     [Header("Jump Related")]
     [SerializeField] private float FootOffset = 0.5f;
     [SerializeField] private float RayLength = 0.75f;
-    [SerializeField] private float JumpHeight = 5f;
+    [SerializeField] private float JumpHeight;
     [SerializeField] private float GravityMultiplier = 1.5f;
     
     [HideInInspector]
@@ -64,6 +64,11 @@ public class PlayerControl : BasicControl
             if (Input.GetButtonDown("Jump"))
             {
                 rb.velocity = Vector3.up * JumpHeight;
+                if (anim.GetBool("isGrounded"))
+                {
+                    anim.Play("Anim_Father_Jump");
+                    anim.SetBool("isJumping", true);
+                }
             }
         }
         #endregion
@@ -127,5 +132,12 @@ public class PlayerControl : BasicControl
         }
 
         return isLeftFootGrounded || isRightFootGrounded;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Terrain"))
+        {
+            anim.SetBool("isJumping", false);
+        }
     }
 }

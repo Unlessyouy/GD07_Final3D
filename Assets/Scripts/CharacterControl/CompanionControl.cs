@@ -68,5 +68,19 @@ namespace CharacterControl
 
             base.Update();
         }
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.collider.CompareTag("Terrain"))
+            {
+                anim.SetBool("isGrounded", true);
+            }
+        }
+        private void OnCollisionExit(Collision collision)
+        {
+            if (collision.collider.CompareTag("Terrain"))
+            {
+                anim.SetBool("isGrounded", false);
+            }
+        }
     }
 }

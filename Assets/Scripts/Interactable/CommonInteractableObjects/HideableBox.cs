@@ -17,7 +17,7 @@ public class HideableBox : InteractableObject
         base.Update();
         if (isContainingSon && interactingCharacter_Son != null)
         {
-            if (Input.GetAxisRaw("Interact B") == 1)
+            if (Input.GetAxisRaw("Interact B") == 1 && actable)
             {
                 actable = false;
                 isContainingSon = false;

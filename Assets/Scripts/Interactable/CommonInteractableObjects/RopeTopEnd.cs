@@ -5,10 +5,12 @@ using UnityEngine;
 public class RopeTopEnd : InteractableObject
 {
     BasicControl climber;
-    [SerializeField] private int TopForce = 600;
+    [SerializeField]
+    float JumpHeight;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         actable = false;
     }
     private void OnDrawGizmos()
@@ -25,7 +27,8 @@ public class RopeTopEnd : InteractableObject
             if (climber != null && climber.isClimbing == true)
             {
                 climber.isClimbing = false;
-                climber.GetComponent<Rigidbody>().AddForce(Vector3.up * TopForce);
+                climber.GetComponent<Rigidbody>().velocity = Vector3.up * JumpHeight;
+                Debug.Log("fly");
             }
         }
     }

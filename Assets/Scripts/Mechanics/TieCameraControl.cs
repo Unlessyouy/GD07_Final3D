@@ -16,7 +16,7 @@ namespace Mechanics
         {
             _cameraPositionX = (Player.position.x + Companion.position.x) / 2;
 
-            _cameraPositionY = (Player.position.y + Companion.position.y) / 2;
+            _cameraPositionY = (Player.position.y + Companion.position.y) / 4;
 
             _cameraPositionZ = (Player.position.z + Companion.position.z) / 2;
 

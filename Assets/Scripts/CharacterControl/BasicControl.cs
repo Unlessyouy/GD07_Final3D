@@ -22,6 +22,8 @@ public class BasicControl : MonoBehaviour
     public MindPowerComponent interactingMindPowerObject;
 
     protected float towardsY;
+    [Header("转身速度（角度/秒）")]
+    public float rotateSpeed;//degree per second
 
     public bool alive;
 
@@ -33,9 +35,6 @@ public class BasicControl : MonoBehaviour
 
     protected float interactTimer = 0;
     public float interactTime;
-
-    bool interactIsReleasing;
-    bool interactIs;
 
     protected int interactType;//1 = Father; 2 = Son;
 
@@ -83,11 +82,11 @@ public class BasicControl : MonoBehaviour
             {
                 if (rotateDifference > 0 && rotateDifference < 180 || rotateDifference < -180)
                 {
-                    transform.Rotate(0, 2, 0);
+                    transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
                 }
                 else
                 {
-                    transform.Rotate(0, -2, 0);
+                    transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
                 }
             }
         }
@@ -118,7 +117,6 @@ public class BasicControl : MonoBehaviour
 
     protected void Climb()
     {
-        rb.velocity = Vector3.zero;
         rb.MovePosition(transform.position + ClimbSpeed * Time.deltaTime * processedInput);
     }
     protected void OnTriggerEnter(Collider other)

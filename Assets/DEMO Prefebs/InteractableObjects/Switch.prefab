@@ -252,8 +252,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefdddb42fa54eefbe8e184f1df04596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actableCoolDown: 0
-  isMindPowerTrigger: 0
+  actableCoolDown: 1
+  needMP: 0
+  activatedByMP: 0
+  activatedTime: 0
   RicketyObjects:
   - {fileID: 0}
 --- !u!1 &2467620602886212552

@@ -91,8 +91,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8b2179f0c393d48964095a17315cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actableCoolDown: 0.2
-  isMindPowerTrigger: 0
+  actableCoolDown: 1
+  needMP: 0
+  activatedByMP: 0
+  activatedTime: 0
 --- !u!1 &3433053711442522463
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3433053711442522463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalPosition: {x: -1, y: -5, z: 0}
   m_LocalScale: {x: 0.25, y: 5, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -349,9 +351,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b46a0beec65e64f83715cfbe2a8e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actableCoolDown: 0.2
-  isMindPowerTrigger: 0
-  TopForce: 350
+  actableCoolDown: 1
+  needMP: 0
+  activatedByMP: 0
+  activatedTime: 0
+  JumpHeight: 10
 --- !u!1 &3433053712078128684
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,5 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a99b0c7fce83254e99ba68e7f318197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actableCoolDown: 0.2
-  isMindPowerTrigger: 0
+  actableCoolDown: 1
+  needMP: 0
+  activatedByMP: 0
+  activatedTime: 0

@@ -59,18 +59,18 @@ public class PlayerControl : BasicControl
 
         CanJump = JumpRay();
 
-        if (alive && CanJump && !canInteract && !isClimbing && !IsHoldingHands && !isInOcean)
-        {
-            if (Input.GetButtonDown("Jump"))
-            {
-                rb.velocity = Vector3.up * JumpHeight;
-                if (anim.GetBool("isGrounded"))
-                {
-                    anim.Play("Anim_Father_Jump");
-                    anim.SetBool("isJumping", true);
-                }
-            }
-        }
+        // if (alive && CanJump && !canInteract && !isClimbing && !IsHoldingHands && !isInOcean)
+        // {
+        //     if (Input.GetButtonDown("Jump"))
+        //     {
+        //         rb.velocity = Vector3.up * JumpHeight;
+        //         if (anim.GetBool("isGrounded"))
+        //         {
+        //             anim.Play("Anim_Father_Jump");
+        //             anim.SetBool("isJumping", true);
+        //         }
+        //     }
+        // }
         #endregion
 
         #region interactTimer
@@ -81,7 +81,7 @@ public class PlayerControl : BasicControl
 
             if (interactTimer >= interactTime)
             {
-                //¸¸×ÓÇ£ÊÖ£¬´ý×ö
+                //ï¿½ï¿½ï¿½ï¿½Ç£ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½
                 interactTimer = 0;
             }
         }

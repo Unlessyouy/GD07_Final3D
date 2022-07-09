@@ -15,6 +15,8 @@ namespace Systems
         private float _rightVerticalInput;
 
         public bool IsHoldingHands { get; set; }
+        public bool CanSonMove { get; set; }
+        public bool CanFatherMove { get; set; }
 
         private bool _isFatherInteract;
         private bool _isSonInteract;
@@ -34,15 +36,27 @@ namespace Systems
                 Instance = this;
             }
         }
-        
+
+        private void Start()
+        {
+            CanFatherMove = true;
+            CanSonMove = true;
+        }
+
         private void Update()
         {
-            _horizontalInput = Input.GetAxisRaw("Horizontal");
-            _rightHorizontalInput = Input.GetAxisRaw("Horizontal B");
+            if (CanSonMove)
+            {
+                _rightHorizontalInput = Input.GetAxisRaw("Horizontal B");
+                _rightVerticalInput = Input.GetAxisRaw("Vertical B");
+            }
 
-            _verticalInput = Input.GetAxisRaw("Vertical");
-            _rightVerticalInput = Input.GetAxisRaw("Vertical B");
-
+            if (CanFatherMove)
+            {
+                _horizontalInput = Input.GetAxisRaw("Horizontal");
+                _verticalInput = Input.GetAxisRaw("Vertical");
+            }
+            
             _isFatherInteract = Input.GetButton("HoldHandFather") || Math.Abs(Input.GetAxisRaw("HoldHandFather") - 1) < 0.1f;;
             _isSonInteract = Input.GetButton("HoldHandSon") || Math.Abs(Input.GetAxisRaw("HoldHandSon") - 1) < 0.1f;
             _isCloseEnough = Vector3.Distance(Father.transform.position, Son.transform.position) <= CloseDistance;
@@ -50,6 +64,9 @@ namespace Systems
             IsHoldingHands = _isSonInteract && _isFatherInteract && _isCloseEnough;
             Father.IsHoldingHands = IsHoldingHands;
             Son.IsHoldingHands = IsHoldingHands;
+            
+            Son.SetAnimMoveSpeed(Mathf.Abs(_rightHorizontalInput));
+            Father.SetAnimMoveSpeed(Mathf.Abs(_horizontalInput));
         }
 
         private void FixedUpdate()

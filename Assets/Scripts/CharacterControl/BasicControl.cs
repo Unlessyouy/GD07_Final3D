@@ -22,7 +22,7 @@ public class BasicControl : MonoBehaviour
     public MindPowerComponent interactingMindPowerObject;
 
     protected float towardsY;
-    [Header("×ªÉíËÙ¶È£¨½Ç¶È/Ãë£©")]
+    [Header("×ªï¿½ï¿½ï¿½Ù¶È£ï¿½ï¿½Ç¶ï¿½/ï¿½ë£©")]
     public float rotateSpeed;//degree per second
 
     public bool alive;
@@ -75,6 +75,7 @@ public class BasicControl : MonoBehaviour
             else
             {
                 anim.SetBool("isMoving", false);
+                anim.SetFloat("MovingSpeed", 0);
             }
             float rotateDifference = towardsY - transform.rotation.eulerAngles.y;
 
@@ -119,6 +120,12 @@ public class BasicControl : MonoBehaviour
     {
         rb.MovePosition(transform.position + ClimbSpeed * Time.deltaTime * processedInput);
     }
+
+    public void SetAnimMoveSpeed(float count)
+    {
+        anim.SetFloat("MovingSpeed", count);
+    }
+    
     protected void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<InteractableObject>())

@@ -7,12 +7,14 @@ using TMPro;
 public class PlayerControl : BasicControl
 {
     public bool CanJump { get; set; }
+    public bool CanPlayerInput { get; set; }
+    
     [Header("Jump Related")]
     [SerializeField] private float FootOffset = 0.5f;
     [SerializeField] private float RayLength = 0.75f;
     [SerializeField] private float JumpHeight;
     [SerializeField] private float GravityMultiplier = 1.5f;
-    
+
     [HideInInspector]
     public bool canInteract;
 
@@ -25,15 +27,19 @@ public class PlayerControl : BasicControl
             rb.useGravity = false;
         }
         interactType = 1;
+        CanPlayerInput = true;
     }
     protected override void Update()
     {
         #region Input & Movement
 
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+        if (CanPlayerInput)
+        {
+            horizontalInput = Input.GetAxisRaw("Horizontal");
+            verticalInput = Input.GetAxisRaw("Vertical");
 
-        interactInput = Input.GetAxisRaw("Interact");
+            interactInput = Input.GetAxisRaw("Interact");
+        }
 
         if (isClimbing)
         {
@@ -59,18 +65,18 @@ public class PlayerControl : BasicControl
 
         CanJump = JumpRay();
 
-        // if (alive && CanJump && !canInteract && !isClimbing && !IsHoldingHands && !isInOcean)
-        // {
-        //     if (Input.GetButtonDown("Jump"))
-        //     {
-        //         rb.velocity = Vector3.up * JumpHeight;
-        //         if (anim.GetBool("isGrounded"))
-        //         {
-        //             anim.Play("Anim_Father_Jump");
-        //             anim.SetBool("isJumping", true);
-        //         }
-        //     }
-        // }
+        if (alive && CanJump && !canInteract && !isClimbing && !IsHoldingHands && !isInOcean)
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                rb.velocity = Vector3.up * JumpHeight;
+                if (anim.GetBool("isGrounded"))
+                {
+                    anim.Play("Anim_Father_Jump");
+                    anim.SetBool("isJumping", true);
+                }
+            }
+        }
         #endregion
 
         #region interactTimer

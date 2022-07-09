@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869859560746299680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 1.1, z: 0}
+  m_LocalPosition: {x: 1, y: 1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -144,7 +144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869859561528782458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.65, z: 0}
+  m_LocalPosition: {x: -1, y: 0.65, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b19dd6938aea64eaa810e1e981d18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 150
+  movingSpeed: 100
   ClimbSpeed: 2.5
   interactingObject: {fileID: 0}
   interactingMindPowerObject: {fileID: 0}

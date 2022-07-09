@@ -1,7 +1,6 @@
 using System;
 using EventClass;
 using HackMan.Scripts;
-using HackMan.Scripts.Systems;
 
 namespace Systems
 {

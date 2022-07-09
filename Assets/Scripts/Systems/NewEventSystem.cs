@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HackMan.Scripts.Systems
+namespace Systems
 {
     public class NewEventSystem
     {

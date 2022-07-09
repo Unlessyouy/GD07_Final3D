@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using EventClass;
 using HackMan.Scripts;
-using HackMan.Scripts.Systems;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;

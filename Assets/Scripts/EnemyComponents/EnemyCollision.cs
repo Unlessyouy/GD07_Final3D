@@ -1,6 +1,6 @@
 using System;
 using EventClass;
-using HackMan.Scripts.Systems;
+using Systems;
 using UnityEngine;
 
 namespace EnemyComponents

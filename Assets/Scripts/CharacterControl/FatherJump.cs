@@ -27,7 +27,7 @@ namespace CharacterControl
         {
             if (CanJump())
             {
-                if (Input.GetKeyDown(KeyCode.UpArrow))
+                if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.Space))
                 {
                     isJump = true;
                 }

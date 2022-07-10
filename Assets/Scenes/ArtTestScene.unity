@@ -2545,6 +2545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a99b0c7fce83254e99ba68e7f318197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actableCoolDown: 0
   needMP: 0
   activatedByMP: 0
   activatedTime: 0
@@ -2665,7 +2666,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Father: {fileID: 2134282038}
-  FatherClimbComponent: {fileID: 2134282044}
   Son: {fileID: 769282154}
   CloseDistance: 1
 --- !u!4 &407227088 stripped
@@ -2966,10 +2966,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b46a0beec65e64f83715cfbe2a8e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actableCoolDown: 0
   needMP: 0
   activatedByMP: 0
   activatedTime: 0
-  TopForce: 350
+  JumpHeight: 0
 --- !u!135 &437783697
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3110,33 +3111,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmite2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 207891147, guid: 20ae9eb2042a9a649bd7d5567eadd2fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4daa0128280a5e8498536af79573f23c, type: 2}
     - target: {fileID: 207891149, guid: 20ae9eb2042a9a649bd7d5567eadd2fc, type: 3}
       propertyPath: m_RootOrder
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 207891149, guid: 20ae9eb2042a9a649bd7d5567eadd2fc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8895598
+      value: 0.4649729
       objectReference: {fileID: 0}
     - target: {fileID: 207891149, guid: 20ae9eb2042a9a649bd7d5567eadd2fc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3451148
+      value: 0.4233103
       objectReference: {fileID: 0}
     - target: {fileID: 207891149, guid: 20ae9eb2042a9a649bd7d5567eadd2fc, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.8895598
+      value: 0.4649729
       objectReference: {fileID: 0}
     - target: {fileID: 207891149, guid: 20ae9eb2042a9a649bd7d5567eadd2fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.322052
+      value: 5.18
       objectReference: {fileID: 0}
     - target: {fileID: 207891149, guid: 20ae9eb2042a9a649bd7d5567eadd2fc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.70636
+      value: 5.13
       objectReference: {fileID: 0}
     - target: {fileID: 207891149, guid: 20ae9eb2042a9a649bd7d5567eadd2fc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.77771
+      value: 8.8051
       objectReference: {fileID: 0}
     - target: {fileID: 207891149, guid: 20ae9eb2042a9a649bd7d5567eadd2fc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3168,6 +3173,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20ae9eb2042a9a649bd7d5567eadd2fc, type: 3}
+--- !u!1 &493081644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 207891145, guid: 20ae9eb2042a9a649bd7d5567eadd2fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 493081643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &496529332 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4746699935484408360, guid: 3e89b059f78e1ed4a9613ebe3cae65a6,
@@ -3272,6 +3283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stalagmite1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 446987714, guid: a01382f4fef9dda44bfc417604e578b8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4daa0128280a5e8498536af79573f23c, type: 2}
     - target: {fileID: 446987716, guid: a01382f4fef9dda44bfc417604e578b8, type: 3}
       propertyPath: m_RootOrder
       value: 66
@@ -8992,6 +9007,7 @@ MonoBehaviour:
   ClimbSpeed: 2.5
   interactingObject: {fileID: 0}
   interactingMindPowerObject: {fileID: 0}
+  rotateSpeed: 0
   alive: 1
   isClimbing: 0
   onRopeTop: 0
@@ -14961,7 +14977,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2289975, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -18199,7 +18215,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 70c4fe63392434e4b88124ecf95ed958,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70c4fe63392434e4b88124ecf95ed958,
         type: 3}
@@ -18219,27 +18235,27 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 70c4fe63392434e4b88124ecf95ed958,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -11.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70c4fe63392434e4b88124ecf95ed958,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20
+      value: 20.005192
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70c4fe63392434e4b88124ecf95ed958,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.012620095
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70c4fe63392434e4b88124ecf95ed958,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.924848
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70c4fe63392434e4b88124ecf95ed958,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.38033697
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70c4fe63392434e4b88124ecf95ed958,
         type: 3}
@@ -18254,7 +18270,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 70c4fe63392434e4b88124ecf95ed958,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 44.709
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70c4fe63392434e4b88124ecf95ed958,
         type: 3}
@@ -19388,6 +19404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8b2179f0c393d48964095a17315cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actableCoolDown: 0
   needMP: 0
   activatedByMP: 0
   activatedTime: 0
@@ -19449,6 +19466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefdddb42fa54eefbe8e184f1df04596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actableCoolDown: 0
   needMP: 0
   activatedByMP: 0
   activatedTime: 0
@@ -22326,6 +22344,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 493081643}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1958484616
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493081644}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 01bd288ba122f0241b0b322365be7915, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1965244119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 207891149, guid: 20ae9eb2042a9a649bd7d5567eadd2fc,
@@ -23395,6 +23433,7 @@ MonoBehaviour:
   ClimbSpeed: 5
   interactingObject: {fileID: 0}
   interactingMindPowerObject: {fileID: 0}
+  rotateSpeed: 0
   alive: 1
   isClimbing: 0
   onRopeTop: 0

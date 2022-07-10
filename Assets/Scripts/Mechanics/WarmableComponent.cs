@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Interactable.MindPowerComponent;
 using UnityEngine;
 
 namespace Mechanics
@@ -32,7 +33,8 @@ namespace Mechanics
 
         private void OnTriggerStay(Collider other)
         {
-            if (other.GetComponent<FireBrazierComponent>())
+            var fireBrazier = other.GetComponent<FireBrazier>();
+            if (fireBrazier && fireBrazier.IsFire)
             {
                 _timer = 0f;
                 if (!IsWarmed)

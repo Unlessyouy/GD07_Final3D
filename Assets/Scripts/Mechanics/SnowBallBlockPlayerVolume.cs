@@ -17,7 +17,6 @@ namespace Mechanics
 
         private void OnCollisionEnter(Collision collision)
         {
-            Debug.Log(Rigidbody.velocity.sqrMagnitude);
             if (Rigidbody.velocity.sqrMagnitude >= 10)
             {
                 NewEventSystem.Instance.Publish(new GameEndEvent(true));

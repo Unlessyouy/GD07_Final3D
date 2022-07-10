@@ -7,6 +7,7 @@ namespace Systems
     public class SynchronousControlSingleton : MonoBehaviour
     {
         [SerializeField] private BasicControl Father;
+
         //[SerializeField] private FatherClimbComponent FatherClimbComponent;
         [SerializeField] private BasicControl Son;
         private float _horizontalInput;
@@ -24,6 +25,9 @@ namespace Systems
         [SerializeField] private float CloseDistance = 2f;
 
         public static SynchronousControlSingleton Instance;
+
+        private const float SON_SPEED = 100f;
+        private const float FATHER_SPEED = 125f;
 
         private void Awake()
         {
@@ -56,15 +60,26 @@ namespace Systems
                 _horizontalInput = Input.GetAxisRaw("Horizontal");
                 _verticalInput = Input.GetAxisRaw("Vertical");
             }
-            
-            _isFatherInteract = Input.GetButton("HoldHandFather") || Math.Abs(Input.GetAxisRaw("HoldHandFather") - 1) < 0.1f;;
+
+            _isFatherInteract = Input.GetButton("HoldHandFather") ||
+                                Math.Abs(Input.GetAxisRaw("HoldHandFather") - 1) < 0.1f;
+            ;
             _isSonInteract = Input.GetButton("HoldHandSon") || Math.Abs(Input.GetAxisRaw("HoldHandSon") - 1) < 0.1f;
             _isCloseEnough = Vector3.Distance(Father.transform.position, Son.transform.position) <= CloseDistance;
 
             IsHoldingHands = _isSonInteract && _isFatherInteract && _isCloseEnough;
             Father.IsHoldingHands = IsHoldingHands;
             Son.IsHoldingHands = IsHoldingHands;
-            
+
+            if (_isCloseEnough)
+            {
+                Son.movingSpeed = FATHER_SPEED;
+            }
+            else
+            {
+                Son.movingSpeed = SON_SPEED;
+            }
+
             Son.SetAnimMoveSpeed(Mathf.Abs(_rightHorizontalInput));
             Father.SetAnimMoveSpeed(Mathf.Abs(_horizontalInput));
         }
@@ -86,7 +101,7 @@ namespace Systems
                 Father.Move(0);
             }
 
-            if(!Son.isClimbing && !Son.isInOcean && Son.alive)
+            if (!Son.isClimbing && !Son.isInOcean && Son.alive)
             {
                 Son.Move(_rightHorizontalInput);
             }

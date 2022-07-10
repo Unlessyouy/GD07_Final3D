@@ -3,15 +3,10 @@ using EventClass;
 using Systems;
 using UnityEngine;
 
-namespace EnemyComponents
+namespace Mechanics
 {
-    public class EnemyCollision : MonoBehaviour
+    public class KillCharacterVolume : MonoBehaviour
     {
-        public void DestroySelf()
-        {
-            Destroy(transform.parent.gameObject);
-        }
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.GetComponent<BasicControl>())

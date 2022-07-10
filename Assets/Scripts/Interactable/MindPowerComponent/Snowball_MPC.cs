@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Interactable.MindPowerComponent
 {
-    public class SnowballMpc : global::MindPowerComponent
+    public class Snowball_MPC : global::MindPowerComponent
     {
         [SerializeField] private GameObject SnowballActivated;
         [SerializeField] private GameObject SnowballBefore;

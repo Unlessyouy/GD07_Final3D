@@ -51,8 +51,8 @@ namespace Systems
             yield return FadeOut(FadeOutTime);
 
             yield return new WaitForSeconds(1.5f);
-
-            yield return SceneManager.LoadSceneAsync(0);
+            
+            yield return SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
         
         #region Fade

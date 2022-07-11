@@ -43,15 +43,7 @@ public class PlayerControl : BasicControl
 
         if (isClimbing)
         {
-            if (onRopeTop)
-            {
-                verticalInput = -1;
-                processedInput = Vector3.up * verticalInput;
-            }
-            else
-            {
-                processedInput = Vector3.up * verticalInput;
-            }
+            processedInput = Vector3.up * verticalInput;
         }
         else
         {
@@ -65,42 +57,50 @@ public class PlayerControl : BasicControl
 
         CanJump = JumpRay();
 
-        if (alive && CanJump && !canInteract && !isClimbing && !IsHoldingHands && !isInOcean)
-        {
-            if (Input.GetButtonDown("Jump"))
-            {
-                rb.velocity = Vector3.up * JumpHeight;
-                if (anim.GetBool("isGrounded"))
-                {
-                    anim.Play("Anim_Father_Jump");
-                    anim.SetBool("isJumping", true);
-                }
-            }
-        }
         #endregion
 
         #region interactTimer
 
         if (interactInput == 1)
         {
-            interactTimer += Time.deltaTime;
+            if (interactTimer <= 10)
+            {
+                interactTimer += Time.deltaTime;
+            }
 
             if (interactTimer >= interactTime)
             {
-                //����ǣ�֣�����
-                interactTimer = 0;
+                if (interactingObject != null)
+                {
+                    isInteracting = true;
+                }
             }
         }
         else if (interactInput == 0)
         {
             if (interactTimer > 0 && interactTimer <= interactTime)
             {
-                if (interactingObject != null)
+                if (alive && CanJump && !canInteract && !isClimbing && !IsHoldingHands && !isInOcean)
                 {
-                    interactingObject.InteractTrigger(interactType, gameObject);
+                    rb.velocity = Vector3.up * JumpHeight;
+                    if (anim.GetBool("isGrounded"))
+                    {
+                        anim.Play("Anim_Father_Jump");
+                        anim.SetBool("isJumping", true);
+                    }
                 }
             }
             interactTimer = 0;
+            isInteracting = false;
+        }
+
+        #endregion
+
+        #region Interact With Objects
+
+        if (isInteracting && interactingObject != null)
+        {
+            interactingObject.InteractTrigger(interactType, gameObject);
         }
 
         #endregion

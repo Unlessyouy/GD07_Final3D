@@ -17,7 +17,7 @@ public class HideableBox : InteractableObject
         base.Update();
         if (isContainingSon && interactingCharacter_Son != null)
         {
-            if (Input.GetAxisRaw("Interact B") == 1 && actable)
+            if (Input.GetAxisRaw("Interact B") == 0 && actable)
             {
                 actable = false;
                 isContainingSon = false;
@@ -28,7 +28,7 @@ public class HideableBox : InteractableObject
     }
     public override void InteractTrigger(int interactType, GameObject interactingCharacter)
     {
-        if (interactType == 2 && actable)
+        if (interactType == 2 && actable && interactingCharacter.GetComponent<CompanionControl>().isInteracting)
         {
             actable = false;
             interactingCharacter.SetActive(false);

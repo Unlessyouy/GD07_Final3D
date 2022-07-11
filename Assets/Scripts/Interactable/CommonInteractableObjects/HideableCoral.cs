@@ -19,7 +19,7 @@ public class HideableCoral : InteractableObject
 
         if (isContainingSon && interactingCharacter_Son != null)
         {
-            if (Input.GetAxisRaw("Interact B") == 1 && actable)
+            if (Input.GetAxisRaw("Interact B") == 0 && actable)
             {
                 actable = false;
                 isContainingSon = false;
@@ -30,7 +30,7 @@ public class HideableCoral : InteractableObject
 
         if (isContainingFather && interactingCharacter_Father != null)
         {
-            if (Input.GetAxisRaw("Interact") == 1 && actable)
+            if (Input.GetAxisRaw("Interact") == 0 && actable)
             {
                 actable = false;
                 isContainingFather = false;
@@ -50,7 +50,7 @@ public class HideableCoral : InteractableObject
     }
     public override void InteractTrigger(int interactType, GameObject interactingCharacter)
     {
-        if (actable && activatedByMP)
+        if (actable && activatedByMP && interactingCharacter.GetComponent<BasicControl>().isInteracting)
         {
             if (interactType == 1)
             {

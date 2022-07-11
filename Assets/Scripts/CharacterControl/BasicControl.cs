@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
-using Unity.VisualScripting;
 
 public class BasicControl : MonoBehaviour
 {
@@ -17,6 +13,7 @@ public class BasicControl : MonoBehaviour
     protected float verticalInput;
     protected Vector3 processedInput = new(0, 0, 0);
 
+    public bool isInteracting;
     protected float interactInput;
     public InteractableObject interactingObject;
     public MindPowerComponent interactingMindPowerObject;
@@ -28,7 +25,8 @@ public class BasicControl : MonoBehaviour
     public bool alive;
 
     public bool isClimbing;
-    public bool onRopeTop;
+    public bool onRopeTopEnd;
+    public bool onRopeDownEnd;
     public bool IsHoldingHands;
 
     public bool isInOcean;
@@ -98,6 +96,7 @@ public class BasicControl : MonoBehaviour
     {
         if (isClimbing)
         {
+            rb.velocity = Vector3.zero;
             Climb();
         }
 
@@ -106,7 +105,6 @@ public class BasicControl : MonoBehaviour
             rb.useGravity = true;
         }
     }
-
     public void Move(float direction)
     {
         rb.velocity = new Vector3(movingSpeed * Time.deltaTime * direction, rb.velocity.y);
@@ -115,17 +113,14 @@ public class BasicControl : MonoBehaviour
     {
         rb.velocity = new Vector3(movingSpeed * Time.deltaTime * directionX, movingSpeed * Time.deltaTime * directionY);
     }
-
     protected void Climb()
     {
         rb.MovePosition(transform.position + ClimbSpeed * Time.deltaTime * processedInput);
     }
-
     public void SetAnimMoveSpeed(float count)
     {
         anim.SetFloat("MovingSpeed", count);
     }
-    
     protected void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<InteractableObject>())

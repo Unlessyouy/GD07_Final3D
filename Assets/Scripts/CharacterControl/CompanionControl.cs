@@ -20,9 +20,14 @@ namespace CharacterControl
 
             if (isClimbing)
             {
-                if (onRopeTop)
+                if (onRopeTopEnd)
                 {
                     verticalInput = -1;
+                    processedInput = Vector3.up * verticalInput;
+                }
+                else if (onRopeDownEnd)
+                {
+                    verticalInput = 1;
                     processedInput = Vector3.up * verticalInput;
                 }
                 else
@@ -37,19 +42,21 @@ namespace CharacterControl
 
             #endregion
 
-            #region interactTimer
+            #region InteractTimer
 
             if (interactInput == 1)
             {
-                interactTimer += Time.deltaTime;
+                if (interactTimer <= 10)
+                {
+                    interactTimer += Time.deltaTime;
+                }
 
                 if (interactTimer >= interactTime)
                 {
                     if (interactingObject != null)
                     {
-                        interactingObject.InteractTrigger(interactType, gameObject);
+                        isInteracting = true;
                     }
-                    interactTimer = 0;
                 }
             }
             else if (interactInput == 0)
@@ -62,6 +69,16 @@ namespace CharacterControl
                     }
                 }
                 interactTimer = 0;
+                isInteracting = false;
+            }
+
+            #endregion
+
+            #region Interact With Objects
+
+            if (isInteracting && interactingObject != null)
+            {
+                interactingObject.InteractTrigger(interactType, gameObject);
             }
 
             #endregion

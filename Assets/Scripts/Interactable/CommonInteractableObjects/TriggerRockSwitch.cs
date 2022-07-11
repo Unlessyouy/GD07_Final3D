@@ -17,7 +17,7 @@ namespace Interactable
         }
         public override void InteractTrigger(int interactType, GameObject interactingCharacter)
         {
-            if (interactType == 2 && actable)
+            if (interactType == 2 && actable && interactingCharacter.GetComponent<CompanionControl>().isInteracting)
             {
                 actable = false;
                 NewEventSystem.Instance.Publish(new SwitchTriggerEvent(RicketyObjects));

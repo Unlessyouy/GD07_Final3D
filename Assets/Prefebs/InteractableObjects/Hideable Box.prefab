@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d302a027f6e6343a996f70244c6d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actableCoolDown: 1
+  actableCoolDown: 0.01
   needMP: 0
   activatedByMP: 0
   activatedTime: 0

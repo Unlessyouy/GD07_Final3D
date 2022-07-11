@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RopeTopEnd : InteractableObject
 {
+    bool comeFromTop;
     BasicControl climber;
     [SerializeField]
     float JumpHeight;
@@ -23,12 +24,11 @@ public class RopeTopEnd : InteractableObject
         if (other.GetComponent<BasicControl>() != null)
         {
             climber = other.GetComponent<BasicControl>();
-            climber.onRopeTop = true;
-            if (climber != null && climber.isClimbing == true)
+            climber.onRopeTopEnd = true;
+            if (climber != null && climber.isClimbing == true && !comeFromTop)
             {
                 climber.isClimbing = false;
                 climber.GetComponent<Rigidbody>().velocity = Vector3.up * JumpHeight;
-                Debug.Log("fly");
             }
         }
     }
@@ -36,14 +36,26 @@ public class RopeTopEnd : InteractableObject
     {
         if (other.GetComponent<BasicControl>() != null)
         {
-            other.GetComponent<BasicControl>().onRopeTop = false;
+            other.GetComponent<BasicControl>().onRopeTopEnd = false;
+            comeFromTop = false;
         }
     }
     public override void InteractTrigger(int interactType, GameObject interactingCharacter)
     {
         if (actable)
         {
+            if (interactingCharacter.GetComponent<BasicControl>() != null)
+            {
+                climber = interactingCharacter.GetComponent<BasicControl>();
+                climber.onRopeTopEnd = true;
+                if (climber != null && climber.isClimbing == true && !comeFromTop)
+                {
+                    climber.isClimbing = false;
+                }
+            }
+
             climber = interactingCharacter.GetComponent<BasicControl>();
+            comeFromTop = true;
 
             if (!climber.isClimbing)
             {

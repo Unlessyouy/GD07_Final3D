@@ -4,7 +4,7 @@ namespace Interactable.CommonInteractableObjects
 {
     public class PushableObject : InteractableObject
     {
-        [SerializeField] private Rigidbody PushTarget;
+        [SerializeField] private GameObject PushTarget;
 
         public override void InteractTrigger(int interactType, GameObject interactingCharacter)
         {
@@ -19,8 +19,7 @@ namespace Interactable.CommonInteractableObjects
                 pushSpeed += 1 * Input.GetAxisRaw("Horizontal B");
             }
 
-
-            PushTarget.MovePosition(transform.position + Vector3.right * (pushSpeed * Time.deltaTime));
+            PushTarget.transform.position = (PushTarget.transform.position + Vector3.right * (pushSpeed * Time.deltaTime));
         }
     }
 }

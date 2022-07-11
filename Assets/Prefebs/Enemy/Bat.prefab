@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad53ba66a274cb3867684d485f4b199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 5
+  MoveSpeed: 3
   BombVFX: {fileID: 1373299578596584033, guid: a534249c220151042936d324385f0596, type: 3}
 --- !u!1 &2745034955453296925
 GameObject:

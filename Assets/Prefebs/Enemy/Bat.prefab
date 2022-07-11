@@ -46,7 +46,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 6, z: 1}
+  m_Size: {x: 7, y: 12, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2745034955419107491
 MonoBehaviour:
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad53ba66a274cb3867684d485f4b199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 3
+  MoveSpeed: 5
   BombVFX: {fileID: 1373299578596584033, guid: a534249c220151042936d324385f0596, type: 3}
 --- !u!1 &2745034955453296925
 GameObject:

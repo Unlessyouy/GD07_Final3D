@@ -8,7 +8,7 @@ namespace EnemyComponents
         [SerializeField] private float MoveSpeed = 3f;
         [SerializeField] private GameObject BombVFX;
 
-        private Vector3 _targetPosition;
+        private Transform _targetTransform;
         private bool _isAimTarget;
 
         private void Update()
@@ -16,9 +16,9 @@ namespace EnemyComponents
             if (_isAimTarget)
             {
                 transform.position =
-                    Vector3.MoveTowards(transform.position, _targetPosition, MoveSpeed * Time.deltaTime);
+                    Vector3.MoveTowards(transform.position, _targetTransform.position, MoveSpeed * Time.deltaTime);
 
-                if (Vector3.Distance(transform.position, _targetPosition) <= 0.1f)
+                if (Vector3.Distance(transform.position, _targetTransform.position) <= 0.1f)
                 {
                     Instantiate(BombVFX, transform.position, transform.rotation);
                     gameObject.SetActive(false);
@@ -30,7 +30,7 @@ namespace EnemyComponents
         {
             if (!_isAimTarget && other.GetComponent<BasicControl>())
             {
-                _targetPosition = other.transform.position;
+                _targetTransform = other.transform;
 
                 _isAimTarget = true;
             }

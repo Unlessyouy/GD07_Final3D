@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowObject: {fileID: 1479997981633108576}
-  Rigidbody: {fileID: 0}
+  Rigidbody: {fileID: 1479997981633108607}
 --- !u!1 &251418440437654905
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 1479997981633108606}
   - component: {fileID: 1479997981633108607}
   - component: {fileID: 6842259900973493264}
+  - component: {fileID: 8337031269413812061}
   m_Layer: 8
   m_Name: Snowball_Activated
   m_TagString: Untagged
@@ -278,6 +279,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f568a6c9e1be4786b6f6066b8b733655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8337031269413812061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479997981633108577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 156e8b4ac7484f09807e52eafb36d232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1479997982275394328
@@ -492,7 +505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowObject: {fileID: 1479997982275394327}
-  Rigidbody: {fileID: 0}
+  Rigidbody: {fileID: 718246583}
 --- !u!65 &3558714221156949152
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -11,7 +11,8 @@ namespace CharacterControl
         private Rigidbody _rigidbody;
 
         [SerializeField] private float JumpHeight = 2f;
-        [SerializeField] private float RayHeight = 1.2f;
+        [SerializeField] private float JumpLow = 0.5f;
+        [SerializeField] private float RayHeight = 1.7f;
         [SerializeField] private float JumpDistance = 0.5f;
         private RaycastHit _hitInfo;
 
@@ -27,7 +28,7 @@ namespace CharacterControl
         {
             if (CanJump())
             {
-                if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.Space))
+                if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.S))
                 {
                     isJump = true;
                 }
@@ -59,8 +60,8 @@ namespace CharacterControl
             var t = 0f;
             _rigidbody.useGravity = false;
             _rigidbody.AddForce(JumpHeight * Vector3.up);
-            
-            
+
+
             yield return new WaitForSeconds(0.5f);
             _rigidbody.AddForce(900f * -transform.forward);
             yield return new WaitForSeconds(0.5f);
@@ -68,13 +69,25 @@ namespace CharacterControl
             SynchronousControlSingleton.Instance.CanFatherMove = true;
             _rigidbody.useGravity = true;
         }
-        
+
         private bool CanJump()
         {
             var highestPos = transform.position + RayHeight * transform.up;
+            var lowestPos = transform.position + JumpLow * transform.up;
+
+            Debug.DrawRay(transform.position, transform.up * RayHeight, Color.red);
+            
+            if (Physics.Raycast(transform.position, transform.up, out var hitInfo, RayHeight) && hitInfo.collider.CompareTag("Terrain"))
+            {
+                return false;
+            }
+            
             Debug.DrawRay(highestPos, -transform.forward * JumpDistance, Color.green);
-            return Physics.Raycast(highestPos, -transform.forward, out _hitInfo, JumpDistance) &&
-                   _hitInfo.collider.CompareTag("JumpPoint");
+            Debug.DrawRay(lowestPos, -transform.forward * JumpDistance, Color.green);
+            return (Physics.Raycast(highestPos, -transform.forward, out _hitInfo, JumpDistance) &&
+                    _hitInfo.collider.CompareTag("JumpPoint")) ||
+                   (Physics.Raycast(lowestPos, -transform.forward, out _hitInfo, JumpDistance) &&
+                    _hitInfo.collider.CompareTag("JumpPoint"));
         }
     }
 }

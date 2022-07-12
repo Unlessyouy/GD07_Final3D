@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8795651772993434838}
   - component: {fileID: 8795651772993434839}
   m_Layer: 0
-  m_Name: E_Mental_VFX
+  m_Name: E_Ripple_VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -603,7 +603,7 @@ ParticleSystem:
     randomizeRotationDirection: 0
     maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
-    size3D: 0
+    size3D: 1
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
@@ -4841,7 +4841,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 2
+  m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0

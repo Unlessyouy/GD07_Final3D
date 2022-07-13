@@ -49,6 +49,7 @@ namespace EnemyComponents
 
             transform.rotation = Quaternion.LookRotation(newDirection);
 
+            Debug.DrawRay(transform.position + Vector3.up, transform.forward * 20f, Color.red);
             if (Physics.Raycast(transform.position + Vector3.up, transform.forward, out var hitInfo) &&
                 hitInfo.collider.isTrigger != true &&
                 hitInfo.point.z >= MovingArea.transform.position.z)

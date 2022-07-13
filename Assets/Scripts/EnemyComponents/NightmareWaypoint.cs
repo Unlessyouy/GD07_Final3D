@@ -7,7 +7,7 @@ namespace EnemyComponents
     {
         [SerializeField] private List<float> WayPointSpeed = new List<float>();
         private float _radius = 0.5f;
-        
+
         private void OnDrawGizmos()
         {
             for (var i = 0; i < transform.childCount; i++)
@@ -19,8 +19,14 @@ namespace EnemyComponents
 
         public int GetNextWaypointIndex(int i)
         {
-            var nextIndex = i == transform.childCount - 1 ? 0 : i + 1;
+            // var nextIndex = i == transform.childCount - 1 ? 0 : i + 1;
+            var nextIndex = i == transform.childCount - 1 ? i : i + 1;
             return nextIndex;
+        }
+
+        public int GetWaypointCount()
+        {
+            return transform.childCount;
         }
 
         public Vector3 GetWaypointPosition(int i)

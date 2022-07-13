@@ -14,10 +14,10 @@ namespace EnemyComponents
 
         private void Update()
         {
-            var trans = transform;
-            var transPosition = trans.position;
-            transPosition = new Vector3(transPosition.x, transPosition.y, _z);
-            trans.position = transPosition;
+            // var trans = transform;
+            // var transPosition = trans.position;
+            // transPosition = new Vector3(transPosition.x, transPosition.y, _z);
+            // trans.position = transPosition;
         }
 
         private void OnTriggerStay(Collider other)

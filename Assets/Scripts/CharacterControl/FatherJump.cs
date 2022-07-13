@@ -7,7 +7,7 @@ namespace CharacterControl
 {
     public class FatherJump : MonoBehaviour
     {
-        private PlayerControl _playerControl;
+        [SerializeField] private PlayerControl PlayerControl;
         private Rigidbody _rigidbody;
 
         [SerializeField] private float JumpHeight = 2f;
@@ -20,7 +20,6 @@ namespace CharacterControl
 
         private void Start()
         {
-            _playerControl = GetComponent<PlayerControl>();
             _rigidbody = GetComponent<Rigidbody>();
         }
 
@@ -28,7 +27,7 @@ namespace CharacterControl
         {
             if (CanJump())
             {
-                if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.S))
+                if (PlayerControl.PullSon)
                 {
                     isJump = true;
                 }
@@ -65,7 +64,7 @@ namespace CharacterControl
             yield return new WaitForSeconds(0.5f);
             _rigidbody.AddForce(900f * -transform.forward);
             yield return new WaitForSeconds(0.5f);
-            _playerControl.canInteract = true;
+            PlayerControl.canInteract = true;
             SynchronousControlSingleton.Instance.CanFatherMove = true;
             _rigidbody.useGravity = true;
         }

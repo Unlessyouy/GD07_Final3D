@@ -9,6 +9,8 @@ public class RopeTopEnd : InteractableObject
     [SerializeField]
     float JumpHeight;
 
+    [SerializeField] private Vector3 Direction;
+
     protected override void Start()
     {
         base.Start();
@@ -28,7 +30,7 @@ public class RopeTopEnd : InteractableObject
             if (climber != null && climber.isClimbing == true && !comeFromTop)
             {
                 climber.isClimbing = false;
-                climber.GetComponent<Rigidbody>().velocity = Vector3.up * JumpHeight;
+                climber.GetComponent<Rigidbody>().velocity = Direction.normalized * JumpHeight;
             }
         }
     }

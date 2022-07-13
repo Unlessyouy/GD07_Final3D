@@ -8,6 +8,8 @@ public class PlayerControl : BasicControl
 {
     public bool CanJump { get; set; }
     public bool CanPlayerInput { get; set; }
+
+    public bool PullSon;
     
     [Header("Jump Related")]
     [SerializeField] private float JumpHeight;
@@ -57,6 +59,8 @@ public class PlayerControl : BasicControl
 
         #endregion
 
+        PullSon = false;
+        
         #region interactTimer
 
         if (interactInput == 1)
@@ -78,15 +82,7 @@ public class PlayerControl : BasicControl
         {
             if (interactTimer > 0 && interactTimer <= interactTime)
             {
-                if (alive && CanJump && !canInteract && !isClimbing && !IsHoldingHands && !isInOcean)
-                {
-                    rb.velocity = Vector3.up * JumpHeight;
-                    if (anim.GetBool("isGrounded"))
-                    {
-                        anim.Play("Anim_Father_Jump");
-                        anim.SetBool("isJumping", true);
-                    }
-                }
+                PullSon = true;
             }
             interactTimer = 0;
             isInteracting = false;
@@ -103,6 +99,15 @@ public class PlayerControl : BasicControl
 
         #endregion
 
+        if (Input.GetButtonDown("Jump") && alive && CanJump && !canInteract && !isClimbing && !IsHoldingHands && !isInOcean)
+        {
+            rb.velocity = Vector3.up * JumpHeight;
+            if (anim.GetBool("isGrounded"))
+            {
+                anim.Play("Anim_Father_Jump");
+                anim.SetBool("isJumping", true);
+            }
+        }
         base.Update();
     }
    

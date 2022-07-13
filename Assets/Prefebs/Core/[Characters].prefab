@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSpeed: 125
-  ClimbSpeed: 5
+  ClimbSpeed: 3.5
   isInteracting: 0
   interactingObject: {fileID: 0}
   interactingMindPowerObject: {fileID: 0}
@@ -148,6 +148,7 @@ MonoBehaviour:
   interactTime: 0.8
   FootOffset: 0.25
   RayLength: 0.75
+  PullSon: 0
   JumpHeight: 9
   GravityMultiplier: 1.5
   canInteract: 0
@@ -252,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSpeed: 100
-  ClimbSpeed: 2.5
+  ClimbSpeed: 3.5
   isInteracting: 0
   interactingObject: {fileID: 0}
   interactingMindPowerObject: {fileID: 0}
@@ -291,6 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54387370c87e374cb593a099a27f130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerControl: {fileID: 1869859560746299685}
   JumpHeight: 2
   JumpLow: 0.5
   RayHeight: 1.7

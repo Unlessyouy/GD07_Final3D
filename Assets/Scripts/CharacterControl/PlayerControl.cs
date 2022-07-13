@@ -10,8 +10,6 @@ public class PlayerControl : BasicControl
     public bool CanPlayerInput { get; set; }
     
     [Header("Jump Related")]
-    [SerializeField] private float FootOffset = 0.5f;
-    [SerializeField] private float RayLength = 0.75f;
     [SerializeField] private float JumpHeight;
     [SerializeField] private float GravityMultiplier = 1.5f;
 
@@ -107,38 +105,7 @@ public class PlayerControl : BasicControl
 
         base.Update();
     }
-    private bool JumpRay()
-    {
-        var isRightFootGrounded = false;
-        var isLeftFootGrounded = false;
-        
-        if (Physics.Raycast(transform.position + FootOffset * transform.right, -transform.up, out var rightFootHitInfo, RayLength))
-        {
-            if (rightFootHitInfo.collider.CompareTag("Terrain"))
-            {
-                isRightFootGrounded = true;
-            }
-        }
-        
-        if (Physics.Raycast(transform.position + FootOffset * -transform.right, -transform.up, out var leftFootHitInfo, RayLength))
-        {
-            if (leftFootHitInfo.collider.CompareTag("Terrain"))
-            {
-                isLeftFootGrounded = true;
-            }
-        }
-
-        if (isLeftFootGrounded || isRightFootGrounded)
-        {
-            anim.SetBool("isGrounded", true);
-        }
-        else
-        {
-            anim.SetBool("isGrounded", false);
-        }
-
-        return isLeftFootGrounded || isRightFootGrounded;
-    }
+   
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Terrain"))

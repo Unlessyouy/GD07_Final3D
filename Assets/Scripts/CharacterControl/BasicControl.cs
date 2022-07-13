@@ -19,7 +19,7 @@ public class BasicControl : MonoBehaviour
     public MindPowerComponent interactingMindPowerObject;
 
     protected float towardsY;
-    [Header("ת���ٶȣ��Ƕ�/�룩")]
+    [Header("Rotate")]
     public float rotateSpeed;//degree per second
 
     public bool alive;
@@ -36,6 +36,9 @@ public class BasicControl : MonoBehaviour
 
     protected int interactType;//1 = Father; 2 = Son;
 
+    [SerializeField] private float FootOffset = 0.25f;
+    [SerializeField] private float RayLength = 0.75f;
+    
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -89,6 +92,8 @@ public class BasicControl : MonoBehaviour
                 }
             }
         }
+
+        rb.useGravity = !JumpRay();
 
         #endregion
     }
@@ -153,5 +158,38 @@ public class BasicControl : MonoBehaviour
         {
             interactingMindPowerObject = null;
         }
+    }
+    
+    protected bool JumpRay()
+    {
+        var isRightFootGrounded = false;
+        var isLeftFootGrounded = false;
+        
+        if (Physics.Raycast(transform.position + FootOffset * transform.right, -transform.up, out var rightFootHitInfo, RayLength))
+        {
+            if (rightFootHitInfo.collider.CompareTag("Terrain"))
+            {
+                isRightFootGrounded = true;
+            }
+        }
+        
+        if (Physics.Raycast(transform.position + FootOffset * -transform.right, -transform.up, out var leftFootHitInfo, RayLength))
+        {
+            if (leftFootHitInfo.collider.CompareTag("Terrain"))
+            {
+                isLeftFootGrounded = true;
+            }
+        }
+
+        if (isLeftFootGrounded || isRightFootGrounded)
+        {
+            anim.SetBool("isGrounded", true);
+        }
+        else
+        {
+            anim.SetBool("isGrounded", false);
+        }
+
+        return isLeftFootGrounded || isRightFootGrounded;
     }
 }

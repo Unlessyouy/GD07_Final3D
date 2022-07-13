@@ -98,7 +98,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869859560746299680}
-  m_Material: {fileID: 13400000, guid: 559a30125e6b06844986651a7d0ea54e, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.35
@@ -216,7 +216,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869859561528782458}
-  m_Material: {fileID: 13400000, guid: 559a30125e6b06844986651a7d0ea54e, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -264,6 +264,8 @@ MonoBehaviour:
   IsHoldingHands: 0
   isInOcean: 0
   interactTime: 0.8
+  FootOffset: 0.25
+  RayLength: 0.75
   MindPowerVFX: {fileID: 5356944628478497259}
 --- !u!114 &2584751054422470628
 MonoBehaviour:

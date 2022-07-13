@@ -103,7 +103,6 @@ Transform:
   m_Children:
   - {fileID: 1479997982275394327}
   - {fileID: 7152340024231083200}
-  - {fileID: 1479997980980763813}
   m_Father: {fileID: 1479997982758503237}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -118,7 +117,7 @@ GameObject:
   - component: {fileID: 1479997980980763813}
   - component: {fileID: 1479997980980763811}
   - component: {fileID: 2854829593804801358}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MP_Radius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,12 +132,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479997980980763814}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6066806643661900523}
-  m_RootOrder: 2
+  m_Father: {fileID: 1479997982275394327}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1479997980980763811
 MonoBehaviour:
@@ -341,6 +340,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3863149781153530181}
+  - {fileID: 1479997980980763813}
   m_Father: {fileID: 6066806643661900523}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

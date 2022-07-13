@@ -12,6 +12,11 @@ namespace Mechanics
 
         private void OnTriggerStay(Collider other)
         {
+            if (other.CompareTag("Terrain"))
+            {
+                return;
+            }
+            
             StopAllCoroutines();
             
             if (!HasSet)

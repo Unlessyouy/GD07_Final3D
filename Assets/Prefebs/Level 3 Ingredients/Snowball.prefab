@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SnowballActivated: {fileID: 3873014829776020917}
   SnowballBefore: {fileID: 251418440437654905}
+  SnowballPositionAdjust: {fileID: 1479997981633108577}
 --- !u!65 &2854829593804801358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -181,6 +182,7 @@ GameObject:
   - component: {fileID: 1479997981633108607}
   - component: {fileID: 6842259900973493264}
   - component: {fileID: 8337031269413812061}
+  - component: {fileID: 8030793134118344600}
   m_Layer: 8
   m_Name: Snowball_Activated
   m_TagString: Untagged
@@ -231,7 +233,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db30aef6b784ee242a3541e9a5a4e515, type: 2}
+  - {fileID: 2100000, guid: e273a7a6097d00344b3be7d85e2fc2f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -306,6 +308,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 156e8b4ac7484f09807e52eafb36d232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8030793134118344600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479997981633108577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0813d81eeffe4611be58ccc3f9b8a9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WarmSpeed: 0.25
+  WarmAmount: 1
+  Activated: {fileID: 3873014829776020917}
+  BeforeActivated: {fileID: 251418440437654905}
+  BeforeCollision: {fileID: 1479997982275394328}
 --- !u!1 &1479997982275394328
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +336,6 @@ GameObject:
   - component: {fileID: 1479997982275394327}
   - component: {fileID: 1479997982275394324}
   - component: {fileID: 1479997982275394325}
-  - component: {fileID: 1479997982275394323}
   - component: {fileID: 718246583}
   - component: {fileID: 406656046032915392}
   m_Layer: 8
@@ -394,23 +412,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1479997982275394323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479997982275394328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f408017a43504cc0a43715dd81f9b980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actableCoolDown: 0
-  needMP: 0
-  activatedByMP: 0
-  activatedTime: 0
-  PushTarget: {fileID: 0}
 --- !u!54 &718246583
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -484,6 +485,8 @@ GameObject:
   - component: {fileID: 7152340024231083200}
   - component: {fileID: 188412412037804216}
   - component: {fileID: 3558714221156949152}
+  - component: {fileID: 3673001271670326778}
+  - component: {fileID: 6149695179212837493}
   m_Layer: 9
   m_Name: Pushable Volume
   m_TagString: Terrain
@@ -500,7 +503,7 @@ Transform:
   m_GameObject: {fileID: 2508835416039479362}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1.1, y: 1, z: 1.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6066806643661900523}
@@ -521,6 +524,36 @@ MonoBehaviour:
   FollowObject: {fileID: 1479997982275394327}
   Rigidbody: {fileID: 718246583}
 --- !u!65 &3558714221156949152
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2508835416039479362}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3673001271670326778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2508835416039479362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f408017a43504cc0a43715dd81f9b980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actableCoolDown: 0
+  needMP: 0
+  activatedByMP: 0
+  activatedTime: 0
+  PushTarget: {fileID: 1479997982275394328}
+--- !u!65 &6149695179212837493
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

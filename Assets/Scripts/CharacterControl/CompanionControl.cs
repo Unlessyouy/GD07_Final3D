@@ -4,6 +4,7 @@ namespace CharacterControl
 {
     public class CompanionControl : BasicControl
     {
+        [SerializeField] private ParticleSystem MindPowerVFX;
         protected override void Start()
         {
             base.Start();
@@ -67,6 +68,9 @@ namespace CharacterControl
                     {
                         interactingMindPowerObject.MindPowerTrigger();
                     }
+
+                    MindPowerVFX.transform.position = transform.position;
+                    MindPowerVFX.Play();
                 }
                 interactTimer = 0;
                 isInteracting = false;

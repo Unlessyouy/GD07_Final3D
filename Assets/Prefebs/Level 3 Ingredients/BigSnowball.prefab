@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 6556363793359997073}
   - component: {fileID: 8579197907229844569}
   - component: {fileID: 2215147391658392651}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Pushable Volume
   m_TagString: Terrain
   m_Icon: {fileID: 0}
@@ -233,6 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SnowballActivated: {fileID: 2224169278302201760}
   SnowballBefore: {fileID: 2891126132412802924}
+  SnowballPositionAdjust: {fileID: 4605038413182490893}
 --- !u!65 &935627464407156571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -384,7 +385,6 @@ GameObject:
   - component: {fileID: 4605038413182490882}
   - component: {fileID: 4605038413182490881}
   - component: {fileID: 4605038413182490880}
-  - component: {fileID: 4605038413182490886}
   - component: {fileID: 3126167036143276194}
   - component: {fileID: 3370623125893548501}
   m_Layer: 8
@@ -459,23 +459,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4605038413182490886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4605038413182490893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f408017a43504cc0a43715dd81f9b980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actableCoolDown: 0
-  needMP: 0
-  activatedByMP: 0
-  activatedTime: 0
-  PushTarget: {fileID: 0}
 --- !u!54 &3126167036143276194
 Rigidbody:
   m_ObjectHideFlags: 0

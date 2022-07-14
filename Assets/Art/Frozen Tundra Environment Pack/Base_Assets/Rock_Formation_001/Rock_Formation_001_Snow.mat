@@ -15,15 +15,22 @@ MonoBehaviour:
   version: 0
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Rock_Formation_001_Snow
   m_Shader: {fileID: 4800000, guid: 13dbaaa838e018742b1d2db35c905415, type: 3}
-  m_ShaderKeywords: _BENTNORMALMAP _DETAIL_MAP _HEIGHTMAP _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
-    _SPECULAR_OCCLUSION_FROM_BENT_NORMAL_MAP
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _BENTNORMALMAP
+  - _DETAIL_MAP
+  - _HEIGHTMAP
+  - _MASKMAP
+  - _NORMALMAP
+  - _NORMALMAP_TANGENT_SPACE
+  - _SPECULAR_OCCLUSION_FROM_BENT_NORMAL_MAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -187,6 +194,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AORemapMax: 1
     - _AORemapMin: 0.21039099
@@ -251,7 +259,7 @@ Material:
     - _GlossyReflections: 1
     - _GroundSnowDetail: 0.7
     - _GroundSnowGradient: 0
-    - _GroundSnowIntensity: 1.5
+    - _GroundSnowIntensity: 0.04
     - _GroundSnowNormalBias: 0.042
     - _GroundSnowNormalInfluence: 0.15
     - _GroundSnowOcclusionInfluence: 1
@@ -303,7 +311,7 @@ Material:
     - _SnowMultiplier: 1
     - _SnowSplash: 1
     - _SnowSplashNormalInfluence: 1
-    - _SnowSplashOcclusionInfluence: 1
+    - _SnowSplashOcclusionInfluence: 0
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
     - _SpecularHighlights: 1
@@ -373,3 +381,4 @@ Material:
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

@@ -48,7 +48,7 @@ Material:
     - _Tess: 32
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _PathColorIn: {r: 0.42951223, g: 0.4604333, b: 0.5377358, a: 1}
+    - _PathColorIn: {r: 0, g: 0, b: 0, a: 1}
     - _PathColorOut: {r: 0.79910296, g: 0.79910296, b: 0.79910296, a: 1}
     - _RimColor: {r: 0.10461649, g: 0.12213881, b: 0.14126332, a: 1}
     - _ShadowColor: {r: 0.11047821, g: 0.18565705, b: 0.3584906, a: 1}

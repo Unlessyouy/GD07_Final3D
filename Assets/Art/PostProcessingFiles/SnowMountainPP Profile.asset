@@ -179,8 +179,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.12432104
-          value: 0.9393549
+          time: 0.112251036
+          value: 0.9329033
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
   active: 1
   temperature:
     m_OverrideState: 1
-    m_Value: -19
+    m_Value: -14
   tint:
     m_OverrideState: 1
     m_Value: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 1, y: 1, z: 1, w: -0.02780755}
   gamma:
     m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0}
@@ -388,7 +388,7 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: 36
+    m_Value: 25
 --- !u!114 &6108866851859516213
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -410,7 +410,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.309
+    m_Value: 0.323
   smoothness:
     m_OverrideState: 1
     m_Value: 0.73

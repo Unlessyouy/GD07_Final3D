@@ -41,7 +41,7 @@
 							<ConversionPlugin Name="" ID="{DC7E008E-1078-4489-93D7-A03CF80D3D35}" PluginName="PCM" CompanyID="0" PluginID="1"/>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Windows">
-							<ConversionPlugin Name="" ID="{F75534BF-FD48-458E-B3A0-235795819BCE}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{B140784F-DF1A-4578-A4A5-2F99BB48933B}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 						</ConversionPluginInfo>
 					</ConversionPluginInfoList>
 				</Conversion>

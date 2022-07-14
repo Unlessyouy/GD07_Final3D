@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Foot_Player" ID="{6C289EF7-FBF3-47B8-89A8-069F96009A0F}">
+					<ChildrenList>
+						<Action Name="" ID="{C78A8E80-679B-4963-91FD-4CBBC7AD8533}" ShortID="703089077">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{20CC9350-36E2-4DDC-B305-1F2BE782AD0E}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Campfire" ID="{B0DA7C52-F319-4C4C-B210-8A79833038DB}">
+					<ChildrenList>
+						<Action Name="" ID="{605FB273-FDE2-4E6A-AB4F-551388C4D7E5}" ShortID="300558527">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Campfire" ID="{6C71B6A4-C950-49AC-BEC6-093E611C8283}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ambient_HeavyWind" ID="{6F4A698E-C726-4298-9B43-23F115C21D14}">
+					<ChildrenList>
+						<Action Name="" ID="{B67A412C-4483-489F-9F02-63109295FA6C}" ShortID="760454535">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind_Heavy" ID="{6D54297A-22A9-4FD2-BE65-698B0DB92C8E}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ambient_CaveSub" ID="{865B4492-E6D5-482D-8F34-B430B0FC2907}">
+					<ChildrenList>
+						<Action Name="" ID="{3BF4C1E9-8BFE-423C-9BF5-7CE222A14E04}" ShortID="361020752">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cave_WindSub" ID="{169C9B6D-97BD-43D2-B20F-038CCB340EC9}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

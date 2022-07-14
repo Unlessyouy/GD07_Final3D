@@ -9,6 +9,35 @@
 							<ObjectRef Name="System" ID="{06DB1CF0-F1FD-49F3-86A4-ED0EB9AFA059}" WorkUnitID="{D7CF7571-9F2C-4A6A-9E01-A03B81C887CE}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Environments" ID="{9CC5F4E1-1547-4681-986C-14A7D581188F}">
+							<ChildrenList>
+								<AuxBus Name="Cave" ID="{A769F39A-20C4-4B04-AC9C-908045F1763F}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Hall_Medium" ID="{50286348-176A-4235-9E4C-CA5F73D87818}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</AuxBus>
+							</ChildrenList>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="SFX" ID="{C392B0AD-E8B3-41A0-95E0-C240FFBD1B6A}">
+							<ChildrenList>
+								<Bus Name="Main Character" ID="{88F87300-EB3F-466C-8473-EEBFF7C3ADF4}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}">
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Ambience" ID="{E99FB118-E803-44D2-B443-B7483E94D366}">
+							<ObjectLists/>
+						</Bus>
+					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
 			</ChildrenList>

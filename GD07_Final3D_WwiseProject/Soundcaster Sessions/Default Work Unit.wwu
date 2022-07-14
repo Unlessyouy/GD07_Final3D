@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{22FD583C-22FF-437A-86AD-9099B19BA70B}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{22FD583C-22FF-437A-86AD-9099B19BA70B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{22FD583C-22FF-437A-86AD-9099B19BA70B}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="001" ID="{9BA2AF1E-013C-45FE-99CE-7E142D444F11}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Footsteps" ID="{20CC9350-36E2-4DDC-B305-1F2BE782AD0E}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Campfire" ID="{6C71B6A4-C950-49AC-BEC6-093E611C8283}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Wind_Heavy" ID="{6D54297A-22A9-4FD2-BE65-698B0DB92C8E}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Cave_WindSub" ID="{169C9B6D-97BD-43D2-B20F-038CCB340EC9}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Stone" ID="{E244C986-178F-467B-B1B6-6388A82761CF}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

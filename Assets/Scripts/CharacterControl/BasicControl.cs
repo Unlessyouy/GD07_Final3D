@@ -24,6 +24,10 @@ public class BasicControl : MonoBehaviour
 
     public bool alive;
 
+    bool isMoving;
+    float walkingIntervalTimer = 0;
+    float walkingIntervalTime = 0.3f;
+
     public bool isClimbing;
     public bool onRopeTopEnd;
     public bool onRopeDownEnd;
@@ -67,16 +71,19 @@ public class BasicControl : MonoBehaviour
             {
                 towardsY = 270;
                 anim.SetBool("isMoving", true);
+                isMoving = true;
             }
             else if (rb.velocity.x < -1)
             {
                 towardsY = 90;
                 anim.SetBool("isMoving", true);
+                isMoving = true;
             }
             else
             {
                 anim.SetBool("isMoving", false);
                 anim.SetFloat("MovingSpeed", 0);
+                isMoving = false;
             }
             float rotateDifference = towardsY - transform.rotation.eulerAngles.y;
 
@@ -96,6 +103,16 @@ public class BasicControl : MonoBehaviour
         rb.useGravity = !JumpRay();
 
         #endregion
+
+        if (isMoving)
+        {
+            walkingIntervalTimer += Time.deltaTime;
+            if (walkingIntervalTimer >= walkingIntervalTime)
+            {
+                walkingIntervalTimer = 0;
+                AkSoundEngine.PostEvent("Foot_Player", gameObject);
+            }
+        }
     }
     protected virtual void FixedUpdate()
     {

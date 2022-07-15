@@ -10,7 +10,7 @@
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
-  <WwiseInstallationPathWindows>D:\Wwise</WwiseInstallationPathWindows>
+  <WwiseInstallationPathWindows>D:\Wwise 2021.1.9.7847</WwiseInstallationPathWindows>
   <WwiseProjectPath>../GD07_Final3D_WwiseProject/GD07_Final3D_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>

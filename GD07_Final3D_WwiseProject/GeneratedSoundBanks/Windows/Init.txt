@@ -1,5 +1,16 @@
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	2151963051	Items			\Default Work Unit\Master Audio Bus\SFX\Items	
+	3381091279	Main Character			\Default Work Unit\Master Audio Bus\SFX\Main Character	
+	3761286811	Environments			\Default Work Unit\Master Audio Bus\Environments	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	4122393694	Cave			\Default Work Unit\Master Audio Bus\Environments\Cave	
+
+Effect plug-ins	ID	Name	Type				Notes
+	3451596814	Hall_Medium	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

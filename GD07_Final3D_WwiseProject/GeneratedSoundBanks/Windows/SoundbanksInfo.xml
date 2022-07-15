@@ -11,10 +11,147 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+		<SoundBank Id="1355168291" Language="SFX" Hash="86689428">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
+			</IncludedAuxBusses>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="3434492242">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2523607441" Name="Ambient_CaveSub" ObjectPath="\Events\Default Work Unit\Ambient_CaveSub" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1052914941" Language="SFX">
+							<ShortName>Cave_WindSub.wav</ShortName>
+							<Path>SFX\Cave_WindSub_9EDFC787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1253188249" Name="Ambient_HeavyWind" ObjectPath="\Events\Default Work Unit\Ambient_HeavyWind" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="523090183" Language="SFX">
+							<ShortName>Wind_Heavy.wav</ShortName>
+							<Path>SFX\Wind_Heavy_9EDFC787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1931646578" Name="Campfire" ObjectPath="\Events\Default Work Unit\Campfire" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="842402316" Language="SFX">
+							<ShortName>Campfire.wav</ShortName>
+							<Path>SFX\Campfire_9EDFC787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1894362767" Name="Foot_Player" ObjectPath="\Events\Default Work Unit\Foot_Player" DurationType="OneShot" DurationMin="0.088437" DurationMax="0.362579">
+					<IncludedMemoryFiles>
+						<File Id="1428087" Language="SFX">
+							<ShortName>Footstep_Wood-001.wav</ShortName>
+							<Path>SFX\Footstep_Wood-001_2427157E.wem</Path>
+						</File>
+						<File Id="6276280" Language="SFX">
+							<ShortName>Footstep_Snow-003.wav</ShortName>
+							<Path>SFX\Footstep_Snow-003_1C1C03D9.wem</Path>
+						</File>
+						<File Id="75060662" Language="SFX">
+							<ShortName>Footstep_Wood-005.wav</ShortName>
+							<Path>SFX\Footstep_Wood-005_AE6C44CC.wem</Path>
+						</File>
+						<File Id="81444893" Language="SFX">
+							<ShortName>Footstep_Stone-001.wav</ShortName>
+							<Path>SFX\Footstep_Stone-001_9C196647.wem</Path>
+						</File>
+						<File Id="92285822" Language="SFX">
+							<ShortName>Footstep_Stone-002.wav</ShortName>
+							<Path>SFX\Footstep_Stone-002_970C43A2.wem</Path>
+						</File>
+						<File Id="309047856" Language="SFX">
+							<ShortName>Footstep_Snow-005.wav</ShortName>
+							<Path>SFX\Footstep_Snow-005_43FC7388.wem</Path>
+						</File>
+						<File Id="311964852" Language="SFX">
+							<ShortName>Footstep_Stone-003.wav</ShortName>
+							<Path>SFX\Footstep_Stone-003_90FC6839.wem</Path>
+						</File>
+						<File Id="406418679" Language="SFX">
+							<ShortName>Footstep_Wood-002.wav</ShortName>
+							<Path>SFX\Footstep_Wood-002_18539E22.wem</Path>
+						</File>
+						<File Id="620895053" Language="SFX">
+							<ShortName>Footstep_Stone-004.wav</ShortName>
+							<Path>SFX\Footstep_Stone-004_B45D88B3.wem</Path>
+						</File>
+						<File Id="651806299" Language="SFX">
+							<ShortName>Footstep_Wood-003.wav</ShortName>
+							<Path>SFX\Footstep_Wood-003_CB038847.wem</Path>
+						</File>
+						<File Id="793680965" Language="SFX">
+							<ShortName>Footstep_Stone-005.wav</ShortName>
+							<Path>SFX\Footstep_Stone-005_CC77A0A1.wem</Path>
+						</File>
+						<File Id="833876951" Language="SFX">
+							<ShortName>Footstep_Snow-002.wav</ShortName>
+							<Path>SFX\Footstep_Snow-002_34C1E7FA.wem</Path>
+						</File>
+						<File Id="898568729" Language="SFX">
+							<ShortName>Footstep_Snow-004.wav</ShortName>
+							<Path>SFX\Footstep_Snow-004_A699629E.wem</Path>
+						</File>
+						<File Id="983661866" Language="SFX">
+							<ShortName>Footstep_Snow-001.wav</ShortName>
+							<Path>SFX\Footstep_Snow-001_D2DD5155.wem</Path>
+						</File>
+						<File Id="1051221840" Language="SFX">
+							<ShortName>Footstep_Wood-004.wav</ShortName>
+							<Path>SFX\Footstep_Wood-004_93BBEE0C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{CFC63A43-DCF9-4C8C-9DAE-8413D2659081}">
+							<Media>
+								<File Id="1428087"/>
+								<File Id="75060662"/>
+								<File Id="406418679"/>
+								<File Id="651806299"/>
+								<File Id="1051221840"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E244C986-178F-467B-B1B6-6388A82761CF}">
+							<Media>
+								<File Id="81444893"/>
+								<File Id="92285822"/>
+								<File Id="311964852"/>
+								<File Id="620895053"/>
+								<File Id="793680965"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}">
+							<Media>
+								<File Id="6276280"/>
+								<File Id="309047856"/>
+								<File Id="833876951"/>
+								<File Id="898568729"/>
+								<File Id="983661866"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="3865314626" Name="Material" ObjectPath="\Switches\Default Work Unit\Material" GUID="{95DF0976-2A80-4D3D-A0A9-EBE89C4CE141}">
+					<Switches>
+						<Switch Id="1216965916" Name="Stone" ObjectPath="\Switches\Default Work Unit\Material\Stone" GUID="{E244C986-178F-467B-B1B6-6388A82761CF}"/>
+						<Switch Id="2058049674" Name="Wood" ObjectPath="\Switches\Default Work Unit\Material\Wood" GUID="{CFC63A43-DCF9-4C8C-9DAE-8413D2659081}"/>
+						<Switch Id="787898836" Name="Snow" ObjectPath="\Switches\Default Work Unit\Material\Snow" GUID="{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

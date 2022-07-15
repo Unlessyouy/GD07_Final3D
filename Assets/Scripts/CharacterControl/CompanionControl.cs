@@ -68,8 +68,6 @@ namespace CharacterControl
                     {
                         interactingMindPowerObject.MindPowerTrigger();
                     }
-
-                    MindPowerVFX.transform.position = transform.position;
                     MindPowerVFX.Play();
                 }
                 interactTimer = 0;

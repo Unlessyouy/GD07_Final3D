@@ -1,0 +1,34 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1253188249	Ambient_HeavyWind			\Default Work Unit\Ambient_HeavyWind	
+	1894362767	Foot_Player			\Default Work Unit\Foot_Player	
+	1931646578	Campfire			\Default Work Unit\Campfire	
+	2523607441	Ambient_CaveSub			\Default Work Unit\Ambient_CaveSub	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3865314626	Material			\Default Work Unit\Material	
+
+Switch	ID	Name	Switch Group			Notes
+	787898836	Snow	Material			
+	1216965916	Stone	Material			
+	2058049674	Wood	Material			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1428087	Footstep_Wood-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-001_2427157E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-001		2577
+	6276280	Footstep_Snow-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-003_1C1C03D9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-003		3385
+	75060662	Footstep_Wood-005	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-005_AE6C44CC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-005		2490
+	81444893	Footstep_Stone-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-001_9C196647.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-001		1603
+	92285822	Footstep_Stone-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-002_970C43A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-002		1783
+	309047856	Footstep_Snow-005	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-005_43FC7388.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-005		3394
+	311964852	Footstep_Stone-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-003_90FC6839.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-003		1712
+	406418679	Footstep_Wood-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-002_18539E22.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-002		2723
+	523090183	Wind_Heavy	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Wind_Heavy_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind_Heavy		1528612
+	620895053	Footstep_Stone-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-004_B45D88B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-004		1690
+	651806299	Footstep_Wood-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-003_CB038847.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-003		2446
+	793680965	Footstep_Stone-005	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-005_CC77A0A1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-005		1617
+	833876951	Footstep_Snow-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-002_34C1E7FA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-002		3160
+	842402316	Campfire	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Campfire_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Campfire		103480
+	898568729	Footstep_Snow-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-004_A699629E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-004		3444
+	983661866	Footstep_Snow-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-001_D2DD5155.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-001		3308
+	1051221840	Footstep_Wood-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-004_93BBEE0C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-004		1971
+	1052914941	Cave_WindSub	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Cave_WindSub_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Cave_WindSub		620217
+

@@ -4,6 +4,10 @@
 		<UserProjectSettings Name="" ID="{1C21C9C5-2A7D-4AB4-87E1-0DCE64CBBA89}">
 			<PropertyList>
 				<Property Name="Event Action List\{03D2A3F2-1B4B-4846-98DA-37A0CE47E2D2}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{6C289EF7-FBF3-47B8-89A8-069F96009A0F}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{6F4A698E-C726-4298-9B43-23F115C21D14}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{865B4492-E6D5-482D-8F34-B430B0FC2907}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{B0DA7C52-F319-4C4C-B210-8A79833038DB}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
@@ -24,7 +28,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="GFB97/YN1ECUoasg/cxYy2fcwWWgybVIoelNjaKvq2o="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value=""/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="+p422VfFAUmcjumtUcZDSAEpHYT/////lnLREvRx/0SFV10pp67wQwEpHYT/////"/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="+p422VfFAUmcjumtUcZDSAEroHn/////lnLREvRx/0SFV10pp67wQwEroHn/////"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>
@@ -57,7 +61,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_22_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="N7krBKMjd0mj4bKD60RDyQ=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="GDfpW0pn80uQVxmjdF6GIg=="/>
-				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value="Nn1k2RF8VUqs7P0wcn/aQA=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value=""/>

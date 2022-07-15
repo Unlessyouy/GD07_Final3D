@@ -10,11 +10,24 @@ namespace Interactable.MindPowerComponent
         [SerializeField] private FireBrazier FireBrazier;
         [SerializeField] private float LitTime = 5f;
 
+        bool soundPlayed;
         private void Start()
         {
             FireVFX.SetActive(false);
         }
-
+        private void Update()
+        {
+            if (FireBrazier.IsFire && !soundPlayed)
+            {
+                AkSoundEngine.PostEvent("Campfire", gameObject);
+                soundPlayed = true;
+            }
+            else if(!FireBrazier.IsFire)
+            {
+                AkSoundEngine.StopAll(gameObject);
+                soundPlayed = false;
+            }
+        }
         public override void MindPowerTrigger()
         {
             StopAllCoroutines();

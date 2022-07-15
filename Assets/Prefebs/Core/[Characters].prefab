@@ -200,6 +200,7 @@ Transform:
   m_Children:
   - {fileID: 6310938724106579162}
   - {fileID: 5258250610542819567}
+  - {fileID: 8252562159280635873}
   m_Father: {fileID: 1869859562498904980}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -799,6 +800,106 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 467908448415128883}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1504472259021803508
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1869859561528782460}
+    m_Modifications:
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380450124718957795, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_Name
+      value: E_MentalWave3_VFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380450124718957795, guid: 023656fe641c4c942b9983f790612d80,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 023656fe641c4c942b9983f790612d80, type: 3}
+--- !u!4 &8252562159280635873 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7378593849472200725, guid: 023656fe641c4c942b9983f790612d80,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504472259021803508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5773135508345211697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -985,6 +1086,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: E_MentalWaves2_VFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097802340894065575, guid: caa298b1499d30b4c91cfc73d6b889d6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2280927272516924629, guid: caa298b1499d30b4c91cfc73d6b889d6,
         type: 3}

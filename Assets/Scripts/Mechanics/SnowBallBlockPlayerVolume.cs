@@ -13,6 +13,7 @@ namespace Mechanics
         private void Update()
         {
             transform.position = FollowObject.position;
+            transform.rotation = FollowObject.rotation;
         }
 
         private void OnCollisionEnter(Collision collision)

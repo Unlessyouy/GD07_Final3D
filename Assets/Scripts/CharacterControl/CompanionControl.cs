@@ -5,11 +5,13 @@ namespace CharacterControl
     public class CompanionControl : BasicControl
     {
         [SerializeField] private ParticleSystem MindPowerVFX;
+
         protected override void Start()
         {
             base.Start();
             interactType = 2;
         }
+
         protected override void Update()
         {
             #region Input & Movement
@@ -68,8 +70,13 @@ namespace CharacterControl
                     {
                         interactingMindPowerObject.MindPowerTrigger();
                     }
-                    MindPowerVFX.Play();
+
+                    if (MindPowerVFX)
+                    {
+                       MindPowerVFX.Play();
+                    }
                 }
+
                 interactTimer = 0;
                 isInteracting = false;
             }
@@ -87,6 +94,7 @@ namespace CharacterControl
 
             base.Update();
         }
+
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.collider.CompareTag("Terrain"))
@@ -94,6 +102,7 @@ namespace CharacterControl
                 anim.SetBool("isGrounded", true);
             }
         }
+
         private void OnCollisionExit(Collision collision)
         {
             if (collision.collider.CompareTag("Terrain"))

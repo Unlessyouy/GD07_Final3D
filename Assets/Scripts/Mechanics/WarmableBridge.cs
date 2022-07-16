@@ -14,18 +14,16 @@ namespace Mechanics
 
         protected override void CompletelyWarm()
         {
-            if (!_collider.isTrigger)
-            {
-                _collider.isTrigger = true;
-            }
+            _collider.isTrigger = true;
+            gameObject.SetActive(false);
         }
 
         protected override void CompletelyFrozen()
         {
-            if (_collider.isTrigger)
-            {
-                _collider.isTrigger = false;
-            }
+            // if (_collider.isTrigger)
+            // {
+            //     _collider.isTrigger = false;
+            // }
         }
     }
 }

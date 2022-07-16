@@ -10,6 +10,27 @@ namespace Mechanics
         [SerializeField] private GameObject Mesh;
         [SerializeField] private bool HasSet;
 
+        private Vector3 _originalPosition;
+        private Vector3 _targetPosition;
+
+        private void Start()
+        {
+            _originalPosition = Mesh.transform.position;
+            _targetPosition = _originalPosition - Vector3.up * 0.25f;
+        }
+
+        private void Update()
+        {
+            if (HasSet)
+            {
+                Mesh.transform.position = Vector3.MoveTowards(Mesh.transform.position, _targetPosition, 1f * Time.deltaTime);
+            }
+            else
+            {
+                Mesh.transform.position = Vector3.MoveTowards(Mesh.transform.position, _originalPosition, 1f * Time.deltaTime);
+            }
+        }
+
         private void OnTriggerStay(Collider other)
         {
             if (other.CompareTag("Terrain"))
@@ -19,9 +40,12 @@ namespace Mechanics
             
             StopAllCoroutines();
             
-            if (!HasSet)
+            if (!HasSet && other.GetComponent<PressureableComponent>())
             {
-                ControlledObject.BeActivated();
+                if (ControlledObject)
+                {
+                    ControlledObject.BeActivated();
+                }
                 SetPlate();
             }
 
@@ -31,7 +55,7 @@ namespace Mechanics
         private void SetPlate()
         {
             HasSet = true;
-            Mesh.SetActive(false);
+            
         }
 
         private IEnumerator ResetPlate()

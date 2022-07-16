@@ -28,8 +28,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750300994620016782}
-  m_LocalRotation: {x: 0.031192183, y: 0.012490799, z: -0.0003898354, w: 0.9994353}
-  m_LocalPosition: {x: 180.95, y: 45.400745, z: -3}
+  m_LocalRotation: {x: 0.0743579, y: 0.009970808, z: -0.00074350386, w: 0.99718153}
+  m_LocalPosition: {x: 30.75, y: -12.700745, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61,13 +61,13 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 40
+  field of view: 45
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 15351
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -255,8 +255,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750300995371860610}
-  m_LocalRotation: {x: 0.11389612, y: 0.024361137, z: -0.0027936636, w: 0.99319005}
-  m_LocalPosition: {x: -35.671997, y: 5.283, z: -13.894}
+  m_LocalRotation: {x: 0.0743579, y: 0.009970808, z: -0.00074350386, w: 0.99718153}
+  m_LocalPosition: {x: 30.75, y: -12.700745, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 45
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -293,7 +293,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7788616, y: 1}
+    m_SensorSize: {x: 1.7775091, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 0
-  m_FollowOffset: {x: 0, y: 1.5, z: -8}
+  m_FollowOffset: {x: 0, y: 3, z: -10}
   m_XDamping: 4
   m_YDamping: 3
   m_ZDamping: 1
@@ -417,7 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0.2, y: 1.69, z: 0}
+  m_TrackedObjectOffset: {x: 0.2, y: 1.5, z: 0}
   m_LookaheadTime: 0.073
   m_LookaheadSmoothing: 30
   m_LookaheadIgnoreY: 0

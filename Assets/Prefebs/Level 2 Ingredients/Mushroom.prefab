@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2300540253032341930}
   m_Layer: 0
   m_Name: Mushroom
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f78ca1f515214f5b8b6897a81ddab313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MindPowerDistance: 4
+  MindPowerDistance: 2.7
   ActivatedVFX: {fileID: 20919786926665846}
   BounceVFX: {fileID: 20919786016312079}
   ResetTime: 5

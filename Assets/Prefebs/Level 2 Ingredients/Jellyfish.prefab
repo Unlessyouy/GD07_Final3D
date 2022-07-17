@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224580ff1853424cb6df67335418f03c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MindPowerDistance: 4
+  MindPowerDistance: 2.7
   LitUpVFX: {fileID: 6509404327089367699}
   LitUpMesh: {fileID: 5039941381527975338}
   ResetLightTime: 5

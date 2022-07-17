@@ -50,6 +50,7 @@ public class BasicControl : MonoBehaviour
         alive = true;
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
+            Physics.gravity = new Vector3(0, -5);
             isInOcean = true;
             anim.SetBool("isInOcean", true);
         }
@@ -100,8 +101,11 @@ public class BasicControl : MonoBehaviour
             }
         }
 
-        rb.useGravity = !JumpRay();
-
+        if (!isInOcean)
+        {
+            rb.useGravity = !JumpRay();
+        }
+        
         #endregion
 
         if (isMoving)

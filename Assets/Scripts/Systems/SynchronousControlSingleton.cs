@@ -74,10 +74,12 @@ namespace Systems
             if (_isCloseEnough)
             {
                 Son.movingSpeed = FATHER_SPEED;
+                Son.isInOcean = true;
             }
             else
             {
                 Son.movingSpeed = SON_SPEED;
+                Son.isInOcean = false;
             }
 
             Son.SetAnimMoveSpeed(Mathf.Abs(_rightHorizontalInput));

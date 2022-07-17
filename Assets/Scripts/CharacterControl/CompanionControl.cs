@@ -10,6 +10,7 @@ namespace CharacterControl
         {
             base.Start();
             interactType = 2;
+            isInOcean = false;
         }
 
         protected override void Update()
@@ -93,6 +94,11 @@ namespace CharacterControl
             #endregion
 
             base.Update();
+
+            if (isInOcean)
+            {
+                rb.useGravity = false;
+            }
         }
 
         private void OnCollisionEnter(Collision collision)

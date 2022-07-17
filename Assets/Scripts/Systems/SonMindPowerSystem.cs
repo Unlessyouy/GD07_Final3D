@@ -9,12 +9,12 @@ namespace Systems
 {
     public class SonMindPowerSystem : Singleton<SonMindPowerSystem>
     {
-        private List<JellyfishLightup_MPC> _jellyfishes = new List<JellyfishLightup_MPC>();
+        private List<EventMPCBase> _eventMPCObjects = new List<EventMPCBase>();
 
         private void OnEnable()
         {
             NewEventSystem.Instance.Subscribe<MindPowerEvent>(OnSonMindPower);
-            _jellyfishes = FindObjectsOfType<JellyfishLightup_MPC>().ToList();
+            _eventMPCObjects = FindObjectsOfType<EventMPCBase>().ToList();
         }
 
         private void OnDisable()
@@ -24,9 +24,9 @@ namespace Systems
 
         private void OnSonMindPower(MindPowerEvent eventArgs)
         {
-            foreach (var jellyfish in _jellyfishes)
+            foreach (var eventMpcObject in _eventMPCObjects)
             {
-                jellyfish.OnMentalPowerActivate(eventArgs.SonTransform);
+                eventMpcObject.OnMentalPowerActivate(eventArgs.SonTransform);
             }
         }
     }

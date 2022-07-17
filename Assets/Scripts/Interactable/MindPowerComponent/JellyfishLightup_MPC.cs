@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Interactable.MindPowerComponent
 {
-    public class JellyfishLightup_MPC : MonoBehaviour
+    public class JellyfishLightup_MPC : EventMPCBase
     {
         [SerializeField] private float MindPowerDistance = 4f;
         [SerializeField] private ParticleSystem LitUpVFX;
@@ -16,7 +16,7 @@ namespace Interactable.MindPowerComponent
         
         private bool _isLitUp;
         
-        public void OnMentalPowerActivate(Transform sonTransform)
+        public override void OnMentalPowerActivate(Transform sonTransform)
         {
             if (_isLitUp)
             {

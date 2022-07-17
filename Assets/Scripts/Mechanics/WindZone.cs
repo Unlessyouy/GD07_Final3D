@@ -18,12 +18,11 @@ namespace Mechanics
 
         private void OnTriggerStay(Collider other)
         {
-            if (other.GetComponent<WindBlowable>())
+            if (other.GetComponent<WindBlowable>() && other.GetComponent<WindBlowable>().IsBlowable)
             {
                 var otherRb = other.GetComponent<Rigidbody>();
-                if (otherRb.velocity.sqrMagnitude > 0)
+                if (otherRb.velocity.sqrMagnitude >= 0)
                 {
-                    Debug.Log("Wind");
                     otherRb.AddForce(Direction * Intensity * Time.deltaTime * 1000f);
                 }
             }

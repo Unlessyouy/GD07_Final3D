@@ -29,6 +29,8 @@ namespace Systems
         private const float SON_SPEED = 100f;
         private const float FATHER_SPEED = 125f;
 
+        public bool IsInteractWithOceanObject = false;
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -79,7 +81,10 @@ namespace Systems
             else
             {
                 Son.movingSpeed = SON_SPEED;
-                Son.isInOcean = false;
+                if (!IsInteractWithOceanObject)
+                {
+                    Son.isInOcean = false;
+                }
             }
 
             Son.SetAnimMoveSpeed(Mathf.Abs(_rightHorizontalInput));

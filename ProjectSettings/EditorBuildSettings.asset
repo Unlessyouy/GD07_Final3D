@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScene_OceanLevel.unity
     guid: bfc588a83e6555e4ca7a58a188eef1a2
   - enabled: 1
+    path: Assets/Scenes/Level2/Level2Gym.unity
+    guid: 0f17054cf5ffb8d49a11e594fca88eaa
+  - enabled: 1
     path: Assets/Scenes/Level2/Level2.unity
     guid: 8381dbda3125e2a4ba42ddf4280e8dbc
   - enabled: 1

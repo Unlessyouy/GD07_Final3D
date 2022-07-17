@@ -76,7 +76,10 @@ namespace Systems
             if (_isCloseEnough)
             {
                 Son.movingSpeed = FATHER_SPEED;
-                Son.isInOcean = true;
+                if (!IsInteractWithOceanObject)
+                {
+                    Son.isInOcean = true;
+                }
             }
             else
             {

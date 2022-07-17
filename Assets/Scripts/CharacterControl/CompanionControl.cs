@@ -1,3 +1,5 @@
+using EventClass;
+using Systems;
 using UnityEngine;
 
 namespace CharacterControl
@@ -74,8 +76,10 @@ namespace CharacterControl
 
                     if (MindPowerVFX)
                     {
-                       MindPowerVFX.Play();
+                       MindPowerVFX.Play(true);
                     }
+                    
+                    NewEventSystem.Instance.Publish(new MindPowerEvent(transform));
                 }
 
                 interactTimer = 0;

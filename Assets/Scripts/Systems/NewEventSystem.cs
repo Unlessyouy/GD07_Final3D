@@ -55,7 +55,6 @@ namespace Systems
          {
              if (e == null)
              {
-                 Debug.Log($"Invalid Event Arg: {typeof(T)}");
                  return;
              }
 

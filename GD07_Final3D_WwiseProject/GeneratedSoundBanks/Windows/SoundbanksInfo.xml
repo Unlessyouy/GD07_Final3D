@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -19,7 +19,7 @@
 				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3434492242">
+		<SoundBank Id="3161908922" Language="SFX" Hash="223458107">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -48,67 +48,67 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1894362767" Name="Foot_Player" ObjectPath="\Events\Default Work Unit\Foot_Player" DurationType="OneShot" DurationMin="0.088437" DurationMax="0.362579">
+				<Event Id="1894362767" Name="Foot_Player" ObjectPath="\Events\Default Work Unit\Foot_Player" DurationType="OneShot" DurationMin="0.072367" DurationMax="0.550568">
 					<IncludedMemoryFiles>
 						<File Id="1428087" Language="SFX">
 							<ShortName>Footstep_Wood-001.wav</ShortName>
-							<Path>SFX\Footstep_Wood-001_2427157E.wem</Path>
+							<Path>SFX\Footstep_Wood-001_3F75BDB9.wem</Path>
 						</File>
 						<File Id="6276280" Language="SFX">
 							<ShortName>Footstep_Snow-003.wav</ShortName>
-							<Path>SFX\Footstep_Snow-003_1C1C03D9.wem</Path>
+							<Path>SFX\Footstep_Snow-003_3F75BDB9.wem</Path>
 						</File>
 						<File Id="75060662" Language="SFX">
 							<ShortName>Footstep_Wood-005.wav</ShortName>
-							<Path>SFX\Footstep_Wood-005_AE6C44CC.wem</Path>
+							<Path>SFX\Footstep_Wood-005_3F75BDB9.wem</Path>
 						</File>
 						<File Id="81444893" Language="SFX">
 							<ShortName>Footstep_Stone-001.wav</ShortName>
-							<Path>SFX\Footstep_Stone-001_9C196647.wem</Path>
+							<Path>SFX\Footstep_Stone-001_3F75BDB9.wem</Path>
 						</File>
 						<File Id="92285822" Language="SFX">
 							<ShortName>Footstep_Stone-002.wav</ShortName>
-							<Path>SFX\Footstep_Stone-002_970C43A2.wem</Path>
+							<Path>SFX\Footstep_Stone-002_3F75BDB9.wem</Path>
 						</File>
 						<File Id="309047856" Language="SFX">
 							<ShortName>Footstep_Snow-005.wav</ShortName>
-							<Path>SFX\Footstep_Snow-005_43FC7388.wem</Path>
+							<Path>SFX\Footstep_Snow-005_3F75BDB9.wem</Path>
 						</File>
 						<File Id="311964852" Language="SFX">
 							<ShortName>Footstep_Stone-003.wav</ShortName>
-							<Path>SFX\Footstep_Stone-003_90FC6839.wem</Path>
+							<Path>SFX\Footstep_Stone-003_3F75BDB9.wem</Path>
 						</File>
 						<File Id="406418679" Language="SFX">
 							<ShortName>Footstep_Wood-002.wav</ShortName>
-							<Path>SFX\Footstep_Wood-002_18539E22.wem</Path>
+							<Path>SFX\Footstep_Wood-002_3F75BDB9.wem</Path>
 						</File>
 						<File Id="620895053" Language="SFX">
 							<ShortName>Footstep_Stone-004.wav</ShortName>
-							<Path>SFX\Footstep_Stone-004_B45D88B3.wem</Path>
+							<Path>SFX\Footstep_Stone-004_3F75BDB9.wem</Path>
 						</File>
 						<File Id="651806299" Language="SFX">
 							<ShortName>Footstep_Wood-003.wav</ShortName>
-							<Path>SFX\Footstep_Wood-003_CB038847.wem</Path>
+							<Path>SFX\Footstep_Wood-003_3F75BDB9.wem</Path>
 						</File>
 						<File Id="793680965" Language="SFX">
 							<ShortName>Footstep_Stone-005.wav</ShortName>
-							<Path>SFX\Footstep_Stone-005_CC77A0A1.wem</Path>
+							<Path>SFX\Footstep_Stone-005_3F75BDB9.wem</Path>
 						</File>
 						<File Id="833876951" Language="SFX">
 							<ShortName>Footstep_Snow-002.wav</ShortName>
-							<Path>SFX\Footstep_Snow-002_34C1E7FA.wem</Path>
+							<Path>SFX\Footstep_Snow-002_3F75BDB9.wem</Path>
 						</File>
 						<File Id="898568729" Language="SFX">
 							<ShortName>Footstep_Snow-004.wav</ShortName>
-							<Path>SFX\Footstep_Snow-004_A699629E.wem</Path>
+							<Path>SFX\Footstep_Snow-004_3F75BDB9.wem</Path>
 						</File>
 						<File Id="983661866" Language="SFX">
 							<ShortName>Footstep_Snow-001.wav</ShortName>
-							<Path>SFX\Footstep_Snow-001_D2DD5155.wem</Path>
+							<Path>SFX\Footstep_Snow-001_3F75BDB9.wem</Path>
 						</File>
 						<File Id="1051221840" Language="SFX">
 							<ShortName>Footstep_Wood-004.wav</ShortName>
-							<Path>SFX\Footstep_Wood-004_93BBEE0C.wem</Path>
+							<Path>SFX\Footstep_Wood-004_3F75BDB9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}</DefaultSwitchValue>

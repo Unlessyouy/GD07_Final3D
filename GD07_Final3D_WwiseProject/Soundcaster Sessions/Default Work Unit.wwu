@@ -18,6 +18,10 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Wind_Heavy" ID="{6D54297A-22A9-4FD2-BE65-698B0DB92C8E}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Cave_WindSub" ID="{169C9B6D-97BD-43D2-B20F-038CCB340EC9}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
 							<Position X="1" Y="3"/>
 						</Module>
@@ -25,7 +29,7 @@
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Stone" ID="{E244C986-178F-467B-B1B6-6388A82761CF}"/>
+						<CurrentSwitchRef Name="Snow" ID="{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

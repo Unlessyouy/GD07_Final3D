@@ -7,7 +7,7 @@ namespace Interactable.MindPowerComponent
 {
     public class JellyfishLightup_MPC : EventMPCBase
     {
-        [SerializeField] private float MindPowerDistance = 4f;
+        [SerializeField] private float MindPowerDistance = 2.7f;
         [SerializeField] private ParticleSystem LitUpVFX;
         [SerializeField] private GameObject LitUpMesh;
 

@@ -17,6 +17,10 @@ namespace EnemyComponents
             var otherPlayer = other.GetComponent<BasicControl>();
             if (otherPlayer && !_anglerFishController.IsPlayerHideInBush)
             {
+                if (otherPlayer.IsHideInCoral)
+                {
+                    return;
+                }
                 _anglerFishController.FindPlayer(otherPlayer);
             }
         }

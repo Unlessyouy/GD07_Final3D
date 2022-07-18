@@ -40,6 +40,7 @@ public class BasicControl : MonoBehaviour
     protected int interactType; //1 = Father; 2 = Son;
 
     public bool IsInBounce = false;
+    public bool IsHideInCoral = false;
 
     [SerializeField] private float FootOffset = 0.25f;
     [SerializeField] private float RayLength = 0.75f;

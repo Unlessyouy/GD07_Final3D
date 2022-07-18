@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3995091176917826075}
   - component: {fileID: 3995091176917826074}
   - component: {fileID: 3995091176917826068}
+  - component: {fileID: 3898780664689957314}
   m_Layer: 0
-  m_Name: '[JellyFishSystem]'
+  m_Name: '[OceanSystem]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,5 +56,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22b1895be41b4d4f817e10673e4394b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3898780664689957314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3995091176917826073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad155d73f0e746a3ae0e2ec4dfd5a4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

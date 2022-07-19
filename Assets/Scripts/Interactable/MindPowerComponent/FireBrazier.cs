@@ -4,6 +4,6 @@ namespace Interactable.MindPowerComponent
 {
     public class FireBrazier : MonoBehaviour
     {
-        public bool IsFire { get; set; }
+        public bool IsFire;
     }
 }

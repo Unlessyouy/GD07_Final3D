@@ -7,10 +7,14 @@ namespace Interactable.MindPowerComponent
     public class FireBrazier_MPC : global::MindPowerComponent
     {
         [SerializeField] private GameObject FireVFX;
+        [SerializeField] private ParticleSystem TriggerVFX;
         [SerializeField] private FireBrazier FireBrazier;
         [SerializeField] private float LitTime = 5f;
 
         bool soundPlayed;
+
+        private bool _isFirstLit = true;
+        
         private void Start()
         {
             FireVFX.SetActive(false);
@@ -34,6 +38,12 @@ namespace Interactable.MindPowerComponent
             FireBrazier.IsFire = true;
             FireVFX.SetActive(true);
             StartCoroutine(Burn());
+
+            if (_isFirstLit)
+            {
+                TriggerVFX.Play();
+                _isFirstLit = false;
+            }
         }
 
         private IEnumerator Burn()
@@ -42,6 +52,7 @@ namespace Interactable.MindPowerComponent
 
             FireBrazier.IsFire = false;
             FireVFX.SetActive(false);
+            _isFirstLit = true;
         }
     }
 }

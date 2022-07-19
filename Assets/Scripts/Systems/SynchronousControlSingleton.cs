@@ -124,5 +124,15 @@ namespace Systems
                 Son.Move(0);
             }
         }
+
+        public void Freeze()
+        {
+            CanSonMove = false;
+            CanFatherMove = false;
+            _horizontalInput = 0;
+            _verticalInput = 0;
+            _rightHorizontalInput = 0;
+            _rightVerticalInput = 0;
+        }
     }
 }

@@ -6,7 +6,6 @@ using TMPro;
 
 public class PlayerControl : BasicControl
 {
-    public bool CanJump { get; set; }
     public bool CanPlayerInput { get; set; }
 
     public bool PullSon;
@@ -44,9 +43,11 @@ public class PlayerControl : BasicControl
         if (isClimbing)
         {
             processedInput = Vector3.up * verticalInput;
+            anim.SetFloat("ClimbSpeed", verticalInput);
         }
         else
         {
+            anim.SetFloat("ClimbSpeed", 0);
             processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
         }
 
@@ -55,7 +56,10 @@ public class PlayerControl : BasicControl
             rb.velocity -= GravityMultiplier * Time.deltaTime * transform.up;
         }
 
-        CanJump = JumpRay();
+        if (!IsInRope)
+        {
+            CanJump = JumpRay();
+        }
 
         #endregion
 
@@ -104,8 +108,8 @@ public class PlayerControl : BasicControl
             rb.velocity = Vector3.up * JumpHeight;
             if (anim.GetBool("isGrounded"))
             {
-                anim.Play("Anim_Father_Jump");
                 anim.SetBool("isJumping", true);
+                anim.Play("Anim_Father_Jump");
             }
         }
         base.Update();

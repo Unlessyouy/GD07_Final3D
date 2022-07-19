@@ -40,9 +40,12 @@ namespace CharacterControl
                 {
                     processedInput = Vector3.up * verticalInput;
                 }
+                
+                anim.SetFloat("ClimbSpeed", verticalInput);
             }
             else
             {
+                anim.SetFloat("ClimbSpeed", 0);
                 processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
             }
 

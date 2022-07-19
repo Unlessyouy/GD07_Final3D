@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8395127b337fff24c9daee3dce7ca5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsFire: 0
+  IsFire: 1
 --- !u!135 &5198394937589482445
 SphereCollider:
   m_ObjectHideFlags: 0

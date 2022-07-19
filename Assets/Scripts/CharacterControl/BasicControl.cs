@@ -34,6 +34,9 @@ public class BasicControl : MonoBehaviour
 
     public bool isInOcean;
 
+    public bool CanJump;
+    public bool IsInRope;
+
     protected float interactTimer = 0;
     public float interactTime;
 
@@ -69,7 +72,7 @@ public class BasicControl : MonoBehaviour
 
         anim.SetBool("isClimbing", isClimbing);
 
-        if (alive)
+        if (alive && !isClimbing)
         {
             if (rb.velocity.x > 1)
             {
@@ -105,9 +108,14 @@ public class BasicControl : MonoBehaviour
             }
         }
 
-        if (!isInOcean)
+        if (!isInOcean && !isClimbing)
         {
             rb.useGravity = !JumpRay();
+        }
+
+        if (isClimbing)
+        {
+            rb.useGravity = false;
         }
 
         #endregion
@@ -246,5 +254,16 @@ public class BasicControl : MonoBehaviour
     public void AddForceToRigidbody(Vector3 force, ForceMode forceMode)
     {
         rb.AddForce(force, forceMode);
+    }
+
+    public void InRopeRadius()
+    {
+        CanJump = false;
+        IsInRope = true;
+    }
+
+    public void OutRopeRadius()
+    {
+        IsInRope = false;
     }
 }

@@ -14,7 +14,7 @@ namespace Mechanics.LevelThree
         private float _warmAmount = 0f;
 
         public bool IsWarmed { get; set; }
-        
+
         private bool IsFrozen;
 
         private float _timer = .0f;
@@ -22,6 +22,8 @@ namespace Mechanics.LevelThree
         [SerializeField] private SkinnedMeshRenderer SkinnedMeshRenderer;
         private Material _material;
         private Animator _anim;
+
+        [Header("Debug")] [SerializeField] private bool MuteThis;
 
         private void Start()
         {
@@ -31,6 +33,7 @@ namespace Mechanics.LevelThree
 
         private void Update()
         {
+            if (MuteThis) return;
             if (IsFrozen) return;
             if (IsWarmed)
             {
@@ -109,7 +112,7 @@ namespace Mechanics.LevelThree
 
             _anim.Play(clipInfo.clip.name, 0, 0);
             _anim.speed = 0;
-            
+
             yield return new WaitForSeconds(2f);
 
             NewEventSystem.Instance.Publish(new GameEndEvent(true));

@@ -27,6 +27,8 @@ public class RopeDownEnd : InteractableObject
             }
         }
     }
+    
+    
     public override void InteractTrigger(int interactType, GameObject interactingCharacter)
     {
         if (actable)

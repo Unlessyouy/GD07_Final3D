@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSpeed: 125
-  ClimbSpeed: 3.5
+  ClimbSpeed: 1
   isInteracting: 0
   interactingObject: {fileID: 0}
   interactingMindPowerObject: {fileID: 0}
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSpeed: 100
-  ClimbSpeed: 3.5
+  ClimbSpeed: 1
   isInteracting: 0
   interactingObject: {fileID: 0}
   interactingMindPowerObject: {fileID: 0}

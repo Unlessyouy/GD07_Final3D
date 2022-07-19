@@ -141,11 +141,14 @@ MonoBehaviour:
   interactingMindPowerObject: {fileID: 0}
   rotateSpeed: 540
   alive: 1
+  walkingIntervalTime: 0.35
   isClimbing: 0
   onRopeTopEnd: 0
   onRopeDownEnd: 0
   IsHoldingHands: 0
   isInOcean: 0
+  CanJump: 0
+  IsInRope: 0
   interactTime: 0.8
   IsInBounce: 0
   IsHideInCoral: 0
@@ -278,11 +281,14 @@ MonoBehaviour:
   interactingMindPowerObject: {fileID: 0}
   rotateSpeed: 720
   alive: 1
+  walkingIntervalTime: 0.35
   isClimbing: 0
   onRopeTopEnd: 0
   onRopeDownEnd: 0
   IsHoldingHands: 0
   isInOcean: 0
+  CanJump: 0
+  IsInRope: 0
   interactTime: 0.8
   IsInBounce: 0
   IsHideInCoral: 0

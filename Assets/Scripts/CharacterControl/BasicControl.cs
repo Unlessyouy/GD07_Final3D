@@ -25,7 +25,8 @@ public class BasicControl : MonoBehaviour
 
     bool isMoving;
     float walkingIntervalTimer = 0;
-    float walkingIntervalTime = 0.3f;
+    [SerializeField]
+    float walkingIntervalTime;
 
     public bool isClimbing;
     public bool onRopeTopEnd;

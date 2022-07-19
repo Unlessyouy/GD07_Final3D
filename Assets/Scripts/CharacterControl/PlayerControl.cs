@@ -103,7 +103,7 @@ public class PlayerControl : BasicControl
 
         #endregion
 
-        if (Input.GetButtonDown("Jump") && alive && CanJump && !canInteract && !isClimbing && !IsHoldingHands && !isInOcean)
+        if (verticalInput >= 0.25 && alive && CanJump && !canInteract && !isClimbing && !IsHoldingHands && !isInOcean)
         {
             rb.velocity = Vector3.up * JumpHeight;
             if (anim.GetBool("isGrounded"))
@@ -114,7 +114,6 @@ public class PlayerControl : BasicControl
         }
         base.Update();
     }
-   
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Terrain"))

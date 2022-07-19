@@ -167,7 +167,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 6138610157693768556}
-    m_Position: {x: -130, y: 470, z: 0}
+    m_Position: {x: -140, y: 460, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5435630035825279241}
     m_Position: {x: 1010, y: 490, z: 0}
@@ -188,7 +188,7 @@ AnimatorStateMachine:
     m_Position: {x: 390, y: 610, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7350386470443763861}
-    m_Position: {x: 150, y: 650, z: 0}
+    m_Position: {x: 140, y: 660, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5132629307077233144}
     m_Position: {x: -100, y: 220, z: 0}
@@ -200,7 +200,7 @@ AnimatorStateMachine:
     m_Position: {x: 1190, y: 490, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2857023222404276525}
-    m_Position: {x: 150, y: 350, z: 0}
+    m_Position: {x: 160, y: 310, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1164985554518190625}
     m_Position: {x: 910, y: 620, z: 0}
@@ -221,7 +221,7 @@ AnimatorStateMachine:
     m_Position: {x: 1190, y: 890, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 92742758031724625}
-    m_Position: {x: -10, y: 400, z: 0}
+    m_Position: {x: 150, y: 430, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8781186437943118934}
     m_Position: {x: 910, y: 830, z: 0}
@@ -550,43 +550,43 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isGrounded
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isJumping
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isClimbing
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isInOcean
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: MovingSpeed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: ClimbSpeed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

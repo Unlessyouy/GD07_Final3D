@@ -25,8 +25,7 @@ public class BasicControl : MonoBehaviour
 
     bool isMoving;
     float walkingIntervalTimer = 0;
-    [SerializeField]
-    float walkingIntervalTime;
+    [SerializeField] float walkingIntervalTime;
 
     public bool isClimbing;
     public bool onRopeTopEnd;
@@ -266,5 +265,15 @@ public class BasicControl : MonoBehaviour
     public void OutRopeRadius()
     {
         IsInRope = false;
+    }
+
+    public void PushObject()
+    {
+        anim.SetBool("IsPush", true);
+    }
+
+    public void StopPushObject()
+    {
+        anim.SetBool("IsPush", false);
     }
 }

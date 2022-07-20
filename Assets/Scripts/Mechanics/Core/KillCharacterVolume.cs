@@ -14,5 +14,13 @@ namespace Mechanics
                 NewEventSystem.Instance.Publish(new GameEndEvent(true));
             }
         }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.GetComponent<BasicControl>())
+            {
+                NewEventSystem.Instance.Publish(new GameEndEvent(true));
+            }
+        }
     }
 }

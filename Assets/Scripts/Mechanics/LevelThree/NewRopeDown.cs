@@ -14,18 +14,6 @@ namespace Mechanics.LevelThree
             var climber = other.GetComponent<BasicControl>();
             if (!climber) return;
             climber.InRopeRadius();
-            // if (climber && climber.isClimbing)
-            // {
-            //     climber.isClimbing = false;
-            //     other.GetComponent<Rigidbody>().useGravity = true;
-            // }
-            //
-            // if (!climber.isClimbing)
-            // {
-            //     climber.isClimbing = true;
-            //     climber.GetComponent<Rigidbody>().useGravity = false;
-            //     climber.transform.position = transform.position;
-            // }
 
             if (climber as CompanionControl)
             {

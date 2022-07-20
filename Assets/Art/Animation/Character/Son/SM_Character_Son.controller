@@ -129,7 +129,7 @@ AnimatorStateMachine:
     m_Position: {x: 0, y: 440, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3354393268219887785}
-    m_Position: {x: 280, y: 130, z: 0}
+    m_Position: {x: 280, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 445971465218319522}
     m_Position: {x: 280, y: 550, z: 0}
@@ -482,6 +482,12 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: ClimbSpeed
     m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: IsPush
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0

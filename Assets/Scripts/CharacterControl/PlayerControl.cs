@@ -108,17 +108,17 @@ public class PlayerControl : BasicControl
             rb.velocity = Vector3.up * JumpHeight;
             if (anim.GetBool("isGrounded"))
             {
-                anim.SetBool("isJumping", true);
-                anim.Play("Anim_Father_Jump");
+                anim.SetTrigger("IsJumping");
             }
         }
+        
         base.Update();
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Terrain"))
         {
-            anim.SetBool("isJumping", false);
+            anim.ResetTrigger("IsJumping");
         }
     }
 }

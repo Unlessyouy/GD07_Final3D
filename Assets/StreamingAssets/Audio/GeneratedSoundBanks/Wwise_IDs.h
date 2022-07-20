@@ -13,10 +13,12 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID AMBIENT_CAVESUB = 2523607441U;
+        static const AkUniqueID AMBIENT_CAVE = 1995429365U;
         static const AkUniqueID AMBIENT_HEAVYWIND = 1253188249U;
         static const AkUniqueID CAMPFIRE = 1931646578U;
         static const AkUniqueID FOOT_PLAYER = 1894362767U;
+        static const AkUniqueID SNOWBALL_ROLL_END = 841599257U;
+        static const AkUniqueID SNOWBALL_ROLL_START = 634408506U;
     } // namespace EVENTS
 
     namespace SWITCHES

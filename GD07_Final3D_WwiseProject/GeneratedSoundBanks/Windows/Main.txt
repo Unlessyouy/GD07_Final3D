@@ -1,8 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1253188249	Ambient_HeavyWind			\Default Work Unit\Ambient_HeavyWind	
-	1894362767	Foot_Player			\Default Work Unit\Foot_Player	
-	1931646578	Campfire			\Default Work Unit\Campfire	
-	2523607441	Ambient_CaveSub			\Default Work Unit\Ambient_CaveSub	
+	634408506	Snowball_Roll_Start			\Default Work Unit\Items\Snowball_Roll\Snowball_Roll_Start	
+	841599257	Snowball_Roll_End			\Default Work Unit\Items\Snowball_Roll\Snowball_Roll_End	
+	1253188249	Ambient_HeavyWind			\Default Work Unit\Ambience\Ambient_HeavyWind	
+	1894362767	Foot_Player			\Default Work Unit\Main Character\Foot_Player	
+	1931646578	Campfire			\Default Work Unit\Items\Campfire	
+	1995429365	Ambient_Cave			\Default Work Unit\Ambience\Ambient_Cave	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	3865314626	Material			\Default Work Unit\Material	
@@ -18,12 +20,18 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	75060662	Footstep_Wood-005	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-005_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-005		2061
 	81444893	Footstep_Stone-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-001		1569
 	92285822	Footstep_Stone-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-002		1793
+	156686436	Snowball_Roll-005	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-005_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-005		5626
+	237569014	Snowball_Roll-006	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-006_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-006		5044
+	240188004	Snowball_Roll-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-002_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-002		4275
 	309047856	Footstep_Snow-005	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-005_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-005		4555
 	311964852	Footstep_Stone-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-003		1442
+	339064604	Snowball_Roll-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-003_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_06\Snowball_Roll-003		5056
 	406418679	Footstep_Wood-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-002		1565
 	523090183	Wind_Heavy	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Wind_Heavy_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind_Heavy		1528612
 	620895053	Footstep_Stone-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-004_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-004		1623
 	651806299	Footstep_Wood-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-003		1916
+	737618982	Snowball_Roll-008	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-008_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-008		4488
+	774546527	Snowball_Roll-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-004_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-004		5015
 	793680965	Footstep_Stone-005	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-005_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-005		1401
 	833876951	Footstep_Snow-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-002		4840
 	842402316	Campfire	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Campfire_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Campfire		103480
@@ -31,4 +39,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	983661866	Footstep_Snow-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-001		4595
 	1051221840	Footstep_Wood-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-004_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-004		1902
 	1052914941	Cave_WindSub	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Cave_WindSub_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Cave_WindSub		620217
+	1056905124	Snowball_Roll-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-001_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_05\Snowball_Roll-001		5011
+	1063215467	Snowball_Roll-007	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-007_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-007		6265
 

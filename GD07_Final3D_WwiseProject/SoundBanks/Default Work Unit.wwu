@@ -5,10 +5,9 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{BC3CFE11-D292-4600-94B2-B7DFBC5243AE}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Ambient_HeavyWind" ID="{6F4A698E-C726-4298-9B43-23F115C21D14}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Foot_Player" ID="{6C289EF7-FBF3-47B8-89A8-069F96009A0F}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Ambient_CaveSub" ID="{865B4492-E6D5-482D-8F34-B430B0FC2907}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Campfire" ID="{B0DA7C52-F319-4C4C-B210-8A79833038DB}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ambience" ID="{FAFBBBCF-168E-40F7-89AC-C29894110C16}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Main Character" ID="{CFFC145F-5398-4684-B5E0-6FB28F7A661C}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Items" ID="{D4833195-8DC5-4F8E-BCFA-31A86849137C}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

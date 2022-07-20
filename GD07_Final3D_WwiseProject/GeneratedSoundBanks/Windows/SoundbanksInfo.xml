@@ -19,12 +19,12 @@
 				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="223458107">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3777224443">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2523607441" Name="Ambient_CaveSub" ObjectPath="\Events\Default Work Unit\Ambient_CaveSub" DurationType="Infinite">
+				<Event Id="1995429365" Name="Ambient_Cave" ObjectPath="\Events\Default Work Unit\Ambience\Ambient_Cave" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="1052914941" Language="SFX">
 							<ShortName>Cave_WindSub.wav</ShortName>
@@ -32,7 +32,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1253188249" Name="Ambient_HeavyWind" ObjectPath="\Events\Default Work Unit\Ambient_HeavyWind" DurationType="Infinite">
+				<Event Id="1253188249" Name="Ambient_HeavyWind" ObjectPath="\Events\Default Work Unit\Ambience\Ambient_HeavyWind" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="523090183" Language="SFX">
 							<ShortName>Wind_Heavy.wav</ShortName>
@@ -40,7 +40,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1931646578" Name="Campfire" ObjectPath="\Events\Default Work Unit\Campfire" DurationType="Infinite">
+				<Event Id="1931646578" Name="Campfire" ObjectPath="\Events\Default Work Unit\Items\Campfire" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="842402316" Language="SFX">
 							<ShortName>Campfire.wav</ShortName>
@@ -48,7 +48,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1894362767" Name="Foot_Player" ObjectPath="\Events\Default Work Unit\Foot_Player" DurationType="OneShot" DurationMin="0.072367" DurationMax="0.550568">
+				<Event Id="1894362767" Name="Foot_Player" ObjectPath="\Events\Default Work Unit\Main Character\Foot_Player" DurationType="OneShot" DurationMin="0.072367" DurationMax="0.550568">
 					<IncludedMemoryFiles>
 						<File Id="1428087" Language="SFX">
 							<ShortName>Footstep_Wood-001.wav</ShortName>
@@ -141,6 +141,43 @@
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="841599257" Name="Snowball_Roll_End" ObjectPath="\Events\Default Work Unit\Items\Snowball_Roll\Snowball_Roll_End" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="634408506" Name="Snowball_Roll_Start" ObjectPath="\Events\Default Work Unit\Items\Snowball_Roll\Snowball_Roll_Start" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="156686436" Language="SFX">
+							<ShortName>Snowball_Roll-005.wav</ShortName>
+							<Path>SFX\Snowball_Roll-005_F47446A6.wem</Path>
+						</File>
+						<File Id="237569014" Language="SFX">
+							<ShortName>Snowball_Roll-006.wav</ShortName>
+							<Path>SFX\Snowball_Roll-006_F47446A6.wem</Path>
+						</File>
+						<File Id="240188004" Language="SFX">
+							<ShortName>Snowball_Roll-002.wav</ShortName>
+							<Path>SFX\Snowball_Roll-002_F47446A6.wem</Path>
+						</File>
+						<File Id="339064604" Language="SFX">
+							<ShortName>Snowball_Roll-003.wav</ShortName>
+							<Path>SFX\Snowball_Roll-003_F47446A6.wem</Path>
+						</File>
+						<File Id="737618982" Language="SFX">
+							<ShortName>Snowball_Roll-008.wav</ShortName>
+							<Path>SFX\Snowball_Roll-008_F47446A6.wem</Path>
+						</File>
+						<File Id="774546527" Language="SFX">
+							<ShortName>Snowball_Roll-004.wav</ShortName>
+							<Path>SFX\Snowball_Roll-004_F47446A6.wem</Path>
+						</File>
+						<File Id="1056905124" Language="SFX">
+							<ShortName>Snowball_Roll-001.wav</ShortName>
+							<Path>SFX\Snowball_Roll-001_F47446A6.wem</Path>
+						</File>
+						<File Id="1063215467" Language="SFX">
+							<ShortName>Snowball_Roll-007.wav</ShortName>
+							<Path>SFX\Snowball_Roll-007_F47446A6.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
 			<SwitchGroups>

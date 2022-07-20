@@ -3,50 +3,95 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Foot_Player" ID="{6C289EF7-FBF3-47B8-89A8-069F96009A0F}">
+				<Folder Name="Ambience" ID="{FAFBBBCF-168E-40F7-89AC-C29894110C16}" ShortID="868872599">
 					<ChildrenList>
-						<Action Name="" ID="{C78A8E80-679B-4963-91FD-4CBBC7AD8533}" ShortID="703089077">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Footsteps" ID="{20CC9350-36E2-4DDC-B305-1F2BE782AD0E}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Ambient_Cave" ID="{865B4492-E6D5-482D-8F34-B430B0FC2907}">
+							<ChildrenList>
+								<Action Name="" ID="{3BF4C1E9-8BFE-423C-9BF5-7CE222A14E04}" ShortID="361020752">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cave_WindSub" ID="{169C9B6D-97BD-43D2-B20F-038CCB340EC9}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Ambient_HeavyWind" ID="{6F4A698E-C726-4298-9B43-23F115C21D14}">
+							<ChildrenList>
+								<Action Name="" ID="{B67A412C-4483-489F-9F02-63109295FA6C}" ShortID="760454535">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Wind_Heavy" ID="{6D54297A-22A9-4FD2-BE65-698B0DB92C8E}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="Campfire" ID="{B0DA7C52-F319-4C4C-B210-8A79833038DB}">
+				</Folder>
+				<Folder Name="Items" ID="{D4833195-8DC5-4F8E-BCFA-31A86849137C}" ShortID="159998028">
 					<ChildrenList>
-						<Action Name="" ID="{605FB273-FDE2-4E6A-AB4F-551388C4D7E5}" ShortID="300558527">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Campfire" ID="{6C71B6A4-C950-49AC-BEC6-093E611C8283}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Campfire" ID="{B0DA7C52-F319-4C4C-B210-8A79833038DB}">
+							<ChildrenList>
+								<Action Name="" ID="{605FB273-FDE2-4E6A-AB4F-551388C4D7E5}" ShortID="300558527">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Campfire" ID="{6C71B6A4-C950-49AC-BEC6-093E611C8283}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="Snowball_Roll" ID="{8D28C481-6AD5-4E6D-9A68-6724AB4D963D}" ShortID="624686273">
+							<ChildrenList>
+								<Event Name="Snowball_Roll_End" ID="{B3A08FDB-56FF-4F59-89DF-06702E4F0D28}">
+									<ChildrenList>
+										<Action Name="" ID="{E6B821E8-00C7-4C15-A66A-BD3C6A55F04B}" ShortID="996334148">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Snowball" ID="{5EB438A1-71C7-485C-A41F-7B54648B6EBA}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Snowball_Roll_Start" ID="{2736C8F3-10BF-42C1-897C-8F69D56DC6BD}">
+									<ChildrenList>
+										<Action Name="" ID="{829981F3-1DB9-4AA8-8FF8-7E7019202FAD}" ShortID="31258868">
+											<PropertyList>
+												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Snowball" ID="{5EB438A1-71C7-485C-A41F-7B54648B6EBA}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
-				</Event>
-				<Event Name="Ambient_HeavyWind" ID="{6F4A698E-C726-4298-9B43-23F115C21D14}">
+				</Folder>
+				<Folder Name="Main Character" ID="{CFFC145F-5398-4684-B5E0-6FB28F7A661C}" ShortID="650885601">
 					<ChildrenList>
-						<Action Name="" ID="{B67A412C-4483-489F-9F02-63109295FA6C}" ShortID="760454535">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Wind_Heavy" ID="{6D54297A-22A9-4FD2-BE65-698B0DB92C8E}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Foot_Player" ID="{6C289EF7-FBF3-47B8-89A8-069F96009A0F}">
+							<ChildrenList>
+								<Action Name="" ID="{C78A8E80-679B-4963-91FD-4CBBC7AD8533}" ShortID="703089077">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footsteps" ID="{20CC9350-36E2-4DDC-B305-1F2BE782AD0E}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="Ambient_CaveSub" ID="{865B4492-E6D5-482D-8F34-B430B0FC2907}">
-					<ChildrenList>
-						<Action Name="" ID="{3BF4C1E9-8BFE-423C-9BF5-7CE222A14E04}" ShortID="361020752">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Cave_WindSub" ID="{169C9B6D-97BD-43D2-B20F-038CCB340EC9}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

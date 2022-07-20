@@ -44,6 +44,1853 @@
 								<ActiveSource Name="Campfire" ID="{2DBCAED8-F681-449F-B1E6-B5C707F9E66E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<BlendContainer Name="Snowball" ID="{5EB438A1-71C7-485C-A41F-7B54648B6EBA}" ShortID="958720944">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Snowball_Roll" ID="{AC13CCD5-99A2-4B80-985F-6DE274467917}" ShortID="431460621">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="5"/>
+										<Property Name="RenderEffect0" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Wwise Parametric EQ (Custom)" ID="{39144042-8FDB-4968-A046-733B7A103312}" ShortID="871277509" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+													<PropertyList>
+														<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+														<Property Name="FrequencyBand3" Type="Real32" Value="9000"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Snowball_Roll_01" ID="{56005807-AD38-489A-826F-496809D08703}" ShortID="235288425">
+											<PropertyList>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Snowball_Roll-001" ID="{0571B8FA-3838-43A3-9DDC-C27935B9C05C}" ShortID="957944261">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-001" ID="{B477523E-F4DD-4030-888A-4B2DE47B1A96}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1056905124"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-001" ID="{B477523E-F4DD-4030-888A-4B2DE47B1A96}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-002" ID="{D4BCC779-9885-48F2-823E-AC62FF1876A3}" ShortID="656107209">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-002" ID="{EC583659-92CD-4612-9AD0-B6A02F3394AF}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="240188004"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-002" ID="{EC583659-92CD-4612-9AD0-B6A02F3394AF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-003" ID="{9D883DE7-BC68-44A9-AC0E-2B42485B1D8B}" ShortID="1972699">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-003" ID="{973D5411-F5F6-4880-8F7F-C43495AEDC15}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="339064604"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-003" ID="{973D5411-F5F6-4880-8F7F-C43495AEDC15}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-004" ID="{611EDF06-CEF5-4D71-A29B-407AA2303C70}" ShortID="575126295">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-004" ID="{BE61CE5A-8803-449C-9243-0819A0C9CACF}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="774546527"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-004" ID="{BE61CE5A-8803-449C-9243-0819A0C9CACF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-005" ID="{7F2CF98B-1529-40C6-B45D-A4545A4FC450}" ShortID="31847653">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-005" ID="{8BA3C521-CF35-4B3C-9DF2-C55EAC1559F7}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="156686436"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-005" ID="{8BA3C521-CF35-4B3C-9DF2-C55EAC1559F7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-006" ID="{D3022F9E-1B01-44A2-813C-03CE03F33E0C}" ShortID="873151823">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-006" ID="{61A9000E-9E6C-4B2A-95A3-096F4FA9BC91}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-006.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="237569014"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-006" ID="{61A9000E-9E6C-4B2A-95A3-096F4FA9BC91}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-007" ID="{8DE8C61A-F7AC-42A1-84BA-41033A9A52B2}" ShortID="390074152">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-007" ID="{1A94E16C-6549-4F80-9BF2-CF7FC039A8E0}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-007.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1063215467"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-007" ID="{1A94E16C-6549-4F80-9BF2-CF7FC039A8E0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-008" ID="{62DBDCB3-2FE3-4616-9BEF-16262518210A}" ShortID="138665832">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-008" ID="{4289D2EA-ACCC-4F79-9EAD-2560CA89EF9E}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-008.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="737618982"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-008" ID="{4289D2EA-ACCC-4F79-9EAD-2560CA89EF9E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+											<Playlist>
+												<ItemRef Name="Snowball_Roll-002" ID="{D4BCC779-9885-48F2-823E-AC62FF1876A3}"/>
+												<ItemRef Name="Snowball_Roll-008" ID="{62DBDCB3-2FE3-4616-9BEF-16262518210A}"/>
+												<ItemRef Name="Snowball_Roll-005" ID="{7F2CF98B-1529-40C6-B45D-A4545A4FC450}"/>
+												<ItemRef Name="Snowball_Roll-007" ID="{8DE8C61A-F7AC-42A1-84BA-41033A9A52B2}"/>
+												<ItemRef Name="Snowball_Roll-004" ID="{611EDF06-CEF5-4D71-A29B-407AA2303C70}"/>
+												<ItemRef Name="Snowball_Roll-006" ID="{D3022F9E-1B01-44A2-813C-03CE03F33E0C}"/>
+											</Playlist>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Snowball_Roll_02" ID="{9CB94ACD-7C85-40C4-A21A-BE9A3D21C10F}" ShortID="589154765">
+											<PropertyList>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Snowball_Roll-006" ID="{B18EB667-33F5-4087-AE7C-75A5BAEDF13F}" ShortID="953252924">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-006" ID="{150CC6A9-A158-4C04-94E0-3EFF2386DC67}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-006.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="237569014"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-006" ID="{150CC6A9-A158-4C04-94E0-3EFF2386DC67}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-007" ID="{18711E9F-D08C-4905-BC86-DB30D3166592}" ShortID="183289005">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-007" ID="{E857EB87-A2B1-41FB-86CE-36A84CAD4E38}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-007.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1063215467"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-007" ID="{E857EB87-A2B1-41FB-86CE-36A84CAD4E38}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-005" ID="{CB9403A5-EE63-452C-A9B0-BB97B8A413EC}" ShortID="421133723">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-005" ID="{5E177001-914D-4343-8F15-AA2483FBA064}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="156686436"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-005" ID="{5E177001-914D-4343-8F15-AA2483FBA064}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-004" ID="{72CE8F6A-5F94-461C-A7A4-78F76C2F752A}" ShortID="59601024">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-004" ID="{5AAB2AA1-8540-4622-9CC0-0B8240739823}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="774546527"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-004" ID="{5AAB2AA1-8540-4622-9CC0-0B8240739823}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-008" ID="{E643C09C-EAAB-4325-96A3-B89184E45C58}" ShortID="359133467">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-008" ID="{D6DC1CE3-C689-4BAD-B32D-31175B462897}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-008.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="737618982"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-008" ID="{D6DC1CE3-C689-4BAD-B32D-31175B462897}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-001" ID="{36E6F1AE-E7E0-4E69-97B9-11D2F3BB5BFF}" ShortID="1005332983">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-001" ID="{6684ACAE-DA03-4B08-8324-A37932D3F7DB}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1056905124"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-001" ID="{6684ACAE-DA03-4B08-8324-A37932D3F7DB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-002" ID="{25FF313F-3445-4257-B166-74EC5065CDBE}" ShortID="67884405">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-002" ID="{D7A1828B-5F9C-45A3-8986-922C0DAED317}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="240188004"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-002" ID="{D7A1828B-5F9C-45A3-8986-922C0DAED317}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-003" ID="{00AF3C26-105D-43B3-B733-E1836FD589D4}" ShortID="356962274">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-003" ID="{66BDBEFD-2047-4AF3-9FFB-019CC3DA7D66}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="339064604"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-003" ID="{66BDBEFD-2047-4AF3-9FFB-019CC3DA7D66}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+											<Playlist>
+												<ItemRef Name="Snowball_Roll-006" ID="{B18EB667-33F5-4087-AE7C-75A5BAEDF13F}"/>
+												<ItemRef Name="Snowball_Roll-004" ID="{72CE8F6A-5F94-461C-A7A4-78F76C2F752A}"/>
+												<ItemRef Name="Snowball_Roll-002" ID="{25FF313F-3445-4257-B166-74EC5065CDBE}"/>
+												<ItemRef Name="Snowball_Roll-008" ID="{E643C09C-EAAB-4325-96A3-B89184E45C58}"/>
+												<ItemRef Name="Snowball_Roll-007" ID="{18711E9F-D08C-4905-BC86-DB30D3166592}"/>
+												<ItemRef Name="Snowball_Roll-005" ID="{CB9403A5-EE63-452C-A9B0-BB97B8A413EC}"/>
+											</Playlist>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Snowball_Roll_03" ID="{7D56E61C-98A2-4908-AD2B-289AF4F40909}" ShortID="457521305">
+											<PropertyList>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Snowball_Roll-006" ID="{610A2529-436B-4C50-A573-FA383DAC01F4}" ShortID="228108624">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-006" ID="{23265177-8E3C-4CBB-A24D-AD2048E5CCED}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-006.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="237569014"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-006" ID="{23265177-8E3C-4CBB-A24D-AD2048E5CCED}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-007" ID="{AE172824-9DAA-4134-9863-BDFE7087A85F}" ShortID="27448695">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-007" ID="{DE9DCC4F-4078-4433-894C-3E15B35C84F0}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-007.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1063215467"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-007" ID="{DE9DCC4F-4078-4433-894C-3E15B35C84F0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-005" ID="{11B884DA-9940-43BF-89D4-8B79F967F10C}" ShortID="353787894">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-005" ID="{95BF6964-50EC-48FD-B5B9-2524AFF21850}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="156686436"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-005" ID="{95BF6964-50EC-48FD-B5B9-2524AFF21850}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-004" ID="{828F2C63-B8EE-4AD7-A751-D75D99E35395}" ShortID="785060255">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-004" ID="{CDA9B32A-B0D0-45DF-8252-BFA9571E17FA}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="774546527"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-004" ID="{CDA9B32A-B0D0-45DF-8252-BFA9571E17FA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-008" ID="{774F0903-F06C-42AB-AB6F-DDF47E4D9E44}" ShortID="698209059">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-008" ID="{AC4C5D37-5389-4361-8ABB-A32EFC4B4004}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-008.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="737618982"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-008" ID="{AC4C5D37-5389-4361-8ABB-A32EFC4B4004}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-001" ID="{CCA29034-836C-4A91-9220-610178E8C19E}" ShortID="783103536">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-001" ID="{DFC60674-2EF5-437D-8F7F-16653A65E71E}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1056905124"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-001" ID="{DFC60674-2EF5-437D-8F7F-16653A65E71E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-002" ID="{9C7ACB19-9CCD-4870-B978-F104F55BDB27}" ShortID="668959835">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-002" ID="{3F22956B-08F3-4E34-909D-D8571F09D31D}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="240188004"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-002" ID="{3F22956B-08F3-4E34-909D-D8571F09D31D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-003" ID="{96AD87E4-3DDA-4BA8-A5CA-53B3AC0B80B5}" ShortID="534868191">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-003" ID="{23853F34-8B8C-4318-9CD5-0F97365A6FA4}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="339064604"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-003" ID="{23853F34-8B8C-4318-9CD5-0F97365A6FA4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+											<Playlist>
+												<ItemRef Name="Snowball_Roll-007" ID="{AE172824-9DAA-4134-9863-BDFE7087A85F}"/>
+												<ItemRef Name="Snowball_Roll-005" ID="{11B884DA-9940-43BF-89D4-8B79F967F10C}"/>
+												<ItemRef Name="Snowball_Roll-006" ID="{610A2529-436B-4C50-A573-FA383DAC01F4}"/>
+												<ItemRef Name="Snowball_Roll-002" ID="{9C7ACB19-9CCD-4870-B978-F104F55BDB27}"/>
+												<ItemRef Name="Snowball_Roll-008" ID="{774F0903-F06C-42AB-AB6F-DDF47E4D9E44}"/>
+												<ItemRef Name="Snowball_Roll-004" ID="{828F2C63-B8EE-4AD7-A751-D75D99E35395}"/>
+											</Playlist>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Snowball_Roll_04" ID="{41E5ACAD-BAC0-4E14-9B44-3326D0E9CCDC}" ShortID="306145322">
+											<PropertyList>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Snowball_Roll-006" ID="{F0F0025A-B8FC-44FA-A3F1-6C6E65BDF736}" ShortID="895460178">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-006" ID="{63D9D147-1833-48B1-BB78-A0B0D7C8EF2B}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-006.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="237569014"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-006" ID="{63D9D147-1833-48B1-BB78-A0B0D7C8EF2B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-007" ID="{845DB2B7-7931-442F-89D5-97D5EC406C11}" ShortID="928956780">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-007" ID="{BF0F4180-3EB2-4B84-8930-5293C2B3F92D}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-007.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1063215467"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-007" ID="{BF0F4180-3EB2-4B84-8930-5293C2B3F92D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-005" ID="{29AB56B1-9F90-4344-8CA2-81B8FC9CFDE4}" ShortID="418949696">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-005" ID="{1C2C5327-FD7B-4B7C-BF10-C1ADB3EE4EC5}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="156686436"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-005" ID="{1C2C5327-FD7B-4B7C-BF10-C1ADB3EE4EC5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-004" ID="{8574529F-6975-4182-84F0-A080687DFD3C}" ShortID="152155116">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-004" ID="{BCBE9FD0-C153-452A-A817-A0E8BDF4B155}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="774546527"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-004" ID="{BCBE9FD0-C153-452A-A817-A0E8BDF4B155}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-008" ID="{9D0FF18C-2411-4AFA-8B21-ECA044D62CF8}" ShortID="989920264">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-008" ID="{5B0BDCC9-B1AB-41E6-86A9-A40D1195D140}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-008.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="737618982"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-008" ID="{5B0BDCC9-B1AB-41E6-86A9-A40D1195D140}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-001" ID="{B73A98AF-D922-48F2-A2B7-FC0DF7185835}" ShortID="560205022">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-001" ID="{F7DAE685-4458-4F54-9844-33CDD038425C}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1056905124"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-001" ID="{F7DAE685-4458-4F54-9844-33CDD038425C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-002" ID="{BB90BBF1-837E-490D-8699-35C77BA5B1DF}" ShortID="764334493">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-002" ID="{0CA8BED0-3BE6-4DE6-B4D0-088301ED4F53}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="240188004"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-002" ID="{0CA8BED0-3BE6-4DE6-B4D0-088301ED4F53}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-003" ID="{0490F0E9-9271-4622-ACCF-95913FF43F00}" ShortID="73317862">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-003" ID="{2F311968-0A46-417F-BDE6-33056475CD5A}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="339064604"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-003" ID="{2F311968-0A46-417F-BDE6-33056475CD5A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+											<Playlist>
+												<ItemRef Name="Snowball_Roll-005" ID="{29AB56B1-9F90-4344-8CA2-81B8FC9CFDE4}"/>
+												<ItemRef Name="Snowball_Roll-007" ID="{845DB2B7-7931-442F-89D5-97D5EC406C11}"/>
+												<ItemRef Name="Snowball_Roll-008" ID="{9D0FF18C-2411-4AFA-8B21-ECA044D62CF8}"/>
+												<ItemRef Name="Snowball_Roll-002" ID="{BB90BBF1-837E-490D-8699-35C77BA5B1DF}"/>
+												<ItemRef Name="Snowball_Roll-004" ID="{8574529F-6975-4182-84F0-A080687DFD3C}"/>
+												<ItemRef Name="Snowball_Roll-006" ID="{F0F0025A-B8FC-44FA-A3F1-6C6E65BDF736}"/>
+											</Playlist>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Snowball_Roll_05" ID="{B8DDDC09-5DBF-4FBD-B98F-871FB3922C76}" ShortID="462341367">
+											<PropertyList>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Snowball_Roll-006" ID="{EF0FA82D-3137-4E92-A212-F45AFF0E6D3F}" ShortID="177106614">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-006" ID="{7633AC93-3B0C-4DB0-AE96-2FE394BB9309}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-006.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="237569014"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-006" ID="{7633AC93-3B0C-4DB0-AE96-2FE394BB9309}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-007" ID="{B40392E4-AF3A-4DBB-9D87-B77950CF2CDB}" ShortID="279286793">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-007" ID="{E201A084-0A93-4FDE-84E5-75CDC9D0A338}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-007.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1063215467"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-007" ID="{E201A084-0A93-4FDE-84E5-75CDC9D0A338}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-005" ID="{39BF0635-5281-41B2-94A2-2C32359406F1}" ShortID="605642708">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-005" ID="{F51B2391-8480-4EF9-BC50-BBD20C00B764}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="156686436"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-005" ID="{F51B2391-8480-4EF9-BC50-BBD20C00B764}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-004" ID="{443FC14F-F001-45CC-B319-AB0979AD697F}" ShortID="92407487">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-004" ID="{0D7124C0-9248-4D87-9D8D-9938A805D8D4}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="774546527"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-004" ID="{0D7124C0-9248-4D87-9D8D-9938A805D8D4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-008" ID="{D8651FEE-6F0A-453A-8D47-CE015C13ED6B}" ShortID="973107865">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-008" ID="{D7DBE5F0-8E5B-4FC5-A0BB-BEF13307A97F}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-008.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="737618982"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-008" ID="{D7DBE5F0-8E5B-4FC5-A0BB-BEF13307A97F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-001" ID="{2CD4E6A2-C5E8-43BD-975C-547D321561BC}" ShortID="481235293">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-001" ID="{03AEF632-2522-40DD-8ABC-DDD0FF8B6BE7}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1056905124"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-001" ID="{03AEF632-2522-40DD-8ABC-DDD0FF8B6BE7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-002" ID="{7197D489-0AE9-49AF-A420-1E492E22A861}" ShortID="176120833">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-002" ID="{A8BE2D46-4399-4B26-8775-FDC809C85CA6}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="240188004"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-002" ID="{A8BE2D46-4399-4B26-8775-FDC809C85CA6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-003" ID="{D6702C8B-F3D2-4987-8AE9-5F5E1DD639FE}" ShortID="323581515">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-003" ID="{29244118-2AB7-4C78-899D-BCDA9E042F65}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="339064604"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-003" ID="{29244118-2AB7-4C78-899D-BCDA9E042F65}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+											<Playlist>
+												<ItemRef Name="Snowball_Roll-004" ID="{443FC14F-F001-45CC-B319-AB0979AD697F}"/>
+												<ItemRef Name="Snowball_Roll-008" ID="{D8651FEE-6F0A-453A-8D47-CE015C13ED6B}"/>
+												<ItemRef Name="Snowball_Roll-006" ID="{EF0FA82D-3137-4E92-A212-F45AFF0E6D3F}"/>
+												<ItemRef Name="Snowball_Roll-001" ID="{2CD4E6A2-C5E8-43BD-975C-547D321561BC}"/>
+												<ItemRef Name="Snowball_Roll-005" ID="{39BF0635-5281-41B2-94A2-2C32359406F1}"/>
+												<ItemRef Name="Snowball_Roll-002" ID="{7197D489-0AE9-49AF-A420-1E492E22A861}"/>
+											</Playlist>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Snowball_Roll_06" ID="{D8B5AB56-BEC7-443B-9A50-F69DCBD9C853}" ShortID="242117382">
+											<PropertyList>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Snowball_Roll-006" ID="{CE07371E-951A-4153-944C-BC87E70A1104}" ShortID="407342797">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-006" ID="{9EEE2D4E-0F10-4FC9-8ED6-2E88118A98C6}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-006.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="237569014"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-006" ID="{9EEE2D4E-0F10-4FC9-8ED6-2E88118A98C6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-007" ID="{8A9B2387-21AE-494E-8214-EE0C01F77EFA}" ShortID="1073151499">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-007" ID="{6FEEA716-BAF5-453B-9E17-5EA3D8FEC8A2}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-007.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1063215467"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-007" ID="{6FEEA716-BAF5-453B-9E17-5EA3D8FEC8A2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-005" ID="{C8202B48-2551-4D83-BB5F-ED46EC9703D5}" ShortID="340790671">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-005" ID="{F5C5DECA-E011-4971-9A7A-A7D5F4AF5F0D}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="156686436"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-005" ID="{F5C5DECA-E011-4971-9A7A-A7D5F4AF5F0D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-004" ID="{1743C2EF-66E5-44F2-98D2-1CDE1DEFCEA2}" ShortID="730098753">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-004" ID="{382C901B-E77E-451D-ADF4-E7EEEC1ED863}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="774546527"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-004" ID="{382C901B-E77E-451D-ADF4-E7EEEC1ED863}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-008" ID="{B09CD812-401A-4EC6-BF4F-8727163F5A70}" ShortID="772904171">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-008" ID="{684EC25F-35CC-4E4F-AA77-F26BA6506D95}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-008.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="737618982"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-008" ID="{684EC25F-35CC-4E4F-AA77-F26BA6506D95}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-001" ID="{9876DFE9-9EB6-4330-AAFB-845DC771C2E9}" ShortID="139397444">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-001" ID="{01183EC3-17FF-4A4C-BA7F-8E9D04BDB7A8}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1056905124"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-001" ID="{01183EC3-17FF-4A4C-BA7F-8E9D04BDB7A8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-002" ID="{C30A1720-F7FB-44ED-B26E-D34C269817E9}" ShortID="728141312">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-002" ID="{62E18574-042C-4B65-97E3-85251B664C48}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="240188004"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-002" ID="{62E18574-042C-4B65-97E3-85251B664C48}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-003" ID="{04052BE7-2C5F-41E3-8E72-CFC15DEFD295}" ShortID="1034752387">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-003" ID="{FD939E02-9A2E-4EF1-B491-9C26E736F4AC}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="339064604"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-003" ID="{FD939E02-9A2E-4EF1-B491-9C26E736F4AC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+											<Playlist>
+												<ItemRef Name="Snowball_Roll-003" ID="{04052BE7-2C5F-41E3-8E72-CFC15DEFD295}"/>
+												<ItemRef Name="Snowball_Roll-005" ID="{C8202B48-2551-4D83-BB5F-ED46EC9703D5}"/>
+												<ItemRef Name="Snowball_Roll-008" ID="{B09CD812-401A-4EC6-BF4F-8727163F5A70}"/>
+												<ItemRef Name="Snowball_Roll-007" ID="{8A9B2387-21AE-494E-8214-EE0C01F77EFA}"/>
+												<ItemRef Name="Snowball_Roll-004" ID="{1743C2EF-66E5-44F2-98D2-1CDE1DEFCEA2}"/>
+												<ItemRef Name="Snowball_Roll-006" ID="{CE07371E-951A-4153-944C-BC87E70A1104}"/>
+											</Playlist>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Snowball_Roll_07" ID="{613AA2D1-551C-40B0-B3D6-7BF8D587FDE5}" ShortID="1046704343">
+											<PropertyList>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Snowball_Roll-006" ID="{64B546C6-3C2A-4408-80EA-16EECEA3AB27}" ShortID="151710080">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-006" ID="{95EB8C7B-1BBD-452E-B8A2-161EF9805A01}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-006.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="237569014"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-006" ID="{95EB8C7B-1BBD-452E-B8A2-161EF9805A01}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-007" ID="{09C72AAC-4200-4D67-B394-8F7640B24CCE}" ShortID="325605085">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-007" ID="{8CA9DDA5-9D80-4FDE-885F-99059A6D3D44}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-007.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1063215467"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-007" ID="{8CA9DDA5-9D80-4FDE-885F-99059A6D3D44}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-005" ID="{8634AB76-CCC6-4D2B-95BF-FF53FF62AC1E}" ShortID="326613990">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-005" ID="{2E388B3C-C5C2-4D64-AB01-402DFC00798A}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="156686436"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-005" ID="{2E388B3C-C5C2-4D64-AB01-402DFC00798A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-004" ID="{F07C00B0-FFB7-4047-B5A0-4D4FFCF248AE}" ShortID="627865991">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-004" ID="{56A03756-19B0-44A3-B4E1-B91F79CF0E8F}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="774546527"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-004" ID="{56A03756-19B0-44A3-B4E1-B91F79CF0E8F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-008" ID="{8F39765D-D5A9-4D43-984B-A102223C1C2D}" ShortID="240407309">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-008" ID="{25BCC2D5-F370-4F28-9124-1A7A1268E1D4}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-008.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="737618982"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-008" ID="{25BCC2D5-F370-4F28-9124-1A7A1268E1D4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-001" ID="{557757B9-5420-4FE1-8347-F482646274E4}" ShortID="744727260">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-001" ID="{8EAD14D7-BCFE-4323-B21B-FFCEC9AB389A}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1056905124"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-001" ID="{8EAD14D7-BCFE-4323-B21B-FFCEC9AB389A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-002" ID="{924CA63C-815D-4D5C-B86B-CF0BF5D07559}" ShortID="775518806">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-002" ID="{0035E566-ECD1-46F1-A814-6F7D9EDDA587}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="240188004"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-002" ID="{0035E566-ECD1-46F1-A814-6F7D9EDDA587}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-003" ID="{DB1001CC-38E0-47FA-A0C9-0A3D5CCDC729}" ShortID="101662109">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-003" ID="{82B7EF89-8E89-4D20-9806-A9D77DEA7571}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="339064604"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-003" ID="{82B7EF89-8E89-4D20-9806-A9D77DEA7571}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+											<Playlist>
+												<ItemRef Name="Snowball_Roll-008" ID="{8F39765D-D5A9-4D43-984B-A102223C1C2D}"/>
+												<ItemRef Name="Snowball_Roll-006" ID="{64B546C6-3C2A-4408-80EA-16EECEA3AB27}"/>
+												<ItemRef Name="Snowball_Roll-005" ID="{8634AB76-CCC6-4D2B-95BF-FF53FF62AC1E}"/>
+												<ItemRef Name="Snowball_Roll-004" ID="{F07C00B0-FFB7-4047-B5A0-4D4FFCF248AE}"/>
+												<ItemRef Name="Snowball_Roll-007" ID="{09C72AAC-4200-4D67-B394-8F7640B24CCE}"/>
+												<ItemRef Name="Snowball_Roll-002" ID="{924CA63C-815D-4D5C-B86B-CF0BF5D07559}"/>
+											</Playlist>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Snowball_Roll_08" ID="{6E7DDB56-6BE6-4157-9357-8587EE79D2D9}" ShortID="134302808">
+											<PropertyList>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Snowball_Roll-006" ID="{45D19AFC-0BCF-4396-971C-3D679E1C5133}" ShortID="1029442559">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-006" ID="{23161541-0DE1-4EAB-8A41-2CFCB9202A1E}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-006.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="237569014"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-006" ID="{23161541-0DE1-4EAB-8A41-2CFCB9202A1E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-007" ID="{1105DAFA-023A-4CA2-902A-C7D13BC847CC}" ShortID="726803896">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-007" ID="{9AF270D2-0C5A-4824-A9CD-F4CD584BAD7A}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-007.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1063215467"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-007" ID="{9AF270D2-0C5A-4824-A9CD-F4CD584BAD7A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-005" ID="{425BF308-8D6C-4F08-9E1D-A75838EAA35A}" ShortID="137571782">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-005" ID="{80995D8E-4C6B-4919-9A35-76477F7AB9A1}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="156686436"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-005" ID="{80995D8E-4C6B-4919-9A35-76477F7AB9A1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-004" ID="{679F08BA-46D9-4D37-AC3E-A38D06E87A3B}" ShortID="18177598">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-004" ID="{D069F3F9-2D33-4E46-9E85-CFB075A243AE}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="774546527"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-004" ID="{D069F3F9-2D33-4E46-9E85-CFB075A243AE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-008" ID="{F6CCC5A4-8FF2-4B78-8E97-655C142F5518}" ShortID="443404183">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-008" ID="{2373B9DE-6C20-4E9F-8706-CDEF8CA6858A}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-008.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="737618982"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-008" ID="{2373B9DE-6C20-4E9F-8706-CDEF8CA6858A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-001" ID="{17F06410-1218-4285-A136-217C74653813}" ShortID="242512788">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-001" ID="{22460E31-B3A3-4238-A549-458C45E0C1F0}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1056905124"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-001" ID="{22460E31-B3A3-4238-A549-458C45E0C1F0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-002" ID="{F4A43A1B-5F76-4E5E-BC50-50FACAF5A6BA}" ShortID="739289120">
+													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-002" ID="{18D1AB2F-FB81-4631-BBB8-1701EBA56372}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="240188004"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-002" ID="{18D1AB2F-FB81-4631-BBB8-1701EBA56372}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Snowball_Roll-003" ID="{0BE952C5-DB8F-412D-9D23-00C6C14A774B}" ShortID="818275885">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Snowball_Roll-003" ID="{66973725-AC1C-40DD-986D-64EE887A9899}">
+															<Language>SFX</Language>
+															<AudioFile>Snowball_Roll-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="339064604"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Snowball_Roll-003" ID="{66973725-AC1C-40DD-986D-64EE887A9899}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+											<Playlist>
+												<ItemRef Name="Snowball_Roll-004" ID="{679F08BA-46D9-4D37-AC3E-A38D06E87A3B}"/>
+												<ItemRef Name="Snowball_Roll-005" ID="{425BF308-8D6C-4F08-9E1D-A75838EAA35A}"/>
+												<ItemRef Name="Snowball_Roll-008" ID="{F6CCC5A4-8FF2-4B78-8E97-655C142F5518}"/>
+												<ItemRef Name="Snowball_Roll-007" ID="{1105DAFA-023A-4CA2-902A-C7D13BC847CC}"/>
+												<ItemRef Name="Snowball_Roll-003" ID="{0BE952C5-DB8F-412D-9D23-00C6C14A774B}"/>
+												<ItemRef Name="Snowball_Roll-006" ID="{45D19AFC-0BCF-4396-971C-3D679E1C5133}"/>
+											</Playlist>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</BlendContainer>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
@@ -841,6 +2688,17 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+				<ActorMixer Name="Enemy" ID="{E4AF9D4F-2C0A-493C-85AD-7850AB4C685B}" ShortID="985988028">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+						</Reference>
+					</ReferenceList>
 					<ObjectLists/>
 				</ActorMixer>
 			</ChildrenList>

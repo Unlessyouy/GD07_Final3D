@@ -22,6 +22,10 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Snowball_Roll_Start" ID="{2736C8F3-10BF-42C1-897C-8F69D56DC6BD}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Cave_WindSub" ID="{169C9B6D-97BD-43D2-B20F-038CCB340EC9}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
 							<Position X="1" Y="3"/>
 						</Module>

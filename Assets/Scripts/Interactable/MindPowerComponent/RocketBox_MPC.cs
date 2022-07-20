@@ -13,6 +13,9 @@ namespace Interactable.MindPowerComponent
         [SerializeField] private float MoveTime = 2f;
 
         private bool _isActivated;
+        private bool _isReachMaxPoint;
+        [SerializeField] private Transform MaxPoint;
+        
         private Rigidbody _rb;
 
         private void Start()
@@ -25,6 +28,20 @@ namespace Interactable.MindPowerComponent
             if (IsGrounded())
             {
                 _isActivated = false;
+                _isReachMaxPoint = false;
+            }
+        }
+
+        private void FixedUpdate()
+        {
+            // if (!_isReachMaxPoint && (transform.position.y >= MaxPoint.position.y))
+            // {
+            //     StartCoroutine(StartStatic());
+            // }
+            //
+            if (!_isReachMaxPoint && _rb.velocity.y <= -0.3f)
+            {
+                StartCoroutine(StartStatic());
             }
         }
 
@@ -48,15 +65,39 @@ namespace Interactable.MindPowerComponent
 
         private bool IsGrounded()
         {
-            if (Physics.Raycast(transform.position, -transform.up, out var hitInfo, 0.4f))
+            if (Physics.Raycast(transform.position, -transform.up, out var hitInfo, 0.255f))
             {
                 if (hitInfo.collider.CompareTag("Terrain") && hitInfo.collider.gameObject != gameObject)
                 {
+                    if (_rb.velocity.y < 0)
+                    {
+                        _rb.velocity = Vector3.zero; 
+                    }
                     return true;
                 }
             }
 
             return false;
+        }
+
+        // private void OnCollisionEnter(Collision collision)
+        // {
+        //     if (collision.gameObject.CompareTag("Terrain"))
+        //     {
+        //         _isActivated = false;
+        //         _isReachMaxPoint = false;
+        //     }
+        // }
+
+        private IEnumerator StartStatic()
+        {
+            _isReachMaxPoint = true;
+            _rb.isKinematic = true;
+            _rb.velocity = Vector3.zero;
+
+            yield return new WaitForSeconds(MoveTime);
+
+            _rb.isKinematic = false;
         }
     }
 }

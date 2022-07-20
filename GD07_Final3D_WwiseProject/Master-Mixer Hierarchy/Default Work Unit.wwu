@@ -15,7 +15,7 @@
 								<AuxBus Name="Cave" ID="{A769F39A-20C4-4B04-AC9C-908045F1763F}">
 									<ReferenceList>
 										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-											<ObjectRef Name="Hall_Medium" ID="{50286348-176A-4235-9E4C-CA5F73D87818}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											<ObjectRef Name="Hall_Large" ID="{6D154498-FF6D-4823-96FC-56841B70E079}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 									</ReferenceList>
 									<ObjectLists/>
@@ -29,6 +29,9 @@
 									<ObjectLists/>
 								</Bus>
 								<Bus Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="Enemy" ID="{F5F99584-0A14-4777-9760-3A8BF7F5027F}">
 									<ObjectLists/>
 								</Bus>
 							</ChildrenList>

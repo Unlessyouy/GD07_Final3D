@@ -1,10 +1,16 @@
 Event	ID	Name			Wwise Object Path	Notes
 	634408506	Snowball_Roll_Start			\Default Work Unit\Items\Snowball_Roll\Snowball_Roll_Start	
+	672826925	Foot_Father_Jump			\Default Work Unit\Main Character\Father\Foot_Father_Jump	
+	709314562	Foot_Father_Walk			\Default Work Unit\Main Character\Father\Foot_Father_Walk	
 	841599257	Snowball_Roll_End			\Default Work Unit\Items\Snowball_Roll\Snowball_Roll_End	
 	1253188249	Ambient_HeavyWind			\Default Work Unit\Ambience\Ambient_HeavyWind	
-	1894362767	Foot_Player			\Default Work Unit\Main Character\Foot_Player	
 	1931646578	Campfire			\Default Work Unit\Items\Campfire	
 	1995429365	Ambient_Cave			\Default Work Unit\Ambience\Ambient_Cave	
+	2237177844	Foot_Father_Run			\Default Work Unit\Main Character\Father\Foot_Father_Run	
+	2993334066	Foot_Son_Run			\Default Work Unit\Main Character\Son\Foot_Son_Run	
+	3038606776	Foot_Son_Land			\Default Work Unit\Main Character\Son\Foot_Son_Land	
+	3092656219	Foot_Son_Jump			\Default Work Unit\Main Character\Son\Foot_Son_Jump	
+	3538893650	Foot_Father_Land			\Default Work Unit\Main Character\Father\Foot_Father_Land	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	3865314626	Material			\Default Work Unit\Material	
@@ -15,30 +21,63 @@ Switch	ID	Name	Switch Group			Notes
 	2058049674	Wood	Material			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	1428087	Footstep_Wood-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-001		1854
-	6276280	Footstep_Snow-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-003		4521
-	75060662	Footstep_Wood-005	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-005_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-005		2061
-	81444893	Footstep_Stone-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-001		1569
-	92285822	Footstep_Stone-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-002		1793
+	5708474	Run_Stone-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Stone-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Stone\Run_Stone-001		4020
+	35085224	Run_Snow-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Snow-004_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Snow\Run_Snow-004		4481
+	53757683	Land_Snow-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Land_Snow-004_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Snow\Land_Snow-004		4043
+	58258714	Run_Stone-005	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Stone-005_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Stone\Run_Stone-005		2954
+	71594557	Land_Snow-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Land_Snow-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Snow\Land_Snow-001		5714
+	90528754	Run_Stone-010	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Stone-010_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Stone\Run_Stone-010		1401
+	155263112	Run_Snow-010	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Snow-010_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Snow\Run_Snow-010		4555
 	156686436	Snowball_Roll-005	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-005_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-005		5626
+	196411225	Run_Snow-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Snow-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Snow\Run_Snow-002		5331
+	197414246	Run_Stone-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Stone-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Stone\Run_Stone-002		3545
+	210657007	Run_Stone-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Stone-004_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Stone\Run_Stone-004		4128
+	213115617	Walk_Snow-005	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Walk_Snow-005_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Walk\Snow\Walk_Snow-005		8996
+	214748463	Jump_Stone-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Jump_Stone-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Stone\Jump_Stone-001		1875
+	237368122	Land_Stone-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Land_Stone-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Stone\Land_Stone-003		2327
 	237569014	Snowball_Roll-006	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-006_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-006		5044
 	240188004	Snowball_Roll-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-002_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-002		4275
-	309047856	Footstep_Snow-005	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-005_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-005		4555
-	311964852	Footstep_Stone-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-003		1442
+	249884054	Run_Snow-007	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Snow-007_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Snow\Run_Snow-007		4840
+	260403469	Run_Snow-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Snow-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Snow\Run_Snow-001		3946
+	262229113	Run_Wood-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Wood-004_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Wood\Run_Wood-004		2246
+	268986904	Run_Wood-006	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Wood-006_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Wood\Run_Wood-006		1854
+	289751522	Run_Snow-006	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Snow-006_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Snow\Run_Snow-006		4595
+	291570625	Run_Wood-005	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Wood-005_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Wood\Run_Wood-005		2458
+	298239654	Land_Stone-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Land_Stone-004_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Stone\Land_Stone-004		2354
+	328170736	Jump_Stone-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Jump_Stone-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Stone\Jump_Stone-003		2777
 	339064604	Snowball_Roll-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-003_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_06\Snowball_Roll-003		5056
-	406418679	Footstep_Wood-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-002		1565
+	366226189	Run_Wood-010	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Wood-010_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Wood\Run_Wood-010		2061
+	394759641	Land_Stone-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Land_Stone-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Stone\Land_Stone-001		2470
+	401252325	Walk_Snow-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Walk_Snow-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Walk\Snow\Walk_Snow-001		7467
+	436831600	Run_Wood-007	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Wood-007_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Wood\Run_Wood-007		1565
+	480724282	Run_Snow-008	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Snow-008_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Snow\Run_Snow-008		4521
+	495153094	Run_Stone-006	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Stone-006_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Stone\Run_Stone-006		1569
+	495239455	Jump_Snow-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Jump_Snow-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Snow\Jump_Snow-002		4267
 	523090183	Wind_Heavy	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Wind_Heavy_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind_Heavy		1528612
-	620895053	Footstep_Stone-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-004_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-004		1623
-	651806299	Footstep_Wood-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-003		1916
+	566301915	Run_Snow-009	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Snow-009_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Snow\Run_Snow-009		6172
+	643621617	Run_Snow-005	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Snow-005_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Snow\Run_Snow-005		4841
+	651625248	Land_Snow-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Land_Snow-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Snow\Land_Snow-003		5069
+	679652668	Run_Wood-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Wood-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Wood\Run_Wood-001		2170
+	690222087	Run_Stone-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Stone-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Stone\Run_Stone-003		4155
 	737618982	Snowball_Roll-008	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-008_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-008		4488
+	753625376	Land_Stone-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Land_Stone-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Stone\Land_Stone-002		2772
 	774546527	Snowball_Roll-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-004_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-004		5015
-	793680965	Footstep_Stone-005	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Stone-005_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Stone\Footstep_Stone-005		1401
-	833876951	Footstep_Snow-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-002		4840
+	782860848	Jump_Snow-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Jump_Snow-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Snow\Jump_Snow-001		4552
+	822292802	Run_Wood-009	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Wood-009_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Wood\Run_Wood-009		1902
 	842402316	Campfire	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Campfire_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Campfire		103480
-	898568729	Footstep_Snow-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-004_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-004		6172
-	983661866	Footstep_Snow-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Snow-001_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Snow\Footstep_Snow-001		4595
-	1051221840	Footstep_Wood-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Footstep_Wood-004_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Footsteps\Wood\Footstep_Wood-004		1902
+	846649399	Run_Stone-009	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Stone-009_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Stone\Run_Stone-009		1623
+	873261511	Run_Stone-007	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Stone-007_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Stone\Run_Stone-007		1793
+	882535665	Walk_Snow-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Walk_Snow-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Walk\Snow\Walk_Snow-003		6964
+	909723097	Walk_Snow-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Walk_Snow-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Walk\Snow\Walk_Snow-002		6327
+	924546160	Jump_Stone-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Jump_Stone-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Stone\Jump_Stone-002		1766
+	973933471	Run_Snow-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Snow-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Snow\Run_Snow-003		4461
+	975927773	Run_Stone-008	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Stone-008_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Stone\Run_Stone-008		1442
+	1003008649	Run_Wood-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Wood-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Wood\Run_Wood-002		2151
+	1022072329	Walk_Snow-004	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Walk_Snow-004_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Walk\Snow\Walk_Snow-004		10470
+	1023893057	Land_Snow-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Land_Snow-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Snow\Land_Snow-002		7359
+	1034007203	Run_Wood-008	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Wood-008_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Wood\Run_Wood-008		1916
 	1052914941	Cave_WindSub	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Cave_WindSub_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Cave_WindSub		620217
 	1056905124	Snowball_Roll-001	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-001_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_05\Snowball_Roll-001		5011
 	1063215467	Snowball_Roll-007	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Snowball_Roll-007_F47446A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-007		6265
+	1064859608	Run_Wood-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Wood-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Wood\Run_Wood-003		2097
 

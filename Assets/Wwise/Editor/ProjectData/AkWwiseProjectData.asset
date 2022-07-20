@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 419cd34db498474b9ea9b63b81909818
     GuidInternal: 
-    m_lastTime: -8585437898850693423
+    m_lastTime: -8585444891919133395
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 37b92b04a3237749a3e1b283eb4443c9
     GuidInternal: 
-    m_lastTime: -8585437903507674287
+    m_lastTime: -8585438321836003030
     List:
     - name: Ambience
       guid: 18b19fe903e8d244b443b7483e94d366
@@ -177,7 +177,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 91d2806cecd99c4eae86d6b5a37c2eba
     GuidInternal: 
-    m_lastTime: -8585437903505896416
+    m_lastTime: -8585433123670607260
     List:
     - name: Main
       guid: 11fe3cbc92d2004694b2b7dfbc5243ae
@@ -205,11 +205,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 367d64d9117c554aacecfd30727fda40
     GuidInternal: 
-    m_lastTime: -8585433603633953333
+    m_lastTime: -8585433555201260843
     List:
-    - name: Ambient_CaveSub
-      guid: 92445b86d5e62d488f34b430b0fc2907
-      id: 2523607441
+    - name: Ambience
+      guid: cfbbfbfa8e16f74089acc29894110c16
+      id: 85412153
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -217,10 +217,30 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 367d64d9117c554aacecfd30727fda40
-      - ElementName: Ambient_CaveSub
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: cfbbfbfa8e16f74089acc29894110c16
+      Path: Events\Default Work Unit\Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ambient_Cave
+      guid: 92445b86d5e62d488f34b430b0fc2907
+      id: 1995429365
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: cfbbfbfa8e16f74089acc29894110c16
+      - ElementName: Ambient_Cave
         ObjectType: 3
         guid: 92445b86d5e62d488f34b430b0fc2907
-      Path: Events\Default Work Unit\Ambient_CaveSub
+      Path: Events\Default Work Unit\Ambience\Ambient_Cave
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -234,10 +254,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: cfbbfbfa8e16f74089acc29894110c16
       - ElementName: Ambient_HeavyWind
         ObjectType: 3
         guid: 8e694a6f26c798429b4323f115c21d14
-      Path: Events\Default Work Unit\Ambient_HeavyWind
+      Path: Events\Default Work Unit\Ambience\Ambient_HeavyWind
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -251,10 +274,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Items
+        ObjectType: 4
+        guid: 953183d4c58d8e4fbcfa31a86849137c
       - ElementName: Campfire
         ObjectType: 3
         guid: 527cdab019f34c4cb2108a79833038db
-      Path: Events\Default Work Unit\Campfire
+      Path: Events\Default Work Unit\Items\Campfire
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -268,13 +294,116 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Main Character
+        ObjectType: 4
+        guid: 5f14fccf98538446b5e06fb28f7a661c
       - ElementName: Foot_Player
         ObjectType: 3
         guid: f79e286cf3fbb84789a8069f96009a0f
-      Path: Events\Default Work Unit\Foot_Player
+      Path: Events\Default Work Unit\Main Character\Foot_Player
       maxAttenuation: 0
       maxDuration: 0.550568
       minDuration: 0.072367
+    - name: Items
+      guid: 953183d4c58d8e4fbcfa31a86849137c
+      id: 2151963051
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Items
+        ObjectType: 4
+        guid: 953183d4c58d8e4fbcfa31a86849137c
+      Path: Events\Default Work Unit\Items
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Main Character
+      guid: 5f14fccf98538446b5e06fb28f7a661c
+      id: 3381091279
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Main Character
+        ObjectType: 4
+        guid: 5f14fccf98538446b5e06fb28f7a661c
+      Path: Events\Default Work Unit\Main Character
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Snowball_Roll
+      guid: 81c4288dd56a6d4e9a686724ab4d963d
+      id: 3520028279
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Items
+        ObjectType: 4
+        guid: 953183d4c58d8e4fbcfa31a86849137c
+      - ElementName: Snowball_Roll
+        ObjectType: 4
+        guid: 81c4288dd56a6d4e9a686724ab4d963d
+      Path: Events\Default Work Unit\Items\Snowball_Roll
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Snowball_Roll_End
+      guid: db8fa0b3ff56594f89df06702e4f0d28
+      id: 841599257
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Items
+        ObjectType: 4
+        guid: 953183d4c58d8e4fbcfa31a86849137c
+      - ElementName: Snowball_Roll
+        ObjectType: 4
+        guid: 81c4288dd56a6d4e9a686724ab4d963d
+      - ElementName: Snowball_Roll_End
+        ObjectType: 3
+        guid: db8fa0b3ff56594f89df06702e4f0d28
+      Path: Events\Default Work Unit\Items\Snowball_Roll\Snowball_Roll_End
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Snowball_Roll_Start
+      guid: f3c83627bf10c142897c8f69d56dc6bd
+      id: 634408506
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Items
+        ObjectType: 4
+        guid: 953183d4c58d8e4fbcfa31a86849137c
+      - ElementName: Snowball_Roll
+        ObjectType: 4
+        guid: 81c4288dd56a6d4e9a686724ab4d963d
+      - ElementName: Snowball_Roll_Start
+        ObjectType: 3
+        guid: f3c83627bf10c142897c8f69d56dc6bd
+      Path: Events\Default Work Unit\Items\Snowball_Roll\Snowball_Roll_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -287,7 +416,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 83047f4e49a6064ab4b0c51c2a758231
     GuidInternal: 
-    m_lastTime: -8585437898850782915
+    m_lastTime: -8585444891919203212
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -301,7 +430,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: f2339841cf15084a9e6238de60db1afc
     GuidInternal: 
-    m_lastTime: -8585437898850703127
+    m_lastTime: -8585444891919143343
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -315,7 +444,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 4bcbde5e15a23e43abf01c739eec5149
     GuidInternal: 
-    m_lastTime: -8585437903505886444
+    m_lastTime: -8585438326731103400
     List:
     - name: Material
       guid: 7609df95802a3d4da0a9ebe89c4ce141
@@ -395,7 +524,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 9d157d552dd93b458c8ff2c47aef7cfc
     GuidInternal: 
-    m_lastTime: -8585437898850703127
+    m_lastTime: -8585444891919133395
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

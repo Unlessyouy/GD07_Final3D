@@ -79,17 +79,91 @@
 				</Folder>
 				<Folder Name="Main Character" ID="{CFFC145F-5398-4684-B5E0-6FB28F7A661C}" ShortID="650885601">
 					<ChildrenList>
-						<Event Name="Foot_Player" ID="{6C289EF7-FBF3-47B8-89A8-069F96009A0F}">
+						<Folder Name="Father" ID="{E844E445-4FE0-4364-9CFC-61403DEFB0F1}" ShortID="829400205">
 							<ChildrenList>
-								<Action Name="" ID="{C78A8E80-679B-4963-91FD-4CBBC7AD8533}" ShortID="703089077">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Footsteps" ID="{20CC9350-36E2-4DDC-B305-1F2BE782AD0E}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
+								<Event Name="Foot_Father_Run" ID="{DE171918-533D-4A2B-BCF1-FA5687096D9D}">
+									<ChildrenList>
+										<Action Name="" ID="{3F66105D-4CAB-4264-8B6C-ABDE1A776C99}" ShortID="618111771">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Father_Run" ID="{16C18F81-5F12-4F1C-B453-F5F1D8B44498}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Foot_Father_Walk" ID="{81C0EA1D-F38E-402D-9C12-2575270111CB}">
+									<ChildrenList>
+										<Action Name="" ID="{22E02C49-1822-4828-9F06-67567028EAF2}" ShortID="1058031850">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Father_Walk" ID="{45D8AA4C-BB1A-48C7-8AC1-A875D58FB367}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Foot_Father_Jump" ID="{DFDCADCF-6C39-45F3-B869-665B14D2208D}">
+									<ChildrenList>
+										<Action Name="" ID="{39623D77-3467-46A5-B4EC-FD45FF5EA003}" ShortID="198470743">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Father_Jump" ID="{F3DC3CF6-43BF-418C-B01F-4586E171ABF9}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Foot_Father_Land" ID="{BFC99447-CFE1-47AE-B4C8-E15D9707CB2F}">
+									<ChildrenList>
+										<Action Name="" ID="{93CEE3B1-3DBF-406D-856F-2DFE8D69BA22}" ShortID="226616791">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Father_Land" ID="{0BAA9F59-7EE7-423B-9677-831A3C010B5A}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
-						</Event>
+						</Folder>
+						<Folder Name="Son" ID="{08546D2F-185E-4D7F-B6C2-91B144A72A04}" ShortID="934091620">
+							<ChildrenList>
+								<Event Name="Foot_Son_Jump" ID="{25C4F02A-BE98-42D9-A92B-E828D803A1F5}">
+									<ChildrenList>
+										<Action Name="" ID="{B59699CE-C439-4B37-A26A-6D8B515AEEC4}" ShortID="242834573">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Son_Jump" ID="{E4076845-4051-4948-A2D5-C40D73B147B6}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Foot_Son_Run" ID="{0D7034F2-00E2-42F2-BBC7-5E85027AC1F2}">
+									<ChildrenList>
+										<Action Name="" ID="{DBC8BFED-54DD-4EDA-A8D7-6C6034874F0E}" ShortID="833613811">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Son_Run" ID="{20CC9350-36E2-4DDC-B305-1F2BE782AD0E}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Foot_Son_Land" ID="{4A235C3B-4088-49B2-B37D-BF4811BC9591}">
+									<ChildrenList>
+										<Action Name="" ID="{FD9163ED-1A64-4965-8088-90EF7BA8F6C2}" ShortID="565823729">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Son_Land" ID="{51B61B5F-F6E5-4FE5-9064-B0D306219654}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

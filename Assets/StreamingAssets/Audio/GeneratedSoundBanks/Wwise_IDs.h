@@ -16,7 +16,13 @@ namespace AK
         static const AkUniqueID AMBIENT_CAVE = 1995429365U;
         static const AkUniqueID AMBIENT_HEAVYWIND = 1253188249U;
         static const AkUniqueID CAMPFIRE = 1931646578U;
-        static const AkUniqueID FOOT_PLAYER = 1894362767U;
+        static const AkUniqueID FOOT_FATHER_JUMP = 672826925U;
+        static const AkUniqueID FOOT_FATHER_LAND = 3538893650U;
+        static const AkUniqueID FOOT_FATHER_RUN = 2237177844U;
+        static const AkUniqueID FOOT_FATHER_WALK = 709314562U;
+        static const AkUniqueID FOOT_SON_JUMP = 3092656219U;
+        static const AkUniqueID FOOT_SON_LAND = 3038606776U;
+        static const AkUniqueID FOOT_SON_RUN = 2993334066U;
         static const AkUniqueID SNOWBALL_ROLL_END = 841599257U;
         static const AkUniqueID SNOWBALL_ROLL_START = 634408506U;
     } // namespace EVENTS
@@ -46,6 +52,7 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID ENEMY = 2299321487U;
         static const AkUniqueID ENVIRONMENTS = 3761286811U;
         static const AkUniqueID ITEMS = 2151963051U;
         static const AkUniqueID MAIN_CHARACTER = 3381091279U;

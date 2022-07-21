@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 419cd34db498474b9ea9b63b81909818
     GuidInternal: 
-    m_lastTime: -8585444891919133395
+    m_lastTime: -8585481141748201766
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 37b92b04a3237749a3e1b283eb4443c9
     GuidInternal: 
-    m_lastTime: -8585438321836003030
+    m_lastTime: -8585432771108884872
     List:
     - name: Ambience
       guid: 18b19fe903e8d244b443b7483e94d366
@@ -77,6 +77,26 @@ MonoBehaviour:
         ObjectType: 1
         guid: 9af369a7c420044bac9c908045f1763f
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave
+    - name: Enemy
+      guid: 8495f9f5140a774797603a8bf7f5027f
+      id: 2299321487
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 37b92b04a3237749a3e1b283eb4443c9
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: adb092c3b3e8a04195e0c240ffbd1b6a
+      - ElementName: Enemy
+        ObjectType: 2
+        guid: 8495f9f5140a774797603a8bf7f5027f
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX\Enemy
     - name: Environments
       guid: e1f4c59c47158146986c14a7d581188f
       id: 3761286811
@@ -177,7 +197,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 91d2806cecd99c4eae86d6b5a37c2eba
     GuidInternal: 
-    m_lastTime: -8585433123670607260
+    m_lastTime: -8585433035807931882
     List:
     - name: Main
       guid: 11fe3cbc92d2004694b2b7dfbc5243ae
@@ -205,7 +225,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 367d64d9117c554aacecfd30727fda40
     GuidInternal: 
-    m_lastTime: -8585433555201260843
+    m_lastTime: -8585432771109441183
     List:
     - name: Ambience
       guid: cfbbfbfa8e16f74089acc29894110c16
@@ -284,9 +304,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Foot_Player
-      guid: f79e286cf3fbb84789a8069f96009a0f
-      id: 1894362767
+    - name: Father
+      guid: 45e444e8e04f64439cfc61403defb0f1
+      id: 2244853319
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -297,13 +317,174 @@ MonoBehaviour:
       - ElementName: Main Character
         ObjectType: 4
         guid: 5f14fccf98538446b5e06fb28f7a661c
-      - ElementName: Foot_Player
-        ObjectType: 3
-        guid: f79e286cf3fbb84789a8069f96009a0f
-      Path: Events\Default Work Unit\Main Character\Foot_Player
+      - ElementName: Father
+        ObjectType: 4
+        guid: 45e444e8e04f64439cfc61403defb0f1
+      Path: Events\Default Work Unit\Main Character\Father
       maxAttenuation: 0
-      maxDuration: 0.550568
-      minDuration: 0.072367
+      maxDuration: -1
+      minDuration: -1
+    - name: Foot_Father_Jump
+      guid: cfaddcdf396cf345b869665b14d2208d
+      id: 672826925
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Main Character
+        ObjectType: 4
+        guid: 5f14fccf98538446b5e06fb28f7a661c
+      - ElementName: Father
+        ObjectType: 4
+        guid: 45e444e8e04f64439cfc61403defb0f1
+      - ElementName: Foot_Father_Jump
+        ObjectType: 3
+        guid: cfaddcdf396cf345b869665b14d2208d
+      Path: Events\Default Work Unit\Main Character\Father\Foot_Father_Jump
+      maxAttenuation: 0
+      maxDuration: 0.484623
+      minDuration: 0.118439
+    - name: Foot_Father_Land
+      guid: 4794c9bfe1cfae47b4c8e15d9707cb2f
+      id: 3538893650
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Main Character
+        ObjectType: 4
+        guid: 5f14fccf98538446b5e06fb28f7a661c
+      - ElementName: Father
+        ObjectType: 4
+        guid: 45e444e8e04f64439cfc61403defb0f1
+      - ElementName: Foot_Father_Land
+        ObjectType: 3
+        guid: 4794c9bfe1cfae47b4c8e15d9707cb2f
+      Path: Events\Default Work Unit\Main Character\Father\Foot_Father_Land
+      maxAttenuation: 0
+      maxDuration: 0.825056
+      minDuration: 0.154756
+    - name: Foot_Father_Run
+      guid: 181917de3d532b4abcf1fa5687096d9d
+      id: 2237177844
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Main Character
+        ObjectType: 4
+        guid: 5f14fccf98538446b5e06fb28f7a661c
+      - ElementName: Father
+        ObjectType: 4
+        guid: 45e444e8e04f64439cfc61403defb0f1
+      - ElementName: Foot_Father_Run
+        ObjectType: 3
+        guid: 181917de3d532b4abcf1fa5687096d9d
+      Path: Events\Default Work Unit\Main Character\Father\Foot_Father_Run
+      maxAttenuation: 0
+      maxDuration: 0.535051
+      minDuration: 0.154756
+    - name: Foot_Father_Walk
+      guid: 1deac0818ef32d409c122575270111cb
+      id: 709314562
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Main Character
+        ObjectType: 4
+        guid: 5f14fccf98538446b5e06fb28f7a661c
+      - ElementName: Father
+        ObjectType: 4
+        guid: 45e444e8e04f64439cfc61403defb0f1
+      - ElementName: Foot_Father_Walk
+        ObjectType: 3
+        guid: 1deac0818ef32d409c122575270111cb
+      Path: Events\Default Work Unit\Main Character\Father\Foot_Father_Walk
+      maxAttenuation: 0
+      maxDuration: 0.988832
+      minDuration: 0.471937
+    - name: Foot_Son_Jump
+      guid: 2af0c42598bed942a92be828d803a1f5
+      id: 3092656219
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Main Character
+        ObjectType: 4
+        guid: 5f14fccf98538446b5e06fb28f7a661c
+      - ElementName: Son
+        ObjectType: 4
+        guid: 2f6d54085e187f4db6c291b144a72a04
+      - ElementName: Foot_Son_Jump
+        ObjectType: 3
+        guid: 2af0c42598bed942a92be828d803a1f5
+      Path: Events\Default Work Unit\Main Character\Son\Foot_Son_Jump
+      maxAttenuation: 0
+      maxDuration: 0.407518
+      minDuration: 0.099595
+    - name: Foot_Son_Land
+      guid: 3b5c234a8840b249b37dbf4811bc9591
+      id: 3038606776
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Main Character
+        ObjectType: 4
+        guid: 5f14fccf98538446b5e06fb28f7a661c
+      - ElementName: Son
+        ObjectType: 4
+        guid: 2f6d54085e187f4db6c291b144a72a04
+      - ElementName: Foot_Son_Land
+        ObjectType: 3
+        guid: 3b5c234a8840b249b37dbf4811bc9591
+      Path: Events\Default Work Unit\Main Character\Son\Foot_Son_Land
+      maxAttenuation: 0
+      maxDuration: 0.561231
+      minDuration: 0.099952
+    - name: Foot_Son_Run
+      guid: f234700de200f242bbc75e85027ac1f2
+      id: 2993334066
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Main Character
+        ObjectType: 4
+        guid: 5f14fccf98538446b5e06fb28f7a661c
+      - ElementName: Son
+        ObjectType: 4
+        guid: 2f6d54085e187f4db6c291b144a72a04
+      - ElementName: Foot_Son_Run
+        ObjectType: 3
+        guid: f234700de200f242bbc75e85027ac1f2
+      Path: Events\Default Work Unit\Main Character\Son\Foot_Son_Run
+      maxAttenuation: 0
+      maxDuration: 0.519667
+      minDuration: 0.07667
     - name: Items
       guid: 953183d4c58d8e4fbcfa31a86849137c
       id: 2151963051
@@ -404,6 +585,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Son
+      guid: 2f6d54085e187f4db6c291b144a72a04
+      id: 544238367
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Main Character
+        ObjectType: 4
+        guid: 5f14fccf98538446b5e06fb28f7a661c
+      - ElementName: Son
+        ObjectType: 4
+        guid: 2f6d54085e187f4db6c291b144a72a04
+      Path: Events\Default Work Unit\Main Character\Son
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -416,7 +617,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 83047f4e49a6064ab4b0c51c2a758231
     GuidInternal: 
-    m_lastTime: -8585444891919203212
+    m_lastTime: -8585481141748241645
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -430,7 +631,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: f2339841cf15084a9e6238de60db1afc
     GuidInternal: 
-    m_lastTime: -8585444891919143343
+    m_lastTime: -8585481141748211734
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -444,7 +645,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 4bcbde5e15a23e43abf01c739eec5149
     GuidInternal: 
-    m_lastTime: -8585438326731103400
+    m_lastTime: -8585437939130483266
     List:
     - name: Material
       guid: 7609df95802a3d4da0a9ebe89c4ce141
@@ -524,7 +725,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 9d157d552dd93b458c8ff2c47aef7cfc
     GuidInternal: 
-    m_lastTime: -8585444891919133395
+    m_lastTime: -8585481141748201766
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

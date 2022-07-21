@@ -31,18 +31,7 @@
 				</Folder>
 				<Folder Name="Items" ID="{D4833195-8DC5-4F8E-BCFA-31A86849137C}" ShortID="159998028">
 					<ChildrenList>
-						<Event Name="Campfire" ID="{B0DA7C52-F319-4C4C-B210-8A79833038DB}">
-							<ChildrenList>
-								<Action Name="" ID="{605FB273-FDE2-4E6A-AB4F-551388C4D7E5}" ShortID="300558527">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Campfire" ID="{6C71B6A4-C950-49AC-BEC6-093E611C8283}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Folder Name="Snowball_Roll" ID="{8D28C481-6AD5-4E6D-9A68-6724AB4D963D}" ShortID="624686273">
+						<Folder Name="Snowball" ID="{8D28C481-6AD5-4E6D-9A68-6724AB4D963D}" ShortID="624686273">
 							<ChildrenList>
 								<Event Name="Snowball_Roll_End" ID="{B3A08FDB-56FF-4F59-89DF-06702E4F0D28}">
 									<ChildrenList>
@@ -68,6 +57,46 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Snowball" ID="{5EB438A1-71C7-485C-A41F-7B54648B6EBA}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Campfire" ID="{4D81806E-A945-4007-9A8A-4043F28AE73C}" ShortID="565337481">
+							<ChildrenList>
+								<Event Name="Campfire" ID="{B0DA7C52-F319-4C4C-B210-8A79833038DB}">
+									<ChildrenList>
+										<Action Name="" ID="{605FB273-FDE2-4E6A-AB4F-551388C4D7E5}" ShortID="300558527">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Campfire" ID="{6C71B6A4-C950-49AC-BEC6-093E611C8283}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Campfire_Slide_Start" ID="{1D49C879-4A00-40DC-BE97-58762FB35333}">
+									<ChildrenList>
+										<Action Name="" ID="{0FD47EE9-095E-424C-9E8F-A1A4362192EF}" ShortID="452480144">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Campfire_Slide" ID="{12090814-D391-4B9B-A534-F580AA1EE7EF}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Campfire_Slide_End" ID="{9A69C70D-A610-4FF5-9B52-3F25B1A2D0D6}">
+									<ChildrenList>
+										<Action Name="" ID="{2CB48190-FB60-47B8-A4DB-4F231D31A035}" ShortID="247675553">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Campfire_Slide" ID="{12090814-D391-4B9B-A534-F580AA1EE7EF}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

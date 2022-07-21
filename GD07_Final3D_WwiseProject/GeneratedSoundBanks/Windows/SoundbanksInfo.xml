@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2585014505">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1459719099">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -19,7 +19,7 @@
 				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="4037556882">
+		<SoundBank Id="3161908922" Language="SFX" Hash="125809324">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -40,11 +40,36 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1931646578" Name="Campfire" ObjectPath="\Events\Default Work Unit\Items\Campfire" DurationType="Infinite">
+				<Event Id="1931646578" Name="Campfire" ObjectPath="\Events\Default Work Unit\Items\Campfire\Campfire" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="842402316" Language="SFX">
 							<ShortName>Campfire.wav</ShortName>
 							<Path>SFX\Campfire_9EDFC787.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3701859130" Name="Campfire_Slide_End" ObjectPath="\Events\Default Work Unit\Items\Campfire\Campfire_Slide_End" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2649043497" Name="Campfire_Slide_Start" ObjectPath="\Events\Default Work Unit\Items\Campfire\Campfire_Slide_Start" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="32039786" Language="SFX">
+							<ShortName>Snowball_Roll-006.wav</ShortName>
+							<Path>SFX\Snowball_Roll-006_C2F5F904.wem</Path>
+						</File>
+						<File Id="58305440" Language="SFX">
+							<ShortName>Snowball_Roll-008.wav</ShortName>
+							<Path>SFX\Snowball_Roll-008_C2F5F904.wem</Path>
+						</File>
+						<File Id="164977265" Language="SFX">
+							<ShortName>Snowball_Roll-007.wav</ShortName>
+							<Path>SFX\Snowball_Roll-007_C2F5F904.wem</Path>
+						</File>
+						<File Id="378909021" Language="SFX">
+							<ShortName>Snowball_Roll-004.wav</ShortName>
+							<Path>SFX\Snowball_Roll-004_C2F5F904.wem</Path>
+						</File>
+						<File Id="565494909" Language="SFX">
+							<ShortName>Snowball_Roll-005.wav</ShortName>
+							<Path>SFX\Snowball_Roll-005_C2F5F904.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -538,8 +563,8 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="841599257" Name="Snowball_Roll_End" ObjectPath="\Events\Default Work Unit\Items\Snowball_Roll\Snowball_Roll_End" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="634408506" Name="Snowball_Roll_Start" ObjectPath="\Events\Default Work Unit\Items\Snowball_Roll\Snowball_Roll_Start" DurationType="Infinite">
+				<Event Id="841599257" Name="Snowball_Roll_End" ObjectPath="\Events\Default Work Unit\Items\Snowball\Snowball_Roll_End" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="634408506" Name="Snowball_Roll_Start" ObjectPath="\Events\Default Work Unit\Items\Snowball\Snowball_Roll_Start" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="156686436" Language="SFX">
 							<ShortName>Snowball_Roll-005.wav</ShortName>

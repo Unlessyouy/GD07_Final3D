@@ -295,7 +295,7 @@ MonoBehaviour:
   FootOffset: 0.25
   RayLength: 0.75
   MindPowerVFX: {fileID: 8090813364787397937}
-  JumpHeight: 4.5
+  JumpHeight: 5
 --- !u!114 &2584751054422470628
 MonoBehaviour:
   m_ObjectHideFlags: 0

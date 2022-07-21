@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1684692022">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1312555013">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -19,12 +19,12 @@
 				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="191382556">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1910878273">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2523607441" Name="Ambient_CaveSub" ObjectPath="\Events\Default Work Unit\Ambient_CaveSub" DurationType="Infinite">
+				<Event Id="1995429365" Name="Ambient_Cave" ObjectPath="\Events\Default Work Unit\Ambience\Ambient_Cave" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="1052914941" Language="SFX">
 							<ShortName>Cave_WindSub.wav</ShortName>
@@ -32,7 +32,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1253188249" Name="Ambient_HeavyWind" ObjectPath="\Events\Default Work Unit\Ambient_HeavyWind" DurationType="Infinite">
+				<Event Id="1253188249" Name="Ambient_HeavyWind" ObjectPath="\Events\Default Work Unit\Ambience\Ambient_HeavyWind" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="523090183" Language="SFX">
 							<ShortName>Wind_Heavy.wav</ShortName>
@@ -40,7 +40,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1931646578" Name="Campfire" ObjectPath="\Events\Default Work Unit\Campfire" DurationType="Infinite">
+				<Event Id="1931646578" Name="Campfire" ObjectPath="\Events\Default Work Unit\Items\Campfire\Campfire" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="842402316" Language="SFX">
 							<ShortName>Campfire.wav</ShortName>
@@ -48,99 +48,557 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1894362767" Name="Foot_Player" ObjectPath="\Events\Default Work Unit\Foot_Player" DurationType="OneShot" DurationMin="0.088437" DurationMax="0.362579">
+				<Event Id="3701859130" Name="Campfire_Slide_End" ObjectPath="\Events\Default Work Unit\Items\Campfire\Campfire_Slide_End" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2649043497" Name="Campfire_Slide_Start" ObjectPath="\Events\Default Work Unit\Items\Campfire\Campfire_Slide_Start" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="1428087" Language="SFX">
-							<ShortName>Footstep_Wood-001.wav</ShortName>
-							<Path>SFX\Footstep_Wood-001_CAB2F60E.wem</Path>
+						<File Id="32039786" Language="SFX">
+							<ShortName>Snowball_Roll-006.wav</ShortName>
+							<Path>SFX\Snowball_Roll-006_EE01D034.wem</Path>
 						</File>
-						<File Id="6276280" Language="SFX">
-							<ShortName>Footstep_Snow-003.wav</ShortName>
-							<Path>SFX\Footstep_Snow-003_FBFFF029.wem</Path>
+						<File Id="58305440" Language="SFX">
+							<ShortName>Snowball_Roll-008.wav</ShortName>
+							<Path>SFX\Snowball_Roll-008_EE01D034.wem</Path>
 						</File>
-						<File Id="75060662" Language="SFX">
-							<ShortName>Footstep_Wood-005.wav</ShortName>
-							<Path>SFX\Footstep_Wood-005_F1C195FC.wem</Path>
+						<File Id="164977265" Language="SFX">
+							<ShortName>Snowball_Roll-007.wav</ShortName>
+							<Path>SFX\Snowball_Roll-007_EE01D034.wem</Path>
 						</File>
-						<File Id="81444893" Language="SFX">
-							<ShortName>Footstep_Stone-001.wav</ShortName>
-							<Path>SFX\Footstep_Stone-001_FF7D4797.wem</Path>
+						<File Id="378909021" Language="SFX">
+							<ShortName>Snowball_Roll-004.wav</ShortName>
+							<Path>SFX\Snowball_Roll-004_EE01D034.wem</Path>
 						</File>
-						<File Id="92285822" Language="SFX">
-							<ShortName>Footstep_Stone-002.wav</ShortName>
-							<Path>SFX\Footstep_Stone-002_03A8DD52.wem</Path>
+						<File Id="565494909" Language="SFX">
+							<ShortName>Snowball_Roll-005.wav</ShortName>
+							<Path>SFX\Snowball_Roll-005_EE01D034.wem</Path>
 						</File>
-						<File Id="309047856" Language="SFX">
-							<ShortName>Footstep_Snow-005.wav</ShortName>
-							<Path>SFX\Footstep_Snow-005_C4A404D8.wem</Path>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="672826925" Name="Foot_Father_Jump" ObjectPath="\Events\Default Work Unit\Main Character\Father\Foot_Father_Jump" DurationType="OneShot" DurationMin="0.118439" DurationMax="0.484623">
+					<IncludedMemoryFiles>
+						<File Id="214748463" Language="SFX">
+							<ShortName>Jump_Stone-001.wav</ShortName>
+							<Path>SFX\Jump_Stone-001_10C4C929.wem</Path>
 						</File>
-						<File Id="311964852" Language="SFX">
-							<ShortName>Footstep_Stone-003.wav</ShortName>
-							<Path>SFX\Footstep_Stone-003_A60D7E69.wem</Path>
+						<File Id="262229113" Language="SFX">
+							<ShortName>Run_Wood-004.wav</ShortName>
+							<Path>SFX\Run_Wood-004_10C4C929.wem</Path>
 						</File>
-						<File Id="406418679" Language="SFX">
-							<ShortName>Footstep_Wood-002.wav</ShortName>
-							<Path>SFX\Footstep_Wood-002_3D3AD892.wem</Path>
+						<File Id="291570625" Language="SFX">
+							<ShortName>Run_Wood-005.wav</ShortName>
+							<Path>SFX\Run_Wood-005_10C4C929.wem</Path>
 						</File>
-						<File Id="620895053" Language="SFX">
-							<ShortName>Footstep_Stone-004.wav</ShortName>
-							<Path>SFX\Footstep_Stone-004_620D4F43.wem</Path>
+						<File Id="328170736" Language="SFX">
+							<ShortName>Jump_Stone-003.wav</ShortName>
+							<Path>SFX\Jump_Stone-003_10C4C929.wem</Path>
 						</File>
-						<File Id="651806299" Language="SFX">
-							<ShortName>Footstep_Wood-003.wav</ShortName>
-							<Path>SFX\Footstep_Wood-003_792C23B7.wem</Path>
+						<File Id="495239455" Language="SFX">
+							<ShortName>Jump_Snow-002.wav</ShortName>
+							<Path>SFX\Jump_Snow-002_10C4C929.wem</Path>
 						</File>
-						<File Id="793680965" Language="SFX">
-							<ShortName>Footstep_Stone-005.wav</ShortName>
-							<Path>SFX\Footstep_Stone-005_EBC48191.wem</Path>
+						<File Id="679652668" Language="SFX">
+							<ShortName>Run_Wood-001.wav</ShortName>
+							<Path>SFX\Run_Wood-001_10C4C929.wem</Path>
 						</File>
-						<File Id="833876951" Language="SFX">
-							<ShortName>Footstep_Snow-002.wav</ShortName>
-							<Path>SFX\Footstep_Snow-002_4A1F8E4A.wem</Path>
+						<File Id="782860848" Language="SFX">
+							<ShortName>Jump_Snow-001.wav</ShortName>
+							<Path>SFX\Jump_Snow-001_10C4C929.wem</Path>
 						</File>
-						<File Id="898568729" Language="SFX">
-							<ShortName>Footstep_Snow-004.wav</ShortName>
-							<Path>SFX\Footstep_Snow-004_2B91E4EE.wem</Path>
+						<File Id="924546160" Language="SFX">
+							<ShortName>Jump_Stone-002.wav</ShortName>
+							<Path>SFX\Jump_Stone-002_10C4C929.wem</Path>
 						</File>
-						<File Id="983661866" Language="SFX">
-							<ShortName>Footstep_Snow-001.wav</ShortName>
-							<Path>SFX\Footstep_Snow-001_1D723DA5.wem</Path>
+						<File Id="1003008649" Language="SFX">
+							<ShortName>Run_Wood-002.wav</ShortName>
+							<Path>SFX\Run_Wood-002_10C4C929.wem</Path>
 						</File>
-						<File Id="1051221840" Language="SFX">
-							<ShortName>Footstep_Wood-004.wav</ShortName>
-							<Path>SFX\Footstep_Wood-004_7834405C.wem</Path>
+						<File Id="1064859608" Language="SFX">
+							<ShortName>Run_Wood-003.wav</ShortName>
+							<Path>SFX\Run_Wood-003_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<DefaultSwitchValue>{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}</DefaultSwitchValue>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{CFC63A43-DCF9-4C8C-9DAE-8413D2659081}">
 							<Media>
-								<File Id="1428087"/>
-								<File Id="75060662"/>
-								<File Id="406418679"/>
-								<File Id="651806299"/>
-								<File Id="1051221840"/>
+								<File Id="262229113"/>
+								<File Id="291570625"/>
+								<File Id="679652668"/>
+								<File Id="1003008649"/>
+								<File Id="1064859608"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{E244C986-178F-467B-B1B6-6388A82761CF}">
 							<Media>
-								<File Id="81444893"/>
-								<File Id="92285822"/>
-								<File Id="311964852"/>
-								<File Id="620895053"/>
-								<File Id="793680965"/>
+								<File Id="214748463"/>
+								<File Id="328170736"/>
+								<File Id="924546160"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}">
 							<Media>
-								<File Id="6276280"/>
-								<File Id="309047856"/>
-								<File Id="833876951"/>
-								<File Id="898568729"/>
-								<File Id="983661866"/>
+								<File Id="495239455"/>
+								<File Id="782860848"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="3538893650" Name="Foot_Father_Land" ObjectPath="\Events\Default Work Unit\Main Character\Father\Foot_Father_Land" DurationType="OneShot" DurationMin="0.154756" DurationMax="0.825056">
+					<IncludedMemoryFiles>
+						<File Id="71594557" Language="SFX">
+							<ShortName>Land_Snow-001.wav</ShortName>
+							<Path>SFX\Land_Snow-001_10C4C929.wem</Path>
+						</File>
+						<File Id="262229113" Language="SFX">
+							<ShortName>Run_Wood-004.wav</ShortName>
+							<Path>SFX\Run_Wood-004_10C4C929.wem</Path>
+						</File>
+						<File Id="291570625" Language="SFX">
+							<ShortName>Run_Wood-005.wav</ShortName>
+							<Path>SFX\Run_Wood-005_10C4C929.wem</Path>
+						</File>
+						<File Id="394759641" Language="SFX">
+							<ShortName>Land_Stone-001.wav</ShortName>
+							<Path>SFX\Land_Stone-001_10C4C929.wem</Path>
+						</File>
+						<File Id="679652668" Language="SFX">
+							<ShortName>Run_Wood-001.wav</ShortName>
+							<Path>SFX\Run_Wood-001_10C4C929.wem</Path>
+						</File>
+						<File Id="753625376" Language="SFX">
+							<ShortName>Land_Stone-002.wav</ShortName>
+							<Path>SFX\Land_Stone-002_10C4C929.wem</Path>
+						</File>
+						<File Id="1003008649" Language="SFX">
+							<ShortName>Run_Wood-002.wav</ShortName>
+							<Path>SFX\Run_Wood-002_10C4C929.wem</Path>
+						</File>
+						<File Id="1023893057" Language="SFX">
+							<ShortName>Land_Snow-002.wav</ShortName>
+							<Path>SFX\Land_Snow-002_10C4C929.wem</Path>
+						</File>
+						<File Id="1064859608" Language="SFX">
+							<ShortName>Run_Wood-003.wav</ShortName>
+							<Path>SFX\Run_Wood-003_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{CFC63A43-DCF9-4C8C-9DAE-8413D2659081}">
+							<Media>
+								<File Id="262229113"/>
+								<File Id="291570625"/>
+								<File Id="679652668"/>
+								<File Id="1003008649"/>
+								<File Id="1064859608"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E244C986-178F-467B-B1B6-6388A82761CF}">
+							<Media>
+								<File Id="394759641"/>
+								<File Id="753625376"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}">
+							<Media>
+								<File Id="71594557"/>
+								<File Id="1023893057"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2237177844" Name="Foot_Father_Run" ObjectPath="\Events\Default Work Unit\Main Character\Father\Foot_Father_Run" DurationType="OneShot" DurationMin="0.154756" DurationMax="0.535051">
+					<IncludedMemoryFiles>
+						<File Id="5708474" Language="SFX">
+							<ShortName>Run_Stone-001.wav</ShortName>
+							<Path>SFX\Run_Stone-001_10C4C929.wem</Path>
+						</File>
+						<File Id="35085224" Language="SFX">
+							<ShortName>Run_Snow-004.wav</ShortName>
+							<Path>SFX\Run_Snow-004_10C4C929.wem</Path>
+						</File>
+						<File Id="58258714" Language="SFX">
+							<ShortName>Run_Stone-005.wav</ShortName>
+							<Path>SFX\Run_Stone-005_10C4C929.wem</Path>
+						</File>
+						<File Id="196411225" Language="SFX">
+							<ShortName>Run_Snow-002.wav</ShortName>
+							<Path>SFX\Run_Snow-002_10C4C929.wem</Path>
+						</File>
+						<File Id="197414246" Language="SFX">
+							<ShortName>Run_Stone-002.wav</ShortName>
+							<Path>SFX\Run_Stone-002_10C4C929.wem</Path>
+						</File>
+						<File Id="210657007" Language="SFX">
+							<ShortName>Run_Stone-004.wav</ShortName>
+							<Path>SFX\Run_Stone-004_10C4C929.wem</Path>
+						</File>
+						<File Id="260403469" Language="SFX">
+							<ShortName>Run_Snow-001.wav</ShortName>
+							<Path>SFX\Run_Snow-001_10C4C929.wem</Path>
+						</File>
+						<File Id="262229113" Language="SFX">
+							<ShortName>Run_Wood-004.wav</ShortName>
+							<Path>SFX\Run_Wood-004_10C4C929.wem</Path>
+						</File>
+						<File Id="291570625" Language="SFX">
+							<ShortName>Run_Wood-005.wav</ShortName>
+							<Path>SFX\Run_Wood-005_10C4C929.wem</Path>
+						</File>
+						<File Id="643621617" Language="SFX">
+							<ShortName>Run_Snow-005.wav</ShortName>
+							<Path>SFX\Run_Snow-005_10C4C929.wem</Path>
+						</File>
+						<File Id="679652668" Language="SFX">
+							<ShortName>Run_Wood-001.wav</ShortName>
+							<Path>SFX\Run_Wood-001_10C4C929.wem</Path>
+						</File>
+						<File Id="690222087" Language="SFX">
+							<ShortName>Run_Stone-003.wav</ShortName>
+							<Path>SFX\Run_Stone-003_10C4C929.wem</Path>
+						</File>
+						<File Id="973933471" Language="SFX">
+							<ShortName>Run_Snow-003.wav</ShortName>
+							<Path>SFX\Run_Snow-003_10C4C929.wem</Path>
+						</File>
+						<File Id="1003008649" Language="SFX">
+							<ShortName>Run_Wood-002.wav</ShortName>
+							<Path>SFX\Run_Wood-002_10C4C929.wem</Path>
+						</File>
+						<File Id="1064859608" Language="SFX">
+							<ShortName>Run_Wood-003.wav</ShortName>
+							<Path>SFX\Run_Wood-003_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{CFC63A43-DCF9-4C8C-9DAE-8413D2659081}">
+							<Media>
+								<File Id="262229113"/>
+								<File Id="291570625"/>
+								<File Id="679652668"/>
+								<File Id="1003008649"/>
+								<File Id="1064859608"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E244C986-178F-467B-B1B6-6388A82761CF}">
+							<Media>
+								<File Id="5708474"/>
+								<File Id="58258714"/>
+								<File Id="197414246"/>
+								<File Id="210657007"/>
+								<File Id="690222087"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}">
+							<Media>
+								<File Id="35085224"/>
+								<File Id="196411225"/>
+								<File Id="260403469"/>
+								<File Id="643621617"/>
+								<File Id="973933471"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="709314562" Name="Foot_Father_Walk" ObjectPath="\Events\Default Work Unit\Main Character\Father\Foot_Father_Walk" DurationType="OneShot" DurationMin="0.471937" DurationMax="0.988832">
+					<IncludedMemoryFiles>
+						<File Id="213115617" Language="SFX">
+							<ShortName>Walk_Snow-005.wav</ShortName>
+							<Path>SFX\Walk_Snow-005_10C4C929.wem</Path>
+						</File>
+						<File Id="401252325" Language="SFX">
+							<ShortName>Walk_Snow-001.wav</ShortName>
+							<Path>SFX\Walk_Snow-001_10C4C929.wem</Path>
+						</File>
+						<File Id="882535665" Language="SFX">
+							<ShortName>Walk_Snow-003.wav</ShortName>
+							<Path>SFX\Walk_Snow-003_10C4C929.wem</Path>
+						</File>
+						<File Id="909723097" Language="SFX">
+							<ShortName>Walk_Snow-002.wav</ShortName>
+							<Path>SFX\Walk_Snow-002_10C4C929.wem</Path>
+						</File>
+						<File Id="1022072329" Language="SFX">
+							<ShortName>Walk_Snow-004.wav</ShortName>
+							<Path>SFX\Walk_Snow-004_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}">
+							<Media>
+								<File Id="213115617"/>
+								<File Id="401252325"/>
+								<File Id="882535665"/>
+								<File Id="909723097"/>
+								<File Id="1022072329"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3092656219" Name="Foot_Son_Jump" ObjectPath="\Events\Default Work Unit\Main Character\Son\Foot_Son_Jump" DurationType="OneShot" DurationMin="0.099595" DurationMax="0.407518">
+					<IncludedMemoryFiles>
+						<File Id="214748463" Language="SFX">
+							<ShortName>Jump_Stone-001.wav</ShortName>
+							<Path>SFX\Jump_Stone-001_10C4C929.wem</Path>
+						</File>
+						<File Id="268986904" Language="SFX">
+							<ShortName>Run_Wood-006.wav</ShortName>
+							<Path>SFX\Run_Wood-006_10C4C929.wem</Path>
+						</File>
+						<File Id="328170736" Language="SFX">
+							<ShortName>Jump_Stone-003.wav</ShortName>
+							<Path>SFX\Jump_Stone-003_10C4C929.wem</Path>
+						</File>
+						<File Id="366226189" Language="SFX">
+							<ShortName>Run_Wood-010.wav</ShortName>
+							<Path>SFX\Run_Wood-010_10C4C929.wem</Path>
+						</File>
+						<File Id="436831600" Language="SFX">
+							<ShortName>Run_Wood-007.wav</ShortName>
+							<Path>SFX\Run_Wood-007_10C4C929.wem</Path>
+						</File>
+						<File Id="495239455" Language="SFX">
+							<ShortName>Jump_Snow-002.wav</ShortName>
+							<Path>SFX\Jump_Snow-002_10C4C929.wem</Path>
+						</File>
+						<File Id="782860848" Language="SFX">
+							<ShortName>Jump_Snow-001.wav</ShortName>
+							<Path>SFX\Jump_Snow-001_10C4C929.wem</Path>
+						</File>
+						<File Id="822292802" Language="SFX">
+							<ShortName>Run_Wood-009.wav</ShortName>
+							<Path>SFX\Run_Wood-009_10C4C929.wem</Path>
+						</File>
+						<File Id="924546160" Language="SFX">
+							<ShortName>Jump_Stone-002.wav</ShortName>
+							<Path>SFX\Jump_Stone-002_10C4C929.wem</Path>
+						</File>
+						<File Id="1034007203" Language="SFX">
+							<ShortName>Run_Wood-008.wav</ShortName>
+							<Path>SFX\Run_Wood-008_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{CFC63A43-DCF9-4C8C-9DAE-8413D2659081}">
+							<Media>
+								<File Id="268986904"/>
+								<File Id="366226189"/>
+								<File Id="436831600"/>
+								<File Id="822292802"/>
+								<File Id="1034007203"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E244C986-178F-467B-B1B6-6388A82761CF}">
+							<Media>
+								<File Id="214748463"/>
+								<File Id="328170736"/>
+								<File Id="924546160"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}">
+							<Media>
+								<File Id="495239455"/>
+								<File Id="782860848"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3038606776" Name="Foot_Son_Land" ObjectPath="\Events\Default Work Unit\Main Character\Son\Foot_Son_Land" DurationType="OneShot" DurationMin="0.099952" DurationMax="0.561231">
+					<IncludedMemoryFiles>
+						<File Id="53757683" Language="SFX">
+							<ShortName>Land_Snow-004.wav</ShortName>
+							<Path>SFX\Land_Snow-004_10C4C929.wem</Path>
+						</File>
+						<File Id="237368122" Language="SFX">
+							<ShortName>Land_Stone-003.wav</ShortName>
+							<Path>SFX\Land_Stone-003_10C4C929.wem</Path>
+						</File>
+						<File Id="268986904" Language="SFX">
+							<ShortName>Run_Wood-006.wav</ShortName>
+							<Path>SFX\Run_Wood-006_10C4C929.wem</Path>
+						</File>
+						<File Id="298239654" Language="SFX">
+							<ShortName>Land_Stone-004.wav</ShortName>
+							<Path>SFX\Land_Stone-004_10C4C929.wem</Path>
+						</File>
+						<File Id="366226189" Language="SFX">
+							<ShortName>Run_Wood-010.wav</ShortName>
+							<Path>SFX\Run_Wood-010_10C4C929.wem</Path>
+						</File>
+						<File Id="436831600" Language="SFX">
+							<ShortName>Run_Wood-007.wav</ShortName>
+							<Path>SFX\Run_Wood-007_10C4C929.wem</Path>
+						</File>
+						<File Id="651625248" Language="SFX">
+							<ShortName>Land_Snow-003.wav</ShortName>
+							<Path>SFX\Land_Snow-003_10C4C929.wem</Path>
+						</File>
+						<File Id="822292802" Language="SFX">
+							<ShortName>Run_Wood-009.wav</ShortName>
+							<Path>SFX\Run_Wood-009_10C4C929.wem</Path>
+						</File>
+						<File Id="1034007203" Language="SFX">
+							<ShortName>Run_Wood-008.wav</ShortName>
+							<Path>SFX\Run_Wood-008_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{CFC63A43-DCF9-4C8C-9DAE-8413D2659081}">
+							<Media>
+								<File Id="268986904"/>
+								<File Id="366226189"/>
+								<File Id="436831600"/>
+								<File Id="822292802"/>
+								<File Id="1034007203"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E244C986-178F-467B-B1B6-6388A82761CF}">
+							<Media>
+								<File Id="237368122"/>
+								<File Id="298239654"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}">
+							<Media>
+								<File Id="53757683"/>
+								<File Id="651625248"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2993334066" Name="Foot_Son_Run" ObjectPath="\Events\Default Work Unit\Main Character\Son\Foot_Son_Run" DurationType="OneShot" DurationMin="0.07667" DurationMax="0.519667">
+					<IncludedMemoryFiles>
+						<File Id="90528754" Language="SFX">
+							<ShortName>Run_Stone-010.wav</ShortName>
+							<Path>SFX\Run_Stone-010_10C4C929.wem</Path>
+						</File>
+						<File Id="155263112" Language="SFX">
+							<ShortName>Run_Snow-010.wav</ShortName>
+							<Path>SFX\Run_Snow-010_10C4C929.wem</Path>
+						</File>
+						<File Id="249884054" Language="SFX">
+							<ShortName>Run_Snow-007.wav</ShortName>
+							<Path>SFX\Run_Snow-007_10C4C929.wem</Path>
+						</File>
+						<File Id="268986904" Language="SFX">
+							<ShortName>Run_Wood-006.wav</ShortName>
+							<Path>SFX\Run_Wood-006_10C4C929.wem</Path>
+						</File>
+						<File Id="289751522" Language="SFX">
+							<ShortName>Run_Snow-006.wav</ShortName>
+							<Path>SFX\Run_Snow-006_10C4C929.wem</Path>
+						</File>
+						<File Id="366226189" Language="SFX">
+							<ShortName>Run_Wood-010.wav</ShortName>
+							<Path>SFX\Run_Wood-010_10C4C929.wem</Path>
+						</File>
+						<File Id="436831600" Language="SFX">
+							<ShortName>Run_Wood-007.wav</ShortName>
+							<Path>SFX\Run_Wood-007_10C4C929.wem</Path>
+						</File>
+						<File Id="480724282" Language="SFX">
+							<ShortName>Run_Snow-008.wav</ShortName>
+							<Path>SFX\Run_Snow-008_10C4C929.wem</Path>
+						</File>
+						<File Id="495153094" Language="SFX">
+							<ShortName>Run_Stone-006.wav</ShortName>
+							<Path>SFX\Run_Stone-006_10C4C929.wem</Path>
+						</File>
+						<File Id="566301915" Language="SFX">
+							<ShortName>Run_Snow-009.wav</ShortName>
+							<Path>SFX\Run_Snow-009_10C4C929.wem</Path>
+						</File>
+						<File Id="822292802" Language="SFX">
+							<ShortName>Run_Wood-009.wav</ShortName>
+							<Path>SFX\Run_Wood-009_10C4C929.wem</Path>
+						</File>
+						<File Id="846649399" Language="SFX">
+							<ShortName>Run_Stone-009.wav</ShortName>
+							<Path>SFX\Run_Stone-009_10C4C929.wem</Path>
+						</File>
+						<File Id="873261511" Language="SFX">
+							<ShortName>Run_Stone-007.wav</ShortName>
+							<Path>SFX\Run_Stone-007_10C4C929.wem</Path>
+						</File>
+						<File Id="975927773" Language="SFX">
+							<ShortName>Run_Stone-008.wav</ShortName>
+							<Path>SFX\Run_Stone-008_10C4C929.wem</Path>
+						</File>
+						<File Id="1034007203" Language="SFX">
+							<ShortName>Run_Wood-008.wav</ShortName>
+							<Path>SFX\Run_Wood-008_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{CFC63A43-DCF9-4C8C-9DAE-8413D2659081}">
+							<Media>
+								<File Id="268986904"/>
+								<File Id="366226189"/>
+								<File Id="436831600"/>
+								<File Id="822292802"/>
+								<File Id="1034007203"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E244C986-178F-467B-B1B6-6388A82761CF}">
+							<Media>
+								<File Id="90528754"/>
+								<File Id="495153094"/>
+								<File Id="846649399"/>
+								<File Id="873261511"/>
+								<File Id="975927773"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{31E6ADDC-F6F6-4379-9AD4-421B976E1F6C}">
+							<Media>
+								<File Id="155263112"/>
+								<File Id="249884054"/>
+								<File Id="289751522"/>
+								<File Id="480724282"/>
+								<File Id="566301915"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="841599257" Name="Snowball_Roll_End" ObjectPath="\Events\Default Work Unit\Items\Snowball\Snowball_Roll_End" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="634408506" Name="Snowball_Roll_Start" ObjectPath="\Events\Default Work Unit\Items\Snowball\Snowball_Roll_Start" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="156686436" Language="SFX">
+							<ShortName>Snowball_Roll-005.wav</ShortName>
+							<Path>SFX\Snowball_Roll-005_8DADF936.wem</Path>
+						</File>
+						<File Id="237569014" Language="SFX">
+							<ShortName>Snowball_Roll-006.wav</ShortName>
+							<Path>SFX\Snowball_Roll-006_8DADF936.wem</Path>
+						</File>
+						<File Id="240188004" Language="SFX">
+							<ShortName>Snowball_Roll-002.wav</ShortName>
+							<Path>SFX\Snowball_Roll-002_8DADF936.wem</Path>
+						</File>
+						<File Id="339064604" Language="SFX">
+							<ShortName>Snowball_Roll-003.wav</ShortName>
+							<Path>SFX\Snowball_Roll-003_8DADF936.wem</Path>
+						</File>
+						<File Id="737618982" Language="SFX">
+							<ShortName>Snowball_Roll-008.wav</ShortName>
+							<Path>SFX\Snowball_Roll-008_8DADF936.wem</Path>
+						</File>
+						<File Id="774546527" Language="SFX">
+							<ShortName>Snowball_Roll-004.wav</ShortName>
+							<Path>SFX\Snowball_Roll-004_8DADF936.wem</Path>
+						</File>
+						<File Id="1056905124" Language="SFX">
+							<ShortName>Snowball_Roll-001.wav</ShortName>
+							<Path>SFX\Snowball_Roll-001_8DADF936.wem</Path>
+						</File>
+						<File Id="1063215467" Language="SFX">
+							<ShortName>Snowball_Roll-007.wav</ShortName>
+							<Path>SFX\Snowball_Roll-007_8DADF936.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
 			<SwitchGroups>

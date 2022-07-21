@@ -24,6 +24,10 @@ public class BasicControl : MonoBehaviour
     public bool alive;
 
     bool isMoving;
+    [SerializeField] AK.Wwise.Event walkEvent;
+    [SerializeField] AK.Wwise.Event runEvent;
+    [SerializeField] AK.Wwise.Event landEvent;
+    [SerializeField] AK.Wwise.Event jumpEvent;
     float walkingIntervalTimer = 0;
     [SerializeField] float walkingIntervalTime;
 
@@ -65,7 +69,6 @@ public class BasicControl : MonoBehaviour
             anim.SetBool("isInOcean", false);
         }
     }
-
     protected virtual void Update()
     {
         #region Character Animation & Rotation
@@ -126,11 +129,10 @@ public class BasicControl : MonoBehaviour
             if (walkingIntervalTimer >= walkingIntervalTime)
             {
                 walkingIntervalTimer = 0;
-                AkSoundEngine.PostEvent("Foot_Player", gameObject);
+                runEvent.Post(gameObject);
             }
         }
     }
-
     protected virtual void FixedUpdate()
     {
         if (isClimbing)
@@ -144,29 +146,24 @@ public class BasicControl : MonoBehaviour
             rb.useGravity = true;
         }
     }
-
     public void Move(float direction)
     {
         rb.velocity = new Vector3(movingSpeed * Time.deltaTime * direction, rb.velocity.y);
     }
-
     public void MoveInOcean(float directionX, float directionY)
     {
         rb.velocity = IsInBounce
             ? new Vector3(movingSpeed * Time.deltaTime * directionX, rb.velocity.y)
             : new Vector3(movingSpeed * Time.deltaTime * directionX, movingSpeed * Time.deltaTime * directionY);
     }
-
     protected void Climb()
     {
         rb.MovePosition(transform.position + ClimbSpeed * Time.deltaTime * processedInput);
     }
-
     public void SetAnimMoveSpeed(float count)
     {
         anim.SetFloat("MovingSpeed", count);
     }
-
     protected void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<InteractableObject>())
@@ -179,7 +176,6 @@ public class BasicControl : MonoBehaviour
             interactingMindPowerObject = other.GetComponent<MindPowerComponent>();
         }
     }
-
     protected void OnTriggerStay(Collider other)
     {
         if (other.GetComponent<InteractableObject>())
@@ -192,7 +188,6 @@ public class BasicControl : MonoBehaviour
             interactingMindPowerObject = other.GetComponent<MindPowerComponent>();
         }
     }
-
     protected void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<InteractableObject>())
@@ -205,7 +200,6 @@ public class BasicControl : MonoBehaviour
             interactingMindPowerObject = null;
         }
     }
-
     protected bool JumpRay()
     {
         var isRightFootGrounded = false;
@@ -240,7 +234,6 @@ public class BasicControl : MonoBehaviour
 
         return isLeftFootGrounded || isRightFootGrounded;
     }
-    
     protected bool SonJumpRay()
     {
         var isRightFootGrounded = false;
@@ -275,40 +268,33 @@ public class BasicControl : MonoBehaviour
 
         return isLeftFootGrounded || isRightFootGrounded;
     }
-
     public Vector3 GetRigidbodyVelocity()
     {
         return rb.velocity;
     }
-
     public void SetRigidbodyVelocity(Vector3 velocity)
     {
         rb.velocity = velocity;
     }
-
     public void AddForceToRigidbody(Vector3 force, ForceMode forceMode)
     {
         rb.AddForce(force, forceMode);
     }
-
     public void InRopeRadius()
     {
         anim.ResetTrigger("IsJumping");
         CanJump = false;
         IsInRope = true;
     }
-
     public void OutRopeRadius()
     {
         IsInRope = false;
         anim.ResetTrigger("IsJumping");
     }
-
     public void PushObject()
     {
         anim.SetBool("IsPush", true);
     }
-
     public void StopPushObject()
     {
         anim.SetBool("IsPush", false);

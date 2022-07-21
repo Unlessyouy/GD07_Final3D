@@ -141,6 +141,26 @@ MonoBehaviour:
   interactingMindPowerObject: {fileID: 0}
   rotateSpeed: 540
   alive: 1
+  walkEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3bad823a859898e439e7f4b339fff254,
+      type: 2}
+  runEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0ed41348983cf444aac7535df3fc2cbe,
+      type: 2}
+  landEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 498da052ea53f6b4984dbe973fd29d13,
+      type: 2}
+  jumpEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d1259c87b98750b4d8cc9662d10aac87,
+      type: 2}
   walkingIntervalTime: 0.35
   isClimbing: 0
   onRopeTopEnd: 0
@@ -281,6 +301,26 @@ MonoBehaviour:
   interactingMindPowerObject: {fileID: 0}
   rotateSpeed: 720
   alive: 1
+  walkEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0538bc8960d3f1c49aab2b21a25f7ac9,
+      type: 2}
+  runEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0538bc8960d3f1c49aab2b21a25f7ac9,
+      type: 2}
+  landEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ef80d45a69ebe10428653311f3ddfa8f,
+      type: 2}
+  jumpEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1c6f9e2125d22774b9150eff6eedab8a,
+      type: 2}
   walkingIntervalTime: 0.35
   isClimbing: 0
   onRopeTopEnd: 0

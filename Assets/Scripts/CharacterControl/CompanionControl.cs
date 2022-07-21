@@ -49,10 +49,10 @@ namespace CharacterControl
                 processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
             }
             
-            if (!IsInRope)
-            {
-                CanJump = JumpRay();
-            }
+            // if (!IsInRope)
+            // {
+            //     CanJump = SonJumpRay();
+            // }
 
             #endregion
 
@@ -108,6 +108,7 @@ namespace CharacterControl
             if (verticalInput >= 0.25 && alive && CanJump && !isClimbing && !IsHoldingHands && !isInOcean)
             {
                 rb.velocity = Vector3.up * JumpHeight;
+                CanJump = false;
                 if (anim.GetBool("isGrounded"))
                 {
                     anim.SetTrigger("IsJumping");
@@ -127,6 +128,7 @@ namespace CharacterControl
             if (collision.collider.CompareTag("Terrain"))
             {
                 anim.SetBool("isGrounded", true);
+                CanJump = true;
             }
         }
 

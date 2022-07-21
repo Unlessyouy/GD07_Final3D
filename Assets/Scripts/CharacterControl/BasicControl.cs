@@ -240,6 +240,41 @@ public class BasicControl : MonoBehaviour
 
         return isLeftFootGrounded || isRightFootGrounded;
     }
+    
+    protected bool SonJumpRay()
+    {
+        var isRightFootGrounded = false;
+        var isLeftFootGrounded = false;
+
+        if (Physics.Raycast(transform.position + FootOffset * transform.right, -transform.up, out var rightFootHitInfo,
+                RayLength - 0.2f))
+        {
+            if (rightFootHitInfo.collider.CompareTag("Terrain"))
+            {
+                isRightFootGrounded = true;
+            }
+        }
+
+        if (Physics.Raycast(transform.position + FootOffset * -transform.right, -transform.up, out var leftFootHitInfo,
+                RayLength - 0.2f))
+        {
+            if (leftFootHitInfo.collider.CompareTag("Terrain"))
+            {
+                isLeftFootGrounded = true;
+            }
+        }
+
+        if (isLeftFootGrounded || isRightFootGrounded)
+        {
+            anim.SetBool("isGrounded", true);
+        }
+        else
+        {
+            anim.SetBool("isGrounded", false);
+        }
+
+        return isLeftFootGrounded || isRightFootGrounded;
+    }
 
     public Vector3 GetRigidbodyVelocity()
     {

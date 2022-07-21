@@ -80,6 +80,9 @@
 								<Event Name="Campfire_Slide_Start" ID="{1D49C879-4A00-40DC-BE97-58762FB35333}">
 									<ChildrenList>
 										<Action Name="" ID="{0FD47EE9-095E-424C-9E8F-A1A4362192EF}" ShortID="452480144">
+											<PropertyList>
+												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Campfire_Slide" ID="{12090814-D391-4B9B-A534-F580AA1EE7EF}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
@@ -93,10 +96,47 @@
 										<Action Name="" ID="{2CB48190-FB60-47B8-A4DB-4F231D31A035}" ShortID="247675553">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Campfire_Slide" ID="{12090814-D391-4B9B-A534-F580AA1EE7EF}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Icicle" ID="{E909F717-D845-47B7-BC7F-BD2BA70FED5D}" ShortID="300726447">
+							<ChildrenList>
+								<Event Name="Icicle_Crackle" ID="{887A8084-D8F4-4898-A914-CA191608C3AD}">
+									<ChildrenList>
+										<Action Name="" ID="{37844ED2-D4B4-4AD2-A9A1-C315C7583DE7}" ShortID="984805845">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Icicle_Crackle" ID="{A4C65F27-2F64-49B8-8FD9-44BEEFBD8D8D}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Icicle_Drop" ID="{24C6F9C6-59B8-4DE6-858B-D4E40C1BD90B}">
+									<ChildrenList>
+										<Action Name="" ID="{0030E0E8-C6C2-49C2-812C-7EE6A0CD4D93}" ShortID="44347850">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Icicle_Impact_Head" ID="{3E3E8813-36B5-4077-8623-4909A30022D2}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{D77F4925-6EE1-4E06-8264-1584AAEAEC74}" ShortID="414901035">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Icicle_Impact_Tail" ID="{09BA24D6-1945-4FA0-9F3C-B562C27564CA}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

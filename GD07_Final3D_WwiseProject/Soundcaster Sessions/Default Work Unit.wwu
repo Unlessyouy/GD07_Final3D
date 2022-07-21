@@ -29,6 +29,18 @@
 							<ObjectRef Name="Cave_WindSub" ID="{169C9B6D-97BD-43D2-B20F-038CCB340EC9}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
 							<Position X="1" Y="3"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Ambient_Cave" ID="{865B4492-E6D5-482D-8F34-B430B0FC2907}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Icicle_Crackle" ID="{887A8084-D8F4-4898-A914-CA191608C3AD}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Icicle_Drop" ID="{24C6F9C6-59B8-4DE6-858B-D4E40C1BD90B}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}"/>
+							<Position X="3" Y="1"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>

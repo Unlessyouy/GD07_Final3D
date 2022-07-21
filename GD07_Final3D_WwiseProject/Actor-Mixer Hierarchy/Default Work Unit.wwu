@@ -3881,6 +3881,680 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</ActorMixer>
+						<ActorMixer Name="Icicle" ID="{99D6DB90-18B1-4A49-BA88-74FD683BB628}" ShortID="1040140378">
+							<PropertyList>
+								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Icicle_Crackle" ID="{A4C65F27-2F64-49B8-8FD9-44BEEFBD8D8D}" ShortID="41765912">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6312163E-35E7-4ADF-9B66-4DC61EE47216}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-21</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Icicle_Crackle_Head" ID="{FDE2CD97-4933-406A-8AD5-0DEA35404CD6}" ShortID="472423990">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{D0D9EEE9-7B3C-44E2-A9CD-CD6CE94EDF69}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Ice_Crackle-001" ID="{B03FE7F6-1329-4C42-B78E-41675BC122B4}" ShortID="714899937">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{9DF18DB3-E945-48BC-A722-DD7B47A1AB35}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Ice_Crackle-001" ID="{CA2E98E4-F239-4424-A763-5AA2EFD6706B}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0161849710982659"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.566473988439307"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ice_Crackle-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="326686227"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Ice_Crackle-001" ID="{CA2E98E4-F239-4424-A763-5AA2EFD6706B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Ice_Crackle-002" ID="{1AA2C497-1E9A-408E-88D6-1D546E6CAFF3}" ShortID="314616592">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{FA60FDD3-73EE-4424-9808-68FAB8942702}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Ice_Crackle-002" ID="{2E8BCD56-E1F2-4302-8ED8-4EDC06DC383F}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0263005780346821"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.675722543352601"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ice_Crackle-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="21152946"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Ice_Crackle-002" ID="{2E8BCD56-E1F2-4302-8ED8-4EDC06DC383F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Ice_Crackle-003" ID="{A7DFDD64-DF49-487F-9F0C-CF58C6AB997B}" ShortID="115265337">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{D6821BFC-3584-4000-BC8C-474E1DD37108}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Ice_Crackle-003" ID="{071A966E-9F63-48C0-A621-3DE7FB123C60}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0222543352601157"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.532080924855491"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ice_Crackle-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="813449581"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Ice_Crackle-003" ID="{071A966E-9F63-48C0-A621-3DE7FB123C60}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Ice_Crackle-004" ID="{07A1F07E-A6E4-4A37-B968-7DC339EC2E84}" ShortID="257200112">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{DD930536-39EF-44E5-A1EF-E0E1DB86FB0F}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Ice_Crackle-004" ID="{9A472801-61A1-4400-AD5A-FE863CBFC051}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0224139571290944"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.578687620423892"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ice_Crackle-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="491350078"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Ice_Crackle-004" ID="{9A472801-61A1-4400-AD5A-FE863CBFC051}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Icicle_Crackle_Tail" ID="{478A564B-3088-4434-A83F-A06D42233ABF}" ShortID="133539706">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E022C1A9-FF3F-4C80-A8CF-9B9535A63169}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Ice_Crackle-001" ID="{B583D05B-602B-4EF2-9FAD-4B54317271B8}" ShortID="578080246">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{BB673F90-03D0-4699-9783-28F5CDCA91E2}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Ice_Crackle-001" ID="{EA40CA72-633D-4CDA-9F47-EB81251C1AAE}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0182080924855491"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0141618497109826"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.578612716763006"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ice_Crackle-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="735373197"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Ice_Crackle-001" ID="{EA40CA72-633D-4CDA-9F47-EB81251C1AAE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Ice_Crackle-002" ID="{E3A8442D-6FA2-4C19-8A7C-FAC73E18B01B}" ShortID="1053497474">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{DA7B0393-4434-49DE-82F2-52A61082EB9B}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Ice_Crackle-002" ID="{776BDB49-AE26-442D-9825-5623ED029EBE}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0182080924855491"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0364161849710982"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.683815028901734"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ice_Crackle-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1054806217"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Ice_Crackle-002" ID="{776BDB49-AE26-442D-9825-5623ED029EBE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Ice_Crackle-003" ID="{B73D3E87-6305-45F6-93C9-87ECD967FFA4}" ShortID="601155032">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{EE1E9707-524B-4AF8-B6F0-56E14E986F98}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Ice_Crackle-003" ID="{BE937343-7D21-4C30-A5A0-235DF63C1DE3}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0182080924855492"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0121387283236996"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.530057803468208"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ice_Crackle-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="307203180"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Ice_Crackle-003" ID="{BE937343-7D21-4C30-A5A0-235DF63C1DE3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Ice_Crackle-004" ID="{6BDF776B-08C6-491A-8CB0-8FFC605520E6}" ShortID="1062547720">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{EFB163C0-9097-4237-86F7-FE1AA2A69441}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Ice_Crackle-004" ID="{1B496F1C-9B12-4F12-A313-08BAED103288}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0183386921965318"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0163010597302504"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.576649987957611"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Ice_Crackle-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="127696488"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Ice_Crackle-004" ID="{1B496F1C-9B12-4F12-A313-08BAED103288}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<ObjectLists/>
+									<Playlist>
+										<ItemRef Name="Icicle_Crackle_Head" ID="{FDE2CD97-4933-406A-8AD5-0DEA35404CD6}"/>
+										<ItemRef Name="Icicle_Crackle_Tail" ID="{478A564B-3088-4434-A83F-A06D42233ABF}"/>
+									</Playlist>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Icicle_Impact_Head" ID="{3E3E8813-36B5-4077-8623-4909A30022D2}" ShortID="926928538">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{10A9EB74-F312-42EF-BE68-9BB512BAB4A8}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Cave" ID="{A769F39A-20C4-4B04-AC9C-908045F1763F}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Ice_Impact-001" ID="{674CB94C-C29C-454A-8B60-BFFFC13306F6}" ShortID="798718669">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ice_Impact-001" ID="{EFA96C29-777B-4DFD-BF0D-2ED6BB9A84CA}">
+													<Language>SFX</Language>
+													<AudioFile>Ice_Impact-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="639566159"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Ice_Impact-001" ID="{EFA96C29-777B-4DFD-BF0D-2ED6BB9A84CA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ice_Impact-002" ID="{45A59EE4-1EEF-453B-B7F6-EB8E2B58581C}" ShortID="318997310">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ice_Impact-002" ID="{4C119D09-9030-43FE-83BF-26FAE4BED828}">
+													<Language>SFX</Language>
+													<AudioFile>Ice_Impact-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="849308794"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Ice_Impact-002" ID="{4C119D09-9030-43FE-83BF-26FAE4BED828}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ice_Impact-003" ID="{1DA46FBC-3C8C-40A6-9EA7-AD41195A8FF2}" ShortID="703661658">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ice_Impact-003" ID="{A4C9DBDE-C05B-4A83-8545-F7317447A311}">
+													<Language>SFX</Language>
+													<AudioFile>Ice_Impact-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="709965107"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Ice_Impact-003" ID="{A4C9DBDE-C05B-4A83-8545-F7317447A311}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Icicle_Impact_Tail" ID="{09BA24D6-1945-4FA0-9F3C-B562C27564CA}" ShortID="1008928794">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{234C5DB8-2244-44F1-A192-47527710FD33}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-19</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="Cave" ID="{A769F39A-20C4-4B04-AC9C-908045F1763F}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Ice_Slide-001" ID="{0CBC6C7D-C248-4D4C-B53B-23A6DC289FD6}" ShortID="695405468">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ice_Slide-001" ID="{1618A4D2-C46D-4456-8F23-1702AC9DF48C}">
+													<Language>SFX</Language>
+													<AudioFile>Ice_Slide-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="162843769"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Ice_Slide-001" ID="{1618A4D2-C46D-4456-8F23-1702AC9DF48C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ice_Slide-002" ID="{D26F1DC2-4113-4975-B60D-32182C6DDB65}" ShortID="831864348">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ice_Slide-002" ID="{06360A7E-8C8E-46D0-8CDB-658CD55956E2}">
+													<Language>SFX</Language>
+													<AudioFile>Ice_Slide-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="274647882"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Ice_Slide-002" ID="{06360A7E-8C8E-46D0-8CDB-658CD55956E2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ice_Slide-003" ID="{F13C9578-8434-4DAA-BF9A-63B55F94AD16}" ShortID="943058708">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ice_Slide-003" ID="{06C4FBED-5B70-4EF6-93B4-153E6F3E0671}">
+													<Language>SFX</Language>
+													<AudioFile>Ice_Slide-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="493674703"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Ice_Slide-003" ID="{06C4FBED-5B70-4EF6-93B4-153E6F3E0671}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</ActorMixer>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
@@ -3908,7 +4582,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-20</Value>
+												<Value>-19</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -4606,7 +5280,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-20</Value>
+												<Value>-19</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -5057,7 +5731,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-20</Value>
+												<Value>-19</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>

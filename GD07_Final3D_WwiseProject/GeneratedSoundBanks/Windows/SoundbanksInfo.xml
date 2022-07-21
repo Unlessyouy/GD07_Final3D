@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -19,7 +19,7 @@
 				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="920621157">
+		<SoundBank Id="3161908922" Language="SFX" Hash="824225449">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -562,6 +562,73 @@
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="3855686902" Name="Icicle_Crackle" ObjectPath="\Events\Default Work Unit\Items\Icicle\Icicle_Crackle" DurationType="OneShot" DurationMin="0.927097" DurationMax="1.293402">
+					<IncludedMemoryFiles>
+						<File Id="21152946" Language="SFX">
+							<ShortName>Ice_Crackle-002.wav</ShortName>
+							<Path>SFX\Ice_Crackle-002_09F2A6C2.wem</Path>
+						</File>
+						<File Id="127696488" Language="SFX">
+							<ShortName>Ice_Crackle-004.wav</ShortName>
+							<Path>SFX\Ice_Crackle-004_313E367A.wem</Path>
+						</File>
+						<File Id="307203180" Language="SFX">
+							<ShortName>Ice_Crackle-003.wav</ShortName>
+							<Path>SFX\Ice_Crackle-003_4772BE41.wem</Path>
+						</File>
+						<File Id="326686227" Language="SFX">
+							<ShortName>Ice_Crackle-001.wav</ShortName>
+							<Path>SFX\Ice_Crackle-001_D12D0078.wem</Path>
+						</File>
+						<File Id="491350078" Language="SFX">
+							<ShortName>Ice_Crackle-004.wav</ShortName>
+							<Path>SFX\Ice_Crackle-004_86C9DF27.wem</Path>
+						</File>
+						<File Id="735373197" Language="SFX">
+							<ShortName>Ice_Crackle-001.wav</ShortName>
+							<Path>SFX\Ice_Crackle-001_D4DFB970.wem</Path>
+						</File>
+						<File Id="813449581" Language="SFX">
+							<ShortName>Ice_Crackle-003.wav</ShortName>
+							<Path>SFX\Ice_Crackle-003_8F6152F9.wem</Path>
+						</File>
+						<File Id="1054806217" Language="SFX">
+							<ShortName>Ice_Crackle-002.wav</ShortName>
+							<Path>SFX\Ice_Crackle-002_55FE49CE.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2984024320" Name="Icicle_Drop" ObjectPath="\Events\Default Work Unit\Items\Icicle\Icicle_Drop" DurationType="OneShot" DurationMin="1.301187" DurationMax="2.672081">
+					<IncludedMemoryFiles>
+						<File Id="162843769" Language="SFX">
+							<ShortName>Ice_Slide-001.wav</ShortName>
+							<Path>SFX\Ice_Slide-001_3F75BDB9.wem</Path>
+						</File>
+						<File Id="274647882" Language="SFX">
+							<ShortName>Ice_Slide-002.wav</ShortName>
+							<Path>SFX\Ice_Slide-002_3F75BDB9.wem</Path>
+						</File>
+						<File Id="493674703" Language="SFX">
+							<ShortName>Ice_Slide-003.wav</ShortName>
+							<Path>SFX\Ice_Slide-003_3F75BDB9.wem</Path>
+						</File>
+						<File Id="639566159" Language="SFX">
+							<ShortName>Ice_Impact-001.wav</ShortName>
+							<Path>SFX\Ice_Impact-001_3F75BDB9.wem</Path>
+						</File>
+						<File Id="709965107" Language="SFX">
+							<ShortName>Ice_Impact-003.wav</ShortName>
+							<Path>SFX\Ice_Impact-003_3F75BDB9.wem</Path>
+						</File>
+						<File Id="849308794" Language="SFX">
+							<ShortName>Ice_Impact-002.wav</ShortName>
+							<Path>SFX\Ice_Impact-002_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="841599257" Name="Snowball_Roll_End" ObjectPath="\Events\Default Work Unit\Items\Snowball\Snowball_Roll_End" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="634408506" Name="Snowball_Roll_Start" ObjectPath="\Events\Default Work Unit\Items\Snowball\Snowball_Roll_Start" DurationType="Infinite">

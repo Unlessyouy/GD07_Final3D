@@ -134,5 +134,15 @@ namespace Systems
             _rightHorizontalInput = 0;
             _rightVerticalInput = 0;
         }
+
+        public Transform GetSonTrans()
+        {
+            return Son.transform;
+        }
+        
+        public Transform GetFatherTrans()
+        {
+            return Father.transform;
+        }
     }
 }

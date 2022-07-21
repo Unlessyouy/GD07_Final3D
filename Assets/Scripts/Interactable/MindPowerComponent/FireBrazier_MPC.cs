@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Mechanics.LevelThree;
 using UnityEngine;
 
 namespace Interactable.MindPowerComponent
@@ -13,12 +14,15 @@ namespace Interactable.MindPowerComponent
 
         bool soundPlayed;
 
+        public bool IsInShelter;
+
         private bool _isFirstLit = true;
-        
+
         private void Start()
         {
             FireVFX.SetActive(false);
         }
+
         private void Update()
         {
             if (FireBrazier.IsFire && !soundPlayed)
@@ -26,12 +30,13 @@ namespace Interactable.MindPowerComponent
                 AkSoundEngine.PostEvent("Campfire", gameObject);
                 soundPlayed = true;
             }
-            else if(!FireBrazier.IsFire)
+            else if (!FireBrazier.IsFire)
             {
                 AkSoundEngine.StopAll(gameObject);
                 soundPlayed = false;
             }
         }
+
         public override void MindPowerTrigger()
         {
             StopAllCoroutines();
@@ -50,9 +55,23 @@ namespace Interactable.MindPowerComponent
         {
             yield return new WaitForSeconds(LitTime);
 
+            ExtinguishFire();
+        }
+
+        public void ExtinguishFire()
+        {
             FireBrazier.IsFire = false;
             FireVFX.SetActive(false);
             _isFirstLit = true;
+            StopAllCoroutines();
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.GetComponent<Shelter>())
+            {
+                IsInShelter = true;
+            }
         }
     }
 }

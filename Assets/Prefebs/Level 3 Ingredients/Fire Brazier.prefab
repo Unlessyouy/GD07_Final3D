@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 78371781398508689}
   - component: {fileID: 78371781398508688}
   - component: {fileID: 2137463573948057786}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: Fire Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 8384903943455774032}
   - component: {fileID: 5089170123144408767}
   - component: {fileID: 1238804020184008669}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: MP Radius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 2.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5089170123144408767
 MonoBehaviour:

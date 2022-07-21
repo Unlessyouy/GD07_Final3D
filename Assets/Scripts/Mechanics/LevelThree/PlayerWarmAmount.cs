@@ -14,7 +14,9 @@ namespace Mechanics.LevelThree
         private float _warmAmount = 0f;
 
         public bool IsWarmed { get; set; }
-
+        public bool IsInWind;
+        public bool IsInShelter;
+        
         private bool IsFrozen;
 
         private float _timer = .0f;
@@ -35,13 +37,18 @@ namespace Mechanics.LevelThree
         {
             if (MuteThis) return;
             if (IsFrozen) return;
-            if (IsWarmed)
+            if (IsWarmed && !IsInWind)
             {
                 WarmSelf();
             }
             else
             {
-                FreezeSelf();
+                FreezeSelf(WarmSpeed);
+            }
+
+            if (IsInWind)
+            {
+                FreezeSelf(10 * WarmSpeed);
             }
         }
 
@@ -59,11 +66,11 @@ namespace Mechanics.LevelThree
             IsWarmed = false;
         }
 
-        private void FreezeSelf()
+        private void FreezeSelf(float warmSpeed)
         {
             if (_warmAmount < 1f)
             {
-                _warmAmount += WarmSpeed * Time.deltaTime;
+                _warmAmount += warmSpeed * Time.deltaTime;
                 _material.SetFloat("_IceSlider", _warmAmount);
             }
             else if (!IsFrozen)

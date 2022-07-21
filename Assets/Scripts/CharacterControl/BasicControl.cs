@@ -258,6 +258,7 @@ public class BasicControl : MonoBehaviour
 
     public void InRopeRadius()
     {
+        anim.ResetTrigger("IsJumping");
         CanJump = false;
         IsInRope = true;
     }
@@ -265,6 +266,7 @@ public class BasicControl : MonoBehaviour
     public void OutRopeRadius()
     {
         IsInRope = false;
+        anim.ResetTrigger("IsJumping");
     }
 
     public void PushObject()

@@ -7,7 +7,7 @@ namespace CharacterControl
     public class CompanionControl : BasicControl
     {
         [SerializeField] private ParticleSystem MindPowerVFX;
-
+        [SerializeField] private float JumpHeight;
         protected override void Start()
         {
             base.Start();
@@ -47,6 +47,11 @@ namespace CharacterControl
             {
                 anim.SetFloat("ClimbSpeed", 0);
                 processedInput = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
+            }
+            
+            if (!IsInRope)
+            {
+                CanJump = JumpRay();
             }
 
             #endregion
@@ -99,6 +104,15 @@ namespace CharacterControl
             }
 
             #endregion
+            
+            if (verticalInput >= 0.25 && alive && CanJump && !isClimbing && !IsHoldingHands && !isInOcean)
+            {
+                rb.velocity = Vector3.up * JumpHeight;
+                if (anim.GetBool("isGrounded"))
+                {
+                    anim.SetTrigger("IsJumping");
+                }
+            }
 
             base.Update();
 

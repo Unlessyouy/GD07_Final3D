@@ -249,11 +249,11 @@ Material:
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
     - _SnowCoverNormalInfluence: 0.6
-    - _SnowCoverageMax: 1.9
-    - _SnowCoverageMin: -1.8
+    - _SnowCoverageMax: 1.5
+    - _SnowCoverageMin: 0
     - _SnowGround: 1.25
     - _SnowMaskAdd: 1
-    - _SnowMultiplier: 1
+    - _SnowMultiplier: 0.666
     - _SnowSplash: 1.2
     - _SnowSplashNormalInfluence: 1
     - _SnowSplashOcclusionInfluence: 0.92

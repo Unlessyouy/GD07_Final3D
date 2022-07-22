@@ -40,7 +40,7 @@ Material:
     - _PathBlending: 2.75
     - _RimPower: 20
     - _SnowDepth: 85
-    - _SnowHeight: 0.12
+    - _SnowHeight: 0.1
     - _SnowTextureOpacity: 0.84
     - _SnowTextureScale: 0.08
     - _SparkCutoff: 0.6

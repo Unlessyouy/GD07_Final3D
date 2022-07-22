@@ -19,7 +19,7 @@
 				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="824225449">
+		<SoundBank Id="3161908922" Language="SFX" Hash="616663929">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -562,6 +562,22 @@
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="2374556355" Name="Ice_Melt" ObjectPath="\Events\Default Work Unit\Items\Ice\Ice_Melt" DurationType="OneShot" DurationMin="4.719371" DurationMax="6.003624">
+					<IncludedMemoryFiles>
+						<File Id="261255860" Language="SFX">
+							<ShortName>Ice_Melt-001.wav</ShortName>
+							<Path>SFX\Ice_Melt-001_3F75BDB9.wem</Path>
+						</File>
+						<File Id="499502023" Language="SFX">
+							<ShortName>Ice_Melt-003.wav</ShortName>
+							<Path>SFX\Ice_Melt-003_3F75BDB9.wem</Path>
+						</File>
+						<File Id="650592617" Language="SFX">
+							<ShortName>Ice_Melt-002.wav</ShortName>
+							<Path>SFX\Ice_Melt-002_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3855686902" Name="Icicle_Crackle" ObjectPath="\Events\Default Work Unit\Items\Icicle\Icicle_Crackle" DurationType="OneShot" DurationMin="0.927097" DurationMax="1.293402">
 					<IncludedMemoryFiles>

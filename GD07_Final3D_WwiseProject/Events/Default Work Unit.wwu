@@ -144,6 +144,21 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Ice" ID="{48AD5FAA-4CBA-4B73-8CFA-DA65B88B369D}" ShortID="223475371">
+							<ChildrenList>
+								<Event Name="Ice_Melt" ID="{FA75B863-2665-4626-8B3F-55D5C8834E2E}">
+									<ChildrenList>
+										<Action Name="" ID="{DE89A5AF-CA1D-40AA-95A6-B7534F2F06C2}" ShortID="382197928">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Ice_Melt" ID="{5B987230-28C9-48C6-BF97-87D887E7C24B}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Main Character" ID="{CFFC145F-5398-4684-B5E0-6FB28F7A661C}" ShortID="650885601">

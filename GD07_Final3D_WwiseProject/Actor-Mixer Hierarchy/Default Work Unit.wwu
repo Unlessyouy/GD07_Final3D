@@ -4555,6 +4555,123 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</ActorMixer>
+						<ActorMixer Name="Ice" ID="{F9F34759-C24E-4167-A38E-1C6D5FC5D89F}" ShortID="1065057792">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Ice_Melt" ID="{5B987230-28C9-48C6-BF97-87D887E7C24B}" ShortID="721990049">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A6FE048D-9A8C-4BE5-8206-41FD552D7333}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Items" ID="{8642E6D9-9BE5-4EA6-8DCF-A9C0EE930AD6}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Ice_Melt-001" ID="{635FD39E-DBE3-4FB0-A57E-20CBAB9F6697}" ShortID="700159873">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ice_Melt-001" ID="{4FA1B131-1365-415C-9304-F1ABA1A434D2}">
+													<Language>SFX</Language>
+													<AudioFile>Ice_Melt-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="261255860"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Ice_Melt-001" ID="{4FA1B131-1365-415C-9304-F1ABA1A434D2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ice_Melt-002" ID="{6AA21C77-E823-457B-A170-B21EED83D211}" ShortID="799098799">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ice_Melt-002" ID="{9F3B1CA4-B41C-4377-AE63-5888CC818883}">
+													<Language>SFX</Language>
+													<AudioFile>Ice_Melt-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="650592617"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Ice_Melt-002" ID="{9F3B1CA4-B41C-4377-AE63-5888CC818883}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ice_Melt-003" ID="{1DC69B42-630E-43A0-AC4E-6CA08F898127}" ShortID="567262502">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{696BA693-C7B5-48F7-BB53-AC86C17C2138}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{042BB937-23A3-4977-A3E1-B283EB4443C9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ice_Melt-003" ID="{550A63F7-DBF8-438F-8CD8-EB4CFF1659C1}">
+													<Language>SFX</Language>
+													<AudioFile>Ice_Melt-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="499502023"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Ice_Melt-003" ID="{550A63F7-DBF8-438F-8CD8-EB4CFF1659C1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</ActorMixer>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>

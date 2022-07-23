@@ -25,6 +25,7 @@ namespace AK
         static const AkUniqueID FOOT_SON_JUMP = 3092656219U;
         static const AkUniqueID FOOT_SON_LAND = 3038606776U;
         static const AkUniqueID FOOT_SON_RUN = 2993334066U;
+        static const AkUniqueID GATE_OPEN = 3328279379U;
         static const AkUniqueID ICE_MELT = 2374556355U;
         static const AkUniqueID ICICLE_CRACKLE = 3855686902U;
         static const AkUniqueID ICICLE_DROP = 2984024320U;

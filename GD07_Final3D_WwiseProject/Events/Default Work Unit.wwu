@@ -159,6 +159,21 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Gate" ID="{9B112100-AFC9-4F36-B510-6DFBB972A840}" ShortID="367121313">
+							<ChildrenList>
+								<Event Name="Gate_Open" ID="{08BD3983-EBBB-4F2C-8272-9CFAC2C45116}">
+									<ChildrenList>
+										<Action Name="" ID="{4838FBA8-3839-4E6B-8A7C-6398C37E8256}" ShortID="901504944">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Gate_Open" ID="{FD442955-00BD-4066-B683-AAE5738FEA90}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Main Character" ID="{CFFC145F-5398-4684-B5E0-6FB28F7A661C}" ShortID="650885601">

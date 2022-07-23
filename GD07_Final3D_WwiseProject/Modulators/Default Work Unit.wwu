@@ -4,6 +4,11 @@
 		<WorkUnit Name="Default Work Unit" ID="{5B23ECF6-1D5D-4E65-8AB8-6E58BDAC96A6}" PersistMode="Standalone">
 			<ChildrenList>
 				<ModulatorEnvelope Name="New Modulator Envelope" ID="{30ABC3F7-65A4-4C8D-970E-1FDAD5724A5E}" ShortID="247445454"/>
+				<ModulatorTime Name="Gate_Open_Reverb" ID="{AD7F031E-6172-4824-BF38-4A9D7E274A38}" ShortID="513439292">
+					<PropertyList>
+						<Property Name="TimeModDuration" Type="Real64" Value="5"/>
+					</PropertyList>
+				</ModulatorTime>
 			</ChildrenList>
 		</WorkUnit>
 	</Modulators>

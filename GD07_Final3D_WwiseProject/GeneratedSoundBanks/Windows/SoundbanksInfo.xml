@@ -19,7 +19,7 @@
 				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="616663929">
+		<SoundBank Id="3161908922" Language="SFX" Hash="198332613">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -562,6 +562,17 @@
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="3328279379" Name="Gate_Open" ObjectPath="\Events\Default Work Unit\Items\Gate\Gate_Open" DurationType="OneShot" DurationMin="4.866667" DurationMax="4.866667">
+					<IncludedMemoryFiles>
+						<File Id="861749648" Language="SFX">
+							<ShortName>Gate_Open.wav</ShortName>
+							<Path>SFX\Gate_Open_3F75BDB9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="2374556355" Name="Ice_Melt" ObjectPath="\Events\Default Work Unit\Items\Ice\Ice_Melt" DurationType="OneShot" DurationMin="4.719371" DurationMax="6.003624">
 					<IncludedMemoryFiles>

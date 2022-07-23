@@ -13,6 +13,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2993334066	Foot_Son_Run			\Default Work Unit\Main Character\Son\Foot_Son_Run	
 	3038606776	Foot_Son_Land			\Default Work Unit\Main Character\Son\Foot_Son_Land	
 	3092656219	Foot_Son_Jump			\Default Work Unit\Main Character\Son\Foot_Son_Jump	
+	3328279379	Gate_Open			\Default Work Unit\Items\Gate\Gate_Open	
 	3538893650	Foot_Father_Land			\Default Work Unit\Main Character\Father\Foot_Father_Land	
 	3701859130	Campfire_Slide_End			\Default Work Unit\Items\Campfire\Campfire_Slide_End	
 	3855686902	Icicle_Crackle			\Default Work Unit\Items\Icicle\Icicle_Crackle	
@@ -27,6 +28,9 @@ Switch	ID	Name	Switch Group			Notes
 
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	437076729	Modulator Envelope (Custom)				
+
+Modulator Time	ID	Name			Wwise Object Path	Notes
+	513439292	Gate_Open_Reverb			\Default Work Unit\Gate_Open_Reverb	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	536535705	Wwise Synth One	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\Items\Campfire\Campfire_Slide\Noise\Wwise Synth One	
@@ -98,6 +102,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	842402316	Campfire	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Campfire_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Campfire\Campfire		103480
 	846649399	Run_Stone-009	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Stone-009_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Stone\Run_Stone-009		1623
 	849308794	Ice_Impact-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Ice_Impact-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Impact_Head\Ice_Impact-002		9003
+	861749648	Gate_Open	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Gate_Open_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Gate\Gate_Open		38086
 	873261511	Run_Stone-007	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Run_Stone-007_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Stone\Run_Stone-007		1793
 	882535665	Walk_Snow-003	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Walk_Snow-003_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Walk\Snow\Walk_Snow-003		6964
 	909723097	Walk_Snow-002	F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\SFX\Walk_Snow-002_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Walk\Snow\Walk_Snow-002		6327

@@ -52,7 +52,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _DetailMap:
         m_Texture: {fileID: 2800000, guid: 256a83e41a4f66f4aa4cc143d792174b, type: 3}
-        m_Scale: {x: 8, y: 8}
+        m_Scale: {x: 0, y: 0}
         m_Offset: {x: 0, y: 0}
     - _DistortionVectorMap:
         m_Texture: {fileID: 0}
@@ -80,7 +80,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
         m_Texture: {fileID: 2800000, guid: 3af1d0db7e7961c46917ed44ab18c838, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0, y: 0}
         m_Offset: {x: 0, y: 0}
     - _MaskMap_Layer1:
         m_Texture: {fileID: 2800000, guid: e8e5f5c8b8024fe4e813be794803832b, type: 3}
@@ -108,7 +108,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Snow_DetailMap:
         m_Texture: {fileID: 2800000, guid: ae59db58aaea44d489d6c8b0dcb269a7, type: 3}
-        m_Scale: {x: 9, y: 9}
+        m_Scale: {x: 0, y: 0}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
         m_Texture: {fileID: 0}

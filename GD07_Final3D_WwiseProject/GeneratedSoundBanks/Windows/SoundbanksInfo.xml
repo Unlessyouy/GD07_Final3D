@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -19,7 +19,7 @@
 				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1717228661">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2829730986">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -51,25 +51,25 @@
 				<Event Id="3701859130" Name="Campfire_Slide_End" ObjectPath="\Events\Default Work Unit\Items\Campfire\Campfire_Slide_End" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2649043497" Name="Campfire_Slide_Start" ObjectPath="\Events\Default Work Unit\Items\Campfire\Campfire_Slide_Start" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="32039786" Language="SFX">
-							<ShortName>Snowball_Roll-006.wav</ShortName>
-							<Path>SFX\Snowball_Roll-006_C2F5F904.wem</Path>
+						<File Id="18010526" Language="SFX">
+							<ShortName>Snow_Slide-003.wav</ShortName>
+							<Path>SFX\Snow_Slide-003_D05340C7.wem</Path>
 						</File>
-						<File Id="58305440" Language="SFX">
-							<ShortName>Snowball_Roll-008.wav</ShortName>
-							<Path>SFX\Snowball_Roll-008_C2F5F904.wem</Path>
+						<File Id="165708141" Language="SFX">
+							<ShortName>Snow_Slide-002.wav</ShortName>
+							<Path>SFX\Snow_Slide-002_D05340C7.wem</Path>
 						</File>
-						<File Id="164977265" Language="SFX">
-							<ShortName>Snowball_Roll-007.wav</ShortName>
-							<Path>SFX\Snowball_Roll-007_C2F5F904.wem</Path>
+						<File Id="350310624" Language="SFX">
+							<ShortName>Snow_Slide-001.wav</ShortName>
+							<Path>SFX\Snow_Slide-001_D05340C7.wem</Path>
 						</File>
-						<File Id="378909021" Language="SFX">
-							<ShortName>Snowball_Roll-004.wav</ShortName>
-							<Path>SFX\Snowball_Roll-004_C2F5F904.wem</Path>
+						<File Id="367478032" Language="SFX">
+							<ShortName>Snow_Slide-005.wav</ShortName>
+							<Path>SFX\Snow_Slide-005_D05340C7.wem</Path>
 						</File>
-						<File Id="565494909" Language="SFX">
-							<ShortName>Snowball_Roll-005.wav</ShortName>
-							<Path>SFX\Snowball_Roll-005_C2F5F904.wem</Path>
+						<File Id="912996936" Language="SFX">
+							<ShortName>Snow_Slide-004.wav</ShortName>
+							<Path>SFX\Snow_Slide-004_D05340C7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -656,43 +656,6 @@
 					<AuxBusSends>
 						<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
 					</AuxBusSends>
-				</Event>
-				<Event Id="841599257" Name="Snowball_Roll_End" ObjectPath="\Events\Default Work Unit\Items\Snowball\Snowball_Roll_End" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="634408506" Name="Snowball_Roll_Start" ObjectPath="\Events\Default Work Unit\Items\Snowball\Snowball_Roll_Start" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="156686436" Language="SFX">
-							<ShortName>Snowball_Roll-005.wav</ShortName>
-							<Path>SFX\Snowball_Roll-005_F47446A6.wem</Path>
-						</File>
-						<File Id="237569014" Language="SFX">
-							<ShortName>Snowball_Roll-006.wav</ShortName>
-							<Path>SFX\Snowball_Roll-006_F47446A6.wem</Path>
-						</File>
-						<File Id="240188004" Language="SFX">
-							<ShortName>Snowball_Roll-002.wav</ShortName>
-							<Path>SFX\Snowball_Roll-002_F47446A6.wem</Path>
-						</File>
-						<File Id="339064604" Language="SFX">
-							<ShortName>Snowball_Roll-003.wav</ShortName>
-							<Path>SFX\Snowball_Roll-003_F47446A6.wem</Path>
-						</File>
-						<File Id="737618982" Language="SFX">
-							<ShortName>Snowball_Roll-008.wav</ShortName>
-							<Path>SFX\Snowball_Roll-008_F47446A6.wem</Path>
-						</File>
-						<File Id="774546527" Language="SFX">
-							<ShortName>Snowball_Roll-004.wav</ShortName>
-							<Path>SFX\Snowball_Roll-004_F47446A6.wem</Path>
-						</File>
-						<File Id="1056905124" Language="SFX">
-							<ShortName>Snowball_Roll-001.wav</ShortName>
-							<Path>SFX\Snowball_Roll-001_F47446A6.wem</Path>
-						</File>
-						<File Id="1063215467" Language="SFX">
-							<ShortName>Snowball_Roll-007.wav</ShortName>
-							<Path>SFX\Snowball_Roll-007_F47446A6.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
 			<SwitchGroups>

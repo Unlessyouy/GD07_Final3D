@@ -18,20 +18,16 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Wind_Heavy" ID="{6D54297A-22A9-4FD2-BE65-698B0DB92C8E}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
-							<Position X="1" Y="0"/>
+							<ObjectRef Name="Campfire_Slide_Start" ID="{1D49C879-4A00-40DC-BE97-58762FB35333}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}"/>
+							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Snowball_Roll_Start" ID="{2736C8F3-10BF-42C1-897C-8F69D56DC6BD}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}"/>
-							<Position X="1" Y="1"/>
+							<ObjectRef Name="Foot_Father_Walk" ID="{81C0EA1D-F38E-402D-9C12-2575270111CB}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}"/>
+							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Cave_WindSub" ID="{169C9B6D-97BD-43D2-B20F-038CCB340EC9}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
 							<Position X="1" Y="3"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Ambient_Cave" ID="{865B4492-E6D5-482D-8F34-B430B0FC2907}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}"/>
-							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Icicle_Crackle" ID="{887A8084-D8F4-4898-A914-CA191608C3AD}" WorkUnitID="{D9647D36-7C11-4A55-ACEC-FD30727FDA40}"/>

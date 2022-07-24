@@ -29,8 +29,6 @@ namespace AK
         static const AkUniqueID ICE_MELT = 2374556355U;
         static const AkUniqueID ICICLE_CRACKLE = 3855686902U;
         static const AkUniqueID ICICLE_DROP = 2984024320U;
-        static const AkUniqueID SNOWBALL_ROLL_END = 841599257U;
-        static const AkUniqueID SNOWBALL_ROLL_START = 634408506U;
     } // namespace EVENTS
 
     namespace SWITCHES

@@ -31,39 +31,6 @@
 				</Folder>
 				<Folder Name="Items" ID="{D4833195-8DC5-4F8E-BCFA-31A86849137C}" ShortID="159998028">
 					<ChildrenList>
-						<Folder Name="Snowball" ID="{8D28C481-6AD5-4E6D-9A68-6724AB4D963D}" ShortID="624686273">
-							<ChildrenList>
-								<Event Name="Snowball_Roll_End" ID="{B3A08FDB-56FF-4F59-89DF-06702E4F0D28}">
-									<ChildrenList>
-										<Action Name="" ID="{E6B821E8-00C7-4C15-A66A-BD3C6A55F04B}" ShortID="996334148">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="2"/>
-												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Snowball" ID="{5EB438A1-71C7-485C-A41F-7B54648B6EBA}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="Snowball_Roll_Start" ID="{2736C8F3-10BF-42C1-897C-8F69D56DC6BD}">
-									<ChildrenList>
-										<Action Name="" ID="{829981F3-1DB9-4AA8-8FF8-7E7019202FAD}" ShortID="31258868">
-											<PropertyList>
-												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Snowball" ID="{5EB438A1-71C7-485C-A41F-7B54648B6EBA}" WorkUnitID="{5BE93718-674A-4BF3-9057-19A3745E8622}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
 						<Folder Name="Campfire" ID="{4D81806E-A945-4007-9A8A-4043F28AE73C}" ShortID="565337481">
 							<ChildrenList>
 								<Event Name="Campfire" ID="{B0DA7C52-F319-4C4C-B210-8A79833038DB}">

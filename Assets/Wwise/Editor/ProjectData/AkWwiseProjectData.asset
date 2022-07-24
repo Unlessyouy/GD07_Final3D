@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 419cd34db498474b9ea9b63b81909818
     GuidInternal: 
-    m_lastTime: -8585449536811407886
+    m_lastTime: -8585437898850693423
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 37b92b04a3237749a3e1b283eb4443c9
     GuidInternal: 
-    m_lastTime: -8585432402423398837
+    m_lastTime: -8585431872383033685
     List:
     - name: Ambience
       guid: 18b19fe903e8d244b443b7483e94d366
@@ -197,7 +197,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 91d2806cecd99c4eae86d6b5a37c2eba
     GuidInternal: 
-    m_lastTime: -8585432402422852313
+    m_lastTime: -8585432824131298866
     List:
     - name: Main
       guid: 11fe3cbc92d2004694b2b7dfbc5243ae
@@ -225,7 +225,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 367d64d9117c554aacecfd30727fda40
     GuidInternal: 
-    m_lastTime: -8585431459411141306
+    m_lastTime: -8585430010586760532
     List:
     - name: Ambience
       guid: cfbbfbfa8e16f74089acc29894110c16
@@ -554,6 +554,92 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.519667
       minDuration: 0.07667
+    - name: Gate
+      guid: 0021119bc9af364fb5106dfbb972a840
+      id: 1121922920
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Items
+        ObjectType: 4
+        guid: 953183d4c58d8e4fbcfa31a86849137c
+      - ElementName: Gate
+        ObjectType: 4
+        guid: 0021119bc9af364fb5106dfbb972a840
+      Path: Events\Default Work Unit\Items\Gate
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Gate_Open
+      guid: 8339bd08bbeb2c4f82729cfac2c45116
+      id: 3328279379
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Items
+        ObjectType: 4
+        guid: 953183d4c58d8e4fbcfa31a86849137c
+      - ElementName: Gate
+        ObjectType: 4
+        guid: 0021119bc9af364fb5106dfbb972a840
+      - ElementName: Gate_Open
+        ObjectType: 3
+        guid: 8339bd08bbeb2c4f82729cfac2c45116
+      Path: Events\Default Work Unit\Items\Gate\Gate_Open
+      maxAttenuation: 0
+      maxDuration: 4.866667
+      minDuration: 4.866667
+    - name: Ice
+      guid: aa5fad48ba4c734b8cfada65b88b369d
+      id: 344481046
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Items
+        ObjectType: 4
+        guid: 953183d4c58d8e4fbcfa31a86849137c
+      - ElementName: Ice
+        ObjectType: 4
+        guid: aa5fad48ba4c734b8cfada65b88b369d
+      Path: Events\Default Work Unit\Items\Ice
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ice_Melt
+      guid: 63b875fa652626468b3f55d5c8834e2e
+      id: 2374556355
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 367d64d9117c554aacecfd30727fda40
+      - ElementName: Items
+        ObjectType: 4
+        guid: 953183d4c58d8e4fbcfa31a86849137c
+      - ElementName: Ice
+        ObjectType: 4
+        guid: aa5fad48ba4c734b8cfada65b88b369d
+      - ElementName: Ice_Melt
+        ObjectType: 3
+        guid: 63b875fa652626468b3f55d5c8834e2e
+      Path: Events\Default Work Unit\Items\Ice\Ice_Melt
+      maxAttenuation: 0
+      maxDuration: 6.003624
+      minDuration: 4.719371
     - name: Icicle
       guid: 17f709e945d8b747bc7fbd2ba70fed5d
       id: 2339865188
@@ -752,7 +838,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 83047f4e49a6064ab4b0c51c2a758231
     GuidInternal: 
-    m_lastTime: -8585449536811460714
+    m_lastTime: -8585437898850782915
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -766,7 +852,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: f2339841cf15084a9e6238de60db1afc
     GuidInternal: 
-    m_lastTime: -8585449536811417641
+    m_lastTime: -8585437898850703127
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -780,7 +866,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 4bcbde5e15a23e43abf01c739eec5149
     GuidInternal: 
-    m_lastTime: -8585437936769024450
+    m_lastTime: -8585437903505886444
     List:
     - name: Material
       guid: 7609df95802a3d4da0a9ebe89c4ce141
@@ -860,10 +946,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 9d157d552dd93b458c8ff2c47aef7cfc
     GuidInternal: 
-    m_lastTime: -8585449536811417641
+    m_lastTime: -8585437898850703127
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 06000000070000000900000026000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

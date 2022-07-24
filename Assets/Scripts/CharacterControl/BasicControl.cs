@@ -24,10 +24,10 @@ public class BasicControl : MonoBehaviour
     public bool alive;
 
     bool isMoving;
-    [SerializeField] AK.Wwise.Event walkEvent;
-    [SerializeField] AK.Wwise.Event runEvent;
-    [SerializeField] AK.Wwise.Event landEvent;
-    [SerializeField] AK.Wwise.Event jumpEvent;
+    [SerializeField] protected AK.Wwise.Event walkEvent;
+    [SerializeField] protected AK.Wwise.Event runEvent;
+    [SerializeField] protected AK.Wwise.Event landEvent;
+    [SerializeField] protected AK.Wwise.Event jumpEvent;
     float walkingIntervalTimer = 0;
     [SerializeField] float walkingIntervalTime;
 
@@ -96,17 +96,17 @@ public class BasicControl : MonoBehaviour
                 isMoving = false;
             }
 
-            float rotateDifference = towardsY - transform.rotation.eulerAngles.y;
+            float rotateDifference = towardsY - transform.GetChild(0).rotation.eulerAngles.y;
 
             if (Mathf.Abs(rotateDifference) >= 2.5)
             {
                 if (rotateDifference > 0 && rotateDifference < 180 || rotateDifference < -180)
                 {
-                    transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
+                    transform.GetChild(0).Rotate(0, rotateSpeed * Time.deltaTime, 0);
                 }
                 else
                 {
-                    transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
+                    transform.GetChild(0).Rotate(0, -rotateSpeed * Time.deltaTime, 0);
                 }
             }
         }
@@ -293,10 +293,10 @@ public class BasicControl : MonoBehaviour
     }
     public void PushObject()
     {
-        anim.SetBool("IsPush", true);
+        anim.SetBool("IsPushing", true);
     }
     public void StopPushObject()
     {
-        anim.SetBool("IsPush", false);
+        anim.SetBool("IsPushing", false);
     }
 }

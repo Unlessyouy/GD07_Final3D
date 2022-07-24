@@ -14,7 +14,6 @@ namespace CharacterControl
             interactType = 2;
             isInOcean = false;
         }
-
         protected override void Update()
         {
             #region Input & Movement
@@ -102,6 +101,10 @@ namespace CharacterControl
             {
                 interactingObject.InteractTrigger(interactType, gameObject);
             }
+            else if (!isInteracting && interactingObject != null)
+            {
+                interactingObject.DeInteractTrigger(interactType, gameObject);
+            }
 
             #endregion
             
@@ -112,6 +115,7 @@ namespace CharacterControl
                 if (anim.GetBool("isGrounded"))
                 {
                     anim.SetTrigger("IsJumping");
+                    jumpEvent.Post(gameObject);
                 }
             }
 
@@ -122,16 +126,15 @@ namespace CharacterControl
                 rb.useGravity = false;
             }
         }
-
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.collider.CompareTag("Terrain"))
             {
                 anim.SetBool("isGrounded", true);
                 CanJump = true;
+                landEvent.Post(gameObject);
             }
         }
-
         private void OnCollisionExit(Collision collision)
         {
             if (collision.collider.CompareTag("Terrain"))

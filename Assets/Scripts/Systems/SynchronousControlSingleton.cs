@@ -65,7 +65,7 @@ namespace Systems
 
             _isFatherInteract = Input.GetButton("HoldHandFather") ||
                                 Math.Abs(Input.GetAxisRaw("HoldHandFather") - 1) < 0.1f;
-            ;
+
             _isSonInteract = Input.GetButton("HoldHandSon") || Math.Abs(Input.GetAxisRaw("HoldHandSon") - 1) < 0.1f;
             _isCloseEnough = Vector3.Distance(Father.transform.position, Son.transform.position) <= CloseDistance;
 

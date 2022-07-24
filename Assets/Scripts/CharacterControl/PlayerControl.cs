@@ -100,6 +100,10 @@ public class PlayerControl : BasicControl
         {
             interactingObject.InteractTrigger(interactType, gameObject);
         }
+        else if (!isInteracting && interactingObject != null)
+        {
+            interactingObject.DeInteractTrigger(interactType, gameObject);
+        }
 
         #endregion
 
@@ -109,6 +113,7 @@ public class PlayerControl : BasicControl
             if (anim.GetBool("isGrounded"))
             {
                 anim.SetTrigger("IsJumping");
+                jumpEvent.Post(gameObject);
             }
         }
         
@@ -119,6 +124,7 @@ public class PlayerControl : BasicControl
         if (collision.collider.CompareTag("Terrain"))
         {
             anim.ResetTrigger("IsJumping");
+            landEvent.Post(gameObject);
         }
     }
 }

@@ -6,20 +6,15 @@ namespace Interactable.CommonInteractableObjects
     {
         [SerializeField] private GameObject PushTarget;
 
+
+
         public override void InteractTrigger(int interactType, GameObject interactingCharacter)
         {
-            var pushSpeed = 0f;
-
-            if (interactType == 1)
-            {
-                pushSpeed += 2 * Input.GetAxisRaw("Horizontal");
-            }
-            else
-            {
-                pushSpeed += 1 * Input.GetAxisRaw("Horizontal B");
-            }
-
-            PushTarget.transform.position = (PushTarget.transform.position + Vector3.right * (pushSpeed * Time.deltaTime));
+            transform.parent.parent = interactingCharacter.transform;
+        }
+        public override void DeInteractTrigger(int interactType, GameObject interactingCharacter)
+        {
+            transform.parent.parent = null;
         }
     }
 }

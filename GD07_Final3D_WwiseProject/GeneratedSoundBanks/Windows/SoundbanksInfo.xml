@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>F:\Game Audio\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -19,7 +19,7 @@
 				<AuxBus Id="4122393694" Name="Cave" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Environments\Cave"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="198332613">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1717228661">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>

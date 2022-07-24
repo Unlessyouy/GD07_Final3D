@@ -16,8 +16,7 @@ namespace Mechanics
         float camChangeTimer = 0;//between 0 to 1;
         float targetCamFOV = 45;
         float tempCamFOV;
-
-        private void LateUpdate()
+        private void Update()
         {
             _cameraPositionX = (Player.position.x + Companion.position.x) / 2;
 

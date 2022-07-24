@@ -47,4 +47,8 @@ public class InteractableObject : MonoBehaviour
     {
 
     }
+    public virtual void DeInteractTrigger(int interactType, GameObject interactingCharacter)
+    {
+
+    }
 }

@@ -7,12 +7,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	1931646578	Campfire			\Default Work Unit\Items\Campfire\Campfire	
 	1995429365	Ambient_Cave			\Default Work Unit\Ambience\Ambient_Cave	
 	2237177844	Foot_Father_Run			\Default Work Unit\Main Character\Father\Foot_Father_Run	
+	2374556355	Ice_Melt			\Default Work Unit\Items\Ice\Ice_Melt	
 	2649043497	Campfire_Slide_Start			\Default Work Unit\Items\Campfire\Campfire_Slide_Start	
+	2984024320	Icicle_Drop			\Default Work Unit\Items\Icicle\Icicle_Drop	
 	2993334066	Foot_Son_Run			\Default Work Unit\Main Character\Son\Foot_Son_Run	
 	3038606776	Foot_Son_Land			\Default Work Unit\Main Character\Son\Foot_Son_Land	
 	3092656219	Foot_Son_Jump			\Default Work Unit\Main Character\Son\Foot_Son_Jump	
+	3328279379	Gate_Open			\Default Work Unit\Items\Gate\Gate_Open	
 	3538893650	Foot_Father_Land			\Default Work Unit\Main Character\Father\Foot_Father_Land	
 	3701859130	Campfire_Slide_End			\Default Work Unit\Items\Campfire\Campfire_Slide_End	
+	3855686902	Icicle_Crackle			\Default Work Unit\Items\Icicle\Icicle_Crackle	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	3865314626	Material			\Default Work Unit\Material	
@@ -25,11 +29,15 @@ Switch	ID	Name	Switch Group			Notes
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	437076729	Modulator Envelope (Custom)				
 
+Modulator Time	ID	Name			Wwise Object Path	Notes
+	513439292	Gate_Open_Reverb			\Default Work Unit\Gate_Open_Reverb	
+
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	536535705	Wwise Synth One	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\Items\Campfire\Campfire_Slide\Noise\Wwise Synth One	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	5708474	Run_Stone-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Stone-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Stone\Run_Stone-001		32064
+	21152946	Ice_Crackle-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Crackle-002_1B36B192.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Crackle\Icicle_Crackle_Head\Ice_Crackle-002		64934
 	32039786	Snowball_Roll-006	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-006_EE01D034.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Campfire\Campfire_Slide\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-006		51264
 	35085224	Run_Snow-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Snow-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Snow\Run_Snow-004		44644
 	53757683	Land_Snow-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Land_Snow-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Snow\Land_Snow-004		38464
@@ -37,60 +45,77 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	58305440	Snowball_Roll-008	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-008_EE01D034.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Campfire\Campfire_Slide\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-008		44864
 	71594557	Land_Snow-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Land_Snow-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Snow\Land_Snow-001		57168
 	90528754	Run_Stone-010	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Stone-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Stone\Run_Stone-010		8952
+	127696488	Ice_Crackle-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Crackle-004_296479EA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Crackle\Icicle_Crackle_Tail\Ice_Crackle-004		80070
 	155263112	Run_Snow-010	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Snow-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Snow\Run_Snow-010		44922
 	156686436	Snowball_Roll-005	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-005_8DADF936.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-005		57664
+	162843769	Ice_Slide-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Slide-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Impact_Tail\Ice_Slide-001		140864
 	164977265	Snowball_Roll-007	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-007_EE01D034.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Campfire\Campfire_Slide\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-007		64064
 	196411225	Run_Snow-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Snow-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Snow\Run_Snow-002		48546
 	197414246	Run_Stone-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Stone-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Stone\Run_Stone-002		32064
 	210657007	Run_Stone-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Stone-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Stone\Run_Stone-004		32064
 	213115617	Walk_Snow-005	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Walk_Snow-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Walk\Snow\Walk_Snow-005		67264
-	214748463	Jump_Stone-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Jump_Stone-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Jump\Stone\Jump_Stone-001		15324
+	214748463	Jump_Stone-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Jump_Stone-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Stone\Jump_Stone-001		15324
 	237368122	Land_Stone-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Land_Stone-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Stone\Land_Stone-003		16064
 	237569014	Snowball_Roll-006	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-006_8DADF936.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-006		51264
 	240188004	Snowball_Roll-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-002_8DADF936.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-002		41664
 	249884054	Run_Snow-007	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Snow-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Snow\Run_Snow-007		46594
 	260403469	Run_Snow-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Snow-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Snow\Run_Snow-001		38464
-	262229113	Run_Wood-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Wood\Run_Wood-004		18800
-	268986904	Run_Wood-006	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Wood\Run_Wood-006		10230
+	261255860	Ice_Melt-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Melt-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Ice\Ice_Melt\Ice_Melt-001		480064
+	262229113	Run_Wood-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Jump\Wood\Run_Wood-004		18800
+	268986904	Run_Wood-006	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Wood\Run_Wood-006		10230
+	274647882	Ice_Slide-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Slide-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Impact_Tail\Ice_Slide-002		112064
 	289751522	Run_Snow-006	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Snow-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Snow\Run_Snow-006		46038
-	291570625	Run_Wood-005	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Wood\Run_Wood-005		15804
+	291570625	Run_Wood-005	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Jump\Wood\Run_Wood-005		15804
 	298239654	Land_Stone-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Land_Stone-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Stone\Land_Stone-004		16064
-	328170736	Jump_Stone-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Jump_Stone-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Jump\Stone\Jump_Stone-003		16064
+	307203180	Ice_Crackle-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Crackle-003_8E5833B1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Crackle\Icicle_Crackle_Tail\Ice_Crackle-003		83578
+	326686227	Ice_Crackle-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Crackle-001_47C15AC8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Crackle\Icicle_Crackle_Head\Ice_Crackle-001		54446
+	328170736	Jump_Stone-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Jump_Stone-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Stone\Jump_Stone-003		16064
 	339064604	Snowball_Roll-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-003_8DADF936.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_06\Snowball_Roll-003		51264
-	366226189	Run_Wood-010	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Wood\Run_Wood-010		14446
+	366226189	Run_Wood-010	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Wood\Run_Wood-010		14446
 	378909021	Snowball_Roll-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-004_EE01D034.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Campfire\Campfire_Slide\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-004		51264
 	394759641	Land_Stone-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Land_Stone-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Stone\Land_Stone-001		18638
 	401252325	Walk_Snow-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Walk_Snow-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Walk\Snow\Walk_Snow-001		67264
-	436831600	Run_Wood-007	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Wood\Run_Wood-007		11312
+	436831600	Run_Wood-007	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Wood\Run_Wood-007		11312
 	480724282	Run_Snow-008	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Snow-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Snow\Run_Snow-008		44922
+	491350078	Ice_Crackle-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Crackle-004_F0DB76D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Crackle\Icicle_Crackle_Head\Ice_Crackle-004		55618
+	493674703	Ice_Slide-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Slide-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Impact_Tail\Ice_Slide-003		224064
 	495153094	Run_Stone-006	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Stone-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Stone\Run_Stone-006		9100
-	495239455	Jump_Snow-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Jump_Snow-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Jump\Snow\Jump_Snow-002		38464
+	495239455	Jump_Snow-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Jump_Snow-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Snow\Jump_Snow-002		38464
+	499502023	Ice_Melt-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Melt-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Ice\Ice_Melt\Ice_Melt-003		512064
 	523090183	Wind_Heavy	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Wind_Heavy_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind_Heavy		19008064
 	565494909	Snowball_Roll-005	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-005_EE01D034.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Campfire\Campfire_Slide\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-005		57664
 	566301915	Run_Snow-009	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Snow-009_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Snow\Run_Snow-009		47152
+	639566159	Ice_Impact-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Impact-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Impact_Head\Ice_Impact-001		99264
 	643621617	Run_Snow-005	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Snow-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Snow\Run_Snow-005		46594
+	650592617	Ice_Melt-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Melt-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Ice\Ice_Melt\Ice_Melt-002		544064
 	651625248	Land_Snow-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Land_Snow-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Snow\Land_Snow-003		48064
-	679652668	Run_Wood-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Wood\Run_Wood-001		16640
+	679652668	Run_Wood-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Jump\Wood\Run_Wood-001		16640
 	690222087	Run_Stone-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Stone-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Stone\Run_Stone-003		35264
+	709965107	Ice_Impact-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Impact-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Impact_Head\Ice_Impact-003		172864
+	735373197	Ice_Crackle-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Crackle-001_B2764C60.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Crackle\Icicle_Crackle_Tail\Ice_Crackle-001		78918
 	737618982	Snowball_Roll-008	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-008_8DADF936.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-008		44864
 	753625376	Land_Stone-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Land_Stone-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Stone\Land_Stone-002		16064
 	774546527	Snowball_Roll-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-004_8DADF936.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-004		51264
-	782860848	Jump_Snow-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Jump_Snow-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Jump\Snow\Jump_Snow-001		41512
-	822292802	Run_Wood-009	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-009_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Wood\Run_Wood-009		14620
+	782860848	Jump_Snow-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Jump_Snow-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Snow\Jump_Snow-001		41512
+	813449581	Ice_Crackle-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Crackle-003_778D2469.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Crackle\Icicle_Crackle_Head\Ice_Crackle-003		51144
+	822292802	Run_Wood-009	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-009_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Wood\Run_Wood-009		14620
 	842402316	Campfire	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Campfire_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Campfire\Campfire		726464
 	846649399	Run_Stone-009	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Stone-009_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Stone\Run_Stone-009		9082
+	849308794	Ice_Impact-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Impact-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Impact_Head\Ice_Impact-002		99264
+	861749648	Gate_Open	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Gate_Open_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Gate\Gate_Open		467264
 	873261511	Run_Stone-007	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Stone-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Stone\Run_Stone-007		9956
 	882535665	Walk_Snow-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Walk_Snow-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Walk\Snow\Walk_Snow-003		57664
 	909723097	Walk_Snow-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Walk_Snow-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Walk\Snow\Walk_Snow-002		48064
-	924546160	Jump_Stone-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Jump_Stone-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Jump\Stone\Jump_Stone-002		10796
+	924546160	Jump_Stone-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Jump_Stone-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Stone\Jump_Stone-002		10796
 	973933471	Run_Snow-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Snow-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Run\Snow\Run_Snow-003		45740
 	975927773	Run_Stone-008	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Stone-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Run\Stone\Run_Stone-008		7862
-	1003008649	Run_Wood-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Wood\Run_Wood-002		16536
+	1003008649	Run_Wood-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Jump\Wood\Run_Wood-002		16536
 	1022072329	Walk_Snow-004	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Walk_Snow-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Walk\Snow\Walk_Snow-004		89664
 	1023893057	Land_Snow-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Land_Snow-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Snow\Land_Snow-002		70628
-	1034007203	Run_Wood-008	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Jump\Wood\Run_Wood-008		12530
+	1034007203	Run_Wood-008	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Son\Son_Land\Wood\Run_Wood-008		12530
 	1052914941	Cave_WindSub	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Cave_WindSub_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Cave_WindSub		20736064
+	1054806217	Ice_Crackle-002	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Ice_Crackle-002_FE38E0DE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Icicle\Icicle_Crackle\Icicle_Crackle_Tail\Ice_Crackle-002		68818
 	1056905124	Snowball_Roll-001	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-001_8DADF936.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_05\Snowball_Roll-001		51264
 	1063215467	Snowball_Roll-007	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Snowball_Roll-007_8DADF936.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\Snowball\Snowball_Roll\Snowball_Roll_01\Snowball_Roll-007		64064
-	1064859608	Run_Wood-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Land\Wood\Run_Wood-003		16710
+	1064859608	Run_Wood-003	E:\UNITY\GD07_Final3D\GD07_Final3D_WwiseProject\.cache\Mac\SFX\Run_Wood-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Main Character\Father\Father_Jump\Wood\Run_Wood-003		16710
 

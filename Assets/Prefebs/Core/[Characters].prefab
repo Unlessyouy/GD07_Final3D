@@ -300,7 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Father: {fileID: 1869859560746299685}
   Son: {fileID: 241474680587001276}
-  CloseDistance: 1
+  CloseDistance: 2
   IsInteractWithOceanObject: 0
 --- !u!1 &2019851193005368005
 GameObject:
@@ -771,7 +771,7 @@ MonoBehaviour:
   FootOffset: 0.25
   RayLength: 0.75
   MindPowerVFX: {fileID: 3744893086762970042}
-  JumpHeight: 5
+  JumpHeight: 6
 --- !u!114 &4127713988933869397
 MonoBehaviour:
   m_ObjectHideFlags: 0

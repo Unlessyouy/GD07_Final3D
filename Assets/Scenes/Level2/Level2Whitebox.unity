@@ -2236,6 +2236,11 @@ PrefabInstance:
       propertyPath: Direction.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4011549436265945450, guid: 6019d39c31d39f14dbfd1ff1d9159098,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 4011549437015223448, guid: 6019d39c31d39f14dbfd1ff1d9159098,
         type: 3}
       propertyPath: m_Name
@@ -27457,6 +27462,11 @@ PrefabInstance:
       propertyPath: Direction.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4011549436265945450, guid: 6019d39c31d39f14dbfd1ff1d9159098,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 4011549437015223448, guid: 6019d39c31d39f14dbfd1ff1d9159098,
         type: 3}
       propertyPath: m_Name
@@ -38305,6 +38315,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Direction.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4011549436265945450, guid: 6019d39c31d39f14dbfd1ff1d9159098,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 4011549436311212382, guid: 6019d39c31d39f14dbfd1ff1d9159098,
         type: 3}

@@ -1,6 +1,7 @@
 using EventClass;
 using Systems;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace CharacterControl
 {
@@ -8,11 +9,17 @@ namespace CharacterControl
     {
         [SerializeField] private ParticleSystem MindPowerVFX;
         [SerializeField] private float JumpHeight;
+
+        private bool IsInOceanScene;
         protected override void Start()
         {
             base.Start();
             interactType = 2;
             isInOcean = false;
+            if ( SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                IsInOceanScene = true;
+            }
         }
         protected override void Update()
         {
@@ -108,7 +115,7 @@ namespace CharacterControl
 
             #endregion
             
-            if (verticalInput >= 0.25 && alive && CanJump && !isClimbing && !IsHoldingHands && !isInOcean)
+            if (verticalInput >= 0.25 && alive && CanJump && !isClimbing && !IsHoldingHands && !isInOcean && !IsInOceanScene)
             {
                 rb.velocity = Vector3.up * JumpHeight;
                 CanJump = false;

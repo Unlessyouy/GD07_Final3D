@@ -7,6 +7,8 @@ namespace Mechanics
     public class BalanceComponent : MonoBehaviour
     {
         [SerializeField] private int Number;
+
+        public bool IsBalanced;
         private List<TurtleController> _turtles = new List<TurtleController>();
 
         private void OnCollisionEnter(Collision collision)
@@ -18,7 +20,7 @@ namespace Mechanics
 
                 if (_turtles.Count == Number)
                 {
-                    Debug.Log("Success");
+                    IsBalanced = true;
                 }
             }
         }
@@ -29,7 +31,7 @@ namespace Mechanics
             if (_turtles.Contains(turtle))
             {
                 _turtles.Remove(turtle);
-                Debug.Log(_turtles.Count);
+                IsBalanced = false;
             }
         }
     }

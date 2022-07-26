@@ -6,6 +6,7 @@ namespace Interactable.CommonInteractableObjects
     public class OnlyFatherInteractRock : InteractableObject
     {
         [SerializeField] private float Offset;
+        [SerializeField] private Transform RockHolder;
         private bool _isInteracted;
         private Rigidbody _rb;
         
@@ -22,9 +23,7 @@ namespace Interactable.CommonInteractableObjects
             {
                 StopAllCoroutines();
 
-                _isInteracted = true;
-                transform.position = interactingCharacter.transform.position -
-                                     interactingCharacter.transform.forward * Offset;
+                transform.position = RockHolder.position;
 
                 _rb.useGravity = false;
                 StartCoroutine(StopInteract());
@@ -33,9 +32,10 @@ namespace Interactable.CommonInteractableObjects
 
         private IEnumerator StopInteract()
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
             _rb.useGravity = true;
             transform.parent = null;
+            _isInteracted = true;
         }
 
         public void DestroySelf()

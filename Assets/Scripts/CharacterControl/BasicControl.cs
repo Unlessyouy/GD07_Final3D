@@ -77,13 +77,13 @@ public class BasicControl : MonoBehaviour
 
         if (alive && !isClimbing)
         {
-            if (rb.velocity.x > 1)
+            if (rb.velocity.x > 0.1)
             {
                 towardsY = 270;
                 anim.SetBool("isMoving", true);
                 isMoving = true;
             }
-            else if (rb.velocity.x < -1)
+            else if (rb.velocity.x < -0.1)
             {
                 towardsY = 90;
                 anim.SetBool("isMoving", true);
@@ -126,7 +126,7 @@ public class BasicControl : MonoBehaviour
         if (isMoving)
         {
             walkingIntervalTimer += Time.deltaTime;
-            if (walkingIntervalTimer >= walkingIntervalTime)
+            if (walkingIntervalTimer >= walkingIntervalTime && !isClimbing)
             {
                 walkingIntervalTimer = 0;
                 runEvent.Post(gameObject);

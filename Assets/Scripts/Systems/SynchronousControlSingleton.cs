@@ -18,16 +18,17 @@ namespace Systems
         public bool IsHoldingHands;
 
         public bool CanSonMove;
-        public bool CanSonLeft;
-        public bool CanSonRight;
-        public bool CanSonUp;
-        public bool CanSonDown;
-
         public bool CanFatherMove;
-        public bool CanFatherLeft;
-        public bool CanFatherRight;
-        public bool CanFatherUp;
-        public bool CanFatherDown;
+
+        [HideInInspector] public bool CanSonLeft;
+        [HideInInspector] public bool CanSonRight;
+        //[HideInInspector] public bool CanSonUp;
+        //[HideInInspector] public bool CanSonDown;
+
+        [HideInInspector] public bool CanFatherLeft;
+        [HideInInspector] public bool CanFatherRight;
+        //[HideInInspector] public bool CanFatherUp;
+        //[HideInInspector] public bool CanFatherDown;
 
 
         private bool _isFatherInteract;
@@ -80,20 +81,20 @@ namespace Systems
                         _rightHorizontalInput = 0;
                     }
                 }
-                else if (!CanSonUp)
-                {
-                    if (_rightVerticalInput > 0)
-                    {
-                        _rightVerticalInput = 0;
-                    }
-                }
-                else if (!CanSonDown)
-                {
-                    if (_rightVerticalInput < 0)
-                    {
-                        _rightVerticalInput = 0;
-                    }
-                }
+                //else if (!CanSonUp)
+                //{
+                //    if (_rightVerticalInput > 0)
+                //    {
+                //        _rightVerticalInput = 0;
+                //    }
+                //}
+                //else if (!CanSonDown)
+                //{
+                //    if (_rightVerticalInput < 0)
+                //    {
+                //        _rightVerticalInput = 0;
+                //    }
+                //}
             }
 
             if (CanFatherMove)
@@ -114,20 +115,20 @@ namespace Systems
                         _horizontalInput = 0;
                     }
                 }
-                else if (!CanFatherUp)
-                {
-                    if (_verticalInput > 0)
-                    {
-                        _verticalInput = 0;
-                    }
-                }
-                else if (!CanFatherDown)
-                {
-                    if (_verticalInput < 0)
-                    {
-                        _verticalInput = 0;
-                    }
-                }
+                //else if (!CanFatherUp)
+                //{
+                //    if (_verticalInput > 0)
+                //    {
+                //        _verticalInput = 0;
+                //    }
+                //}
+                //else if (!CanFatherDown)
+                //{
+                //    if (_verticalInput < 0)
+                //    {
+                //        _verticalInput = 0;
+                //    }
+                //}
             }
 
             _isFatherInteract = Input.GetButton("HoldHandFather") ||

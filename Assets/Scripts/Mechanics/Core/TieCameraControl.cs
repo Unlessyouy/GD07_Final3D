@@ -1,4 +1,5 @@
 using CharacterControl;
+using EventClass;
 using Systems;
 using UnityEngine;
 
@@ -85,28 +86,27 @@ namespace Mechanics
                 CharacterControlSystem.CanSonLeft = true;
             }
 
-            if (charactersVerticalDistance >= maxCharactersVerticalDistance)
-            {
-                if (Player.position.y - Companion.position.y > 0)
-                {
-                    CharacterControlSystem.CanFatherUp = false;
-                    CharacterControlSystem.CanSonDown = false;
-                }
-                else
-                {
-                    CharacterControlSystem.CanFatherDown = false;
-                    CharacterControlSystem.CanSonUp = false;
-                }
-            }
-            else
-            {
-                CharacterControlSystem.CanFatherUp = true;
-                CharacterControlSystem.CanFatherDown = true;
-                CharacterControlSystem.CanSonUp = true;
-                CharacterControlSystem.CanSonDown = true;
-            }
-
-
+            //if (charactersVerticalDistance >= maxCharactersVerticalDistance)
+            //{
+            //    if (Player.position.y - Companion.position.y > 0)
+            //    {
+            //        CharacterControlSystem.CanFatherUp = false;
+            //        CharacterControlSystem.CanSonDown = false;
+            //    }
+            //    else
+            //    {
+            //        CharacterControlSystem.CanFatherDown = false;
+            //        CharacterControlSystem.CanSonUp = false;
+            //    }
+            //    NewEventSystem.Instance.Publish(new GameEndEvent(true));
+            //}
+            //else
+            //{
+            //    CharacterControlSystem.CanFatherUp = true;
+            //    CharacterControlSystem.CanFatherDown = true;
+            //    CharacterControlSystem.CanSonUp = true;
+            //    CharacterControlSystem.CanSonDown = true;
+            //}
         }
         public void LengthenCameraFOV()
         {

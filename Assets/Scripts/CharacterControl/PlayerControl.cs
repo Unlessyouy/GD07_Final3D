@@ -16,7 +16,6 @@ namespace CharacterControl
 
         [HideInInspector]
         public bool canInteract;
-
         protected override void Start()
         {
             base.Start();
@@ -31,6 +30,8 @@ namespace CharacterControl
         {
             #region Input & Movement
 
+            horizontalInput = Input.GetAxisRaw("Horizontal");
+            verticalInput = Input.GetAxisRaw("Vertical");
             interactInput = Input.GetAxisRaw("Interact");
             
             if (isClimbing)
@@ -117,7 +118,10 @@ namespace CharacterControl
             if (collision.collider.CompareTag("Terrain"))
             {
                 anim.ResetTrigger("IsJumping");
-                landEvent.Post(gameObject);
+                if (!isClimbing)
+                {
+                    landEvent.Post(gameObject);
+                }
             }
         }
     }

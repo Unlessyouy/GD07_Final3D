@@ -20,6 +20,8 @@ namespace CharacterControl
         {
             #region Input & Movement
 
+            horizontalInput = Input.GetAxisRaw("Horizontal B");
+            verticalInput = Input.GetAxisRaw("Vertical B");
             interactInput = Input.GetAxisRaw("Interact B");
 
             if (isClimbing)
@@ -131,7 +133,10 @@ namespace CharacterControl
             {
                 anim.SetBool("isGrounded", true);
                 CanJump = true;
-                landEvent.Post(gameObject);
+                if (!isClimbing)
+                {
+                    landEvent.Post(gameObject);
+                }
             }
         }
         private void OnCollisionExit(Collision collision)

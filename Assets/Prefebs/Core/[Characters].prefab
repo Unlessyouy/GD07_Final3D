@@ -252,7 +252,7 @@ MonoBehaviour:
   Player: {fileID: 1869859560746299688}
   Companion: {fileID: 3592585133940565368}
   maxCharactersHorizontalDistance: 14
-  maxCharactersVerticalDistance: 8
+  maxCharactersVerticalDistance: 9
 --- !u!1 &1869859562498904982
 GameObject:
   m_ObjectHideFlags: 0

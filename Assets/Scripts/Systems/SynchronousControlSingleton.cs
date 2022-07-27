@@ -10,14 +10,25 @@ namespace Systems
 
         //[SerializeField] private FatherClimbComponent FatherClimbComponent;
         [SerializeField] private BasicControl Son;
-        private float _horizontalInput;
-        private float _verticalInput;
-        private float _rightHorizontalInput;
-        private float _rightVerticalInput;
+        public float _horizontalInput;//left = -1; right = 1;
+        public float _verticalInput;
+        public float _rightHorizontalInput;
+        public float _rightVerticalInput;
 
-        public bool IsHoldingHands { get; set; }
-        public bool CanSonMove { get; set; }
-        public bool CanFatherMove { get; set; }
+        public bool IsHoldingHands;
+
+        public bool CanSonMove;
+        public bool CanSonLeft;
+        public bool CanSonRight;
+        public bool CanSonUp;
+        public bool CanSonDown;
+
+        public bool CanFatherMove;
+        public bool CanFatherLeft;
+        public bool CanFatherRight;
+        public bool CanFatherUp;
+        public bool CanFatherDown;
+
 
         private bool _isFatherInteract;
         private bool _isSonInteract;
@@ -55,12 +66,68 @@ namespace Systems
             {
                 _rightHorizontalInput = Input.GetAxisRaw("Horizontal B");
                 _rightVerticalInput = Input.GetAxisRaw("Vertical B");
+                if (!CanSonLeft)
+                {
+                    if (_rightHorizontalInput < 0)
+                    {
+                        _rightHorizontalInput = 0;
+                    }
+                }
+                else if (!CanSonRight)
+                {
+                    if (_rightHorizontalInput > 0)
+                    {
+                        _rightHorizontalInput = 0;
+                    }
+                }
+                else if (!CanSonUp)
+                {
+                    if (_rightVerticalInput > 0)
+                    {
+                        _rightVerticalInput = 0;
+                    }
+                }
+                else if (!CanSonDown)
+                {
+                    if (_rightVerticalInput < 0)
+                    {
+                        _rightVerticalInput = 0;
+                    }
+                }
             }
 
             if (CanFatherMove)
             {
                 _horizontalInput = Input.GetAxisRaw("Horizontal");
                 _verticalInput = Input.GetAxisRaw("Vertical");
+                if (!CanFatherLeft)
+                {
+                    if (_horizontalInput < 0)
+                    {
+                        _horizontalInput = 0;
+                    }
+                }
+                else if (!CanFatherRight)
+                {
+                    if (_horizontalInput > 0)
+                    {
+                        _horizontalInput = 0;
+                    }
+                }
+                else if (!CanFatherUp)
+                {
+                    if (_verticalInput > 0)
+                    {
+                        _verticalInput = 0;
+                    }
+                }
+                else if (!CanFatherDown)
+                {
+                    if (_verticalInput < 0)
+                    {
+                        _verticalInput = 0;
+                    }
+                }
             }
 
             _isFatherInteract = Input.GetButton("HoldHandFather") ||
@@ -96,12 +163,10 @@ namespace Systems
 
         private void FixedUpdate()
         {
-            //if (!Father.isClimbing && !FatherClimbComponent.IsHanging && !Father.isInOcean && Father.alive)
             if (!Father.isClimbing && !Father.isInOcean && Father.alive)
             {
                 Father.Move(_horizontalInput);
             }
-            //else if (!Father.isClimbing && !FatherClimbComponent.IsHanging && Father.isInOcean && Father.alive)
             else if (!Father.isClimbing && Father.isInOcean && Father.alive)
             {
                 Father.MoveInOcean(_horizontalInput, _verticalInput);

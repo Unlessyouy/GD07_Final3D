@@ -15,18 +15,10 @@ namespace CharacterControl
         {
             base.Start();
             interactType = 2;
-            isInOcean = false;
-            if ( SceneManager.GetActiveScene().buildIndex == 2)
-            {
-                IsInOceanScene = true;
-            }
         }
         protected override void Update()
         {
             #region Input & Movement
-
-            horizontalInput = Input.GetAxisRaw("Horizontal B");
-            verticalInput = Input.GetAxisRaw("Vertical B");
 
             interactInput = Input.GetAxisRaw("Interact B");
 

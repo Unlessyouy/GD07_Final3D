@@ -1,17 +1,27 @@
 using CharacterControl;
+using Systems;
 using UnityEngine;
 
 namespace Mechanics
 {
     public class TieCameraControl : MonoBehaviour
     {
+        [SerializeField] private Cinemachine.CinemachineVirtualCamera CM1;
+
+        [SerializeField] SynchronousControlSingleton CharacterControlSystem;
+
         [SerializeField] private Transform Player;
         [SerializeField] private Transform Companion;
-        [SerializeField] private Cinemachine.CinemachineVirtualCamera CM1;
 
         private float _cameraPositionX;
         private float _cameraPositionY;
         private float _cameraPositionZ;
+
+        private float charactersHorizontalDistance;
+        private float charactersVerticalDistance;
+
+        public float maxCharactersHorizontalDistance;
+        public float maxCharactersVerticalDistance;
 
         float camChangeTimer = 0;//between 0 to 1;
         float targetCamFOV = 45;
@@ -23,6 +33,10 @@ namespace Mechanics
             _cameraPositionY = (Player.position.y + Companion.position.y) / 2;
 
             _cameraPositionZ = (Player.position.z + Companion.position.z) / 2;
+
+            charactersHorizontalDistance = Mathf.Abs(Player.position.x - Companion.position.x);
+
+            charactersVerticalDistance = Mathf.Abs(Player.position.y - Companion.position.y);
 
             transform.position = new Vector3(_cameraPositionX, _cameraPositionY, _cameraPositionZ);
 
@@ -49,8 +63,51 @@ namespace Mechanics
             {
                 NormalizeCameraFOV();
             }
-        }
 
+            if (charactersHorizontalDistance >= maxCharactersHorizontalDistance)
+            {
+                if (Player.position.x - Companion.position.x > 0)
+                {
+                    CharacterControlSystem.CanFatherRight = false;
+                    CharacterControlSystem.CanSonLeft = false;
+                }
+                else
+                {
+                    CharacterControlSystem.CanFatherLeft = false;
+                    CharacterControlSystem.CanSonRight = false;
+                }
+            }
+            else
+            {
+                CharacterControlSystem.CanFatherRight = true;
+                CharacterControlSystem.CanFatherLeft = true;
+                CharacterControlSystem.CanSonRight = true;
+                CharacterControlSystem.CanSonLeft = true;
+            }
+
+            if (charactersVerticalDistance >= maxCharactersVerticalDistance)
+            {
+                if (Player.position.y - Companion.position.y > 0)
+                {
+                    CharacterControlSystem.CanFatherUp = false;
+                    CharacterControlSystem.CanSonDown = false;
+                }
+                else
+                {
+                    CharacterControlSystem.CanFatherDown = false;
+                    CharacterControlSystem.CanSonUp = false;
+                }
+            }
+            else
+            {
+                CharacterControlSystem.CanFatherUp = true;
+                CharacterControlSystem.CanFatherDown = true;
+                CharacterControlSystem.CanSonUp = true;
+                CharacterControlSystem.CanSonDown = true;
+            }
+
+
+        }
         public void LengthenCameraFOV()
         {
             targetCamFOV = 60;
@@ -62,6 +119,62 @@ namespace Mechanics
         public void NormalizeCameraFOV()
         {
             targetCamFOV = 45;
+        }
+        protected void BanGoLeftForFather(SynchronousControlSingleton synchronousControlSingleton)
+        {
+            if (synchronousControlSingleton._horizontalInput < 0)
+            {
+                synchronousControlSingleton._horizontalInput = 0;
+            }
+        }
+        protected void BanGoLeftForSon(SynchronousControlSingleton synchronousControlSingleton)
+        {
+            if (synchronousControlSingleton._rightHorizontalInput < 0)
+            {
+                synchronousControlSingleton._rightHorizontalInput = 0;
+            }
+        }
+        protected void BanGoRightForFather(SynchronousControlSingleton synchronousControlSingleton)
+        {
+            if (synchronousControlSingleton._horizontalInput > 0)
+            {
+                synchronousControlSingleton._horizontalInput = 0;
+            }
+        }
+        protected void BanGoRightForSon(SynchronousControlSingleton synchronousControlSingleton)
+        {
+            if (synchronousControlSingleton._rightHorizontalInput > 0)
+            {
+                synchronousControlSingleton._rightHorizontalInput = 0;
+            }
+        }
+        protected void BanGoUpForFather(SynchronousControlSingleton synchronousControlSingleton)
+        {
+            if (synchronousControlSingleton._verticalInput > 0)
+            {
+                synchronousControlSingleton._verticalInput = 0;
+            }
+        }
+        protected void BanGoUpForSon(SynchronousControlSingleton synchronousControlSingleton)
+        {
+            if (synchronousControlSingleton._rightVerticalInput > 0)
+            {
+                synchronousControlSingleton._rightVerticalInput = 0;
+            }
+        }
+        protected void BanGoDownForFather(SynchronousControlSingleton synchronousControlSingleton)
+        {
+            if (synchronousControlSingleton._verticalInput < 0)
+            {
+                synchronousControlSingleton._verticalInput = 0;
+            }
+        }
+        protected void BanGoDownForSon(SynchronousControlSingleton synchronousControlSingleton)
+        {
+            if (synchronousControlSingleton._rightVerticalInput < 0)
+            {
+                synchronousControlSingleton._rightVerticalInput = 0;
+            }
         }
     }
 }

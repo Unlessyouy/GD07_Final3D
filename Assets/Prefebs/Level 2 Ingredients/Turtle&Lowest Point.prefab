@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 566312277290919482}
   - component: {fileID: 566312277290919481}
   - component: {fileID: 566312277290919483}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Turtle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &566312277290919482
 Rigidbody:
   m_ObjectHideFlags: 0

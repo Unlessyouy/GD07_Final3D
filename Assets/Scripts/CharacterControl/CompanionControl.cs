@@ -10,7 +10,7 @@ namespace CharacterControl
         [SerializeField] private ParticleSystem MindPowerVFX;
         [SerializeField] private float JumpHeight;
 
-        private bool IsInOceanScene;
+        public bool IsInOceanScene;
         protected override void Start()
         {
             base.Start();

@@ -14,7 +14,7 @@ namespace Interactable.MindPowerComponent
         [Header("Time")] [SerializeField] private float ResetLightTime = 5f;
         [SerializeField] private float WaitForResetTime = 1f;
         
-        private bool _isLitUp;
+        public bool _isLitUp;
         
         public override void OnMentalPowerActivate(Transform sonTransform)
         {

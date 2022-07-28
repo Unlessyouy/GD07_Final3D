@@ -8,8 +8,7 @@ namespace Interactable.MindPowerComponent
         
         public override void MindPowerTrigger()
         {
-            ParentRigidbody.useGravity = true;
-            ParentRigidbody.isKinematic = false;
+            gameObject.SetActive(false);
         }
     }
 }

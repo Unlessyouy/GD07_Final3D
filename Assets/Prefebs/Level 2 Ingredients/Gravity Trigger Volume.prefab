@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6903533598232749181
+--- !u!1 &483778413361380914
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6903533598232749152}
-  - component: {fileID: 6903533598232749183}
-  - component: {fileID: 6903533598232749182}
+  - component: {fileID: 483778413361380911}
+  - component: {fileID: 483778413361380912}
+  - component: {fileID: 483778413361380913}
   m_Layer: 0
   m_Name: Gravity Trigger Volume
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6903533598232749152
+--- !u!4 &483778413361380911
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6903533598232749181}
+  m_GameObject: {fileID: 483778413361380914}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 238.76399, y: 78.91, z: 5.2}
   m_LocalScale: {x: 1.5215, y: 1.5215, z: 1.5215}
@@ -33,26 +33,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6903533598232749183
+--- !u!65 &483778413361380912
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6903533598232749181}
+  m_GameObject: {fileID: 483778413361380914}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6903533598232749182
+--- !u!114 &483778413361380913
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6903533598232749181}
+  m_GameObject: {fileID: 483778413361380914}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70592901ffac4ae3816577138f9aee98, type: 3}
